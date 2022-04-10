@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>select</title>
+    </head>
+    <body>
+        <!--
+        select : option들 중 선택할 수 있게 만듬
+        option : select의 목록-->
+        <p>
+            취미 : 
+            <select>
+                <option>농구</option>
+                <option>족구</option>
+                <option>풋살</option>
+                <option>자전거</option>
+                <option>코딩</option>
+            </select>
+        </p>
+
+        <!--
+        input 타입 radio : name이 같은 것 중에 하나 선택 가능하게 만듬
+        name             : input의 이름
+        label            : 묶는 것 (radio가 아니라 label 안의 것을 아무거나 클릭해도 반응)-->
+        <p>
+            성별 : 
+            <label><input type="radio" name= "gender"/> 남자</label>
+            <input type="radio" name= "gender"/> 여자
+        </p>
+
+        <!--
+        input 타입 checkbox : 다중 선택 가능한 체크박스-->
+        <p>
+            관계 : 
+            <label><input type="checkbox"/> 본인</label>
+            <label><input type="checkbox"/> 부모</label>
+            <label><input type="checkbox"/> 형제</label>
+            <label><input type="checkbox"/> 지인</label>
+        </p>
+    </body> 
+</html>
