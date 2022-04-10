@@ -1,0 +1,4 @@
+
+HTML 파일의 확장자명은 파일명.html 
+
+빠른 html 실행 : alt + l + o
