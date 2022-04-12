@@ -1,0 +1,38 @@
+배상엽 강사
+cidea100@naver.com
+메일제목 : 1900 자바 + 이름
+메일본문 : 코드, 오류 메세지
+수업자료 : 카카오톡 오픈채팅방
+
+
+java 설치 확인
+cmd -> java -version	//JDK
+cmd -> javac -version	//JRE
+
+java tool
+-Eclipse IDE for Enterprise Java and Web Developers
+IDE(Integrated Develop Environment)
+
+Java
+-JVM(Java Virtual Machine)
+  Java로 만든 프로그램 실행
+-JRE(Java Runtime Environment)
+  JVM 생성 / JVM 실행에 필요한 파일 보유(Library File)
+-JDK(Java Development Kit)
+  JRE외 개발에 필요한 도구
+
+컴파일
+  사람의 언어를 컴퓨터가 이해할 수 있는 언어로 바꿔주는 작업
+컴파일러
+  컴파일 해주는 장치, 통역
+
+Eclipse 무설치 패키지
+
+자바 구성요소
+  프로젝트
+    패키지
+      클래스
+        메소드
+          소스코드
+
+프로젝트 - new project (module X)

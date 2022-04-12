@@ -1,0 +1,470 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk-Spec: 11
+Automatic-Module-Name: org.eclipse.m2e.maven.runtime
+Bnd-LastModified: 1645968076671
+Build-Jdk: 11.0.11
+Built-By: jenkins
+Bundle-ClassPath: .,jars/maven-core-3.8.4.jar,jars/maven-model-3.8.4.jar
+ ,jars/maven-settings-3.8.4.jar,jars/maven-settings-builder-3.8.4.jar,ja
+ rs/maven-builder-support-3.8.4.jar,jars/maven-repository-metadata-3.8.4
+ .jar,jars/maven-artifact-3.8.4.jar,jars/maven-plugin-api-3.8.4.jar,jars
+ /maven-model-builder-3.8.4.jar,jars/maven-resolver-provider-3.8.4.jar,j
+ ars/maven-resolver-api-1.6.3.jar,jars/maven-resolver-spi-1.6.3.jar,jars
+ /maven-resolver-util-1.6.3.jar,jars/maven-shared-utils-3.3.4.jar,jars/c
+ ommons-io-2.6.jar,jars/org.eclipse.sisu.inject-0.3.5.jar,jars/guice-4.2
+ .2-no_aop.jar,jars/plexus-utils-3.3.0.jar,jars/plexus-classworlds-2.6.0
+ .jar,jars/plexus-interpolation-1.26.jar,jars/plexus-component-annotatio
+ ns-2.1.0.jar,jars/commons-lang3-3.8.1.jar,jars/maven-embedder-3.8.4.jar
+ ,jars/javax.annotation-api-1.2.jar,jars/plexus-sec-dispatcher-2.0.jar,j
+ ars/plexus-cipher-2.0.jar,jars/commons-cli-1.4.jar,jars/maven-compat-3.
+ 8.4.jar,jars/wagon-provider-api-3.4.3.jar,jars/org.eclipse.sisu.plexus-
+ 0.3.5.jar,jars/plexus-build-api-0.0.7.jar,jars/aether-connector-okhttp-
+ 0.17.8.jar,jars/okhttp-3.14.1.jar,jars/okio-1.17.3.jar,jars/maven-resol
+ ver-impl-1.6.3.jar,jars/maven-resolver-connector-basic-1.6.3.jar,jars/m
+ aven-resolver-transport-wagon-1.6.3.jar,jars/wagon-file-3.4.3.jar,jars/
+ jansi-2.4.0.jar
+Bundle-Description: Maven Integration for Eclipse provides tight integra
+ tion		for Maven into the IDE
+Bundle-DocURL: https://eclipse.org/m2e
+Bundle-License: https://www.eclipse.org/legal/epl-v20.html
+Bundle-ManifestVersion: 2
+Bundle-Name: M2E Embedded Maven Runtime (includes Incubating components)
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-SymbolicName: org.eclipse.m2e.maven.runtime;singleton:=false
+Bundle-Vendor: Eclipse.org - m2e
+Bundle-Version: 1.18.3.20220227-1319
+Eclipse-BundleShape: dir
+Embed-Dependency: *;scope=compile|runtime
+Embed-Directory: jars
+Embed-Transitive: true
+Embedded-Artifacts: jars/maven-core-3.8.4.jar;g="org.apache.maven";a="ma
+ ven-core";v="3.8.4",jars/maven-model-3.8.4.jar;g="org.apache.maven";a="
+ maven-model";v="3.8.4",jars/maven-settings-3.8.4.jar;g="org.apache.mave
+ n";a="maven-settings";v="3.8.4",jars/maven-settings-builder-3.8.4.jar;g
+ ="org.apache.maven";a="maven-settings-builder";v="3.8.4",jars/maven-bui
+ lder-support-3.8.4.jar;g="org.apache.maven";a="maven-builder-support";v
+ ="3.8.4",jars/maven-repository-metadata-3.8.4.jar;g="org.apache.maven";
+ a="maven-repository-metadata";v="3.8.4",jars/maven-artifact-3.8.4.jar;g
+ ="org.apache.maven";a="maven-artifact";v="3.8.4",jars/maven-plugin-api-
+ 3.8.4.jar;g="org.apache.maven";a="maven-plugin-api";v="3.8.4",jars/mave
+ n-model-builder-3.8.4.jar;g="org.apache.maven";a="maven-model-builder";
+ v="3.8.4",jars/maven-resolver-provider-3.8.4.jar;g="org.apache.maven";a
+ ="maven-resolver-provider";v="3.8.4",jars/maven-resolver-api-1.6.3.jar;
+ g="org.apache.maven.resolver";a="maven-resolver-api";v="1.6.3",jars/mav
+ en-resolver-spi-1.6.3.jar;g="org.apache.maven.resolver";a="maven-resolv
+ er-spi";v="1.6.3",jars/maven-resolver-util-1.6.3.jar;g="org.apache.mave
+ n.resolver";a="maven-resolver-util";v="1.6.3",jars/maven-shared-utils-3
+ .3.4.jar;g="org.apache.maven.shared";a="maven-shared-utils";v="3.3.4",j
+ ars/commons-io-2.6.jar;g="commons-io";a="commons-io";v="2.6",jars/org.e
+ clipse.sisu.inject-0.3.5.jar;g="org.eclipse.sisu";a="org.eclipse.sisu.i
+ nject";v="0.3.5",jars/guice-4.2.2-no_aop.jar;g="com.google.inject";a="g
+ uice";v="4.2.2";c="no_aop",jars/plexus-utils-3.3.0.jar;g="org.codehaus.
+ plexus";a="plexus-utils";v="3.3.0",jars/plexus-classworlds-2.6.0.jar;g=
+ "org.codehaus.plexus";a="plexus-classworlds";v="2.6.0",jars/plexus-inte
+ rpolation-1.26.jar;g="org.codehaus.plexus";a="plexus-interpolation";v="
+ 1.26",jars/plexus-component-annotations-2.1.0.jar;g="org.codehaus.plexu
+ s";a="plexus-component-annotations";v="2.1.0",jars/commons-lang3-3.8.1.
+ jar;g="org.apache.commons";a="commons-lang3";v="3.8.1",jars/maven-embed
+ der-3.8.4.jar;g="org.apache.maven";a="maven-embedder";v="3.8.4",jars/ja
+ vax.annotation-api-1.2.jar;g="javax.annotation";a="javax.annotation-api
+ ";v="1.2",jars/plexus-sec-dispatcher-2.0.jar;g="org.codehaus.plexus";a=
+ "plexus-sec-dispatcher";v="2.0",jars/plexus-cipher-2.0.jar;g="org.codeh
+ aus.plexus";a="plexus-cipher";v="2.0",jars/commons-cli-1.4.jar;g="commo
+ ns-cli";a="commons-cli";v="1.4",jars/maven-compat-3.8.4.jar;g="org.apac
+ he.maven";a="maven-compat";v="3.8.4",jars/wagon-provider-api-3.4.3.jar;
+ g="org.apache.maven.wagon";a="wagon-provider-api";v="3.4.3",jars/org.ec
+ lipse.sisu.plexus-0.3.5.jar;g="org.eclipse.sisu";a="org.eclipse.sisu.pl
+ exus";v="0.3.5",jars/plexus-build-api-0.0.7.jar;g="org.sonatype.plexus"
+ ;a="plexus-build-api";v="0.0.7",jars/aether-connector-okhttp-0.17.8.jar
+ ;g="io.takari.aether";a="aether-connector-okhttp";v="0.17.8",jars/okhtt
+ p-3.14.1.jar;g="com.squareup.okhttp3";a="okhttp";v="3.14.1",jars/okio-1
+ .17.3.jar;g="com.squareup.okio";a="okio";v="1.17.3",jars/maven-resolver
+ -impl-1.6.3.jar;g="org.apache.maven.resolver";a="maven-resolver-impl";v
+ ="1.6.3",jars/maven-resolver-connector-basic-1.6.3.jar;g="org.apache.ma
+ ven.resolver";a="maven-resolver-connector-basic";v="1.6.3",jars/maven-r
+ esolver-transport-wagon-1.6.3.jar;g="org.apache.maven.resolver";a="mave
+ n-resolver-transport-wagon";v="1.6.3",jars/wagon-file-3.4.3.jar;g="org.
+ apache.maven.wagon";a="wagon-file";v="3.4.3",jars/jansi-2.4.0.jar;g="or
+ g.fusesource.jansi";a="jansi";v="2.4.0"
+Export-Package: org.apache.maven;provider=m2e;mandatory:=provider,org.ap
+ ache.maven.artifact;provider=m2e;mandatory:=provider,org.apache.maven.a
+ rtifact.deployer;provider=m2e;mandatory:=provider,org.apache.maven.arti
+ fact.factory;provider=m2e;mandatory:=provider,org.apache.maven.artifact
+ .handler;provider=m2e;mandatory:=provider,org.apache.maven.artifact.han
+ dler.manager;provider=m2e;mandatory:=provider,org.apache.maven.artifact
+ .installer;provider=m2e;mandatory:=provider,org.apache.maven.artifact.m
+ anager;provider=m2e;mandatory:=provider,org.apache.maven.artifact.metad
+ ata;provider=m2e;mandatory:=provider,org.apache.maven.artifact.reposito
+ ry;provider=m2e;mandatory:=provider,org.apache.maven.artifact.repositor
+ y.layout;provider=m2e;mandatory:=provider,org.apache.maven.artifact.rep
+ ository.metadata;provider=m2e;mandatory:=provider,org.apache.maven.arti
+ fact.repository.metadata.io;provider=m2e;mandatory:=provider,org.apache
+ .maven.artifact.repository.metadata.io.xpp3;provider=m2e;mandatory:=pro
+ vider,org.apache.maven.artifact.resolver;provider=m2e;mandatory:=provid
+ er,org.apache.maven.artifact.resolver.filter;provider=m2e;mandatory:=pr
+ ovider,org.apache.maven.artifact.versioning;provider=m2e;mandatory:=pro
+ vider,org.apache.maven.bridge;provider=m2e;mandatory:=provider,org.apac
+ he.maven.building;provider=m2e;mandatory:=provider,org.apache.maven.cla
+ ssrealm;provider=m2e;mandatory:=provider,org.apache.maven.cli;provider=
+ m2e;mandatory:=provider,org.apache.maven.cli.configuration;provider=m2e
+ ;mandatory:=provider,org.apache.maven.cli.event;provider=m2e;mandatory:
+ =provider,org.apache.maven.cli.internal;provider=m2e;mandatory:=provide
+ r,org.apache.maven.cli.internal.extension.model;provider=m2e;mandatory:
+ =provider,org.apache.maven.cli.internal.extension.model.io.xpp3;provide
+ r=m2e;mandatory:=provider,org.apache.maven.cli.logging;provider=m2e;man
+ datory:=provider,org.apache.maven.cli.logging.impl;provider=m2e;mandato
+ ry:=provider,org.apache.maven.cli.transfer;provider=m2e;mandatory:=prov
+ ider,org.apache.maven.configuration;provider=m2e;mandatory:=provider,or
+ g.apache.maven.configuration.internal;provider=m2e;mandatory:=provider,
+ org.apache.maven.eventspy;provider=m2e;mandatory:=provider,org.apache.m
+ aven.eventspy.internal;provider=m2e;mandatory:=provider,org.apache.mave
+ n.exception;provider=m2e;mandatory:=provider,org.apache.maven.execution
+ ;provider=m2e;mandatory:=provider,org.apache.maven.execution.scope;prov
+ ider=m2e;mandatory:=provider,org.apache.maven.execution.scope.internal;
+ provider=m2e;mandatory:=provider,org.apache.maven.extension.internal;pr
+ ovider=m2e;mandatory:=provider,org.apache.maven.graph;provider=m2e;mand
+ atory:=provider,org.apache.maven.internal.aether;provider=m2e;mandatory
+ :=provider,org.apache.maven.lifecycle;provider=m2e;mandatory:=provider,
+ org.apache.maven.lifecycle.internal;provider=m2e;mandatory:=provider,or
+ g.apache.maven.lifecycle.internal.builder;provider=m2e;mandatory:=provi
+ der,org.apache.maven.lifecycle.internal.builder.multithreaded;provider=
+ m2e;mandatory:=provider,org.apache.maven.lifecycle.internal.builder.sin
+ glethreaded;provider=m2e;mandatory:=provider,org.apache.maven.lifecycle
+ .mapping;provider=m2e;mandatory:=provider,org.apache.maven.messages;pro
+ vider=m2e;mandatory:=provider,org.apache.maven.model;provider=m2e;manda
+ tory:=provider,org.apache.maven.model.building;provider=m2e;mandatory:=
+ provider,org.apache.maven.model.composition;provider=m2e;mandatory:=pro
+ vider,org.apache.maven.model.inheritance;provider=m2e;mandatory:=provid
+ er,org.apache.maven.model.interpolation;provider=m2e;mandatory:=provide
+ r,org.apache.maven.model.io;provider=m2e;mandatory:=provider,org.apache
+ .maven.model.io.xpp3;provider=m2e;mandatory:=provider,org.apache.maven.
+ model.locator;provider=m2e;mandatory:=provider,org.apache.maven.model.m
+ anagement;provider=m2e;mandatory:=provider,org.apache.maven.model.merge
+ ;provider=m2e;mandatory:=provider,org.apache.maven.model.normalization;
+ provider=m2e;mandatory:=provider,org.apache.maven.model.path;provider=m
+ 2e;mandatory:=provider,org.apache.maven.model.plugin;provider=m2e;manda
+ tory:=provider,org.apache.maven.model.profile;provider=m2e;mandatory:=p
+ rovider,org.apache.maven.model.profile.activation;provider=m2e;mandator
+ y:=provider,org.apache.maven.model.resolution;provider=m2e;mandatory:=p
+ rovider,org.apache.maven.model.superpom;provider=m2e;mandatory:=provide
+ r,org.apache.maven.model.validation;provider=m2e;mandatory:=provider,or
+ g.apache.maven.monitor.event;provider=m2e;mandatory:=provider,org.apach
+ e.maven.monitor.logging;provider=m2e;mandatory:=provider,org.apache.mav
+ en.plugin;provider=m2e;mandatory:=provider,org.apache.maven.plugin.desc
+ riptor;provider=m2e;mandatory:=provider,org.apache.maven.plugin.interna
+ l;provider=m2e;mandatory:=provider,org.apache.maven.plugin.lifecycle;pr
+ ovider=m2e;mandatory:=provider,org.apache.maven.plugin.lifecycle.io.xpp
+ 3;provider=m2e;mandatory:=provider,org.apache.maven.plugin.logging;prov
+ ider=m2e;mandatory:=provider,org.apache.maven.plugin.prefix;provider=m2
+ e;mandatory:=provider,org.apache.maven.plugin.prefix.internal;provider=
+ m2e;mandatory:=provider,org.apache.maven.plugin.version;provider=m2e;ma
+ ndatory:=provider,org.apache.maven.plugin.version.internal;provider=m2e
+ ;mandatory:=provider,org.apache.maven.profiles;provider=m2e;mandatory:=
+ provider,org.apache.maven.profiles.activation;provider=m2e;mandatory:=p
+ rovider,org.apache.maven.profiles.io.xpp3;provider=m2e;mandatory:=provi
+ der,org.apache.maven.project;provider=m2e;mandatory:=provider,org.apach
+ e.maven.project.artifact;provider=m2e;mandatory:=provider,org.apache.ma
+ ven.project.inheritance;provider=m2e;mandatory:=provider,org.apache.mav
+ en.project.interpolation;provider=m2e;mandatory:=provider,org.apache.ma
+ ven.project.path;provider=m2e;mandatory:=provider,org.apache.maven.proj
+ ect.validation;provider=m2e;mandatory:=provider,org.apache.maven.proper
+ ties.internal;provider=m2e;mandatory:=provider,org.apache.maven.reporti
+ ng;provider=m2e;mandatory:=provider,org.apache.maven.repository;provide
+ r=m2e;mandatory:=provider,org.apache.maven.repository.internal;provider
+ =m2e;mandatory:=provider,org.apache.maven.repository.legacy;provider=m2
+ e;mandatory:=provider,org.apache.maven.repository.legacy.metadata;provi
+ der=m2e;mandatory:=provider,org.apache.maven.repository.legacy.reposito
+ ry;provider=m2e;mandatory:=provider,org.apache.maven.repository.legacy.
+ resolver;provider=m2e;mandatory:=provider,org.apache.maven.repository.l
+ egacy.resolver.conflict;provider=m2e;mandatory:=provider,org.apache.mav
+ en.repository.legacy.resolver.transform;provider=m2e;mandatory:=provide
+ r,org.apache.maven.repository.metadata;provider=m2e;mandatory:=provider
+ ,org.apache.maven.rtinfo;provider=m2e;mandatory:=provider,org.apache.ma
+ ven.rtinfo.internal;provider=m2e;mandatory:=provider,org.apache.maven.s
+ ession.scope.internal;provider=m2e;mandatory:=provider,org.apache.maven
+ .settings;provider=m2e;mandatory:=provider,org.apache.maven.settings.bu
+ ilding;provider=m2e;mandatory:=provider,org.apache.maven.settings.crypt
+ o;provider=m2e;mandatory:=provider,org.apache.maven.settings.io;provide
+ r=m2e;mandatory:=provider,org.apache.maven.settings.io.xpp3;provider=m2
+ e;mandatory:=provider,org.apache.maven.settings.merge;provider=m2e;mand
+ atory:=provider,org.apache.maven.settings.validation;provider=m2e;manda
+ tory:=provider,org.apache.maven.shared.utils;provider=m2e;mandatory:=pr
+ ovider,org.apache.maven.shared.utils.cli;provider=m2e;mandatory:=provid
+ er,org.apache.maven.shared.utils.cli.javatool;provider=m2e;mandatory:=p
+ rovider,org.apache.maven.shared.utils.cli.shell;provider=m2e;mandatory:
+ =provider,org.apache.maven.shared.utils.introspection;provider=m2e;mand
+ atory:=provider,org.apache.maven.shared.utils.io;provider=m2e;mandatory
+ :=provider,org.apache.maven.shared.utils.logging;provider=m2e;mandatory
+ :=provider,org.apache.maven.shared.utils.xml;provider=m2e;mandatory:=pr
+ ovider,org.apache.maven.shared.utils.xml.pull;provider=m2e;mandatory:=p
+ rovider,org.apache.maven.toolchain;provider=m2e;mandatory:=provider,org
+ .apache.maven.toolchain.building;provider=m2e;mandatory:=provider,org.a
+ pache.maven.toolchain.io;provider=m2e;mandatory:=provider,org.apache.ma
+ ven.toolchain.java;provider=m2e;mandatory:=provider,org.apache.maven.to
+ olchain.merge;provider=m2e;mandatory:=provider,org.apache.maven.toolcha
+ in.model;provider=m2e;mandatory:=provider,org.apache.maven.toolchain.mo
+ del.io.xpp3;provider=m2e;mandatory:=provider,org.apache.maven.usability
+ .plugin;provider=m2e;mandatory:=provider,org.apache.maven.usability.plu
+ gin.io.xpp3;provider=m2e;mandatory:=provider,org.apache.maven.wagon;pro
+ vider=m2e;mandatory:=provider,org.apache.maven.wagon.authentication;pro
+ vider=m2e;mandatory:=provider,org.apache.maven.wagon.authorization;prov
+ ider=m2e;mandatory:=provider,org.apache.maven.wagon.events;provider=m2e
+ ;mandatory:=provider,org.apache.maven.wagon.observers;provider=m2e;mand
+ atory:=provider,org.apache.maven.wagon.providers.file;provider=m2e;mand
+ atory:=provider,org.apache.maven.wagon.proxy;provider=m2e;mandatory:=pr
+ ovider,org.apache.maven.wagon.repository;provider=m2e;mandatory:=provid
+ er,org.apache.maven.wagon.resource;provider=m2e;mandatory:=provider,org
+ .codehaus.plexus;provider=m2e;mandatory:=provider,org.codehaus.plexus.c
+ lassworlds;provider=m2e;mandatory:=provider;version="2.6.0",org.codehau
+ s.plexus.classworlds.launcher;provider=m2e;mandatory:=provider;version=
+ "2.6.0",org.codehaus.plexus.classworlds.realm;provider=m2e;mandatory:=p
+ rovider;version="2.6.0",org.codehaus.plexus.classworlds.strategy;provid
+ er=m2e;mandatory:=provider;version="2.6.0",org.codehaus.plexus.componen
+ t;provider=m2e;mandatory:=provider,org.codehaus.plexus.component.annota
+ tions;provider=m2e;mandatory:=provider,org.codehaus.plexus.component.co
+ mposition;provider=m2e;mandatory:=provider,org.codehaus.plexus.componen
+ t.configurator;provider=m2e;mandatory:=provider,org.codehaus.plexus.com
+ ponent.configurator.converters;provider=m2e;mandatory:=provider,org.cod
+ ehaus.plexus.component.configurator.converters.basic;provider=m2e;manda
+ tory:=provider,org.codehaus.plexus.component.configurator.converters.co
+ mposite;provider=m2e;mandatory:=provider,org.codehaus.plexus.component.
+ configurator.converters.lookup;provider=m2e;mandatory:=provider,org.cod
+ ehaus.plexus.component.configurator.converters.special;provider=m2e;man
+ datory:=provider,org.codehaus.plexus.component.configurator.expression;
+ provider=m2e;mandatory:=provider,org.codehaus.plexus.component.factory;
+ provider=m2e;mandatory:=provider,org.codehaus.plexus.component.reposito
+ ry;provider=m2e;mandatory:=provider,org.codehaus.plexus.component.repos
+ itory.exception;provider=m2e;mandatory:=provider,org.codehaus.plexus.co
+ nfiguration;provider=m2e;mandatory:=provider,org.codehaus.plexus.config
+ uration.xml;provider=m2e;mandatory:=provider,org.codehaus.plexus.contex
+ t;provider=m2e;mandatory:=provider,org.codehaus.plexus.interpolation;pr
+ ovider=m2e;mandatory:=provider;version="1.26.0",org.codehaus.plexus.int
+ erpolation.fixed;provider=m2e;mandatory:=provider;version="1.26.0",org.
+ codehaus.plexus.interpolation.multi;provider=m2e;mandatory:=provider;ve
+ rsion="1.26.0",org.codehaus.plexus.interpolation.object;provider=m2e;ma
+ ndatory:=provider;version="1.26.0",org.codehaus.plexus.interpolation.os
+ ;provider=m2e;mandatory:=provider;version="1.26.0",org.codehaus.plexus.
+ interpolation.reflection;provider=m2e;mandatory:=provider;version="1.26
+ .0",org.codehaus.plexus.interpolation.util;provider=m2e;mandatory:=prov
+ ider;version="1.26.0",org.codehaus.plexus.logging;provider=m2e;mandator
+ y:=provider,org.codehaus.plexus.logging.console;provider=m2e;mandatory:
+ =provider,org.codehaus.plexus.personality.plexus.lifecycle.phase;provid
+ er=m2e;mandatory:=provider,org.codehaus.plexus.util;provider=m2e;mandat
+ ory:=provider,org.codehaus.plexus.util.cli;provider=m2e;mandatory:=prov
+ ider,org.codehaus.plexus.util.cli.shell;provider=m2e;mandatory:=provide
+ r,org.codehaus.plexus.util.dag;provider=m2e;mandatory:=provider,org.cod
+ ehaus.plexus.util.introspection;provider=m2e;mandatory:=provider,org.co
+ dehaus.plexus.util.io;provider=m2e;mandatory:=provider,org.codehaus.ple
+ xus.util.reflection;provider=m2e;mandatory:=provider,org.codehaus.plexu
+ s.util.xml;provider=m2e;mandatory:=provider,org.codehaus.plexus.util.xm
+ l.pull;provider=m2e;mandatory:=provider,org.sonatype.plexus.build.incre
+ mental;provider=m2e;mandatory:=provider,org.sonatype.plexus.components.
+ cipher;provider=m2e;mandatory:=provider,org.sonatype.plexus.components.
+ sec.dispatcher;provider=m2e;mandatory:=provider,org.sonatype.plexus.com
+ ponents.sec.dispatcher.model;provider=m2e;mandatory:=provider,org.sonat
+ ype.plexus.components.sec.dispatcher.model.io.xpp3;provider=m2e;mandato
+ ry:=provider,org.eclipse.aether;provider=m2e;mandatory:=provider;versio
+ n="1.6.3",org.eclipse.aether.artifact;provider=m2e;mandatory:=provider;
+ version="1.6.3",org.eclipse.aether.collection;provider=m2e;mandatory:=p
+ rovider;version="1.6.3",org.eclipse.aether.connector.basic;provider=m2e
+ ;mandatory:=provider;version="1.6.3",org.eclipse.aether.deployment;prov
+ ider=m2e;mandatory:=provider;version="1.6.3",org.eclipse.aether.graph;p
+ rovider=m2e;mandatory:=provider;version="1.6.3",org.eclipse.aether.impl
+ ;provider=m2e;mandatory:=provider;version="1.6.3",org.eclipse.aether.im
+ pl.guice;provider=m2e;mandatory:=provider;version="1.6.3",org.eclipse.a
+ ether.installation;provider=m2e;mandatory:=provider;version="1.6.3",org
+ .eclipse.aether.internal.impl;provider=m2e;mandatory:=provider;version=
+ "1.6.3",org.eclipse.aether.internal.impl.collect;provider=m2e;mandatory
+ :=provider;version="1.6.3",org.eclipse.aether.internal.impl.slf4j;provi
+ der=m2e;mandatory:=provider;version="1.6.3",org.eclipse.aether.internal
+ .transport.wagon;provider=m2e;mandatory:=provider;version="1.6.3",org.e
+ clipse.aether.metadata;provider=m2e;mandatory:=provider;version="1.6.3"
+ ,org.eclipse.aether.repository;provider=m2e;mandatory:=provider;version
+ ="1.6.3",org.eclipse.aether.resolution;provider=m2e;mandatory:=provider
+ ;version="1.6.3",org.eclipse.aether.spi.connector;provider=m2e;mandator
+ y:=provider;version="1.6.3",org.eclipse.aether.spi.connector.checksum;p
+ rovider=m2e;mandatory:=provider;version="1.6.3",org.eclipse.aether.spi.
+ connector.layout;provider=m2e;mandatory:=provider;version="1.6.3",org.e
+ clipse.aether.spi.connector.transport;provider=m2e;mandatory:=provider;
+ version="1.6.3",org.eclipse.aether.spi.io;provider=m2e;mandatory:=provi
+ der;version="1.6.3",org.eclipse.aether.spi.localrepo;provider=m2e;manda
+ tory:=provider;version="1.6.3",org.eclipse.aether.spi.locator;provider=
+ m2e;mandatory:=provider;version="1.6.3",org.eclipse.aether.spi.log;prov
+ ider=m2e;mandatory:=provider;version="1.6.3",org.eclipse.aether.transfe
+ r;provider=m2e;mandatory:=provider;version="1.6.3",org.eclipse.aether.t
+ ransform;provider=m2e;mandatory:=provider;version="1.6.3",org.eclipse.a
+ ether.transport.wagon;provider=m2e;mandatory:=provider;version="1.6.3",
+ org.eclipse.aether.util;provider=m2e;mandatory:=provider;version="1.6.3
+ ",org.eclipse.aether.util.artifact;provider=m2e;mandatory:=provider;ver
+ sion="1.6.3",org.eclipse.aether.util.concurrency;provider=m2e;mandatory
+ :=provider;version="1.6.3",org.eclipse.aether.util.filter;provider=m2e;
+ mandatory:=provider;version="1.6.3",org.eclipse.aether.util.graph.manag
+ er;provider=m2e;mandatory:=provider;version="1.6.3",org.eclipse.aether.
+ util.graph.selector;provider=m2e;mandatory:=provider;version="1.6.3",or
+ g.eclipse.aether.util.graph.transformer;provider=m2e;mandatory:=provide
+ r;version="1.6.3",org.eclipse.aether.util.graph.traverser;provider=m2e;
+ mandatory:=provider;version="1.6.3",org.eclipse.aether.util.graph.versi
+ on;provider=m2e;mandatory:=provider;version="1.6.3",org.eclipse.aether.
+ util.graph.visitor;provider=m2e;mandatory:=provider;version="1.6.3",org
+ .eclipse.aether.util.listener;provider=m2e;mandatory:=provider;version=
+ "1.6.3",org.eclipse.aether.util.repository;provider=m2e;mandatory:=prov
+ ider;version="1.6.3",org.eclipse.aether.util.version;provider=m2e;manda
+ tory:=provider;version="1.6.3",org.eclipse.aether.version;provider=m2e;
+ mandatory:=provider;version="1.6.3",com.google.inject;provider=m2e;mand
+ atory:=provider;version="1.4",com.google.inject.binder;provider=m2e;man
+ datory:=provider;version="1.4",com.google.inject.internal;provider=m2e;
+ mandatory:=provider,com.google.inject.internal.util;provider=m2e;mandat
+ ory:=provider,com.google.inject.matcher;provider=m2e;mandatory:=provide
+ r;version="1.4",com.google.inject.multibindings;provider=m2e;mandatory:
+ =provider;version="1.4",com.google.inject.name;provider=m2e;mandatory:=
+ provider;version="1.4",com.google.inject.spi;provider=m2e;mandatory:=pr
+ ovider;version="1.4",com.google.inject.util;provider=m2e;mandatory:=pro
+ vider;version="1.4",io.takari.aether.client;provider=m2e;mandatory:=pro
+ vider,io.takari.aether.connector;provider=m2e;mandatory:=provider,io.ta
+ kari.aether.okhttp;provider=m2e;mandatory:=provider,io.takari.aether.wa
+ gon;provider=m2e;mandatory:=provider,META-INF.plexus;x-internal:=true,M
+ ETA-INF.sisu;x-internal:=true
+Import-Package: org.slf4j.spi;resolution:=optional;version="[1.6.2,2.0.0
+ )",javax.inject;version="1.0.0",org.slf4j;resolution:=optional;version=
+ "[1.6.2,2.0.0)",org.slf4j.helpers;resolution:=optional;version="[1.6.2,
+ 2.0.0)"
+Require-Bundle: org.eclipse.m2e.maven.runtime.slf4j.simple;bundle-versio
+ n="[1.18.0,1.19.0)",com.google.guava
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-5.1.1.202006162103
+Eclipse-SourceReferences: scm:git:https://github.com/eclipse-m2e/m2e-cor
+ e.git;path="m2e-maven-runtime/org.eclipse.m2e.maven.runtime";commitId=5
+ 95db9d68e6d090537a107e272d4a9c35a4213dc
+
+Name: jars/plexus-component-annotations-2.1.0.jar
+SHA-256-Digest: veNhfOm1vPlYQSYEYIAEOvaks7rqQKOxU/Aue7wyrKw=
+
+Name: jars/maven-resolver-impl-1.6.3.jar
+SHA-256-Digest: F6rr5uPlnfjLW07CEBlvcIRjcxK5vE/xTLd60a48OBs=
+
+Name: jars/maven-resolver-util-1.6.3.jar
+SHA-256-Digest: zcrZNVtiV0P0Dkzq2aljU0BOAQw5yAjSOwRL4zGvolE=
+
+Name: about_files/LICENSE-2.0.txt
+SHA-256-Digest: z8d0m5b2O9McPEK1xHG/dWgUBT6EfBDz6wA0F7xSPTA=
+
+Name: jars/maven-resolver-spi-1.6.3.jar
+SHA-256-Digest: F0QaOQRawZvEqAaPtyhPrOv2M3dUvyv48mp2tfmO0Qg=
+
+Name: jars/maven-resolver-provider-3.8.4.jar
+SHA-256-Digest: BGx9FjX5EoO096QbV5lThXkUx+DZZUW1V0kVN7Mn4VY=
+
+Name: jars/org.eclipse.sisu.inject-0.3.5.jar
+SHA-256-Digest: xZlAELzc4dK9YDpNUMRxkd29eHXRFXsjqqJtM8gv2hM=
+
+Name: jars/org.eclipse.sisu.plexus-0.3.5.jar
+SHA-256-Digest: fkxhCW1wgm8g96fVXFmlUo56pa0kfuLf5UTk3SX2p4Q=
+
+Name: jars/maven-resolver-transport-wagon-1.6.3.jar
+SHA-256-Digest: /hlhu/KMFyGQVodNLZ1mJWYLlq++7YkB9R08sKC2ee4=
+
+Name: jars/maven-model-3.8.4.jar
+SHA-256-Digest: kewNbVZKEkg+FWmw73L/PZ6SHFugcgH6ernHaU24hEo=
+
+Name: jars/maven-settings-3.8.4.jar
+SHA-256-Digest: TxLtSXYcS0hsFxmWZD2NgCRihqsUSJpzbODdBua8aIY=
+
+Name: jars/maven-artifact-3.8.4.jar
+SHA-256-Digest: QnO06EgF9zUOthoe6l3r/XHRFHQUs7RBuS1TUhjN8K4=
+
+Name: jars/maven-resolver-api-1.6.3.jar
+SHA-256-Digest: 0LKO2UQFi6T5vktUwl1tUmnMTz88SapFDU3C9+DVUvY=
+
+Name: jars/maven-compat-3.8.4.jar
+SHA-256-Digest: 1hOOL05Hk02MXaPdO8slSIKdZfLakOsKCfrGcqB3oxY=
+
+Name: jars/jansi-2.4.0.jar
+SHA-256-Digest: IMB8Gm71iFQGObNSK8vqDiHrxSVU0mUoLx2FmJ2l/0k=
+
+Name: META-INF/maven/org.eclipse.m2e/org.eclipse.m2e.maven.runtime/pom.x
+ ml
+SHA-256-Digest: 6uFF97g+mT0YZy+OrLLctx25yfk3lBb3850jYWMGFcw=
+
+Name: jars/aether-connector-okhttp-0.17.8.jar
+SHA-256-Digest: 86EJwJv6d8l0fuQvjmmcAdM/88ggtV4xX7W1Dm6ItKc=
+
+Name: jars/maven-embedder-3.8.4.jar
+SHA-256-Digest: C6rtS6MJZ9l10vkK2n6KnH2SfnyjANVN7qgmTSLtUew=
+
+Name: META-INF/maven/org.eclipse.m2e/org.eclipse.m2e.maven.runtime/pom.p
+ roperties
+SHA-256-Digest: geLr1S7nIOK2ObwgUEzWbtifDXmHDRI6PZzcxh848v4=
+
+Name: jars/maven-settings-builder-3.8.4.jar
+SHA-256-Digest: fnK0j8s8iKFGQl470SZcO8SsVGhS/ku6thBk8d0YNbc=
+
+Name: jars/maven-builder-support-3.8.4.jar
+SHA-256-Digest: tkFh5v/TB4LZfCBZQruiGdYMU6j0RC5pq9/UKNdpETU=
+
+Name: about.html
+SHA-256-Digest: pOsYSrkIQEBFMkhDDc5mS+RrdEqRlYUzBI1OQaDhTj0=
+
+Name: jars/commons-cli-1.4.jar
+SHA-256-Digest: /Tx8lUWpzbIFHR+RVcT3ax5KxaVzBEBKbu21eP+6cyg=
+
+Name: jars/plexus-sec-dispatcher-2.0.jar
+SHA-256-Digest: hzE5lgxMeAF23aWAsAOixL+CGIvc5buZI04iTves/Os=
+
+Name: jars/plexus-utils-3.3.0.jar
+SHA-256-Digest: dtF0eSVA4nda+U0D0Q+y08d24s0KwOv0J9PlcAcruc4=
+
+Name: jars/maven-model-builder-3.8.4.jar
+SHA-256-Digest: jQ7UtcxcBmEPl5NZgkWCYBZct+V8eBynye+LbgHOFFY=
+
+Name: jars/guice-4.2.2-no_aop.jar
+SHA-256-Digest: D09fsoYJpNKzi39xKL58+bVB8lKD1xtOVgZtmWg6r/8=
+
+Name: jars/javax.annotation-api-1.2.jar
+SHA-256-Digest: WQmzlso6K+ENDuoyx073jYFuG06tId4deN4fiQ0DPgQ=
+
+Name: jars/wagon-file-3.4.3.jar
+SHA-256-Digest: t0MhFGB8Sf2+nhy+Tjr5zCvcax/eIw8RyVJiAHRpurw=
+
+Name: jars/plexus-classworlds-2.6.0.jar
+SHA-256-Digest: Uvd8XsSfeHycQX6+1dbv2ZIvRKIC8hc3bk+UwNdPNUk=
+
+Name: jars/maven-shared-utils-3.3.4.jar
+SHA-256-Digest: eSXZxaDiBA0kuPrj9hLrOZy//lg4szujaHd9x73fbdo=
+
+Name: jars/maven-core-3.8.4.jar
+SHA-256-Digest: JBXmT/vD/05yZSaPZRYjNCx7Cp4Kd8XFS06C0VIvMYk=
+
+Name: jars/maven-repository-metadata-3.8.4.jar
+SHA-256-Digest: Yql5iQaK807vN0vtzKEgocKwvVotSEYNMGlECEzElfk=
+
+Name: jars/maven-resolver-connector-basic-1.6.3.jar
+SHA-256-Digest: UvochekWLJsPYFEdLQe3TioakTJ2G/XO1C2h8JoCbyM=
+
+Name: jars/plexus-build-api-0.0.7.jar
+SHA-256-Digest: k0FxZA+9PSSVxQt5sNmtsR4sg+ZbrRV9+P40vKwP95g=
+
+Name: jars/okio-1.17.3.jar
+SHA-256-Digest: yxja86IIrjirnYJUP/uT4fGF6GPIoOUsw3L/46WPVUk=
+
+Name: jars/maven-plugin-api-3.8.4.jar
+SHA-256-Digest: OqSNkaVKq2/qldmCGDRWIes5UuaTrlkdQbY6xbhut2o=
+
+Name: jars/okhttp-3.14.1.jar
+SHA-256-Digest: WmvmkWUwdqpk3NNh0uRF5AYLS13IgrH2uknnnd/D5WM=
+
+Name: jars/commons-io-2.6.jar
+SHA-256-Digest: +HfTBGYKwqFC84ZbrfyXHex+1zx0fH+NXS9ROcpzZRM=
+
+Name: jars/plexus-interpolation-1.26.jar
+SHA-256-Digest: s7VBLOF4iRA+pWS838+fs9+lQDRP/qxrU4pzydcYJmI=
+
+Name: jars/commons-lang3-3.8.1.jar
+SHA-256-Digest: 2sgH9lsHaY/zmxsHv+89h64/1G2Ru/iivAKyqDFhb2g=
+
+Name: jars/wagon-provider-api-3.4.3.jar
+SHA-256-Digest: X+8trl5copRimkU/hF9DiOpZAAJbY8Uv7LZzuedCcvc=
+
+Name: jars/plexus-cipher-2.0.jar
+SHA-256-Digest: mn8bXFqe/9Yerf2HMUUqL3ao55ER+sOR73XqgBvqIDo=
+

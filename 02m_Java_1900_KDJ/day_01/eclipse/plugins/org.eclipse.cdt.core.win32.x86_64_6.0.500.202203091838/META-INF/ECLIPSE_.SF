@@ -1,0 +1,35 @@
+Signature-Version: 1.0
+Created-By: 11.0.11 (AdoptOpenJDK)
+SHA-256-Digest-Manifest: KpM8unNFY/iBYvCY5sjkybxTZaZ7n2X6J6SeNAGdv2I=
+SHA-256-Digest-Manifest-Main-Attributes: m8ENrE8ccIOO0SSZ0mRKMKlb2p49Xtw
+ nc6DWWVdN+Xs=
+
+Name: about.html
+SHA-256-Digest: ncO+WCNUIJ0JLCOl/ot53yopwTqvvtVu0qSgblesdYo=
+
+Name: os/win32/x86_64/starter.exe
+SHA-256-Digest: 3eTIN3xpKXwhxwAp+s/oA8ff1MX/KI7OOe7XB5mczmU=
+
+Name: os/win32/x86_64/pty.dll
+SHA-256-Digest: 9aMv/Sb/IncPsU4Znapj9XqGh/CMwTOlGFiMHVGW1HM=
+
+Name: os/win32/x86_64/winpty.dll
+SHA-256-Digest: bz4v2V9Y2cU4I0LYRZQp1Ja30xZ7rE4HvMPZVJ2OMFg=
+
+Name: META-INF/maven/org.eclipse.cdt/org.eclipse.cdt.core.win32.x86_64/p
+ om.properties
+SHA-256-Digest: PUdBRXH4HMfn8E1u1loiZ9oicY3bNMo864Z6e+4Y1Kk=
+
+Name: os/win32/x86_64/spawner.dll
+SHA-256-Digest: FeyvG0qK8mwKHr+Z/Obh7SX/EGlo0BEPKGFyBJRKUuw=
+
+Name: plugin.properties
+SHA-256-Digest: zPJK1YdtNARP93mbotzv3PMRpUHPseR2/heSZF/Q1hA=
+
+Name: META-INF/maven/org.eclipse.cdt/org.eclipse.cdt.core.win32.x86_64/p
+ om.xml
+SHA-256-Digest: Cyrg+PDJVPdJA7oX3CGgC3XgAjcGpDIvdd0iYsHOUuo=
+
+Name: os/win32/x86_64/winpty-agent.exe
+SHA-256-Digest: lrxJeZPN/f/eTzOE2+MtY1zeBmvmGEfkIhBxxEDIpzc=
+

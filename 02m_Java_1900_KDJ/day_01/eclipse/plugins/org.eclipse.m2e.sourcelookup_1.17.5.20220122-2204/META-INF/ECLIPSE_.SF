@@ -1,0 +1,37 @@
+Signature-Version: 1.0
+Created-By: 11.0.11 (AdoptOpenJDK)
+SHA-256-Digest-Manifest: 6nORG1tHMW88L1HVB5I0hxqOS9u19yJNz4StyHyxUNU=
+SHA-256-Digest-Manifest-Main-Attributes: ZCFubGBc/OV8W+xN4slYYDqbG3TULkf
+ H2GpnMEDaabg=
+
+Name: plugin.xml
+SHA-256-Digest: D2bvIMt49bjsS9TX4qQ3IkiZDU1CNnF1QzNU29XBijE=
+
+Name: org/eclipse/m2e/sourcelookup/internal/launch/MavenArtifactIdentifi
+ er$1.class
+SHA-256-Digest: 3AUyCiSZHPaeY7VxF/OXm2GgTP8sIIm70EV4dymhVcc=
+
+Name: META-INF/maven/org.eclipse.m2e/org.eclipse.m2e.sourcelookup/pom.xm
+ l
+SHA-256-Digest: kuo8g2MhnaTdl3zZDMu86zuHPZo9+vu5htpG1n4Htb0=
+
+Name: org/eclipse/m2e/sourcelookup/internal/launch/MavenArtifactIdentifi
+ er.class
+SHA-256-Digest: X5DYmMTCI+NV/hbGp+7poPWxfYU5GiiR6bP94hdsC9A=
+
+Name: org/eclipse/m2e/sourcelookup/internal/launch/MetaInfMavenScanner.c
+ lass
+SHA-256-Digest: vkk97qQTR/Nin8R284X/IkaNcv8jRAazRwX7GTgkSto=
+
+Name: META-INF/maven/org.eclipse.m2e/org.eclipse.m2e.sourcelookup/pom.pr
+ operties
+SHA-256-Digest: N8rjxZHTg1OdUTo2yF7ntl3+ACDmhV2yAcNbnr9ut2s=
+
+Name: org/eclipse/m2e/sourcelookup/internal/launch/MavenSourceContainerR
+ esolver.class
+SHA-256-Digest: VrQnBWSiSO76Jz3kg1L6PG99orb97UNALJWn8QZQuFg=
+
+Name: org/eclipse/m2e/sourcelookup/internal/launch/MavenSourceLookupPart
+ icipant.class
+SHA-256-Digest: W3lP+VcPsJ4NOg2oiSGAFLcsld/Sr1MIg4vUOjyqUwU=
+

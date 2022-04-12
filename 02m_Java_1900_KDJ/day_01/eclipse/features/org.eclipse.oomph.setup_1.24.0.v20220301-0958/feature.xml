@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2014-2017 Eike Stepper (Loehne, Germany) and others.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v2.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v20.html
+
+  Contributors:
+    Eike Stepper - initial API and implementation
+-->
+<feature
+      id="org.eclipse.oomph.setup"
+      label="%featureName"
+      version="1.24.0.v20220301-0958"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright url="%copyrightURL">
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="%updateSiteName" url="https://download.eclipse.org/oomph/updates"/>
+      <discovery label="%updateSiteName" url="https://download.eclipse.org/oomph/updates"/>
+   </url>
+
+   <includes
+         id="org.eclipse.oomph.setup.core"
+         version="1.23.0.v20220301-0958"/>
+
+   <includes
+         id="org.eclipse.oomph.p2"
+         version="1.22.0.v20220301-0958"/>
+
+   <plugin
+         id="org.eclipse.oomph.setup.editor"
+         download-size="511"
+         install-size="1088"
+         version="1.21.0.v20220301-0958"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.oomph.setup.ui"
+         download-size="784"
+         install-size="1629"
+         version="1.23.0.v20220301-0958"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.oomph.setup.doc"
+         download-size="2554"
+         install-size="21152"
+         version="1.13.0.v20220222-1048"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.oomph.setup.ui.questionnaire"
+         download-size="336"
+         install-size="399"
+         version="1.13.0.v20220301-0958"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.oomph.jreinfo.ui"
+         download-size="54"
+         install-size="88"
+         version="1.14.0.v20220301-0958"
+         unpack="false"/>
+
+</feature>
