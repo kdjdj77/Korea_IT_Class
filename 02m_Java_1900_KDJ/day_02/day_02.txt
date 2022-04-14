@@ -1,0 +1,78 @@
+Java
+  Project
+    Package
+      Class
+        method
+          Sorce Code
+
+패키지 만들기
+  src 폴더 안에 new packages
+
+클래스 만들기
+  클래스는 대문자로 시작
+  패키지 안에 new class
+  
+**패키지가 없는 상태로 클래스 생성 시 패키지와 클래스 동시 생성
+
+메소드 생성
+public class Basic 
+{
+  public static void main(String args[])
+  {
+    소스코드
+  }
+}
+
+소스코드 실행
+  ctrl + F11
+
+자바 기본 형식
+  자바는 기본적으로 중괄호를 통해 영역을 표시한다
+  ;으로 한 문장 종료
+
+메인메소드
+  컴파일 시 안의 코드를 번역
+출력메소드
+  System.out.println(); // 괄호 안의 값 출력
+  "" 			// 문자열
+
+값의 종류(자료형, type)
+자료형	type	ex
+정수	int	5 -5 10 0
+실수	double	3.14 -5.1
+문자	char	a A z
+문자열	String	aaa_bbb
+
+//, /* */ 주석
+
+제어문자
+  문자열 안에서 특수한 기능을 하는 특수문자
+\"(쌍따옴표 출력), \t(tab), \n(줄바꿈)
+
+System.out.println()	개행 포함 출력
+System.out.print()	한 줄 출력
+
+형식지정자
+int	%d
+double	%f
+char	%c
+String	%s
+
+형식지정자 %05.3f - 공간 5 오른쪽 정렬(- 왼쪽 정렬) 소숫점 3자리 빈 공간 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
