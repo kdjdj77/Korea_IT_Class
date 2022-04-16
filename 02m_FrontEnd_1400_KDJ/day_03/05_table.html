@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table</title>
+    </head>
+    <body>
+        <!--
+        caption     : 표 이름
+        table       : 표
+            border  : 표 테두리 두께
+            width   : 표의 가로 길이 (%)
+            align   : 표가 창의 어느쪽에 위치할 것인지
+        tr          : table의 한 줄             // table row
+            height  : 한 줄의 높이
+        td          : table의 한 칸             // table data
+            colspan : 셀 가로 병합을 몇 칸 할 것인가
+            rowspan : 셀 세로 병합을 몇 칸 할 것인가
+        th          : table의 첫 줄             // table header -->
+        <table border="1" width="50%" align="center">
+            <caption> Table </caption>
+            <tr height="50px">
+                <th width="30%">content01</th>
+                <th>content01</th>
+                <th>content01</th>
+                <th>content01</th>
+                <th>content01</th>
+            </tr>
+            <tr>
+                <td align="center">content01</td>
+                <td>content01</td>
+                <td>content01</td>
+                <td colspan="2">content01</td>
+            </tr>
+            <tr>
+                <td>content01</td>
+                <td>content01</td>
+                <td>content01</td>
+                <td>content01</td>
+                <td rowspan="2">content01</td>
+            </tr>
+            <tr>
+                <td>content01</td>
+                <td>content01</td>
+                <td>content01</td>
+                <td>content01</td>
+            </tr>
+        </table>
+    </body>
+</html>
