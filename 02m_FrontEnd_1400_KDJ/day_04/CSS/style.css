@@ -1,0 +1,17 @@
+h2 {
+    font-size : 50px;
+    color : salmon;
+}
+p {
+    font-size : 20px;
+    color : magenta;
+}
+ul {
+    list-style : none;
+}
+li {
+    display : inline-block;
+    margin-right : 20px;
+    font-weight : bold;
+    color : aquamarine;
+}
