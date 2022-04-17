@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>자식 선택자</title>
+        <style>
+            ul a {              /* ul 아래의 모든 a */
+                text-decoration : none;     /* 밑줄을 없앰 */
+            }
+            ul > a {            /* ul 아래의 a */
+                color : deeppink;
+            }
+            ul > li > a {       /* ul 아래 li 아래의 a */
+                color : cornflowerblue;
+            }
+            ul > li > p > a {   /* ul 아래 li 아래 p 아래의 a */
+                color : darkviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>자식 선택자</h2>
+        <ul>
+            <a href="https://www.naver.com">네이버</a>
+            <li>
+                <a href="https://www.daum.net">다음</a>
+            </li>
+            <li>
+                <p>
+                    <a href="https://www.google.com">구글</a>
+                </p>
+            </li>
+        </ul>
+    </body>
+</html>
