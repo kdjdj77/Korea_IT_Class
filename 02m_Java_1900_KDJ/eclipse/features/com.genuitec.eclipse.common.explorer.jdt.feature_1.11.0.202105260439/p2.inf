@@ -1,0 +1,5 @@
+requires.0.namespace = org.eclipse.equinox.p2.iu
+requires.0.name = org.eclipse.jdt.feature.group
+requires.0.range = 0.0.0
+requires.0.greedy = false
+requires.0.optional = false

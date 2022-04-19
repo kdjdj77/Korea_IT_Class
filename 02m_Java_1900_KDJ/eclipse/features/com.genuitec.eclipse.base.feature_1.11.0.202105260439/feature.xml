@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.genuitec.eclipse.base.feature"
+      label="Genuitec Base"
+      version="1.11.0.202105260439"
+      provider-name="Genuitec, LLC">
+
+   <description url="https://www.genuitec.com/products/webclipse/">
+      The Genuitec Base feature provides essential plugins.
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license>
+      %license
+   </license>
+
+   <requires>
+      <import plugin="org.apache.httpcomponents.httpclient"/>
+      <import plugin="org.apache.httpcomponents.httpcore"/>
+   </requires>
+
+   <plugin
+         id="com.genuitec.eclipse.core.common.platform"
+         download-size="1765"
+         install-size="2077"
+         version="13.0.2.202105260439"
+         unpack="false"/>
+
+   <plugin
+         id="com.genuitec.eclipse.ui.common.platform"
+         download-size="332"
+         install-size="598"
+         version="13.0.0.202105260439"
+         unpack="false"/>
+
+   <plugin
+         id="com.genuitec.eclipse.patches"
+         download-size="57"
+         install-size="119"
+         version="1.11.0.202105260439"
+         unpack="false"/>
+
+   <plugin
+         id="com.genuitec.eclipse.news"
+         download-size="21"
+         install-size="39"
+         version="1.11.0.202105260439"
+         unpack="false"/>
+
+   <plugin
+         id="com.genuitec.eclipse.monitor"
+         download-size="88"
+         install-size="163"
+         version="13.0.0.202105260439"
+         unpack="false"/>
+
+</feature>

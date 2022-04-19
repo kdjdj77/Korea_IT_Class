@@ -1,0 +1,24 @@
+#Startup Support for Spring - install if possible
+#requires.0.namespace = org.eclipse.equinox.p2.iu
+#requires.0.name = com.genuitec.eclipse.common.startup.spring.feature.feature.group
+#requires.0.range = 0.0.0
+#requires.0.greedy = true
+#requires.0.optional = true
+
+#Startup Support for REST - install if possible
+#requires.1.namespace = org.eclipse.equinox.p2.iu
+#requires.1.name = com.genuitec.eclipse.common.startup.rest.feature.feature.group
+#requires.1.range = 0.0.0
+#requires.1.greedy = true
+#requires.1.optional = true
+
+#JDT Support for breadcrumb
+requires.2.namespace = org.eclipse.equinox.p2.iu
+requires.2.name = com.genuitec.eclipse.common.explorer.jdt.feature.feature.group
+requires.2.range = 0.0.0
+requires.2.greedy = true
+requires.2.optional = true
+
+#Provide theming concept
+provides.1.namespace = com.genuitec.eclipse.concepts
+provides.1.name = com.genuitec.theming.core
