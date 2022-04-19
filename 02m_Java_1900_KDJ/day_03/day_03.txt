@@ -48,6 +48,35 @@ next(), nextInt(), nextDouble() 을 사용하고 나면
      따라서 next(0, nextInt(), nextDouble()을 사용하고 싶다면 그 이전에 nextLine()을 사용하여
     버퍼를 지워주어야 한다.
 
+============================================================
+
+연산자
+    연산의 결과가 어떤 타입인지 파악하는 것이 중요하다
+
+    산술연산자
+        +
+	String은 연산시 결과가 String이며 연결이 된다
+	char는 int라고 생각한다 (ASCII code)
+	String > double > int > char
+        -
+	String 연산 불가
+	char는 int로 생각
+        *
+	String 연산 불가
+	char는 int로 생각
+        /
+	String 연산 불가
+	char는 int로 생각
+	int / int -> int
+	?? / 0   -> error
+        %
+	나머지 연산자
+	10 % 3 -> 1
+    관계연산자
+    논리연산자
+    삼항연산자
+
+
 
 
 
