@@ -1,0 +1,41 @@
+package day_04;
+import java.util.Scanner;
+
+public class Task 
+{
+	public static void main(String[] args) 
+	{
+	//1. 두 정수 입력받아 큰 수 출력
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수 1 입력 : ");
+		int num1 = sc.nextInt();
+		System.out.print("정수 2 입력 : ");
+		int num2 = sc.nextInt();
+		System.out.println("큰 수 : " + (num1 > num2 ? num1 : num2));
+		
+	//2. 두 정수를 입력받아 두 수의 차 출력
+		System.out.println("두 수의 차 : " 
+				+ (num1 > num2 ? num1 - num2 : num2 - num1));
+	//3. 나이가 10이상 25이하이면 1000원 나머지 무료
+	//나이 입력받아 금액 출력
+		int age = sc.nextInt();
+		System.out.println("금액 : " 
+				+ (age >= 10 && age <= 25 ? "1000원" : "무료"));
+	//4. 키와 나이 입력받아 120cm 이상, 8살 이상이라면 탑승가능 아니면 탑승불가
+		int tall = sc.nextInt();
+		int age2 = sc.nextInt();
+		System.out.println(age2 >= 8 && tall > 120 ? "탑승가능" : "탑승불가");
+	//5. 한 박스당 20개 라면 들어가는 상자, 라면의 개수 입력받아서 필요한 상자 개수
+		int ramen = sc.nextInt();
+		System.out.println("필요한 상자 개수 : " + ramen / 20);
+	//6. 이름 입력받아 이름이 관리자이면 관리자 모드로 변환합니다 출력 아니면 
+	// 000님 환영합니다 출력
+		String name = sc.nextLine();
+		System.out.println(name.equals("관리자") 
+				? "관리자 모드로 변환합니다" : (name + "님 환영합니다"));
+	}
+}
+
+
+
+
