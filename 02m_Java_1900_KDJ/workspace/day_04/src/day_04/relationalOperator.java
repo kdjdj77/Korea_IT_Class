@@ -8,7 +8,7 @@ public class relationalOperator
 	//int, double, char, boolean?
 		System.out.println(10 > 10);
 		System.out.println(10 >= 5);
-		System.out.println(10 == 10.0);
+		//System.out.println(10 == 10.0);
 		System.out.println('a' > 'b');
 		//System.out.println(10 > true);
 		//System.out.println("æ»≥Á" > "æ»≥Á«œººø‰");

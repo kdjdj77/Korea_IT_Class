@@ -4,6 +4,7 @@ public class logicalOperator
 {
 	public static void main(String[] args) 
 	{
+/*
 		System.out.println("---&&연산자---");
 		System.out.println(true && true);
 		System.out.println(true && false);
@@ -19,5 +20,6 @@ public class logicalOperator
 		System.out.println("---!연산자---");
 		System.out.println(!true);
 		System.out.println(!false);
+*/
 	}
 }
