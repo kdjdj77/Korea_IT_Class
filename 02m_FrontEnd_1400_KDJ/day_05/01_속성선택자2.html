@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>속성선택자2</title>
+        <style>
+            /*[title="css"] {color:red;}*/  /*정확히 일치하는 단어*/
+            /*[title~="css"] {color:red}*/  /*띄어쓰기로 연결된 합성어 선택*/
+            /*[title*="css"] {color:red}*/  /*문자가 포함되어 있기만 해도 선택*/
+            /*[title$="css"] {color:red}*/  /*해당 단어로 끝나면(접미사) 선택*/
+            /*[title|="css"] {color:red}*/  /*접두사이면서 하이픈으로 연결된 합성어 선택*/
+            /*[title^="css"] {color:red}*/  /*해당 단어로 시작하면(접두사) 선택*/
+        </style>
+    </head>
+    <body>
+        <h2>속성 선택자 - 2</h2>
+        <p title="css">독립적인 단어</p>
+        <p title="css-funny">하이픈이 들어간 합성어</p>
+        <p title="css_funny">언더바가 들어간 합성어</p>
+        <p title="funny css">공백으로 연결된 합성어(접미사)</p>
+        <p title="css funny">공백으로 연결된 합성어(접두사)</p>
+        <p title="funnycss">공백이 없는 합성어(접미사)</p>
+        <p title="cssfunny">공백이 없는 합성어(접두사)</p>
+    </body>
+</html>

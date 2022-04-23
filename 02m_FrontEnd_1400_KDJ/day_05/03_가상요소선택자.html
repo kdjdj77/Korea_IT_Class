@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>가상요소선택자</title>
+        <style>
+            ul > li {
+                display:inline-block;
+                list-style: none;
+            }
+            #login::before  {content:"💬";}
+            #sign::after    {content:"💔";}
+            #sign::before   {content: "| ";}
+            a       {text-decoration:none;}
+            a:link  {color:lightblue;}
+            a:hover {color:magenta;}
+            a:active{color:deepskyblue;}
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li id="login">로그인</li>
+            <li id="sign">회원가입</li>
+        </ul>
+        <a href="https://www.naver.com">아직 아이디가 없으세요?</a>
+    </body>
+</html>
