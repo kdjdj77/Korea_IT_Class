@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: com.genuitec.eclipse.theming.elevation.win32
+Bundle-SymbolicName: com.genuitec.eclipse.theming.elevation.win32
+Archiver-Version: Plexus Archiver
+Built-By: jenkins
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: Genuitec, LLC
+Bundle-Name: Devstyle Windows Elevation
+Bundle-Version: 1.11.0.202105260439
+Created-By: Apache Maven 3.5.0
+Build-Jdk: 1.8.0_45
+Eclipse-BundleShape: dir
+
+Name: META-INF/maven/com.genuitec.eclipse.theming/com.genuitec.eclipse
+ .theming.elevation.win32/pom.properties
+SHA-256-Digest: zwOqT/EhpDBSKoGkKnoV5FK0iqEMCqZ70HmwaYkFV80=
+
+Name: resources/launcher.exe
+SHA-256-Digest: MgcJkaL92y3uQhPaWlpO1NyE7frgvLD+iTlXbPZ8nxA=
+
+Name: resources/elevator.exe
+SHA-256-Digest: hPwEoqTHR8usDZlYUGG0mAP4d45PjvU2uhANBwTN0tA=
+
+Name: META-INF/maven/com.genuitec.eclipse.theming/com.genuitec.eclipse
+ .theming.elevation.win32/pom.xml
+SHA-256-Digest: jsLlpoe06/1koOmD9v3TufxaSQ8GZ1Y9k8EJGg3iVqc=
+

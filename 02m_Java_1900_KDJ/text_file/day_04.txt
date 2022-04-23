@@ -1,0 +1,46 @@
+값의 타입을 바꾸는 방법(type casting)
+    (타입)값
+    ex)
+        (int)3.14 => 3
+
+String은 클래스이기 때문에 메소드를 통해 형변환을 해야 한다
+Integer.parseInt(String)	: String을 int로
+Integer.toString(int)	: int를 String으로
+Double.parseDouble(String)	: String을 double로
+Double.toString(double)	: double을 String으로
+
+암묵적 형변환 (auto casting)
+    10 + 0.0
+    10 + ""
+    10 * 1.0
+
+자료형
+    int		10, -4, 0, 	...
+    double	0.0, 1.0, 3.14, ...
+    char		'a', '안', ...
+    String		"", "10", "d", ...
+    boolean	true, false
+
+연산자
+    산술연산자
+    관계(비교)연산자	: > , <, <=, >=, !=, ==참이면 true, 거짓이면 false
+        문자열은 equals()를 통해서 같은지 비교한다
+    논리연산자		: && ( and ) , || ( or ) , ! ( not )
+    삼항연산자		: 조건식 ? 값1 : 값2 	//a > b ? 3 : 5
+
+연산자의 우선순위
+	최우선 연산자	: ( )
+	단항 연산자	: !
+	산술 연산자	: + - * / %
+	쉬프트 연산자	: 
+	관계 연산자	: > < >= <= == !=
+	논리 연산자	: && ||
+	삼항 연산자	: 
+	대입 연산자	: =
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.genuitec.eclipse.common.explorer.jdt.feature"
+      label="Navigational Aides - JDT Support"
+      version="1.11.0.202105260439"
+      provider-name="Genuitec, LLC">
+
+   <description url="https://www.genuitec.com/products/webclipse/">
+		This feature extends Breadcrumb and Project Explorer+ with support for Java Development.
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license>
+      %license
+   </license>
+
+   <plugin
+         id="com.genuitec.eclipse.meexplorer.jdt"
+         download-size="42"
+         install-size="85"
+         version="1.11.0.202105260439"
+         unpack="false"/>
+
+</feature>
