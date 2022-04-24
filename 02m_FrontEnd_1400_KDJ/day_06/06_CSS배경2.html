@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 배경 2</title>
+        <style>
+            div {
+                width:60%;
+                height:200px;
+                border:3px dotted deeppink; /*dotted : 점선*/
+                padding:10px;
+                background-image:url("./img/img03.jpg");
+                background-repeat:no-repeat;
+            }
+            .bg1 {background-position:right bottom;}
+            .bg2 {background-position:center;}
+            .bg3 {background-position:10% 80px;} 
+            /*위에서부터 10%만 사용, 이미지 상단 80px 공백*/
+        </style>
+    </head>
+    <body>
+        <h2>CSS 배경 2</h2>
+        <div class="bg1">
+            <h2>background-potition1</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum eaque voluptates possimus modi nostrum repellat dolores, at vero quam porro? Nesciunt, blanditiis? Autem sint eius totam id nesciunt alias tempora!</p>
+        </div>
+        <div class="bg2">
+            <h2>background-potition2</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum eaque voluptates possimus modi nostrum repellat dolores, at vero quam porro? Nesciunt, blanditiis? Autem sint eius totam id nesciunt alias tempora!</p>
+        </div>
+        <div class="bg3">
+            <h2>background-potition3</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum eaque voluptates possimus modi nostrum repellat dolores, at vero quam porro? Nesciunt, blanditiis? Autem sint eius totam id nesciunt alias tempora!</p>
+        </div>
+    </body>
+</html>

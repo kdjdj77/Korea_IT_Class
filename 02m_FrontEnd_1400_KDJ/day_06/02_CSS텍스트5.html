@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS텍스트5</title>
+        <style>
+            h1{font-size:100px;}
+            /*text-shadow:xpx ypx zpx #???
+            ->  x, y    : 그림자 x, y축 이동거리 (-이면 왼쪽, 위쪽 방향)
+                z       : 그림자 번짐
+                #???    : 그림자 색상*/
+            #shadow1{text-shadow:10px 10px; color:hotpink}
+            #shadow2{color:deeppink; text-shadow:10px 10px 5px;}
+            #shadow3{text-shadow:10px 10px 5px #f00;}
+            #shadow4{color:#fff; text-shadow:10px -10px 5px #000;}
+        </style>
+    </head>
+    <body>
+        <h2>CSS텍스트5</h2>
+        <h1 id="shadow1">CSS TXT-SHADOW</h1>
+        <h1 id="shadow2">CSS TXT-SHADOW</h1>
+        <h1 id="shadow3">CSS TXT-SHADOW</h1>
+        <h1 id="shadow4">CSS TXT-SHADOW</h1>
+    </body>
+</html>
