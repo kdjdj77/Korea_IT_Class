@@ -1,0 +1,21 @@
+이중 for문
+	for문 안에 있는 for문
+
+반복문
+	for문
+	while문
+	do-while문
+
+while문
+	while (조건식)
+	{
+		while문 안쪽 문장;
+		...
+	}
+	while문을 만나면 조건식을 확인한다
+	조건식이 참이면 while문 안쪽문장을 수행한다
+	while문이 긑나면 다시 조건식을 확인한다
+
+while vs for
+	while문 	: 반복의 조건이 명확하거나 무한 반복을 해야 할 경우
+	for문 	: 반목의 횟수가 명확할 경우
