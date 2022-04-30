@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>둥근 테두리</title>
+        <style>
+            div {
+                width:200px;
+                height:200px;
+                margin:20px;
+            }
+            /*
+            top-left-x      : 좌측 상단으로부터 오른쪽 100px까지 둥글게 만듬
+            top-right-x     : 우측 상단으로부터 왼쪽 100px까지 둥글게 만듬
+            bottom-right-x  : 우측 하단으로부터 왼쪽 50px까지 둥글게 만듬
+            bottom-left-x   : 좌측 하단으로부터 오른쪽 50px까지 둥글게 만듬
+
+            top-left-y      : 좌측 상단으로부터 아래 30px까지 둥글게 만듬
+            top-right-y     : 우측 상단으로부터 아래 30px까지 둥글게 만듬
+            bottom-right-y  : 우측 하단으로부터 위 100px까지 둥글게 만듬
+            bottom-left-y   : 좌측 하단으로부터 위 100px까지 둥글게 만듬
+            //만약 y값을 정의하지 않았다면 x값과 같다는 것으로 간주
+            //만약 bottom 값을 정의하지 않았다면 대각선 top과 같다고 간주
+            */
+            .radius1{border:3px solid red; border-radius:100px 100px 50px 50px / 30px 30px 100px 100px}
+            .radius2{border:3px solid green; border-radius:100px / 50px;}
+            .radius3{border:3px solid blue; border-radius:100px 20px / 50px 100px;}
+            .radius4{border:3px solid hotpink; border-radius:50%;}
+        </style>
+    </head>
+    <body>
+        <h2>둥근 테두리</h2>
+        <div class="radius1"></div>
+        <div class="radius2"></div>
+        <div class="radius3"></div>
+        <div class="radius4"></div>
+    </body>
+</html>

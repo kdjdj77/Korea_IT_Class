@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>디스플레이</title>
+        <link rel="stylesheet" href="./style/display_style.css">
+    </head>
+    <body>
+        <h2>디스플레이</h2>
+        <!-- 
+        div, p와 같은 태그들은 한 줄을 차지하지만                  
+        img, span과 같은 태그들은 inline으로 한 줄에 여러 공간을 차지할 수 있다
+        -->
+        <div id="inline">
+            <img src="./img01.png" alt="바다"/>
+            <img src="./img02.png" alt="바다"/>
+            <img src="./img03.png" alt="바다"/>
+        </div>
+        <div id="block">
+            <img src="./img01.png" alt="바다"/>
+            <img src="./img02.png" alt="바다"/>
+            <img src="./img03.png" alt="바다"/>
+        </div>
+        <hr>    <!-- 직선의 줄을 그어준다 -->
+        <span class="ib"></span>
+        <span class="ib"></span>
+        <span class="ib"></span>
+        <!-- span 태그는 컨텐츠의 크기만큼 설정이 기본 -->
+        <hr>
+        <div class="ib"></div>
+        <div class="ib"></div>
+        <div class="ib"></div>
+        <!--inline-block은 한 줄에 여러 개의 컨텐츠, 그리고 block으로 구분(컨텐츠의 크기에 관계없이)-->
+    </body>
+</html>

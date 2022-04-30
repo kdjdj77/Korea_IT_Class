@@ -1,0 +1,24 @@
+div {
+    margin:20px;
+    border:1px solid deeppink;
+    border-radius:20px;
+    padding:10px;
+}
+img {
+    border:1px solid deepskyblue;
+}
+#block img {
+    display:block;
+}
+.ib {
+    border:3px solid blue;
+    width:100px;
+    height:100px;
+    margin:10px;
+}
+span.ib {
+    display:block;
+}
+div.ib {
+    display:inline-block;
+}

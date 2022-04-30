@@ -1,0 +1,75 @@
+
+박스사이징(box-sizing)
+
+    width, height 높이와 길이를 부여
+    이 높이와 길이에는 padding이나 border영역은 포함하지 않음
+
+        box-sizing:content-box:
+            기존 게산법, width와 height 포함하지 않겠다
+
+        box-sizing:border-box:
+            width와 height에 padding, border를 포함
+
+    만약 width 100% 로 설정된 경우 padding이나 border 속성을 추가할 수 없다
+    그래서 여기에 padding을 주려면 border-box를 사용하여 포함한 길이가 100%가 되도록
+
+둥근 테두리
+
+    //전부 따로 줄 때
+    border-radius : top-left-x top-right-x bottom-right-x bottom-left-x
+    //대각선 위치의 값이 같을 때
+    border-radius : top-left-x top-right-x / top-left-y top-right-y
+    //전부 같을 때
+    border-radius : xy
+
+테이블 테두리
+
+    테이블 셀들 간의 공백을 어떻게 처리할지 결정하는 속성
+    separate(기본, 셀들을 분리), collapse(셀들 사이를 합쳐서 공백을 없앰)
+
+CSS display
+
+    웹 페이지의 레이아웃을 결정하는 속성
+    block       : 새로운 라인에서 시작하고, 해당 라인의 모든 너비를 차지
+                        높이값만큼 한 줄을 가득 채우는 속성을 가지고 있음
+                        (div, header, p, table, h1~h6, ...)
+
+    inline      : 새로운 라인에서 시작되지 않고, 앞의 요소에 이어서 배치
+                        width, height값이 적용되지 않음, 안의 컨텐츠 내용만큼 영역을 차지
+                        (a, span, img, ...)
+
+                        display inline일 경우 margin, padding, top-bottom이 안 먹는 경우가 있음 
+                        대표적으로 span --> inline-block을 쓸 것
+
+    inline-block: block과 inline 속성을 모두 적용
+                        width, height 적용
+                        line-height 적용된 상태에서 가로로 나열
+
+    none        : 웹 페이지에서 해당 요소가 나타나지 않고 레이아웃에서 사라짐
+
+CSS 폼
+
+    폼 요소의 스타일을 설정
+
+    입력부분
+        선택자:focus: 폼 요소가 포커싱 되어있을 때의 스타일을 설정
+            ex) outline:none
+
+        버튼 ex) cursor:pointer -> 마우스를 올렸을 때 커서 모양을 설정
+
+        textarea: resize: none ==> textarea 크기를 사용자가 병경 불가능하도록 설정
+
+====================================================================================
+
+내일 진도
+css position ☆☆☆☆☆
+z-index (레이아웃의 우선 순위 누가 더 앞에 있나)
+float/clear
+다단 레이아웃
+flex ☆☆☆☆☆
+
+em/rem/px/per
++반응형 / 애니메이션 ---------- 5/8
+
+2주정도는 css 심화 --> js
+====================================================================================

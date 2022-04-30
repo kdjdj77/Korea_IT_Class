@@ -1,0 +1,13 @@
+div {
+    background-color:hotpink;
+    border:3px solid blue;
+    margin-bottom:20px;
+}
+p.none {
+    display:none;
+    /*display:block;*/
+}
+p.hidden {
+    visibility:hidden;
+    /*visibility:hidden;*/
+}
