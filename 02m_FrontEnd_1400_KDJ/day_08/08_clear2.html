@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>clear2</title>
+        <style>
+            ul { 
+                padding:15px 20px;
+                background-color:silver;
+                /*li가 ul보다 살짝 아래에 있는 현상 수정 
+                *flow-root를 지원하지 않는 브라우저도 있음*/
+                /*display:flow-root;*/
+            }
+            /*☆가장 많이 쓰는 방법 : li가 ul보다 살짝 아래에 있는 현상 수정*/
+            ul:after {content:"";   display:block;  clear:both;}
+            /*ul:after => ul의 contents들 맨 뒤에 content 생성 */
+            ul > li {
+                float:left;    
+                margin:5px; 
+                padding:5px 10px;   
+                background-color:pink;  
+                list-style:none;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>float1</li>
+            <li>float2</li>
+            <li>float3</li>
+        </ul>
+    </body>
+</html>

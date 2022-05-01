@@ -1,0 +1,42 @@
+flex (플렉시블 레이아웃)
+   대부분의 웹사이트는 수직 구성
+   레이아웃 구성 시 가장 많이 사용되는 요소들은 대부분 블록 개념이기 때문에
+   수직 구성은 쉽게 할 수 있으나 수평 구성은 구현하기가 쉽지 않음
+
+   과거에는 수평구성은 float, inline-block으로 구성
+   현재 조금 더 쉽게 수평 구성을 하기 위하여 flex를 사용한다
+   display:flex;
+
+   1) flex-wrap
+      플렉스 라인에 더 이상 여유가 없을 때 플렉스 요소의 위치를 다음 줄로 넘겨줄 지 여부
+      nowrap         : 기본 설정, 일렬로 나옴
+      wrap           : 다음 줄로 넘어감
+      wrap-reverse   : 아래쪽이 아니라 위쪽으로 넘김
+   
+   2) justify-content
+      플렉스 요소의 수평방향 정렬 방식 설정
+
+      flex-start  : 기본 설정, 앞쪽부터
+      flex-end    : 뒤쪽에서부터 배치
+      center      : 가운데 배치
+
+      space-between  : 요소들 사이에 여백
+      space-arround  : 요소들 사이에 동일 여백을 두고 배치
+      space-evely    : 요소들 주변에 일정한 여백들 두고 배치
+   
+   3)align-items
+      플렉스 요소의 수직방향 정렬 방식을 설정
+
+      stretch  : 기본 설정, 플렉스 요소의 높이가 컨테이너의 높이와 같게 변경된 뒤 이어서 수평 정렬
+      flex-start  : 위쪽부터 배치
+      flex-end    : 아래쪽부터 배치
+      center      : 가운데 배치
+      baseline    : 기준선에 배치
+
+flex 마무리
+em rem px
+미디어쿼리
+트랜스폼
+트랜지션
+애니메이션
+페이지
