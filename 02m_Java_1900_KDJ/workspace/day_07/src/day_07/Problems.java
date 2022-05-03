@@ -1,6 +1,6 @@
 package day_07;
 import java.util.Scanner;
-import java.util.Random;
+//import java.util.Random;
 
 public class Problems 
 {
@@ -22,21 +22,21 @@ public class Problems
 		잔액확인 후 출금
 	*/
 		Scanner sc = new Scanner(System.in);
-		Random r = new Random();
-		String id;
+		//Random r = new Random();
+		//String id;
 		int pw;
 		while(true)
 		{
 			System.out.println("===========================");
 			System.out.println("1. 계좌 발급");
-			System.out.println("2. ");
-			System.out.println("3. ");
-			System.out.println("0. ");
+			System.out.println("2. 입금하기");
+			System.out.println("3. 출금하기");
+			System.out.println("0. 프로그램 종료");
 			System.out.print("번호를 선택하세요 : ");
 			int ch = sc.nextInt();
 			if (ch == 1) 
 			{
-				id = "00-0000-0000";
+				//id = "00-0000-0000";
 				System.out.print("비밀번호를 설정하세요 : ");
 				pw = sc.nextInt();
 				System.out.print("비밀번호를 확인 : ");
