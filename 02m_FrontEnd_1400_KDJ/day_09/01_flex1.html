@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>flex1</title>
+      <style>
+         #container {
+            width:1000px;
+            height:500px;
+            margin:0 auto;          /*가운데 정렬*/
+            border:3px solid red;
+            display:flex;           /*content를 수평 정렬*/
+            flex-direction:column;  /*flex의 방향을 설정*/
+            flex-wrap:wrap;         /*content의 크기가 부모를 초과할 경우 다음줄로*/
+            /*wrap-reverse : 아래에서 위로 정렬*/
+         }
+         #container > div {
+            width:400px;
+            /*height:200px;*/  /*높이를 지정하지 않으면 부모 높이를 따라간다*/
+            border:1px solid black;
+            background-color:gold;
+         }
+      </style>
+   </head>
+   <body>
+      <h2>flex1</h2>
+      <div id="container">
+         <div><h2>1</h2></div>
+         <div><h2>2</h2></div>
+         <div><h2>3</h2></div>
+      </div>
+   </body>
+</html>
