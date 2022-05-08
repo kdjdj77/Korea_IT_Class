@@ -1,0 +1,85 @@
+@font-face {
+   font-family:"twayair";
+   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff")
+   format("woff");
+   font-weight:normal;
+   font-style:normal;
+}
+* {
+   margin:0;
+   padding:0;
+}
+body {
+   font-family:"twayair";
+}
+#container {
+   width:100%;
+   margin:0 auto;
+}
+nav {
+   height:50px;
+   background-color:black;
+}
+nav > ul {
+   list-style:none;
+   padding:3px;
+}
+nav > ul > a > li {
+   display:inline-block;
+   margin:15px 20px;
+}
+a {
+   text-decoration:none;
+}
+a:link,
+a:visited{
+   color:white;
+}
+a:active,
+a:hover {
+   color:yellow;
+}
+header {
+   width:100%;
+   height:300px;
+   background:url(../img/header.jpg) no-repeat center / cover;
+   opacity:0.8;
+}
+.photo {
+   display:none;
+}
+section {
+   position:relative;
+   width:100%;
+   padding:15px 30px;
+}
+.pageTitle {
+   position:absolute;
+   top:20px;
+   left:0;
+   padding:30px 50px;
+}
+.pageTitle > h1 {
+   margin-bottom:30px;
+}
+.content {
+   margin:80px auto 10px;
+   width:90%;
+   padding:20px;
+   box-sizing:border-box;
+}
+#container section:nth-child(odd) {
+   background-color:gold;
+}
+footer {
+   position:relative;
+   width:100%;
+   height:100px;
+   background-color:black;
+   opacity:0.8;
+}
+footer > p {
+   color:white;
+   text-align:center;
+   line-height:100px;
+}
