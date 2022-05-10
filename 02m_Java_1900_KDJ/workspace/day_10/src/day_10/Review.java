@@ -1,7 +1,7 @@
-package day_09;
+package day_10;
 import java.util.Scanner;
 
-public class ArrayTask2 
+public class Review
 {
 	public static void main(String[] args) 
 	{
