@@ -1,7 +1,7 @@
-package day_10;
+package day_11;
 import java.util.Scanner;
 
-public class MethodTask 
+public class Review 
 {
 //이름과 반복횟수 입력받아 출력하는 메소드
 	public static void printName(String name, int n)
@@ -35,14 +35,14 @@ public class MethodTask
 		String name = sc.nextLine();
 		System.out.print("횟수 >> ");
 		int cnt = sc.nextInt();
-		MethodTask.printName(name, cnt);
+		Review.printName(name, cnt);
 	//나이 입력받고 성인/미성년 판별하는 메소드
 		System.out.print("나이 >> ");
 		int age = sc.nextInt();
-		MethodTask.printAdult(age);
+		Review.printAdult(age);
 	//배열을 배열 모양으로 출력하는 메소드
 		int[] arr = {1, 3, 5, 7};
-		MethodTask.printArr(arr);
+		Review.printArr(arr);
 		
 		sc.close();
 	}
