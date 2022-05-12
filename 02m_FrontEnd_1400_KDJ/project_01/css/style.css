@@ -1,0 +1,35 @@
+body, html {
+   padding:0;
+   margin:0;
+}
+header {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   left: 0;
+   right: 0;
+   height: 40px;
+   padding: 1rem;
+   color: white;
+   background: teal;
+   font-weight: bold;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+section {
+   box-sizing:border-box;
+   color:#fff;
+   font-size:24px;
+   text-align:center;
+}
+.s1 {background-color:black;}
+.s2 {background-color:yellow;}
+.s3 {background-color:skyblue;}
+.s4 {background-color:black;}
+.s5 {background-color:red;}
+.s6 {background-color:orange;}
+#vid1{
+   height:100%; 
+   width:auto;
+}
