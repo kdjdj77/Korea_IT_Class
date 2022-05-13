@@ -47,7 +47,6 @@ $(document).ready(function(){
 	});
 });
 $( window ).resize(function() {
-	
 	// 반응형
 	setHeight();
 });
