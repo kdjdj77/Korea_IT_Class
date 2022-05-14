@@ -1,0 +1,28 @@
+#container header h1 {text-align:center;}
+section {
+   display:flex;
+   flex-wrap:wrap;
+   justify-content:space-between;
+}
+section div {
+   margin:10px;
+   padding:5px;
+   background-size: cover;
+   height:300px;
+   width:300px;
+   text-align:right;
+   text-shadow:2px 2px 5px black;
+   color:white;
+   background-repeat:no-repeat;
+}
+#menu1 {background:url(./images/dish1.jpg);}
+#menu2 {background:url(./images/dish2.jpg);}
+#menu3 {background:url(./images/dish3.jpg);}
+#menu4 {background:url(./images/dish4.jpg);}
+#menu5 {background:url(./images/dish5.jpg); width:600px;}
+@media screen and (max-width:787px) {
+
+}
+@media screen and (min-width:787px) and (max-width:1024px) {
+
+}

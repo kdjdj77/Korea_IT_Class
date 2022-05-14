@@ -8,15 +8,21 @@ header {
    width:100%;
    left:0;
    right:0;
-   height:50px;
    padding:1rem;
    color:white;
-   background:orange;
    font-weight:bold;
    display:flex;
    justify-content:space-between;
    align-items:center;
    z-index:500;
+}
+#headerColor {
+   top:0;
+   position:fixed;
+   background:orange;
+   height:80px;
+   width:100%;
+   z-index:400;
 }
 section {
    box-sizing:border-box;
@@ -29,18 +35,35 @@ nav {
    justify-content:space-around;
    font-size:1.5rem;
    width:100%;
-   line-height:50px;
-   text-align:center;
+   /*line-height:50px;*/
 }
-/*
-#menuFixed {
-   top:50px;
-   width:100%;   
-   height:100px;  
-   background-color:rgba(255,255,255,0.7);  
+nav > li {list-style:none;}
+.menu {
+   margin-bottom:50px;
+   line-height: 3rem
+}
+header nav li:hover .submenu {display:block;}
+.subMenu {
+   display:none;
+   background-color:rgba(230, 230, 230, 0.9);
+   margin:16px auto;
+   /*
+   display:flex;
    position:fixed;
+   margin-top:80px;
+   width:100%;
+   background-color:ivory;
+   */
 }
-*/
+.subMenu:hover + .subMenu {
+   display:block;
+}
+.submenu li {
+   color:black;
+   list-style:none;
+   line-height:2rem;
+   font-size:1rem;
+}
 .s1 {background-color:black;}
 .s2 {
    background-color:black;
@@ -52,8 +75,11 @@ nav {
 .s5 {background-color:red;}
 .s6 {background-color:orange;}
 #vid1{
-   height:100%; 
-   width:auto;
+   width:100%; 
+   height:auto;
+   position:relative;
+   top:50%;
+   transform:translate(0, -45%);
 }
 header .logo {
    width:auto;
@@ -89,7 +115,6 @@ ul.imgs li{
    width:100%;
    height:100%;
    position:absolute;
-   left:100%;
    transition-delay:1s;
    padding:0;
    margin:0;

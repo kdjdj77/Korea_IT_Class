@@ -6,6 +6,8 @@
 <body>
 	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="./js/script.js"></script>
+	<div id="headerColor"></div>
+	<div id="subMenuColor"></div>
 	<header>
 		<nav>
 			<div class="logo">
@@ -13,10 +15,31 @@
 					<img src="./img/header/logo.png"/>
 				</a>
 			</div>
-			<a class="menu" href="./mainPage.html">브랜드스토리</a>
-			<a class="menu" href="./mainPage.html">이달의 한정메뉴</a>
-			<a class="menu" href="./mainPage.html">그랜드메뉴</a>
-			<a class="menu" href="./mainPage.html">테이크아웃ㆍ배달</a>
+			<li><a class="menu" href="./mainPage.html">브랜드스토리</a>
+				<ul class="subMenu">
+					<li><a>소개</a></li>
+					<li><a>연혁</a></li>
+				</ul>
+			</li>
+			<li><a class="menu" href="./mainPage.html">이달의 한정메뉴</a>
+				<ul class="subMenu">
+					<li><a>한정메뉴</a></li>
+				</ul>
+			</li>
+			<li><a class="menu" href="./mainPage.html">그랜드메뉴</a>
+				<ul class="subMenu">
+					<li><a>초밥</a></li>
+					<li><a>사이드</a></li>
+					<li><a>디저트</a></li>
+					<li><a>음료</a></li>
+				</ul>
+			</li>
+			<li><a class="menu" href="./mainPage.html">테이크아웃ㆍ배달</a>
+				<ul class="subMenu">
+					<li><a>덮밥</a></li>
+					<li><a>음료</a></li>
+				</ul>
+			</li>
 			<div class="sns">
 				<a href="https://www.instagram.com/sushiro_korea/">
 					<img src="./img/header/insta.png" width="40px"/>
@@ -36,24 +59,24 @@
 		</nav>
 	</header>
 	<!--
-	<div id="menuFixed">
-		<div>
+	<div class="subMenu">
+		<ul>
 			<li><a>소개</a></li>
 			<li><a>연혁</a></li>
-		</div>
-		<div>
+		</ul>
+		<ul>
 			<li><a>한정메뉴</a></li>
-		</div>
-		<div>
+		</ul>
+		<ul>
 			<li><a>초밥</a></li>
 			<li><a>사이드</a></li>
 			<li><a>디저트</a></li>
 			<li><a>음료</a></li>
-		</div>
-		<div>
+		</ul>
+		<ul>
 			<li><a>덮밥</a></li>
 			<li><a>음료</a></li>
-		</div>
+		</ul>
 	</div>
 	-->
 	<div id="onepage">
