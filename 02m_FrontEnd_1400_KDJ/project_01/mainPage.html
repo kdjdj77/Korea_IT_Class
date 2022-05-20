@@ -6,7 +6,6 @@
 <body>
 	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="./js/script.js"></script>
-	<div id="headerColor"></div>
 	<header>
 		<nav>
 			<div class="logo">
@@ -16,38 +15,38 @@
 			</div>
 			<li><a class="menu" href="./mainPage.html">브랜드스토리</a>
 				<ul class="subMenu">
-					<li><a>소개</a></li>
-					<li><a>연혁</a></li>
+					<li><a href="#">소개</a></li>
+					<li><a href="#">연혁</a></li>
 				</ul>
 			</li>
 			<li><a class="menu" href="./mainPage.html">이달의 한정메뉴</a>
 				<ul class="subMenu">
-					<li><a>한정메뉴</a></li>
+					<li><a href="#">한정메뉴</a></li>
 				</ul>
 			</li>
 			<li><a class="menu" href="./mainPage.html">그랜드메뉴</a>
 				<ul class="subMenu">
-					<li><a>초밥</a></li>
-					<li><a>사이드</a></li>
-					<li><a>디저트</a></li>
-					<li><a>음료</a></li>
+					<li><a href="#">초밥</a></li>
+					<li><a href="#">사이드</a></li>
+					<li><a href="#">디저트</a></li>
+					<li><a href="#">음료</a></li>
 				</ul>
 			</li>
 			<li><a class="menu" href="./mainPage.html">테이크아웃ㆍ배달</a>
 				<ul class="subMenu">
-					<li><a>덮밥</a></li>
-					<li><a>음료</a></li>
+					<li><a href="#">덮밥</a></li>
+					<li><a href="#">음료</a></li>
 				</ul>
 			</li>
 			<div class="sns">
 				<a href="https://www.instagram.com/sushiro_korea/">
-					<img src="./img/header/insta.png" width="40px"/>
+					<img src="./img/header/instagram.png" width="50px"/>
 				</a>
 				<a href="https://www.facebook.com/sushiro.kr">
-					<img src="./img/header/faceb.png" width="40px"/>
+					<img src="./img/header/facebook.png" width="50px"/>
 				</a>
 				<a href="https://www.youtube.com/watch?v=PHeXvX-R2pA&feature=youtu.be">
-					<img src="./img/header/youtu.png" width="40px"/>
+					<img src="./img/header/youtube.png" width="50px"/>
 				</a>
 			</div>
 			<div class="logo2">
@@ -67,10 +66,10 @@
 
 		<section class="s2">
 			<div class="slider">
-				<input type="radio" name="slide" id="slide1" checked>
-				<input type="radio" name="slide" id="slide2">
-				<input type="radio" name="slide" id="slide3">
-				<input type="radio" name="slide" id="slide4">
+				<input type="radio" name="intro" id="slide1" checked>
+				<input type="radio" name="intro" id="slide2">
+				<input type="radio" name="intro" id="slide3">
+				<input type="radio" name="intro" id="slide4">
 				<ul id="imgholder" class="imgs">
 					 <li><img id="im" src="./img/section2/slider_1.jpg"></li>
 					 <li><img id="im" src="./img/section2/slider_2.jpg"></li>
@@ -129,8 +128,57 @@
 		</section>
 
 		<section class="s4">
-			<div class="s4Slider">
-				
+			<input type="radio" name="country" id="slide01" checked>
+			<input type="radio" name="country" id="slide02">
+			<input type="radio" name="country" id="slide03">
+			<input type="radio" name="country" id="slide04">
+			<div class="slidewrap">
+				<ul class="slidelist">
+					<li>
+						<a>
+							<label for="slide04" class="left">
+								<img src="./img/section4/left.png" style="width:100%; height:auto;"/>
+							</label>
+							<img src="./img/section4/hongkong.png" style="width:auto; height:100%">
+							<label for="slide02" class="right">
+								<img src="./img/section4/right.png" style="width:100%; height:auto;"/>
+							</label>
+						</a>
+					</li>
+					<li>
+						<a>
+							<label for="slide01" class="left">
+								<img src="./img/section4/left.png" style="width:100%; height:auto;"/>
+							</label>
+							<img src="./img/section4/japan.png" style="width:auto; height:100%">
+							<label for="slide03" class="right">
+								<img src="./img/section4/right.png" style="width:100%; height:auto;"/>
+							</label>
+						</a>
+					</li>
+					<li>
+						<a>
+							<label for="slide02" class="left">
+								<img src="./img/section4/left.png" style="width:100%; height:auto;"/>
+							</label>
+							<img src="./img/section4/singapore.png" style="width:auto; height:100%">
+							<label for="slide04" class="right">
+								<img src="./img/section4/right.png" style="width:100%; height:auto;"/>
+							</label>
+						</a>
+					</li>
+					<li>
+						<a>
+							<label for="slide03" class="left">
+								<img src="./img/section4/left.png" style="width:100%; height:auto;"/>
+							</label>
+							<img src="./img/section4/tailand.png" style="width:auto; height:100%">
+							<label for="slide01" class="right">
+								<img src="./img/section4/right.png" style="width:100%; height:auto;"/>
+							</label>
+						</a>
+					</li>
+				</ul>
 			</div>
 			<div class="mapSearch">
 

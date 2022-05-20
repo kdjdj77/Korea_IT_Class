@@ -5,26 +5,19 @@ body, html {
 header {
    position:fixed;
    top:0;
+   height:8%;
    width:100%;
    left:0;
    right:0;
-   padding:1rem;
    color:white;
    font-weight:bold;
    display:flex;
    justify-content:space-between;
    align-items:center;
    z-index:500;
-}
-header .logo {width:auto;height:50px;}
-#headerColor {
-   top:0;
-   position:fixed;
    background:orange;
-   height:8%;
-   width:100%;
-   z-index:400;
 }
+header .logo {width:auto; height:50px;}
 section {
    box-sizing:border-box;
    color:#fff;
@@ -32,21 +25,28 @@ section {
    text-align:center;
 }
 nav {
+   margin-top:1.5%;
    display:flex;
    justify-content:space-around;
    font-size:1.5rem;
    width:100%;
+   background:orange;
 }
-nav > li {list-style:none;}
+nav > li {
+   list-style:none;
+   height:70px;
+}
 .menu {
    margin-bottom:50px;
-   line-height: 3rem
+   line-height: 3rem;
 }
-header nav li:hover > .submenu {display:block;}
+header nav li:hover > .subMenu {display:block;}
 .subMenu {
    display:none;
    background-color:rgba(230, 230, 230, 0.9);
-   margin:21px auto;
+   margin:20px auto;
+   position:absolute;
+   width:10%;
 }
 .subMenu:hover + .subMenu {display:block;}
 .submenu li {
@@ -54,6 +54,11 @@ header nav li:hover > .submenu {display:block;}
    list-style:none;
    line-height:3rem;
    font-size:1.2rem;
+}
+.submenu li a {
+   list-style:none;
+   text-decoration:none;
+   color:black;
 }
 nav .menu {
    font-size:1.5rem;
@@ -63,9 +68,7 @@ nav .menu {
 nav .menu:hover{
    color:orangered;
 }
-.sns a{
-   text-decoration:none;
-}
+.sns a{text-decoration:none;}
 /*section1--------------------------------------------------------------------------------*/
 .s1 {background-color:black;}
 #vid1{
@@ -109,6 +112,8 @@ ul.imgs li{
 }
 #im {
    position:absolute;
+   height:auto;
+   width:100%;
    bottom:0px;
    left:50%;
    transform:translate(-50%, 0);
@@ -162,8 +167,8 @@ ul.imgs li{
 }
 /*section3--------------------------------------------------------------------------------*/
 .s3 {background-color:black; display:flex; flex-wrap:wrap;}
-.s3 .s3Padding {height:8%; width:100%;}
-.s3 div {width:50%; height:46%;}
+.s3 .s3Padding {height:7.2%; width:100%;}
+.s3 div {width:50%; height:46.4%;}
 .s3Food1{background:url(../img/section3/mainFood01.jpg)no-repeat center; background-size:cover;}
 .s3Food2{background:url(../img/section3/mainFood02.jpg)no-repeat center; background-size:cover;}
 .s3Food3{background:url(../img/section3/mainFood03.jpg)no-repeat center; background-size:cover;}
@@ -192,14 +197,74 @@ ul.imgs li{
 }
 /*section4--------------------------------------------------------------------------------*/
 .s4 {background-color:ivory; position:relative; display:flex; flex-wrap:wrap;}
-.s4Slider {
+.slidewrap {
    position:absolute;
    left:10%;
    top:25%;
    width:30%;
    height:60%;
-   background-color:green;
+   overflow:hidden;
+   max-width:30%;
 }
+/* INPUT 가리기 */
+.s4 input[id*="slide"] {display:none;}
+
+.s4 .slidelist {
+   white-space:nowrap;
+   font-size:0;
+   left:0;
+   padding:0;
+}
+.s4 .slidelist > li {
+   display:inline-block;
+   vertical-align:middle;
+   width:100%;
+   transition:all .5s;
+}
+/* 화살표 화면 밖으로 나가면 안보이도록 OVERFLOW로 가림처리 */
+.s4 .slidelist > li > a {
+   display:block;
+   position:relative;
+   overflow:hidden;
+}
+.s4 .slidelist > li > a img {width:100%;}
+
+/* 좌우로 넘기는 LABEL버튼에 대한 스타일 */
+.s4 .slidelist label {
+   position:absolute;
+   z-index:1;
+   top:50%;
+   transform:translateY(-50%);
+   padding:50px;
+   cursor:pointer;
+}
+/* LEFT -300px로 화살표가 안보이게 되어있도록 준 스타일 */
+.s4 .slidelist .left {
+   left:-300px;
+   /*background:url('./img/section4/left.png') center center / 100% no-repeat;*/
+}
+/* RIGHT -300px로 화살표가 안보이게 되어있도록 준 스타일 */
+.s4 .slidelist .right {
+   right:-300px;
+   /*background:url('./img/section4/right.png') center center / 100% no-repeat;*/
+}
+
+/* INPUT이 체크되면 변화값이 li까지 전달되는 스타일 */
+.s4 input[id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+.s4 input[id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+.s4 input[id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+.s4 input[id="slide04"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-300%);}
+
+/* INPUT이 체크되면 변화값이 LEFT,RIGHT에 전달되는 스타일 */
+.s4 input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .left {left:-20%;transition:all .35s ease .5s;} 
+.s4 input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .right {right:-20%;transition:all .35s ease .5s;} 
+.s4 input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .left {left:-20%;transition:all .35s ease .5s;} 
+.s4 input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .right {right:-20%;transition:all .35s ease .5s;} 
+.s4 input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .left {left:-20%;transition:all .35s ease .5s;} 
+.s4 input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .right {right:-20%;transition:all .35s ease .5s;} 
+.s4 input[id="slide04"]:checked ~ .slidewrap li:nth-child(4) .left {left:-20%;transition:all .35s ease .5s;} 
+.s4 input[id="slide04"]:checked ~ .slidewrap li:nth-child(4) .right {right:-20%;transition:all .35s ease .5s;} 
+
 .mapSearch {
    position:absolute;
    left:45%;
