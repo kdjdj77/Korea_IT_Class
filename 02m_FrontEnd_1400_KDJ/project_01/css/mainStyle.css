@@ -199,12 +199,12 @@ ul.imgs li{
 .s4 {background-color:ivory; position:relative; display:flex; flex-wrap:wrap;}
 .slidewrap {
    position:absolute;
-   left:10%;
-   top:25%;
-   width:30%;
-   height:60%;
+   left:0%;
+   top:0%;
+   width:45%;
+   height:100%;
    overflow:hidden;
-   max-width:30%;
+   max-width:45%;
 }
 /* INPUT 가리기 */
 .s4 input[id*="slide"] {display:none;}
@@ -256,22 +256,22 @@ ul.imgs li{
 .s4 input[id="slide04"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-300%);}
 
 /* INPUT이 체크되면 변화값이 LEFT,RIGHT에 전달되는 스타일 */
-.s4 input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .left {left:-20%;transition:all .35s ease .5s;} 
-.s4 input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .right {right:-20%;transition:all .35s ease .5s;} 
-.s4 input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .left {left:-20%;transition:all .35s ease .5s;} 
-.s4 input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .right {right:-20%;transition:all .35s ease .5s;} 
-.s4 input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .left {left:-20%;transition:all .35s ease .5s;} 
-.s4 input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .right {right:-20%;transition:all .35s ease .5s;} 
-.s4 input[id="slide04"]:checked ~ .slidewrap li:nth-child(4) .left {left:-20%;transition:all .35s ease .5s;} 
-.s4 input[id="slide04"]:checked ~ .slidewrap li:nth-child(4) .right {right:-20%;transition:all .35s ease .5s;} 
+.s4 input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .left {left:-10%;transition:all .35s ease .5s;} 
+.s4 input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .right {right:-10%;transition:all .35s ease .5s;} 
+.s4 input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .left {left:-10%;transition:all .35s ease .5s;} 
+.s4 input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .right {right:-10%;transition:all .35s ease .5s;} 
+.s4 input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .left {left:-10%;transition:all .35s ease .5s;} 
+.s4 input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .right {right:-10%;transition:all .35s ease .5s;} 
+.s4 input[id="slide04"]:checked ~ .slidewrap li:nth-child(4) .left {left:-10%;transition:all .35s ease .5s;} 
+.s4 input[id="slide04"]:checked ~ .slidewrap li:nth-child(4) .right {right:-10%;transition:all .35s ease .5s;} 
 
 .mapSearch {
    position:absolute;
    left:45%;
-   top:25%;
-   width:45%;
-   height:60%;
-   background-color:red;
+   top:0%;
+   width:55%;
+   height:100%;
+   background-color:green;
 }
 /*section5--------------------------------------------------------------------------------*/
 .s5 {background-color:red;}
