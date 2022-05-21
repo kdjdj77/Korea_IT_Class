@@ -1,0 +1,21 @@
+html,
+body {
+   height:100%;
+}
+#menu {
+   background-color:antiquewhite;
+   display:flex;
+   visibility:hidden;
+   transition:all 1s ease;
+   list-style:none;
+   justify-content:space-around;
+   /*width:40vw;*/
+   /*height:0%;*/
+   opacity:0;
+}
+#hover:hover + #menu {
+   visibility:visible;
+   /*width:100vw;*/
+   /*height:30%;*/
+   opacity:1;
+}

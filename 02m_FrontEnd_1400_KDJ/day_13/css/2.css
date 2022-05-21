@@ -1,0 +1,35 @@
+#menu {
+   background-color:antiquewhite;
+   display:flex;
+   visibility:hidden;
+   transition:all 1s ease;
+   list-style:none;
+   justify-content:space-around;
+   /*width:40vw;*/
+   /*height:0%;*/
+   opacity:0;
+}
+/*input[type="checkbox"] or */
+#click {
+   display:none;
+}
+#click + label {
+   display:inline-block;
+   background:url("../img/checkbox.png");
+   cursor:pointer;
+   width:48px;
+   height:48px;
+}
+#click:checked + label {
+   display:inline-block;
+   background:url("../img/checked.png");
+   cursor:pointer;
+   width:48px;
+   height:48px;
+}
+#click:checked ~ #menu {
+   visibility:visible;
+   /*width:100vw;*/
+   /*height:30%;*/
+   opacity:1;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - 심화 3</title>
+    <link rel="stylesheet" href="./css/3.css" />
+  </head>
+  <body>
+    <div class="slidebox">
+      <input type="radio" name="slide" id="slide01" checked />
+      <input type="radio" name="slide" id="slide02" />
+      <input type="radio" name="slide" id="slide03" />
+      <input type="radio" name="slide" id="slide04" />
+      <ul class="slidelist">
+        <li class="slideitem">메뉴1</li>
+        <li class="slideitem">메뉴2</li>
+        <li class="slideitem">메뉴3</li>
+        <li class="slideitem">메뉴4</li>
+      </ul>
+      <div class="slide-control">
+        <div class="control01">
+          <label for="slide04" class="prev"></label>
+          <label for="slide02" class="next"></label>
+        </div>
+        <div class="control02">
+          <label for="slide01" class="prev"></label>
+          <label for="slide03" class="next"></label>
+        </div>
+        <div class="control03">
+          <label for="slide02" class="prev"></label>
+          <label for="slide04" class="next"></label>
+        </div>
+        <div class="control04">
+          <label for="slide03" class="prev"></label>
+          <label for="slide01" class="next"></label>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
