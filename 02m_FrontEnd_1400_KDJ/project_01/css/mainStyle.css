@@ -117,8 +117,8 @@ ul.imgs li{
 #im {
    position:absolute;
    height:auto;
-   width:100%;
-   bottom:0px;
+   height:100%;
+   top:0px;
    left:50%;
    transform:translate(-50%, 0);
 }
@@ -153,7 +153,7 @@ ul.imgs li{
    justify-content:center;
 }
 .s3 .s3Name {
-   margin-top:12%; 
+   margin-top:9%; 
    width:100%; 
    height:10%; 
    font-size:3rem; 
@@ -274,16 +274,83 @@ ul.imgs li{
    color:black;
 }
 .s4 .mapSearch .map {
+   background:url(../img/section4/map.jpg);
    height:90%;
    width:100%;
-   background-color:green;
+}
+.s4 .mapSearch .map .mSearch {
+   font-size:1.5rem;
+   position:absolute;
+   width:300px;
+   height:90%;
+   z-index:1;
+   background-color:orange;
+   right:0;
+}
+.mSearch .mSearchInput {
+   margin-top:5%;
+   font-size:1.5rem;
+   width:90%;
+   height:7%;
+}
+.mSearch .mSearchbutton {
+   color:white;
+   background-color:black;
+   margin-top:2%;
+   font-size:1.5rem;
+   width:90%;
+   height:7%;
+}
+.mSearch .mSearchbutton:hover {
+   cursor:pointer;
+   border:3px solid white;
+}
+.mSearch .BaedalEx {
+   position:absolute;
+   bottom:17%;
+   width:95%;
+   font-size:1rem;
+   right:2.5%;
+}
+.mSearch .mSearchBaedal {
+   position:absolute;
+   background:url(../img/section4/baedal.png);
+   background-size:cover;
+   bottom:5%;
+   width:95%;
+   height:10%;
+   right:2.5%;
 }
 /*section5--------------------------------------------------------------------------------*/
-.s5 {background-color:red;}
-/*section6--------------------------------------------------------------------------------*/
-.s6 {background-color:orange;}
-
-
+.s5 {position:relative; background-color:ivory;}
+#fadeSlide {
+   display:flex;
+   flex-wrap:wrap;
+   position:absolute;
+   bottom:0;
+   height:70%;
+   left:5%;
+   width:90%;
+   opacity:0;
+   justify-content:space-between;
+}
+.s5Title {
+   height:100%; 
+   width:60%; 
+   color:black;
+   text-align:left;
+}
+#fadeSlide img {width:30%; height:70%;}
+.s5 .fadeBlock1 {animation:fade1 30s infinite normal;}
+.s5 .fadeBlock2 {animation:fade2 30s infinite normal;}
+.s5 .fadeBlock3 {animation:fade3 30s infinite normal;}
+.s5 .fadeBlock4 {animation:fade4 30s infinite normal;}
+.s5 .fadeBlock5 {animation:fade5 30s infinite normal;}
+@keyframes fade1 {0%{opacity:1;}15%{opacity:1;}20%{opacity:0;}95%{opacity:0;}100%{opacity:1;}}
+@keyframes fade2 {0%{opacity:0;}15%{opacity:0;}20%{opacity:1;}35%{opacity:1;}40%{opacity:0;}100%{opacity:0;}}
+@keyframes fade3 {0%{opacity:0;}35%{opacity:0;}40%{opacity:1;}55%{opacity:1;}60%{opacity:0;}100%{opacity:0;}}
+@keyframes fade4 {0%{opacity:0;}55%{opacity:0;}60%{opacity:1;}75%{opacity:1;}80%{opacity:0;}100%{opacity:0;}}
+@keyframes fade5 {0%{opacity:0;}75%{opacity:0;}80%{opacity:1;}95%{opacity:1;}100%{opacity:0;}}
 footer {
    width:100%;
    height:400px;

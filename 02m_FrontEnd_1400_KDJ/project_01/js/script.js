@@ -1,4 +1,4 @@
-var total_section = 6; //전체 원페이지 수
+var total_section = 0; //전체 원페이지 수
 var current_idx = 0;
 var screen_h = 0; // 화면 높이
 var page_h = 0;

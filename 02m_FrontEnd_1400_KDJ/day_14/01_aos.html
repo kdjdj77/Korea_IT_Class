@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>AOS</title>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <style>
+         * {margin:0; padding:0; box-sizing:border-box;}
+         .item {
+            position:relative;
+            margin:20rem auto;
+            width:30%;
+            height:50vh;
+            background-color:aquamarine;
+            font-size:3rem;
+            font-weight:bold;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>FADE</h1>
+      <div class="item" data-aos="fade-up">fade-up</div>
+      <div class="item" data-aos="fade-down">fade-down</div>
+      <div class="item" data-aos="fade-right">fade-right</div>
+      <div class="item" data-aos="fade-left">fade-left</div>
+      <div class="item" data-aos="fade-up-right">fade-up-right</div>
+      <div class="item" data-aos="fade-up-left">fade-up-left</div>
+      <div class="item" data-aos="fade-down-right">fade-down-right</div>
+      <div class="item" data-aos="fade-down-left">fade-down-left</div>
+      
+      <h1>FLIP</h1>
+      <div class="item" data-aos="flip-left">flip-left</div>
+      <div class="item" data-aos="flip-right">flip-left</div>
+      <div class="item" data-aos="flip-up">flip-left</div>
+
+      <h1>ZOOM</h1>
+      <div class="item" data-aos="zoom-in">ZOOM-IN</div>
+      <div class="item" data-aos="zoom-out">ZOOM-OUT</div>
+      <div class="item" data-aos="zoom-in-up">ZOOM-IN-UP</div>
+
+      <h1>OPTION</h1>
+      <div class="item" data-aos="fade-up" data-aos-duration="3000">
+         fade-up
+      </div>
+      <div class="item" data-aos="fade-down" data-aos-easing="linear">
+         fade-down-linear
+      </div>
+      <div class="item" data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
+         fade-zoom-in
+      </div>
+      <div class="item" data-aos="fade-up" data-anchor-placement="bottom-center">
+         fade-up-bottom-center
+      </div>
+
+      <script>
+         AOS.init();
+      </script>
+   </body>
+</html>
