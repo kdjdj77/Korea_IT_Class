@@ -22,6 +22,7 @@ header {
 }
 header .logo {width:auto; height:50px;}
 section {
+   position:absolute;
    box-sizing:border-box;
    color:#fff;
    font-size:24px;
@@ -47,6 +48,7 @@ header nav li:hover > .subMenu {display:block;}
 .subMenu {
    height:auto;
    display:none;
+   border-top:4px solid red;
    background-color:rgba(230, 230, 230, 0.8);
    margin:22px auto;
    position:absolute;
@@ -80,7 +82,7 @@ nav .menu:hover{
    height:100%;
 }
 /*section1--------------------------------------------------------------------------------*/
-.s1 {background-color:black;}
+.s1 {background-color:black; position:relative;}
 #vid1{
    max-height:100%;
    width:100%; 
@@ -94,6 +96,7 @@ nav .menu:hover{
    background-color:black;
    display:flex;
    justify-content:center;
+   position:relative;
 }
 .slider{
    max-height:100%;
@@ -128,6 +131,10 @@ ul.imgs li{
    left:50%;
    transform:translate(-50%, 0);
 }
+.im1 {background:url(../img/section2/slider_1.jpg)no-repeat;}
+.im2 {background:url(../img/section2/slider_2.jpg)no-repeat;}
+.im3 {background:url(../img/section2/slider_3.jpg)no-repeat;}
+.im4 {background:url(../img/section2/slider_4.jpg)no-repeat;}
 .bullets{
    position:absolute;
    left:50%;
@@ -158,6 +165,7 @@ ul.imgs li{
    display:flex; 
    flex-wrap:wrap; 
    justify-content:center;
+   position:relative;
 }
 .s3 .s3Name {
    z-index:1;
@@ -347,27 +355,27 @@ ul.imgs li{
    height:100%;
 }
 .fadeBG1 {
-   background:url(../img/BG/fadeBg1.jpg) no-repeat;
+   background:url(../img/BG/fadeBg1.jpg)center center no-repeat;
    background-size:cover; 
    animation:fade1 30s infinite normal;
 }
 .fadeBG2 {
-   background:url(../img/BG/fadeBg2.jpg) no-repeat;
+   background:url(../img/BG/fadeBg2.jpg)center center no-repeat;
    background-size:cover; 
    animation:fade2 30s infinite normal;
 }
 .fadeBG3 {
-   background:url(../img/BG/fadeBg3.jpg) no-repeat;
+   background:url(../img/BG/fadeBg3.jpg)center center no-repeat;
    background-size:cover; 
    animation:fade3 30s infinite normal;
 }
 .fadeBG4 {
-   background:url(../img/BG/fadeBg4.jpg) no-repeat;
+   background:url(../img/BG/fadeBg4.jpg)center center no-repeat;
    background-size:cover; 
    animation:fade4 30s infinite normal;
 }
 .fadeBG5 {
-   background:url(../img/BG/fadeBg5.jpg) no-repeat;
+   background:url(../img/BG/fadeBg5.jpg)center center no-repeat;
    background-size:cover; 
    animation:fade5 30s infinite normal;
 }
@@ -401,8 +409,14 @@ ul.imgs li{
 @keyframes fade3 {0%{opacity:0;}35%{opacity:0;}40%{opacity:1;}55%{opacity:1;}60%{opacity:0;}100%{opacity:0;}}
 @keyframes fade4 {0%{opacity:0;}55%{opacity:0;}60%{opacity:1;}75%{opacity:1;}80%{opacity:0;}100%{opacity:0;}}
 @keyframes fade5 {0%{opacity:0;}75%{opacity:0;}80%{opacity:1;}95%{opacity:1;}100%{opacity:0;}}
-footer {
-   width:100%;
-   height:400px;
-   background-color:gray;
+/*section6--------------------------------------------------------------------------------*/
+.s6 {
+   background-color:ivory;
+   position:relative;
+}
+
+
+/*media queries--------------------------------------------------------------------------------*/
+@media screen and (max-width:787px) {
+   
 }
