@@ -1,0 +1,105 @@
+header {
+   position:fixed;
+   top:0;
+   height:8%;
+   width:100%;
+   left:0;
+   right:0;
+   color:white;
+   font-weight:bold;
+   display:flex;
+   justify-content:space-between;
+   align-items:center;
+   z-index:500;
+   background:orange;
+}
+.mobileMenu {
+   margin-left:-40px;
+   width:auto;
+   height:60px;
+   display:none;
+}
+#sidebar {width:0px; height:0px;}
+#sidebar:checked ~ .sidebarMenu {
+   display:block;
+}
+.mobileMenu:hover {
+   cursor:pointer;
+}
+.sidebarMenu {
+   display:none;
+   background-color:black;
+   position:absolute;
+   top:50px;
+   left:0;
+   width:100px;
+   height:calc(90vh);
+}
+header .logo {width:auto; height:50px;}
+nav {
+   margin-top:1.5%;
+   display:flex;
+   justify-content:space-around;
+   font-size:1.5rem;
+   width:100%;
+   background:orange;
+}
+nav > li {
+   list-style:none;
+   height:70px;
+}
+.menu {
+   margin-bottom:50px;
+   line-height: 3rem;
+}
+#headerMedia1 {display:block;}
+#headerMedia2 {display:none;}
+header nav li:hover > .subMenu {display:block;}
+.subMenu {
+   height:auto;
+   display:none;
+   border-top:4px solid red;
+   background-color:rgba(230, 230, 230, 0.8);
+   margin:-28px auto;
+   position:absolute;
+   width:10%;
+}
+.subMenu:hover + .subMenu {display:block;}
+.submenu li {
+   color:black;
+   list-style:none;
+   line-height:3rem;
+   font-size:1.2rem;
+}
+.submenu li a {
+   list-style:none;
+   text-decoration:none;
+   color:black;
+}
+nav .menu {
+   font-size:1.5rem;
+   text-decoration:none;
+   color:black;
+}
+nav .menu:hover{
+   color:orangered;
+}
+.sns a{text-decoration:none;}
+
+/*media Queries--------------------------------------------------------------*/
+/*tablet*/
+@media screen and (max-width:1064px) and (min-width:787px) {
+   #headerMedia1 {display:none;}
+   #headerMedia2 {display:block;}
+   header nav .mobileMenu {
+      display:none;
+   }
+}
+/*mobile*/
+@media screen and (max-width:787px) {
+   #headerMedia1 {display:none;}
+   #headerMedia2 {display:none;}
+   header nav .mobileMenu {
+      display:block;
+   }
+}

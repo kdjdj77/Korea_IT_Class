@@ -2,29 +2,45 @@
 	<title>스시로</title>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" type="text/css" href="./css/mainStyle.css">
+	<link rel="stylesheet" type="text/css" href="./css/header.css">
 </head>
 <body>
 	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="./js/script.js"></script>
 	<header>
 		<nav>
+			<input id="sidebar" type="checkbox" checked="unchecked"/>
+			<div class="sidebar">
+				<label for="sidebar">
+					<img class="mobileMenu" src="./img/header/mobile_menu.png"></img>
+				</label>
+			</div>
+			<div class="sidebarMenu">
+
+			</div>
 			<div class="logo">
 				<a href="./mainPage.html">
 					<img src="./img/header/logo.png"/>
 				</a>
 			</div>
-			<li><a class="menu" href="./mainPage.html">브랜드스토리</a>
+			<li>
+				<a class="menu" id="headerMedia1" href="./mainPage.html">브랜드스토리</a>
+				<a class="menu" id="headerMedia2" href="./mainPage.html">브랜드</a>
 				<ul class="subMenu">
 					<li><a href="#">소개</a></li>
 					<li><a href="#">연혁</a></li>
 				</ul>
 			</li>
-			<li><a class="menu" href="./mainPage.html">이달의 한정메뉴</a>
+			<li>
+				<a class="menu" id="headerMedia1" href="./mainPage.html">이달의 한정메뉴</a>
+				<a class="menu" id="headerMedia2" href="./mainPage.html">한정메뉴</a>
 				<ul class="subMenu">
 					<li><a href="#">한정메뉴</a></li>
 				</ul>
 			</li>
-			<li><a class="menu" href="./mainPage.html">그랜드메뉴</a>
+			<li>
+				<a class="menu" id="headerMedia1" href="./mainPage.html">그랜드메뉴</a>
+				<a class="menu" id="headerMedia2" href="./mainPage.html">전체메뉴</a>
 				<ul class="subMenu">
 					<li><a href="#">초밥</a></li>
 					<li><a href="#">사이드</a></li>
@@ -32,7 +48,9 @@
 					<li><a href="#">음료</a></li>
 				</ul>
 			</li>
-			<li><a class="menu" href="./mainPage.html">테이크아웃ㆍ배달</a>
+			<li>
+				<a class="menu" id="headerMedia1" href="./mainPage.html">테이크아웃ㆍ배달</a>
+				<a class="menu" id="headerMedia2" href="./mainPage.html">주문</a>
 				<ul class="subMenu">
 					<li><a href="#">덮밥</a></li>
 					<li><a href="#">음료</a></li>
@@ -40,13 +58,13 @@
 			</li>
 			<div class="sns">
 				<a href="https://www.instagram.com/sushiro_korea/">
-					<img src="./img/header/instagram.png" width="50px"/>
+					<img src="./img/header/instagram.png" width="45px"/>
 				</a>
 				<a href="https://www.facebook.com/sushiro.kr">
-					<img src="./img/header/facebook.png" width="50px"/>
+					<img src="./img/header/facebook.png" width="45px"/>
 				</a>
 				<a href="https://www.youtube.com/watch?v=PHeXvX-R2pA&feature=youtu.be">
-					<img src="./img/header/youtube.png" width="50px"/>
+					<img src="./img/header/youtube.png" width="45px"/>
 				</a>
 			</div>
 			<div class="logo2">
@@ -71,10 +89,10 @@
 				<input type="radio" name="intro" id="slide3">
 				<input type="radio" name="intro" id="slide4">
 				<ul id="imgholder" class="imgs">
-					 <li><img id="im" src="./img/section2/slider_1.jpg" ></img></li>
-					 <li><img id="im" src="./img/section2/slider_2.jpg" ></img></li>
-					 <li><img id="im" src="./img/section2/slider_3.jpg" ></img></li>
-					 <li><img id="im" src="./img/section2/slider_4.jpg" ></img></li>
+					 <li><div id="im1" class="s2SliderImg1" ></div></li>
+					 <li><div id="im2" class="s2SliderImg2" ></div></li>
+					 <li><div id="im3" class="s2SliderImg3" ></div></li>
+					 <li><div id="im4" class="s2SliderImg4" ></div></li>
 				</ul>
 				<div class="bullets">
 					 <label for="slide1">&nbsp;</label>
@@ -152,7 +170,7 @@
 			<input type="radio" name="country" id="slide03">
 			<input type="radio" name="country" id="slide04">
 			<div class="slidewrap">
-				<div><b>테마</b></div>
+				<div id="s4Name"><b>테마</b></div>
 				<ul class="slidelist">
 					<li>
 						<a>
@@ -201,7 +219,7 @@
 				</ul>
 			</div>
 			<div class="mapSearch">
-				<div><b>매장검색</b></div>
+				<div id="s4Name"><b>매장검색</b></div>
 				<div class="map">
 					<div class="mSearch">
 						</br>
@@ -284,7 +302,7 @@
 						<br/>맛있는 생선을 구입하는 것에는 지식과 경험이 필요합니다.<br/>
 						산지, 계절, 환경, 어체의 크기에 따라 같은 생선이라도 맛이 달라지며, 스시로는 스시 장인의 감정력으로 전세계의 맛있는 생선을 엄격한 품질 기준에 맞추어 신선하고 좋은 재료를 구입하고 있습니다.
 					</div>
-					<div style="margin-left:3%; font-size:1.2rem; line-height:2rem;">
+					<div id="s5SubText">
 						<br/>
 						-엄선하여 수급한 업계 높은 품질의 참치만을 사용합니다. 해수와 같은 농도의 물로 매일매일 필요한 만큼 해동하여, 맛을 놓치지 않고 참치 본연의 맛을 끌어냅니다. 참치 종류 및 부위별 특성에 따라, 해동 및 전처리 공정을 지속적으로 연구하여 가장 맛있게 본연의 맛을 살릴 수 있도록 끊임없이 연구합니다.<br/>
 						-베스트셀러인 연어 스시를 위해서 쓰는 생연어는 노르웨이산, 냉동연어와 훈제연어는 칠레산으로 일주일에 3회 항공편 으로 받아서, 국내에서 손질하고, 매일 매일 쓸 만큼의 양만 매장으로 배송됩니다.<br/>

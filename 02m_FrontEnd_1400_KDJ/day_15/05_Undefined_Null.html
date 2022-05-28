@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Undefined, Null</title>
+      <script>
+         let str = 10 * "Hello"; //NaN
+         /*
+            NaN (Not a Number)
+            정의 되지 않은 겂이나 표현할 수 없는 값
+            숫자로 변환할 수 없는 연산을 시도한 경우
+         */
+        let num;
+        console.log(num);           // undefined
+        console.log(typeof num);    // undefined
+
+        let obj1 = null;
+        console.log(obj1);          // null
+        console.log(typeof obj1);   // object //null != object
+        //js의 초기 버그 > 하위호완성을 위해 수정을 하지 않았음
+
+        let obj2 = {};
+        console.log(obj2);          // object
+        console.log(typeof obj2);   // object
+      </script>
+   </head>
+   <body>
+      
+   </body>
+</html>

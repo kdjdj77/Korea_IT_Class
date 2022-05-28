@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>객체형, 심볼형</title>
+      <script>
+         let id = "apple";
+         const info = {
+            id,
+            //let id를 뜻함
+            //id : "apple"과 같은 형식
+            pw:"1234",
+            age:10,
+         };
+         console.log(typeof info);
+         console.log(info);
+
+         //하위 연산자 .
+         //A.b ===> A 안의 b || A 의 b
+         console.log("아이디는" + info.id + "입니다");
+         console.log(`비밀번호는 ${info.pw} 입니다`);
+         console.log("나이:" + info.age);
+
+         //심볼형
+         const symbol1 = Symbol("apple");
+         console.log(symbol1);         //Symbol(apple)
+
+         const food = {
+            name:"tomato",
+            [symbol1]:"tomato",
+         };
+
+         console.log(food);            //Object
+         console.log(typeof food[symbol1]);//string
+
+         console.log(food.symbol1);    //undefined
+         console.log(food[symbol1]);   //tomato
+      </script>
+   </head>
+   <body>
+      
+   </body>
+</html>

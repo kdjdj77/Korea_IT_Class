@@ -5,69 +5,6 @@ body, html {
 body::-webkit-scrollbar {
    display:none;
 }
-header {
-   position:fixed;
-   top:0;
-   height:8%;
-   width:100%;
-   left:0;
-   right:0;
-   color:white;
-   font-weight:bold;
-   display:flex;
-   justify-content:space-between;
-   align-items:center;
-   z-index:500;
-   background:orange;
-}
-header .logo {width:auto; height:50px;}
-nav {
-   margin-top:1.5%;
-   display:flex;
-   justify-content:space-around;
-   font-size:1.5rem;
-   width:100%;
-   background:orange;
-}
-nav > li {
-   list-style:none;
-   height:70px;
-}
-.menu {
-   margin-bottom:50px;
-   line-height: 3rem;
-}
-header nav li:hover > .subMenu {display:block;}
-.subMenu {
-   height:auto;
-   display:none;
-   border-top:4px solid red;
-   background-color:rgba(230, 230, 230, 0.8);
-   margin:22px auto;
-   position:absolute;
-   width:10%;
-}
-.subMenu:hover + .subMenu {display:block;}
-.submenu li {
-   color:black;
-   list-style:none;
-   line-height:3rem;
-   font-size:1.2rem;
-}
-.submenu li a {
-   list-style:none;
-   text-decoration:none;
-   color:black;
-}
-nav .menu {
-   font-size:1.5rem;
-   text-decoration:none;
-   color:black;
-}
-nav .menu:hover{
-   color:orangered;
-}
-.sns a{text-decoration:none;}
 section {
    position:absolute;
    box-sizing:border-box;
@@ -123,13 +60,13 @@ ul.imgs li{
    padding:0;
    margin:0;
 }
+.s2SliderImg1 {background:url("../img/section2/slider_1.jpg")no-repeat;height:100%;width:auto;}
+.s2SliderImg2 {background:url("../img/section2/slider_2.jpg")no-repeat;height:100%;width:auto;}
+.s2SliderImg3 {background:url("../img/section2/slider_3.jpg")no-repeat;height:100%;width:auto;}
+.s2SliderImg4 {background:url("../img/section2/slider_4.jpg")center center no-repeat;height:100%;width:auto;}
 #im {
    position:absolute;
-   height:auto;
-   height:100%;
    top:0px;
-   left:50%;
-   transform:translate(-50%, 0);
 }
 .bullets{
    position:absolute;
@@ -214,18 +151,21 @@ ul.imgs li{
 }
 .slidewrap {
    position:absolute;
-   left:10%;
+   left:5%;
    top:20%;
-   width:550px;
+   width:580px;
    height:70%;
    overflow:hidden;
-   max-width:45%;
+   min-width:580px;
 }
 .s4 .slidewrap > div {
    height:10%; 
    width:100%;
    font-size:2rem;
    color:white;
+}
+#s4Name {
+   display:block;
 }
 /* INPUT 가리기 */
 .s4 input[id*="slide"] {display:none;}
@@ -281,8 +221,8 @@ ul.imgs li{
 
 .mapSearch {
    position:absolute;
-   left:calc(500px + 20%);
-   right:10%;
+   left:calc(580px + 10%);
+   right:5%;
    top:20%;
    height:70%;
 }
@@ -308,6 +248,8 @@ ul.imgs li{
    right:0;
 }
 .mSearch .mSearchInput {
+   display:block;
+   margin-left:5%;
    margin-top:5%;
    font-size:1.5rem;
    width:90%;
@@ -326,6 +268,7 @@ ul.imgs li{
    border:3px solid white;
 }
 .mSearch .BaedalEx {
+   display:block;
    position:absolute;
    bottom:17%;
    width:95%;
@@ -333,6 +276,7 @@ ul.imgs li{
    right:2.5%;
 }
 .mSearch .mSearchBaedal {
+   display:block;
    position:absolute;
    background:url(../img/section4/baedal.png) center;
    background-size:cover;
@@ -380,6 +324,7 @@ ul.imgs li{
    flex-wrap:wrap;
    position:absolute;
    bottom:0;
+   top:25%;
    height:70%;
    left:5%;
    width:90%;
@@ -394,7 +339,13 @@ ul.imgs li{
    word-break:keep-all;
    line-height:3rem;
 }
-#fadeSlide img {width:29%; height:70%; visibility:hidden;}
+.s5Title #s5SubText {
+   visibility:visible;
+   margin-left:3%;
+   font-size:1.2rem;
+   line-height:2rem;
+}
+#fadeSlide img {width:29%; height:70%; visibility:hidden; display:block;}
 .s5 .fadeBlock1 {animation:fade1 30s infinite normal;}
 .s5 .fadeBlock2 {animation:fade2 30s infinite normal;}
 .s5 .fadeBlock3 {animation:fade3 30s infinite normal;}
@@ -415,4 +366,73 @@ ul.imgs li{
 /*media queries--------------------------------------------------------------------------------*/
 @media screen and (max-width:787px) {
    
+/*section1--------------------------------------------------------------------------------*/
+
+/*section2--------------------------------------------------------------------------------*/
+   .s2SliderImg1 {background:url("../img/section2/slider_1_mobile.jpg")no-repeat;height:100%;width:auto;}
+   .s2SliderImg2 {background:url("../img/section2/slider_2_mobile.jpg")no-repeat;height:100%;width:auto;}
+   .s2SliderImg3 {background:url("../img/section2/slider_3_mobile.jpg")no-repeat;height:100%;width:auto;}
+   .s2SliderImg4 {background:url("../img/section2/slider_4_mobile.jpg")no-repeat;height:100%;width:auto;}
+/*section3--------------------------------------------------------------------------------*/
+   .s3 .s3f{width:45%; height:35%; margin:0 auto;}
+/*section4--------------------------------------------------------------------------------*/
+   #s4Name {display:none;}
+   .slidewrap {top:10%; left:50%; transform:translateX(-50%);}
+   .mapSearch {
+      left:50%;
+      transform:translateX(-50%);
+      top:80%;
+      height:20%;
+      width:580px;
+   }
+   .s4 .mapSearch .map .mSearch {
+      width:100%;
+      background-color:rgba(0,0,0,0);
+   }
+   .mSearch .BaedalEx {display:none;}
+   .mSearch .mSearchBaedal {display:none;}
+   .mSearch .mSearchInput {display:none;}
+   .mSearch .mSearchbutton {height:25%; width:60%;}
+   .s4 .mapSearch .map {background:rgba(0,0,0,0); color:white;}
+/*section5--------------------------------------------------------------------------------*/
+   .s5Title #s5SubText {visibility:hidden;}
+   .s5Title {width:90%;}
+   #fadeSlide img {display:none;}
+/*section6--------------------------------------------------------------------------------*/
+   
+}
+
+@media screen and (min-width:787px) and (max-width:1064px) {
+   
+/*section1--------------------------------------------------------------------------------*/
+
+/*section2--------------------------------------------------------------------------------*/
+
+/*section3--------------------------------------------------------------------------------*/
+   .s3 .s3f{width:45%; height:35%; margin:0 auto;}
+/*section4--------------------------------------------------------------------------------*/
+   #s4Name {display:none;}
+   .slidewrap {top:10%; left:50%; transform:translateX(-50%);}
+   .mapSearch {
+      left:50%;
+      transform:translateX(-50%);
+      top:80%;
+      height:20%;
+      width:580px;
+   }
+   .s4 .mapSearch .map .mSearch {
+      width:100%;
+      background-color:rgba(0,0,0,0);
+   }
+   .mSearch .BaedalEx {display:none;}
+   .mSearch .mSearchBaedal {display:none;}
+   .mSearch .mSearchInput {display:none;}
+   .mSearch .mSearchbutton {height:25%; width:60%;}
+   .s4 .mapSearch .map {background:rgba(0,0,0,0); color:white;}
+/*section5--------------------------------------------------------------------------------*/
+   .s5Title #s5SubText {visibility:hidden;}
+   .s5Title {width:80%;}
+   #fadeSlide img {width:5%; visibility:hidden; display:block;}
+/*section6--------------------------------------------------------------------------------*/
+      
 }
