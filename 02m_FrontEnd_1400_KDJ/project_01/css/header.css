@@ -1,7 +1,7 @@
 header {
    position:fixed;
    top:0;
-   height:8%;
+   height:80px;
    width:100%;
    left:0;
    right:0;
@@ -12,6 +12,7 @@ header {
    align-items:center;
    z-index:500;
    background:orange;
+   font-family: 'Nanum Gothic Coding', monospace;
 }
 .mobileMenu {
    margin-left:-40px;
@@ -20,20 +21,17 @@ header {
    display:none;
 }
 #sidebar {width:0px; height:0px;}
-#sidebar:checked ~ .sidebarMenu {
-   display:block;
-}
-.mobileMenu:hover {
-   cursor:pointer;
-}
+.mobileMenu:hover {cursor:pointer;}
 .sidebarMenu {
+   padding-left:3%;
+   z-index:-1;
    display:none;
-   background-color:black;
+   background-color:orange;
    position:absolute;
-   top:50px;
+   top:80px;
    left:0;
-   width:100px;
-   height:calc(90vh);
+   width:300px;
+   height:92vh;
 }
 header .logo {width:auto; height:50px;}
 nav {
@@ -63,6 +61,7 @@ header nav li:hover > .subMenu {display:block;}
    margin:-28px auto;
    position:absolute;
    width:10%;
+   min-width:100px;
 }
 .subMenu:hover + .subMenu {display:block;}
 .submenu li {
@@ -88,18 +87,36 @@ nav .menu:hover{
 
 /*media Queries--------------------------------------------------------------*/
 /*tablet*/
-@media screen and (max-width:1064px) and (min-width:787px) {
+@media screen and (max-width:1080px) and (min-width:787px) {
    #headerMedia1 {display:none;}
    #headerMedia2 {display:block;}
-   header nav .mobileMenu {
-      display:none;
-   }
+   header nav .mobileMenu {display:none;}
+   nav .sidebarMenu {display:none;}
 }
 /*mobile*/
 @media screen and (max-width:787px) {
    #headerMedia1 {display:none;}
    #headerMedia2 {display:none;}
-   header nav .mobileMenu {
-      display:block;
+   header nav .mobileMenu {display:block;}
+   #sidebar:checked ~ .sidebarMenu {display:block; animation:SBAnimationOn 0.5s;}
+   .sidebarMenu a{
+      text-decoration:none;
+      list-style:none;
+      color:black;
+   }
+   .sidebarMenu a:hover{color:red;}
+   .sidebarMenu ul li {color:black}
+   .sidebarMenu ul li a{
+      line-height:2rem;
+      font-weight:lighter;
+      text-decoration:none;
+      color:black;
+      font-size:1.3rem;
+   }
+   .sidebarMenu ul li a:hover{color:red;}
+
+   @keyframes SBAnimationOn {
+      0% {transform-origin:0% 0%; transform:scaleX(0);}
+      100% {transform-origin:0% 100%; transform:scaleX(1);}
    }
 }

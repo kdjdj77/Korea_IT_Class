@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>퀴즈</title>
+    <script>
+      /*
+
+        이름: 여러분들 성함
+        국어: 70
+        수학: 80
+        영어: 50
+        탐구: 40
+
+        평균을 구하여
+        90이상이면 A학점
+        80이상이면 B학점
+        70이상이면 C학점
+        60이상이면 D학점을 이름과 함께, 콘솔에 찍히게 하면 됩니다
+        그외 F학점
+
+        if문과 swicth/case문 연산자를 이용
+        
+     */
+
+      const name = "김성용";
+      let kor = 70;
+      let math = 80;
+      let eng = 50;
+      let tam = 40;
+
+      let result = (kor + math + eng + tam) / 4;
+      let hakjum;
+
+      if (result >= 90) {
+        hakjum = "A";
+      } else if (90 > result >= 80) {
+        hakjum = "B";
+      } else if (result >= 70) {
+        hakjum = "C";
+      } else if (result >= 60) {
+        hakjum = "D";
+      } else {
+        hakjum = "F";
+      }
+
+      switch (hakjum) {
+        case "A":
+          console.log(`${name}의 학점은 ${hakjum}학점 입니다`);
+          break;
+        case "B":
+          console.log(`${name}의 학점은 ${hakjum}학점 입니다`);
+          break;
+        case "C":
+          console.log(`${name}의 학점은 ${hakjum}학점 입니다`);
+          break;
+        case "D":
+          console.log(`${name}의 학점은 ${hakjum}학점 입니다`);
+          break;
+        case "F":
+          console.log(`${name}의 학점은 ${hakjum}학점 입니다`);
+          break;
+        default:
+          console.log("잘못입력하셨습니다");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

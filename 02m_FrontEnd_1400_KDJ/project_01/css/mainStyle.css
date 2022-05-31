@@ -1,6 +1,7 @@
 body, html {
    padding:0;
    margin:0;
+   font-family: 'Nanum Gothic Coding', monospace;
 }
 body::-webkit-scrollbar {
    display:none;
@@ -109,6 +110,8 @@ ul.imgs li{
    color:white;
 }
 .s3Logo {
+   line-height:6rem;
+   font-family:none;
    color:white;
    font-size:3.5rem;
    text-decoration:underline;
@@ -324,7 +327,7 @@ ul.imgs li{
    flex-wrap:wrap;
    position:absolute;
    bottom:0;
-   top:25%;
+   top:20%;
    height:70%;
    left:5%;
    width:90%;
@@ -333,7 +336,7 @@ ul.imgs li{
 }
 .s5Title {
    height:100%; 
-   width:60%; 
+   width:70%; 
    color:white;
    text-align:left;
    word-break:keep-all;
@@ -342,10 +345,10 @@ ul.imgs li{
 .s5Title #s5SubText {
    visibility:visible;
    margin-left:3%;
-   font-size:1.2rem;
-   line-height:2rem;
+   font-size:1.1rem;
+   line-height:1.5rem;
 }
-#fadeSlide img {width:29%; height:70%; visibility:hidden; display:block;}
+#fadeSlide img {width:19%; height:70%; visibility:hidden; display:block;}
 .s5 .fadeBlock1 {animation:fade1 30s infinite normal;}
 .s5 .fadeBlock2 {animation:fade2 30s infinite normal;}
 .s5 .fadeBlock3 {animation:fade3 30s infinite normal;}
@@ -402,7 +405,7 @@ ul.imgs li{
    
 }
 
-@media screen and (min-width:787px) and (max-width:1064px) {
+@media screen and (min-width:787px) and (max-width:1080px) {
    
 /*section1--------------------------------------------------------------------------------*/
 

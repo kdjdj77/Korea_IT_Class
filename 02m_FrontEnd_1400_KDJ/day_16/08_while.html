@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>while</title>
+    <script>
+      let num = 0;
+
+      while (num < 10) {
+        num = num + 1;
+        console.log(`현재 숫자는 ${num}입니다`);
+      }
+
+      // do while은 조건식이 false여도 한번은 실행
+      let num2 = 10;
+      do {
+        console.log("한번은 실행 하겠지");
+      } while (num2 < 9);
+
+      //do-while과 while문의 비교
+      while (num2 < 9) {
+        console.log("한번은 실행 할까?");
+      }
+
+      let num3 = 0;
+      while (true) {
+        console.log("무한 반복 중..");
+        num3 = num3 + 1;
+        if (num3 > 5) {
+          console.log("무한 반복 종료");
+          break;
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

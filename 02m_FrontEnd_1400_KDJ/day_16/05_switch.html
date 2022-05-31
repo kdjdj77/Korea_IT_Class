@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch</title>
+    <script>
+      let age = 14;
+      let result;
+
+      if (age >= 20) {
+        result = "성인";
+      } else if (age >= 14) {
+        result = "청소년";
+      } else {
+        result = "어린이";
+      }
+
+      switch (result) {
+        case "성인":
+          console.log("성인입니다");
+          break;
+        case "청소년":
+          console.log("청소년입니다");
+          break;
+        case "어린이":
+          console.log("어린이입니다");
+          break;
+        default:
+          console.log("잘못입력하셨습니다");
+      }
+      // 결과는???
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,85 @@
+예외처리
+	예외(Exception)
+		개발자가 다룰 수 있는 오류
+		런타임예외(runtime exception)
+			실행중에 발생하는 예외
+		컴파일예외(compile exception)
+			실행전에 발생하는 예외
+
+	에러(Error)
+		개발자가 다룰 수 없는 오류
+예외처리(Exception Handling)
+	예외가 발생된다면 다른 코드를 실행 시켜 프로그램을 정상적으로
+	종료할 수 있도록 다루는 행위
+
+try-catch문
+	try{
+		오류가 발생할 수 있는 코드;
+	}catch(Exception 예외객체){
+		오류가발생했을때실행할코드;
+	}
+
+자바에서는 예외를 클래스를 통해 관리한다
+Object
+	Throwable
+		Exception
+			ArrayIn...
+			Ari...
+			Numb...
+
+
+try{
+	예외가발생할수있는코드;
+}catch(예외이름1 예외객체){
+	예외이름1이발생했을때 실행되는영역;
+}catch(예외이름2 예외객체){
+	예외이름2가발생했을때 실행되는영역;
+}...{
+
+}finally{
+	강제종료전에무조건한번실행되는영역;
+}
+
+throw
+	예외를 발생시키는 키워드
+
+	throw 예외객체;
+	ex) throw new ArrayIndexOutOfBoundsException();
+	
+	보통 생성자의 매개변수로 문자열 값을 넘겨주면 해당 문자열값이
+	부연설명으로 들어가도록 설계되어있다
+
+
+throws
+	예외처리를 떠넘길때 사용하는 키워드
+
+	메소드를 정의할때 예외 처리를 떠넘김으로서 사용하는 사람이 원하는 방식으로
+	예외처리를 할 수 있게 한다
+	
+사용자 정의 예외 만들기
+Object
+	Throwable
+		Exception
+			InterruptedException
+			..컴파일예외
+			RuntimeException
+				ArrayIndex....
+				Arith,....
+				InputMis,.....
+컴파일예외 : Exception을 상속받아 만들어진다
+런타임예외 : RuntimeException을 상속받아 만들어진다
+	만일 생성자 매개변수를 활용하고 싶다면 부모생성자를 사용한다
+
+
+
+
+
+
+
+
+
+
+
+
+
+

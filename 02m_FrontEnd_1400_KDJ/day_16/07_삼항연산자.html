@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>삼항 연산자</title>
+  </head>
+  <script>
+    let num = 3;
+
+    // if문
+    if (num > 4) {
+      console.log("참");
+    } else {
+      console.log("거짓");
+    }
+
+    // 삼항연산자
+    num > 4 ? console.log("참") : console.log("거짓");
+    //조건식     ture 실행           false 실행
+    //조건식      실행
+
+    num > 4 && console.log("참");
+    // === num > 4 ? consol.og("참") : null;
+    // false면 아무것도 실행하지 않음
+
+    // num이 3이면
+    // 거짓실행 거짓실행 null실행(빈거 = 실행하지 않음)
+
+    num && console.log("실행할까요?");
+    // 네, 실행합니다
+    // num에 값이 있기 때문에 num && = true
+  </script>
+  <body></body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>불린-존건연산자</title>
+    <script>
+      const b1 = true;
+      const b2 = false;
+
+      console.log(b1); // true
+      console.log(!b1); // false
+
+      const num1 = 3;
+      const str1 = "3";
+
+      const num2 = 5;
+      const str2 = "5";
+      let result;
+      /////////////////////////////////////////////////////////////////
+      result = num1 == str1; // 타입과 무관하게 값은 같은지
+      console.log(result); // true
+
+      result = num1 === str1; // 타입과 같이 모두 완벽히 같은지
+      console.log(result); // false
+
+      result = num1 != str1; // 타입과 무관하게 값이 같지 않은지
+      console.log(result); // false
+
+      result = num1 !== str1; // 타입과 값이 모두 완벽히 같지 않은지
+      console.log(result); // true
+
+      /////////////////////////////////////////////////////////////////
+      result = num1 !== num2; // true 값은 가지만 타입이 다르므로
+      console.log(result);
+
+      result = num1 !== str2; // true 타입은 같지만 값이 틀린거 맞으니까
+      console.log(result);
+
+      result = str1 !== str2; // true 타입은 같지만 값이 틀린거 맞으니까
+      console.log(result);
+      /////////////////////////////////////////////////////////////////
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>if문</title>
+    <script>
+      let age = 14;
+
+      // false
+      if (age >= 20) {
+        console.log("성인입니다");
+        alert("성인인증 완료");
+        // true
+      } else if (age >= 13) {
+        console.log("청소년입니다");
+        alert("청소년입니다");
+        // 그 외 나머지
+        // .. else if 중복 허용
+      } else {
+        console.log("어린이입니다");
+        alert("어린이는 보호자와 함께 이용해주세요");
+      }
+
+      // 결과는 어떻게 될까요?
+      // age = 12 결과는 어떻게 될까요? 어린이
+
+      age = null;
+      // false
+      if (age) {
+        console.log("사용자 정보가 확인 되었습니다");
+      } else {
+        console.log("사용자 정보가 인증되지 않았습니다");
+      }
+
+      // 결과는? 인증이 안돼요 값이 없기 때문에 undefined, null, NaN 마찬가지
+
+      age = false;
+      // 값이 있으면 true 값이 없으면 false인데
+      // 그 값이 애초에 boolean 타입이면 t/f를 검사합니다
+      if (age) {
+        console.log("사용자 정보가 확인 되었습니다");
+      } else {
+        console.log("사용자 정보가 인증되지 않았습니다");
+      }
+
+      // 결과는? 인증이 안돼요 값이 false이기 때문에
+    </script>
+  </head>
+  <body></body>
+</html>
