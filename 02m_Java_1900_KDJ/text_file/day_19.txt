@@ -1,0 +1,75 @@
+Collection Framework
+Collection
+	List
+		순서대로, 중복되는 값을 허용
+		ArrayList
+		LinkedList
+		...
+	Set
+		순서상관없이, 중복되는 값은 허용X
+		HashSet
+		TreeSet
+		...
+	Map
+		key, value 한쌍으로 저장
+		HashMap
+		TreeMap
+		...
+--------------------------------------------------------------
+ArrayList 선언(객체화)
+ArrayList<요소의클래스타입> 객체명 = new ArrayList<요소의클래스타입>();
+	add(요소) : 해당 요소 맨뒤에 추가
+	add(인덱스, 요소) : 해당 요소 인덱스자리에 삽입
+	get(인덱스) : 인덱스에 해당하는 요소 return
+	remove(인덱스) : 인덱스에 해당하는 요소 삭제
+	remove(요소) : 요소 삭제
+	size() : 해당 리스트 요소 갯수(int) return
+	
+
+HashSet 선언(객체화)
+HashSet<요소의클래스타입> 객체명 = new HashSet<요소의클래스타입>();
+	add(요소) : 요소 추가
+	remove(요소) : 요소 삭제
+	size() : 요소의 갯수 return
+	iterator() : 순서를부여해주는 메소드 Iterator<요소의클래스타입> 이 return
+		hasNext() : 다음요소가 있다면 true, 없다면 false가 return
+		next() : 다음 요소를 return
+
+HashMap 선언(객체화)
+HashMap<key클래스타입, value클래스타입> 객체명 = new HashMap<>();
+	put(key, value) : key가 존재한다면 수정, 없다면 추가
+	get(key) : key값에 해당하는 value return
+	remove(key) : key값 value값 삭제
+	size() : 요소의 갯수 return
+	keySet() : key값들이 모여있는 Set return
+	values() : value값들이 모여있는 List가 return
+	entrySet() : Entry 객체들이 모여있는 Set가 return
+		Entry 클래스안에 정의된 메소드
+		getKey() : 해당 Entry객체의 key값 return
+		getValue() : 해당 Entry객체의 value값 return
+----------------------------------------------------------------------
+디자인 패턴
+	설계하는 방식
+
+MVC 모델
+	Model
+		데이터를 옮길때 사용하는 객체
+	View
+		실질적으로 사용자가 보는 부분
+	Controller
+		실질적으로 데이터 베이스에 접근하는 부분
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

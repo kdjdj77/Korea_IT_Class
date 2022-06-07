@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>중첩 반복문</title>
+    <script>
+      //1학년1반~9반
+      //2학년1반~9반
+      //3학년1반~9반
+      /* for(let i=0; i<9 i++){
+            console.log(`1학년 ${i+1}반`);
+        }
+        for(let i=0; i<9 i++){
+            console.log(`2학년 ${i+1}반`);
+        }
+        for(let i=0; i<9 i++){
+            console.log(`3학년 ${i+1}반`);
+        }
+     */
+
+      // 맨위에 있는 조건문을 한번 반복
+      // 현재 i의 값 : 1
+
+      // 그 안에 있는 두번째 조건문을 j번 반복합니다
+      // j의 값은 1 ~ 9가 전부가 찍힘
+
+      // 그 다음에 i의 값을 1을추가해 i의 값이 2가 되고 j는 또다시 1~9까지
+
+      for (let i = 1; i <= 3; i++) {
+        for (let j = 1; j <= 9; j++) {
+          console.log(`${i}학년 ${j}반`);
+          console.log(i + "학년" + j + "반");
+        }
+      }
+      // append (`<div></div>`)
+      // map()
+    </script>
+  </head>
+  <body></body>
+</html>

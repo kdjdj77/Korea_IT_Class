@@ -1,0 +1,63 @@
+파일입출력(한글 다루기 조심할것(인코딩 방식을 잘 살펴볼 것))
+	1. 파일객체만들기
+	2. 스트림열기
+	2-1. 버퍼생성
+	3. 파일입력/출력
+	4-0. 버퍼닫기
+	4. 스트림닫기
+encoding 방식을 맞추는 방법
+	1. eclipse 전체 작업공간 인코딩 방식 변경
+		windows > preferences > enco 검색 > workspace > 
+		text file encoding > other > UTF-8 방식 선택
+
+	2. 프로젝트만 변경
+		해당 프로젝트 마우스 우클릭 > properties > Resource > 
+		text file encoding > other > UTF-8 방식 선택
+
+
+		
+주말
+	사용자에게 번호와 문자열을 입력받아서
+	task.txt 파일 해당 번호 다음줄에 해당문자열을 삽입하여
+	파일에 저장시키기
+	ex) 5 안녕하세요 >> 6번째줄에 안녕하세요가 삽입된 후 메모장에 저장되면 된다
+
+File
+	파일객체를 만드는 클래스
+	생성자 : 사용할 파일 경로
+		파일출력 : 파일이없으면 새로 생성
+		파일입력 : 파일이없으면 FileNotFoundException
+	절대경로, 상대경로
+
+FileReader / FileWriter
+	생성자의 매개변수 : 파일객체
+		FileWriter의 경우 boolean 값을 true로 주면 덧붙이기 기본은 
+		덮어쓰기
+
+BufferedReader / BufferedWriter
+	생성자의 매개변수 : 스트림객체(FileReader 혹은 FileWriter 객체)
+
+----------------------------------------------------------------------
+제네릭
+	사용자에게 사용할 클래스 타입을 전달받는 방법
+	<>로 사용할 타입을 넘겨준다
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

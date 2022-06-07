@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수 - 1</title>
+  </head>
+  <script>
+    function a(x) {
+      console.log(x);
+      if (x < 5) {
+        return 2 * x + 1;
+      }
+      console.log("실행하까요");
+    }
+
+    console.log(a(10));
+    //a라는 함수에 10이라는 수를 전달한겁니다
+    //a(10)은 값이 존재하지 않아요
+    //함수 a에 값을 지정해준게 아니잖아요
+
+    a(5); // 5
+    a(3); // 3
+
+    console.log(a(5)); // 5, 11
+    // a(5) ===> console.log(x)를 실행하는 애 값이 있는게 아니라
+    // return을 통해 a(5)에도 값을 준거에요
+    // a(5)를 통해서 console.log(x);
+    // console.log(a(5))를 통해서 return을 값을 반환받은 a(5)의 값이 콘솔에
+  </script>
+  <body></body>
+</html>

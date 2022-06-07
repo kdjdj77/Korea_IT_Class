@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>구구단, 조건에 맞는 배열 만들기</title>
+  </head>
+  <script>
+    // 1. 중첩 반복문을 통해 구구단 만들기
+    for (let i = 1; i <= 9; i++) {
+      console.log(`---------${i}단--------`);
+      for (let j = 1; j <= 9; j++) {
+        console.log(`${i}x${j} = ${i * j}`);
+      }
+    }
+    // i=1 j=1~9 // i=2 j=1~9../... // i=9 j=1~9//
+
+    // 2.
+
+    let arr1 = [];
+    let arr2 = [];
+
+    arr1.push(10, 20, 30);
+    arr2.push(40, 50, 60);
+
+    arr1.shift(); // arr1에서 첫번째 제거 10제거 (20,30)
+    arr1.shift(); // arr1에서 첫번째 제거 20제거 (30)
+    arr2.pop(); // arr2에서 마지막 제거 60제거 (40, 50)
+
+    let arr3 = arr1.concat(arr2); //(30, 40, 50)
+  </script>
+  <body></body>
+</html>

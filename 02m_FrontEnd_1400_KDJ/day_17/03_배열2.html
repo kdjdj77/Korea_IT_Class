@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열 - 2</title>
+    <script>
+      let arr = ["apple", "김성용", "기성용"];
+      console.log(arr);
+      arr.push("손흥민");
+      console.log(arr);
+      console.log(arr.length);
+
+      let str = arr.shift(); // 첫번째 값 삭제
+      // 삭제한 값을 반환
+      alert(str);
+      console.log(arr);
+
+      arr.pop(); //마지막 값 삭제
+      console.log(arr);
+
+      let arr1 = [10, 20, 30];
+      let arr2 = [40, 50, 60];
+      let arr3 = arr1.concat(arr2);
+      console.log(arr1);
+      console.log(arr2);
+      console.log(arr3);
+      // concat은 ()안에 있는 배열을 합쳐서 원래 배열 뒤에
+      // arr1.concat(arr2) = > 10,20,30   + 40,50,60
+      // concat은 기존 배열은 그대로 놔둔 채 새로운 배열을 반환
+
+      // pop이나 shift, push의 경우 원래 배열을 변형
+      // concat은 기준이 되는 두 배열을 변형하지 않습니다
+    </script>
+  </head>
+  <body></body>
+</html>
