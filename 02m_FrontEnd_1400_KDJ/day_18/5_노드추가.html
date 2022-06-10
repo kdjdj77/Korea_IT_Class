@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>노드의 추가</title>
+    <script>
+      const appendNode = function () {
+        const parent = document.getElementById("list");
+        const newItem = document.getElementById("item1");
+        parent.appendChild(newItem);
+      };
+      const insertNode = function () {
+        const parent = document.getElementById("list");
+        const frontend = document.getElementById("frontend");
+        const newItem = document.getElementById("item2");
+        parent.insertBefore(newItem, frontend);
+      };
+      const appendText = function () {
+        const text = document.getElementById("text").firstChild;
+        text.insertData(15, "너무");
+      };
+    </script>
+  </head>
+  <body>
+    <h2>노드의 추가</h2>
+    <p id="item1">JavaScript</p>
+    <p id="item2">ReactJS</p>
+    <hr />
+    <!-- 직선 줄 그어주는 태그-->
+    <div id="list">
+      <p id="frontend">HTML</p>
+      <p>CSS</p>
+      <p>JS</p>
+      <p>ReactJS</p>
+      <p>nodeJs</p>
+    </div>
+    <p id="text">점심을 못 먹고 강의를 하니 배가 고프네요<br />안녕하세요</p>
+    <hr />
+    <button onclick="appendNode()">노드 추가1</button>
+    <button onclick="insertNode()">노드 추가2</button>
+    <button onclick="appendText()">텍스트 추가</button>
+  </body>
+</html>

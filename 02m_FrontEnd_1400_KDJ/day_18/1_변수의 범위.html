@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변수의 범위</title>
+    <script>
+      let num2 = 100; // 전역변수
+
+      function f1() {
+        let num1 = 100; //함수 내에 선언
+        console.log(num2);
+      }
+      //함수 밖에서 사용하려면 이미 삭제되어 있다
+      //console.log(num1);
+      f1();
+
+      function f2() {
+        console.log(num2); // 전역변수는 어떠한 함수에서도 접근이 가능하다
+      }
+      f2();
+
+      function f3() {
+        console.log(num2); // 100
+        num2 = 200; //전역변수를 가지고 온거에요 (*지역변수 선언X)
+        console.log(num2); // 200
+      }
+      f3();
+      console.log(num2); // 200
+      // => 전역변수를 함수 내에서 값을 변경해줬다면 전역변수 값 자체도 변경
+
+      function f4() {
+        let num2 = 100; // 지역에서 선언
+        console.log(num2); // 지역변수 num2
+      }
+
+      f4();
+      console.log(num2); // 전역변수 num2
+    </script>
+  </head>
+  <body></body>
+</html>

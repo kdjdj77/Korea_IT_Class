@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서객체모델 - 1</title>
+    <script>
+      // window.onload = function(){} ===> 문서를 먼저 다 읽고 실행하는 함수
+      window.onload = function () {
+        const tagName = document.getElementsByTagName("li");
+        console.log(tagName);
+
+        const id = document.getElementById("html");
+        console.log(id); //null 뜨는 이유
+      };
+    </script>
+  </head>
+  <body>
+    <h2>문서 객체 모델 - 1</h2>
+    <ul>
+      <li id="html">html</li>
+      <li>css</li>
+      <li class="js">javascript</li>
+      <li class="js">jquery</li>
+    </ul>
+
+    <!-- 통상의 자바스크립트 위치 -->
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변수의 범위 -2</title>
+    <script>
+      let num2 = 100;
+
+      function f3() {
+        // 지역 범위 내의 최상위에 선언부를 실행
+        console.log(num2); // undefined
+        let num2 = 200;
+        console.log(num2); // 200
+      }
+      f3();
+
+      /*
+      호이스팅
+      
+      console.log(a) // var a = 100이 선언되기 전에 콘솔을 찍었어요
+      // 원래는 에러를 내야죠
+      // var는 에러를 안내요
+      var a = 100
+      console.log(a)
+      
+      -----------------------
+      (최상단)
+      var a;
+      console.log(a) // undefinde 
+      a = 100;
+      coosole.log(a) // 100
+
+      -------------------------
+      let num 2 = 100
+
+    function f3() {
+        console.log(num2); // undefined
+        var num2 = 200;
+        console.log(num2); 
+      }
+      
+      ------------------------
+
+      let num 2 = 100;
+
+      function f3() {
+        var num2; // 최상단 
+        console.log(num2) // undefined
+        num2 = 200;
+        console.log(num2) // 200
+      }
+
+      ------------------------
+      */
+    </script>
+  </head>
+  <body></body>
+</html>

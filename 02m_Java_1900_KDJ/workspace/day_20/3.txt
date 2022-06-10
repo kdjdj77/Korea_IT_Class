@@ -1,0 +1,67 @@
+package dao;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import dto.MovieDTO;
+
+public class MovieDAO {
+   
+   // 모든 영화 정보를 가져다주는 메소드
+   public ArrayList<MovieDTO> selectAll() throws IOException{
+      // 영화 한 편에대한 정보는 MovieDTO에 담을 것임
+      // 여러개의 영화 정보는 List에 담을 것이다
+      ArrayList<MovieDTO> list = new ArrayList<>();
+      
+//      File f = new File("movie.txt");
+//      FileReader fr = new FileReader(f);
+//      BufferedReader br = new BufferedReader(fr);
+      BufferedReader br = DBConnection.read();
+      
+      //읽어오기
+      for(String line = br.readLine(); line != null; line = br.readLine()) {
+         //line 에는 영화 한 편에대한 6개의 값들이 들어있다
+         //"1\t명량\t2014-07-30\t135,748,398,910\t17,613,682\t1,587"
+         String[] temp = line.split("\t");
+         // temp : {"1", "명량","2014-07-30","135,748,398,910","17,613,682","1,587"}
+         MovieDTO dto = new MovieDTO();
+         dto.setRank(Integer.parseInt(temp[0]));
+         dto.setTitle(temp[1]);
+         dto.setDate(temp[2]);
+         dto.setRevenue(temp[3]);
+         dto.setView(temp[4]);
+         dto.setScreen(temp[5]);
+         
+         list.add(dto);
+      }
+
+      br.close();
+      
+      // 다읽고, 반복이 끝났다면 list 안에는 모든 영화들의 정보가 들어있다
+      return list;
+      
+      
+   }
+   
+}   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

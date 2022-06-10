@@ -1,0 +1,78 @@
+package view;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import dao.MovieDAO;
+import dto.MovieDTO;
+
+public class View {
+   public static void main(String[] args) throws IOException{
+      // 콘솔창 화면을 구현할 부분
+      Scanner sc = new Scanner(System.in);
+      MovieDAO dao = new MovieDAO();
+      
+      
+      while(true) {
+         System.out.println("1. 영화정보 추가하기");
+         System.out.println("2. 영화정보 수정하기");
+         System.out.println("3. 영화정보 검색하기");
+         System.out.println("4. 영화정보 삭제하기");
+         System.out.println("5. 모든영화정보 보기");
+         System.out.println("6. 종료하기");
+         System.out.print("입력 >> ");
+         int choice = Integer.parseInt(sc.nextLine());
+         
+         if(choice == 1) {
+            
+         }else if(choice == 2) {
+         }else if(choice == 3) {
+            // 영화 제목으로 검색하기
+         }else if(choice == 4) {      
+         }else if(choice == 5) {
+            ArrayList<MovieDTO> list = dao.selectAll();
+            System.out.println("---모든 영화 정보---");
+            for (MovieDTO a : list) {
+               System.out.println("-["+ a.getRank()+"위]:"+a.getTitle()+"-----");
+               System.out.println("|개봉일:" + a.getDate());
+               System.out.println("|관객수:"+a.getView());
+               System.out.println("|매출액:"+a.getRevenue());
+               System.out.println("|상영관수:"+a.getScreen());
+            }
+            
+            
+         }else if(choice == 6) {
+            System.out.println("프로그램을 종료합니다");
+            break;
+         }else {
+            System.out.println("잘못입력했습니다");
+         }
+         System.out.println();
+      }
+      
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
