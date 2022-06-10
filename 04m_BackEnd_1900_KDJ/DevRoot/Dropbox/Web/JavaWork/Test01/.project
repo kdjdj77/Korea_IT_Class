@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Test01</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>FirstJava.java</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/Web00/JavaWork/Lec02_FirstJava/src/com/lec/java/firstjava/FirstJava.java</locationURI>
+		</link>
+		<link>
+			<name>Variable01Main.java</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/Web00/JavaWork/Lec03_Variables/src/com/lec/java/variables01/Variable01Main.java</locationURI>
+		</link>
+		<link>
+			<name>Variable02Main.java</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/Web00/JavaWork/Lec03_Variables/src/com/lec/java/variables02/Variable02Main.java</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>
