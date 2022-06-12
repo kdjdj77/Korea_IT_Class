@@ -1,0 +1,36 @@
+* {
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+}
+
+#Wrap {
+   width:100%;
+}
+header {
+   width:100%;
+   height:3rem;
+   background-color:#eacdee;
+}
+section {
+   background-color:#9acd32;
+   height:calc(100vh - 3rem);
+}
+#circle {
+   position:absolute;
+   top:0;
+   left:0;
+   width:10rem;
+   height:10rem;
+   border-radius:50%;
+   background-color:#eacdee;
+   transform:translate(-50%, -50%);
+}
+#font {
+   position:absolute;
+   top:0;
+   left:0;
+   color:#fff;
+   font-size:2rem;
+   transform:translate(15%, 15%);
+}
