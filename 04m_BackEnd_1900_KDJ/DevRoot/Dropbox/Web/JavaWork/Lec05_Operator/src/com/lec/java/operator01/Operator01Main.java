@@ -51,7 +51,12 @@ public class Operator01Main {
 		
 		System.out.println("\n====================");
 		System.out.println("[2] 산술 연산자: +, -, *, /, % (arithmetic operator)");
-		// TODO
+		int num1 = 7;
+		int num2 = 3;
+		int result;
+		
+		result = num1 + num2;
+		System.out.println("덧셈: " + result);
 		
 		// 나눗셈 연산자(/)가 실수에 사용됐을 경우에는
 		// 계산 결과를 실수로 돌려 줌.
@@ -62,16 +67,32 @@ public class Operator01Main {
 		// 나머지 연산자(%)
 		// 정수 % 정수 = 정수로 값을 돌려 줌.
 		// 실수 % 정수, 정수 % 실수, 실수 % 실수 = 몫을 제외한 실수형 나머지를 돌려줌.
-		// TODO
+		result = num1 % num2;
+		System.out.println("나머지: " + result);
+		
+		// 12.1 % 3.0 => ?
+		double result3 = 12.1 % 3.0;
+		System.out.println("나머지: " + result3);  // 0.09999999999999964
+		// 실수의 연산결과는 정밀도의 오차가 존재한다!
 		
 		
 		// 두 변수 값 바꾸는 방법
-		// TODO
+		System.out.println();
 		
+		int num3 = 100;
+		int num4 = 200;
+		int temp;   // 임시 변수 필요
+		
+		System.out.println("바꾸기 전 num3=" + num3 + " num4=" + num4);
+		
+		temp = num3;
+		num3 = num4;
+		num4 = temp;
+		
+		System.out.println("바꾼 후 num3=" + num3 + " num4=" + num4);
+
 		
 
-
-		
 		System.out.println("\n프로그램 종료");
 	} // end main()
 

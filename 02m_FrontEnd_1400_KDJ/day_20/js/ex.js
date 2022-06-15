@@ -51,7 +51,7 @@ let counter = 0;
 
 //addEventListner
 //이벤트 동작
-nextBtn.addEventListener('click', 
+nextBtn.addEventListener('click',
    function() 
    {
       clearInterval(banner);

@@ -13,9 +13,40 @@ public class Operator04Main {
 	public static void main(String[] args) {
 		System.out.println("연산자 4 - 증감 연산자(++, --) Increment / Decrement Operator");
 		
-		// TODO
+		int num1 = 100;
+		
+		// 기존의 num1 값에 +1 시키기
+		num1 = num1 + 1;
+		num1 += 1;
+		num1++;   		
+
+		System.out.println("num1 = " + num1);
+		
+		// 기존의 num1 값을 -1 시키기
+		num1--; // postfix 방식
+		--num1; // prefix 방식		
+		System.out.println("num1 = " + num1);
+		
+		int num4 = 100;
+		int num5 = ++num4;  // prefix
+		
+		// num4, num5 값은 어케될까?
+		// num4 -> 101
+		System.out.println("num4 = " + num4);  // 101
+		System.out.println("num5 = " + num5);  // 101
 		
 		
+		int num6 = 100;
+		int num7 = num6++; // postfix
+		System.out.println("num6 = " + num6);  // 101
+		System.out.println("num7 = " + num7);  // 100
+		
+		// 가급적이면 실무에서는 위와 같은 코드 작성 금지!
+		
+		int num8 = 100;
+		int num9 = num8;
+		num8++;   // 굳이 증감연산 사용해야 한다면, 단독으로 사용하는걸 추천.
+
 		System.out.println("\n\n======================");
 		System.out.println("증감연산자: prefix(접두사), postfix(접미사)");
 		

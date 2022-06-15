@@ -7,12 +7,26 @@ package com.lec.java.operator06;
  *	A ^ B : (XOR 연산)A, B 둘의 논리값이 같으면 false, 다르면 true
  * 			eXclusive OR (배타적 논리합)
  */
-public class Operator06Main {
-
-	public static void main(String[] args) {
+public class Operator06Main 
+{
+	public static void main(String[] args) 
+	{
 		System.out.println("연산자 6 - 논리 연산자: &&, ||, !, ^");
 
-		// TODO
+		int num1 = 10;
+		
+		System.out.println(num1 > 0);
+		System.out.println(num1 < 100);
+		System.out.println(num1 > 0 && num1 < 100);
+		System.out.println(num1 > 0 && num1 < 10);
+		System.out.println(num1 > 0 || num1 < 10);
+		System.out.println(num1 < 0 || num1 < 10);
+		
+		System.out.println(!(num1 > 0));
+		
+		System.out.println(num1 < 0 ^ num1 > 100);
+		System.out.println(num1 < 0 ^ num1 < 100);
+
 		
 		System.out.println("\n 프로그램 종료");
 	} // end main ()
