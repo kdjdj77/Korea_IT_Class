@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>포트폴리오</title>
+      <link rel="stylesheet" href="./css/common.css"/>
+      <link rel="stylesheet" href="./css/portfolio.css"/>
+   </head>
+   <body>
+      <div>
+         <section id="wrap">
+            <header><span id="darkMode" class="whiteFont">DARK</span></header>
+            <div id="smallCircle" class="whiteBackground"></div>
+            <div class="fontsize15rem whiteFont bold subject">Hi,</div>
+            <div class="fontsize10rem whiteFont bold subject line80">
+               IM DAE <br/>
+               JIN
+            </div>
+            <div id="bigCircle" class="whiteBackground"></div>
+         </section>
+         <section>
+            <div class="whiteFont fontsize5rem centerTextBox10 bold">
+               DAEJIN'S PORTFOLIO
+            </div>
+            <div id="aboutMe" class="fontsize2rem bold centerTextBox10 whiteBackground">
+               ABOUT ME
+            </div>
+            <div>
+               <p class="fontsize5rem whiteFont bold subject">SKILLS</p>
+               <div class="flexAlignStart">
+                  <div class="whiteBoxWidth whiteBox17rem"></div>
+                  <div>
+                     <div class="whiteBoxWidth whiteBox7rem"></div>
+                     <div class="whiteBoxWidth whiteBox13rem"></div>
+                  </div>
+                  <div class="whiteBoxWidth whiteBox13rem"></div>
+                  <div class="whiteBoxWidth whiteBox20rem"></div>
+               </div>
+            </div>
+         </section>
+         <section class="flexCenter">
+            <div id="projectBox" class="whiteBackground flexCenter">
+               PROJECT 01
+            </div>
+         </section>
+         <section>
+            <div class="whiteFont fontsize5rem bold subject contact">
+               Contact Me
+            </div>
+            <div class="footer whiteBackground"></div>
+         </section>
+      </div>
+      <script>
+         window.onload = function()
+         {
+            document.documentElement.setAttribute("color-theme", "blue");
+         };
+         let darkMode = document.getElementById("darkMode");
+         darkMode.addEventListener('click',
+            function(e)
+            {
+               if (e.target.innerText ==="DARK")
+               {
+                  document.documentElement.setAttribute("color-theme", "dark");
+                  e.target.innerText = "BLUE";
+               }
+               else
+               {
+                  document.documentElement.setAttribute("color-theme", "blue");
+                  e.target.innerText = "DARK";
+               }
+            }
+         );
+      </script>
+   </body>
+</html>
