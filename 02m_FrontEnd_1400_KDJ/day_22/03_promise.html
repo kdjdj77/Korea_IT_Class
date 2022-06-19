@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>promise</title>
+   <script>
+      let number = 5;
+      const callback = function(n) {
+         n += 1;
+         setTimeout (
+            function() {
+               console.log(n);
+            }, 500
+         );
+         return n;
+      };
+      const promise = new Promise (
+         function(resolve, reject) {
+            resolve(callback(number));
+            reject("실패")
+         }
+      );
+      promise
+      .then(function(result) {
+            return callback(result);
+         }
+      )
+      .then(function(result) {
+            return callback(result);
+         }
+      )
+      .then(function(result) {
+            return callback(result);
+         }
+      )
+      .then(function(result) {
+            return callback(result);
+         }
+      )
+      .then(function(result) {
+            return callback(result);
+         }
+      )
+      .catch(
+         function(error) {
+            console.log(error);
+         }
+      );
+
+      let state = false;
+      const promiseBoolean = new Promise (
+         function(resolve, reject) {
+            if(state) resolve("성공"); //resolve 실행
+            else reject("실패");       //reject 실행
+         }
+      );
+      promiseBoolean
+      .then (
+         function(messege) {
+            console.log(messege);
+         }
+      )
+      .catch (
+         function(err) {
+            console.log(err);
+         }
+      )
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
