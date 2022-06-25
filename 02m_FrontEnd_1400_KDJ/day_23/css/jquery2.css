@@ -1,0 +1,32 @@
+/* day90-1_style.css */
+body{
+   overflow: hidden;
+}
+div.wrapper{
+   width: 600%;
+   display: flex;
+}
+div.page{
+   width: calc(100% / 6);
+   height: 100vh;
+   display: flex;
+   justify-content: center; align-items: center;
+}
+div.page .content{
+   width: 1080px; height: 640px;
+   background-color: #999;
+   text-align: center;
+   font-size: 36px; color: #fff;
+}
+div.btns{
+   width: 130px;
+   position: fixed;
+   margin: auto;
+   left: 0; right: 0; bottom: 40px;
+   display: flex;
+   justify-content: space-between;
+   display: none;
+}
+div.btns button{
+   width: 60px; height: 60px;
+}

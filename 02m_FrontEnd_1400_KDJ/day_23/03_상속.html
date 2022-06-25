@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>상속</title>
+   <script>
+      /* 클래스의 설계도
+      interface 자판기기능 {
+         자판기뽑기();
+         setting();
+         자판기청소();
+      }
+      *///DTOimpl
+      class 자판기 {    //implements 자판기기능 (interface의 모든 함수를 class에서 구현해야 함)
+         //다른 언어들과 달리 JS에서만 멤버 변수 선언 불필요 
+
+         //생성자
+         //객체를 만들어낼 때 받아야하는 데이터
+         constructor(자판기종류) {
+            this.자판기종류 = 자판기종류;
+            this.자판기상태 = false;
+         }
+         //자판기 상태를 true와 다시 false로 바꿔주는 함수 만들기
+         setting () {
+            if (this.자판기상태 === false) {
+               console.log("자판기 가동");
+               this.자판기상태 = true;
+            }
+            else {
+               console.log("자판기 중지");
+               this.자판기상태 = false;
+            }
+         }
+         자판기뽑기(coin) {
+            if (this.자판기상태 === true) {
+               if (this.자판기종류 === "drink") {
+                  if (coin === 300) {
+                     console.log("솔의 눈");
+                  }
+                  else if (coin === 500) {
+                     console.log("비타 500");
+                  }
+                  else if (coin === 1000) {
+                     xonsole.log("콜라");
+                  }
+                  else {
+                     console.log("금액을 잘못 투입하셨습니다");
+                  }
+               }
+            }
+            else {
+               console.log("자판기가 정지되어있습니다");
+            }
+         }
+         자판기청소() {
+            if (this.자판기상태 === false) {
+               consoel.log("자판기를 청소하였습니다");
+            }
+            else {
+               console.log("자판기를 먼저 정지해주세요");
+            }
+         }
+      }
+
+      class 새로운자판기 extends 자판기 {
+         자판기자동청소() {
+            if (this.자판기상태 === false)
+               console.log("자판기가 자동으로 청소되었습니다");
+            else {
+               this.setting();
+               console.log("자판기가 자동으로 청소되었습니다");
+               this.setting();
+            }
+         }
+         //오버라이딩
+         
+      }
+
+      const 신자판기 = new 새로운자판기();
+      신자판기.setting();
+      신자판기.자판기청소();
+      신자판기.자판기자동청소();
+
+   </script>
+</head>
+<body>
+   
+</body>
+</html>

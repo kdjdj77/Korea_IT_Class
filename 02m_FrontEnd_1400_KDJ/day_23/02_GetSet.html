@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>게터 세터</title>
+   <script>
+      class User {
+         constructor(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.initialAge = 4;
+         }
+
+         get fullName() {
+            return `${this.firstName} ${this.lastName}`;
+         }
+         get age() {
+            return this.initialAge;
+         }
+         set age(num) {
+            //생성자보다 유효성 검사를 할 수 있다는 장점
+            if (num < 0) {
+               console.log("안 태어났습니다");
+            }
+            this.initialAge = num;
+         }
+      }
+      const user = new User("kim", "daejin");
+      console.log(user.fullName);
+      user.age = 6;
+      console.log(user.age);
+   </script>
+</head>
+<body>
+   
+</body>
+</html>

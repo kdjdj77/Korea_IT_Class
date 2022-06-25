@@ -1,0 +1,129 @@
+/*day77-2_style.css*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;500;700;900&family=Noto+Serif+KR:wght@300;500;700&display=swap");
+
+div.menuWrap {
+  background-color: #333;
+  padding: 5px 0;
+}
+div.menuWrap menu {
+  display: flex;
+  justify-content: flex-end;
+}
+div.menuWrap menu li {
+  color: #fff;
+  height: 20px;
+  margin-left: 30px;
+  padding: 0 5px;
+  position: relative;
+}
+div.menuWrap menu li::after {
+  display: block;
+  content: "";
+  border-bottom: 2px solid #f00;
+  width: 0%;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  left: auto;
+  transition: width 0.3s;
+}
+div.menuWrap menu li:hover::after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+div.hdrWrap {
+  background-color: #f90;
+  padding: 30px 0;
+}
+div.hdrWrap header {
+  display: flex;
+  justify-content: space-between;
+}
+div.hdrWrap header h1 {
+  text-transform: uppercase;
+  line-height: 20px;
+  height: 20px;
+  color: #fff;
+  margin-left: 10px;
+}
+div.hdrWrap header nav {
+  display: flex;
+}
+div.hdrWrap header nav h2 {
+  text-transform: uppercase;
+  line-height: 20px;
+  height: 20px;
+  font-weight: 100;
+  padding: 0 10px;
+  margin-left: 30px;
+  color: rgba(255, 255, 255, 0.5);
+}
+div.hdrWrap header nav .m_over {
+  background: linear-gradient(to right, #f00 0%, #f00 100%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s;
+  background-position: right;
+  font-weight: 700;
+  color: #fff;
+}
+div.hdrWrap header nav .m_over:hover {
+  background-size: 100% 100%;
+  background-position: left;
+  color: #f90;
+}
+
+div.navWrap {
+  background-color: #333;
+  padding: 40px 0;
+  display: none;
+}
+div.navWrap nav {
+  display: flex;
+  justify-content: space-around;
+  border-right: 1px solid #ccc;
+}
+div.navWrap nav dl {
+  width: calc(100% / 6 - 20px);
+  border-left: 1px solid #ccc;
+  padding-left: 20px;
+}
+div.navWrap nav dl dt {
+  color: #fff;
+}
+div.navWrap nav dl dd {
+  color: #ccc;
+}
+div.navWrap nav {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+div.navWrap nav dl {
+  font-family: "Noto Sans KR";
+}
+div.navWrap nav dl dt {
+  font-weight: 700;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+div.navWrap nav dl dd {
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+div.hdrWrap header {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+div.hdrWrap header h1 {
+  font-size: 16px;
+  line-height: 40px;
+}
+div.hdrWrap header h2 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 40px;
+}
