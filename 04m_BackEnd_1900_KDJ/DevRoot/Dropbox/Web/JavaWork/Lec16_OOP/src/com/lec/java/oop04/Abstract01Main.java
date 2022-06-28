@@ -22,57 +22,50 @@ public class Abstract01Main {
 	public static void main(String[] args) {
 		System.out.println("추상 클래스(abstract class)");
 		
-		// TODO
+		// 추상클래스는 인스턴스 생성 불가능 (new 불가!)
+//		TestAbstract test1 = new TestAbstract();
+		
+		TestClass test2 = new TestClass();
+		test2.test = 100;
+		System.out.println(test2.testMethod());
+		
+		
+		// 다형성!
+		TestAbstract test3 = new TestClass();
+		test3.test = 999;
+		System.out.println(test3.testMethod());
+		
 		
 		System.out.println("\n 프로그램 종료");
 	} // end main()
 
 } // end class
 
+// 추상클래스
+abstract class TestAbstract {
+	int test;
+	
+	public int getTest() {return test;}
+	
+	// 추상메소드
+	public abstract int testMethod();
+	
+}
+//추상 클래스를 상속받는 클래스는 반드시 추상메소드를 구현(implement)해야 함
+//추상 메소드의 본체({ ... })를 만들어줘야 함
+
+class TestClass extends TestAbstract{
+
+	@Override
+	public int testMethod() {
+		return test;
+	}
+	
+
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//부모 추상메소드를 상속받아 '구현' 하지 않은 경우 자신도 추상(abstract) 로 남아야 한다
+abstract class TestClass2 extends TestAbstract{
+	int number;
+}
