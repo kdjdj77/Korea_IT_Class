@@ -17,7 +17,7 @@ public class Lambda01Main {
 		Addable myAdder = new AdderImple();
 		double result = myAdder.add(1.11, 2.22);
 		System.out.println("result = " + result);
-				
+///////////////////////////////////////////////////////////////				
 		System.out.println();
 		System.out.println("[2] 익명 클래스 사용");
 		Addable myAdder2 = new Addable() {
@@ -28,7 +28,7 @@ public class Lambda01Main {
 		};
 		result = myAdder2.add(1.11, 2.22);
 		System.out.println("result = " + result);
-		
+///////////////////////////////////////////////////////////////
 		System.out.println();
 		System.out.println("[3] 람다 표현식(lambda expression) 사용");
 		Addable myAdder3 = (a, b) -> a + b;
@@ -44,7 +44,7 @@ public class Lambda01Main {
 interface Addable {
 	public abstract double add(double x, double y);
 	
-} // end interface Adderㄴ
+} // end interface Adder
 
 //인터페이스를 구현하는 클래스를 정의
 class AdderImple implements Addable{

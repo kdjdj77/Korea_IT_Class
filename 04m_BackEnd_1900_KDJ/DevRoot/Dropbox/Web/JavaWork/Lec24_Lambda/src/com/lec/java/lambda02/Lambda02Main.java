@@ -17,16 +17,23 @@ public class Lambda02Main {
 		System.out.println("익명 클래스, 람다 표현식 연습");
 		
 		// 매개변수 없고, 리턴값도 없는 경우
-		// TODO
+		Test01 lambda01 = () -> System.out.println("안녕하세요");
+		lambda01.testPrint();
 		
 		// 매개변수 한개, 리턴값은 없는 경우
-		// TODO
+		Test02 lambda02 = (x) -> System.out.println("num = " + x);
+		lambda02.testPrint(55);
 		
 		// 매개변수 여러개, 리턴값이 있슴.
-		// TODO
+		Test03 lambda03 = (x, y) -> (x > y) ? x : y;
+		System.out.println("result = " + lambda03.max(10, 20));
 		
 		// 매개변수 한개, 내부 수행코드 여러줄.., 리턴값.
-		// TODO
+		Test04 lambda04 = (x) -> {
+			System.out.println(x);
+			return x.length();
+		};
+		System.out.println("result = " + lambda04.myStrLen("Java"));
 		
 		// Test05 인터페이스 만들기
 		// void printMax(double x, double y)
@@ -38,7 +45,16 @@ public class Lambda02Main {
 		// x = 3.14
 		// y = 1.2
 	    // 3.14 > 1.2
-		// TODO
+		Test05 lambda05 = (x, y) -> {
+			System.out.println("x = " + x);
+			System.out.println("y = " + y);
+			if (x > y) {
+				System.out.println(x + " > " + y);
+			} else {
+				System.out.println(x + " <= " + y);
+			}
+		};
+		lambda05.printMax(3.14, 1.2);
 
 		
 		System.out.println("\n프로그램 종료");
