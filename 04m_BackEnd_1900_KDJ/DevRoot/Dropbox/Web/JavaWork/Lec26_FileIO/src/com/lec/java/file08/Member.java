@@ -1,11 +1,17 @@
 package com.lec.java.file08;
 
-public class Member {
+import java.io.Serializable;
 
+public class Member implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4564811082080172359L;
 	private String id;
 	private String pw;
-	private int num;
-	private boolean isExist;
+	transient private int num;
+	transient private boolean isExist;
 	
 	// transient로 선언된 변수는 serialization(직렬화) 대상에서 제외됨.
 	// (파일에 write되지 않는다)
@@ -29,9 +35,3 @@ public class Member {
 	}
 	
 } // end class Member 
-
-
-
-
-
-

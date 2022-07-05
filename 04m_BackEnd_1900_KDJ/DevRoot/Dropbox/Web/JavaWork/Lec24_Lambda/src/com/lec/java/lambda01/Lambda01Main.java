@@ -43,7 +43,7 @@ public class Lambda01Main {
 //인터페이스 정의
 interface Addable {
 	public abstract double add(double x, double y);
-	
+//	int sub(int a, int b);  // 에러	
 } // end interface Adder
 
 //인터페이스를 구현하는 클래스를 정의

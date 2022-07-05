@@ -1,12 +1,8 @@
 package com.lec.java.file11;
 
-import java.io.DataOutputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.OutputStream;
 
 /*
 문자(character) 단위 입출력 스트림 클래스
@@ -37,7 +33,39 @@ public class File11Main {
 	public static void main(String[] args) {
 		System.out.println("FileReader / FileWriter");
 		
-		// TODO
+		String src = "temp/FileData.txt";
+		String dst = "temp/FileData.txt";
+		
+		try(
+				FileWriter fw = new FileWriter(dst);
+				FileReader fr = new FileReader(src);
+				){
+			
+			String str = "안녕하세요";   // 한글 5문자
+			char [] charArr = {'J', 'A', 'V', 'A'};  // 알파벳 4문자
+			
+			// 저장은 시스템 인코딩 상태에 따라 저장됨
+			// UTF-8의 경우 '안녕하세요' 한글 글자는 3byte.  5글자는 15byte로 저장됨.
+			//  영어 알파벳은 한글자당 1byte
+			
+			fw.write(str);
+			fw.write(charArr);
+			fw.flush();
+			
+			
+			// 읽기 read
+			char [] buff = new char[100];  // 텍스트 데이터 읽어올 버퍼 준비
+			
+			int charsRead = fr.read(buff);  // 읽어들인 문자의 개수 리턴
+			for(int i = 0; i < charsRead; i++) {
+				System.out.print(buff[i]);
+			}
+			System.out.println();
+			System.out.println("읽은 문자개수: " + charsRead);
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 		
 		System.out.println("\n프로그램 종료");

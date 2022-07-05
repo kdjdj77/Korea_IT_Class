@@ -34,9 +34,3 @@ public class Member implements Serializable {
 	
 	
 } // end class Member 
-
-
-
-
-
-
