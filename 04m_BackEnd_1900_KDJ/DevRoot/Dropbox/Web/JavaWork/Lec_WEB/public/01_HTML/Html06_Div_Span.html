@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>div, span 컨테이너</title>
+</head>
+<!-- 
+	다른 요소들을 담는 용도(컨테이너)로 주로 사용되는 태그 div, span
+	
+	화면 레이아웃 상의 구역별로 나누는 용도로 많이 사용
+	
+	** 단연코 가장 많이 사용되는 태그들
+	
+ -->
+<body>
+<h2>컨테이너 태그: div, span</h2>
+<div>div</div>
+<div>div</div>
+<div>div</div>
+
+<hr>
+<div style="border: 1px solid blue">
+hello hello<br>
+안녕 안녕<br>
+<p>div 안의 p 태그</p>
+</div>
+ 
+ <hr>
+ 
+<div style="background: yellow; padding: 5px;">
+div1
+	<div style="background: green; padding: 5px;">
+		div21
+	</div>
+div2
+	<div style="background: cyan; padding: 5px;">
+		div22
+		
+		<div style="background: violet; padding: 5px;">
+			div221		
+		</div>
+		
+		<div style="background: tomato; padding: 5px;">
+			div222
+		</div>
+		
+	</div>
+
+</div>
+
+<hr>
+
+<!-- 컨테이너 역할 span / div 와의 결정적 차이점은 inline 속성 -->
+<span>span</span>
+<span>span</span>  <!-- 줄바꿈을  안한다-->
+<span>span</span>
+<hr>
+
+<span style="background: yellow; padding: 5px;">
+span1
+	<span style="background: green; padding: 5px;">
+		span21
+	</span>
+span2
+	<span style="background: cyan; padding: 5px;">
+		span22
+		
+		<span style="background: violet; padding: 5px;">
+			span221		
+		</span>
+		
+		<span style="background: tomato; padding: 5px;">
+			span222
+		</span>
+		
+	</span>
+
+</span>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
+
+
