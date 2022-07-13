@@ -3,6 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>Block & Inline</title>
+<style>
+	.nav {
+		background-color: yellow;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+
+	.nav li {
+		font-size: 20px;
+		padding: 20px;
+		display: inline-block;
+	}
+</style>
 </head>
 <!--
 '모~든' HTML elements 들은  display 스타일 값을 가지고 있다.
@@ -22,7 +37,7 @@
 
 	inline 속성 element 들은 새 라인에서 시작하지 않고
 	필요한 만큼의 좌우폭만 차지한다
-	CSS height. width 속성이 적용안됨★
+	CSS height. width, margin 속성이 적용안됨★
 	CSS의 padding-left 와 padding-right 적용되나 
 		padding-top, padding-bottom 은 적용안됨 
 
@@ -60,7 +75,7 @@
 
 <br>
 <!-- display:block 요소 에는 width, height 가 적용됨 -->
-<div style="background-color: lime; padding: 5px; /* TODO */">
+<div style="background-color: lime; padding: 5px; width:300px; height: 250px">
 	div 요소입니다
 	<div style="background-color: yellow;">div안의 div 입니다</div>
 	<div style="background-color: pink;">div안의 div 입니다</div>
@@ -71,19 +86,19 @@
 
 <span style="background-color: lime; padding: 5px;">
 	span 요소입니다
-	<span style="background-color: yellow;">span안의 span</span>
+	<span style="background-color: yellow; width: 100px;">span안의 span</span>
 </span>
 
 <br><br>
 <hr>
 
-<div style="/* TODO */">
+<div style="background-color: cyan; display: inline;">
 	lnline 적용된 div 입니다
 </div>
 
 <br><br>
 
-<span style="/* TODO */">
+<span style="background-color: cyan; display: block;">
 	block 적용된 span 입니다
 </span>
 
@@ -101,27 +116,3 @@
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

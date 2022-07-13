@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <title>Table2</title>
 <style>
+table {
+    width:100%;
+}
 table, th, td {
     border: 1px solid black;  /* 두께, 선종류, 선색상 */
     border-collapse: collapse; /* border 붙이기 */
@@ -25,46 +28,62 @@ rowspan : 행병합
  -->
 <body>
 
+    <table>
+        <tr>
+            <td>Name</td>
+            <td colspan="2">Telephone</td>
+            
+        </tr>
+        <tr>
+            <td>Bill Gates</td>
+            <td>55577854</td>
+            <td>010343435</td>
+        </tr>
+    </table>
+    
+    <br>
+
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Bill Gates</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Telephone</td>
+            <td>43578643587</td>
+        </tr>
+        <tr>
+            
+            <td>010234243</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td colspan="3" rowspan="2">6</td>
+        </tr>
+        <tr>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+        </tr>
+    </table>
 
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
