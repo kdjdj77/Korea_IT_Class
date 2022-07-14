@@ -8,18 +8,48 @@
  -->
 <style>
 
-/* TODO */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.9em;
+}
+
+div#header, div#footer {
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+div#content {
+  background-color: lightgray;
+  margin: 5px;
+  padding: 10px;
+}
+
+div.article {
+  background-color: white;
+  margin: 5px;
+  padding: 10px;
+}
+
+div#menu ul {
+  padding: 0;
+}
+
+div#menu ul li {
+  display: inline;
+  margin: 5px;
+}
 
 </style>
 </head>
 <body>
 <!-- 우선 페이지의 구조를 설계 -->
 <!-- TODO : id, class 부여 -->
-<div>
+<div id="header">
   <h1>Monday Times</h1>
 </div>
 
-<div>
+<div id="menu">
   <ul>
     <li>News</li>
     <li>Sports</li>
@@ -27,68 +57,24 @@
   </ul>
 </div>
 
-<div>
+<div id="content">
   <h2>News Section</h2>
-  <div>
+  <div class="article">
     <h2>News Article</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in porta lorem. Morbi condimentum est nibh, et consectetur tortor feugiat at.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in porta lorem. Morbi condimentum est nibh, et consectetur tortor feugiat at.</p>
   </div>
-  <div>
+  <div class="article">
     <h2>News Article</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in porta lorem. Morbi condimentum est nibh, et consectetur tortor feugiat at.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in porta lorem. Morbi condimentum est nibh, et consectetur tortor feugiat at.</p>
   </div>
 </div>
 
-<div>
+<div id="footer">
   <p>&copy; 2014 Monday Times. All rights reserved.</p>
 </div>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

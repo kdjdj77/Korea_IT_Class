@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<title>Semantic 적용</title>
-<!-- HTML5 에 추가된 Semantic 태그들
+	<meta charset="UTF-8">
+	<title>Semantic 적용</title>
+	<!-- HTML5 에 추가된 Semantic 태그들
 	https://www.w3schools.com/html/html5_semantic_elements.asp
 	
 	특별한 기능을 하는 것은 아니나, 태그의 의미(semantic) 을 부여하여 작성.
@@ -27,41 +28,81 @@
 		https://www.w3schools.com/html/html5_migration.asp
 
  -->
-<style>
+	<style>
+		/* TODO : 이전버젼에서 가져온후 Semantic 태그로 바꿔보자  */
 
-/* TODO : 이전버젼에서 가져온후 Semantic 태그로 바꿔보자  */
+		body {
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			font-size: 0.9em;
+		}
 
-</style>
+		header,
+		footer {
+			background-color: black;
+			color: white;
+			padding: 10px;
+		}
+
+		section {
+			background-color: lightgray;
+			margin: 5px;
+			padding: 10px;
+		}
+
+		article {
+			background-color: white;
+			margin: 5px;
+			padding: 10px;
+		}
+
+		nav ul {
+			padding: 0;
+		}
+
+		nav ul li {
+			display: inline;
+			margin: 5px;
+		}
+	</style>
 </head>
+
 <body>
-<!-- TODO : 이전버젼에서 가져온후 Semantic 태그로 바꿔보자 -->
+	<!-- TODO : 이전버젼에서 가져온후 Semantic 태그로 바꿔보자 -->
+	<header>
+		<h1>Monday Times</h1>
+	</header>
 
+	<nav>
+		<ul>
+			<li>News</li>
+			<li>Sports</li>
+			<li>Weather</li>
+		</ul>
+	</nav>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<section>
+		<h2>News Section</h2>
+		<article>
+			<h2>News Article</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in porta lorem. Morbi condimentum
+				est nibh, et consectetur tortor feugiat at.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in porta lorem. Morbi condimentum
+				est nibh, et consectetur tortor feugiat at.</p>
+		</article>
+		<article>
+			<h2>News Article</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in porta lorem. Morbi condimentum
+				est nibh, et consectetur tortor feugiat at.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in porta lorem. Morbi condimentum
+				est nibh, et consectetur tortor feugiat at.</p>
+		</article>
+	</section>
+
+	<footer>
+		<p>&copy; 2014 Monday Times. All rights reserved.</p>
+	</footer>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

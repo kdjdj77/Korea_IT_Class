@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex</title>
+
+<!-- Flexbox 레이아웃
+
+기존에 학습했던 레이아웃 방법들
+    1. display : block / inline / table
+    2. position : static, relative, absolute, fixed ...
+
+FlexibleBox 레이아웃
+    float 나 position 을 사용하지 않고도
+    반응형 레이아웃 을 손쉽게 작성할수 있다.
+
+FlexibleBox 사용하기
+    1. 우선 flex container 정의
+    2. container 안에 flex item 들 나열
+
+Flex container 의 property 들
+    flex-direction : 
+        column, column-reverse, row, row-reverse
+    flex-wrap : 
+        > nowrap(디폴트), wrap,  wrap-reverse
+    flex-flow : 
+        > flex-direction 과 flex-wrap 을 동시에 지정가능
+    justify-content : 
+        > center, flex-start(디폴트), flex-end, space-around, space-between
+    align-items : 
+        > center flex-start, flex-end, stretch(디폴트), baseline
+    align-content :  flex line 을 정렬하는데 사용
+        > space-between, space-around, stretch(디폴트), center,  flex-start, flex-end  
+
+-->
+<!--
+    Flex 참조: 
+    https://www.w3schools.com/css/css3_flexbox.asp
+    https://heropy.blog/2018/11/24/css-flexible-box/
+-->
+<style>
+    .flex-container {
+      /* TODO */
+      background-color: DodgerBlue;
+    }
+    
+    .flex-container > div {
+      background-color: #f1f1f1;
+      margin: 10px;
+      padding: 20px;
+      width: 100px;
+      font-size: 30px;
+    }
+
+</style>
+    
+</head>
+<body>
+
+<h2>flex</h2>
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+</div>
+<p> flexible 레이아웃의 부모(컨테이너)는 반드시 <b>display : flex</b> 이어야 한다</p>
+<p> flexible 컨테이너의 child 는 자동적으로 <b>flexible item</b> 이 된다.</p>
+    
+<hr>
+<h2>flex-direction : column</h2>
+<div class="flex-container" style="/* TODO */">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+</div>
+
+<hr>
+<h2>flex-direction: column-reverse</h2>
+<div class="flex-container" style="/* TODO */">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+</div>
+
+<hr>
+<h2>flex-direction: row</h2>
+<div class="flex-container"  style="/* TODO */">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+</div>
+
+<hr>
+<h2>flex-direction: row-reverse</h2>
+<div class="flex-container"  style="/* TODO */">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+</div>
+
+
+<hr>
+<h2>flex-wrap : wrap</h2>
+<div class="flex-container"  style="/* TODO */">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>  
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>  
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>  
+</div>
+
+<hr>
+<h2>flex-wrap : wrap-reverse</h2>
+<div class="flex-container"  style="/* TODO */">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>  
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>  
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>  
+</div>
+
+<hr>
+<h2>flex-flow: row wrap</h2>
+<!-- flex-direction 과 flex-wrap 을 동시 지정 -->
+<div class="flex-container"  style="/* TODO */">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>  
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>  
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>  
+</div>
+
+<hr>
+<h2>justify-content: center</h2>
+<div class="flex-container" style="/* TODO */">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+</div>
+
+<hr>
+<h2>justify-content: flex-start</h2>
+<div class="flex-container" style="/* TODO */"> <!-- flex item 은 container 의 '앞' 에 정렬 -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+</div>
+
+<hr>
+<h2>justify-content: flex-end</h2>
+<div class="flex-container" style="/* TODO */"> <!-- flex item 은 container 의 '끝' 에 정렬 -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+</div>
+
+<hr>
+<h2>justify-content: space-around</h2>    
+<div class="flex-container" style="/* TODO */"> <!-- flex item 의 '앞', '사이', '뒤' 에 여백을 두어 배치 -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+</div>
+
+<hr>
+<h2>justify-content: space-between</h2>    
+<div class="flex-container" style="/* TODO */"> <!-- flex item 의 사이' 여백을 두어 배치 -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+</div>
+
+<hr>
+<h2>align-items: center</h2>    
+<div class="flex-container" style="height: 200px; /* TODO */"> <!-- container 의 middle 에 배치 -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+</div>
+
+<hr>
+<h2>align-items: flex-start</h2>    
+<div class="flex-container" style="height: 200px; /* TODO */"> <!--  container 의 top 에 배치 -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+</div>
+
+<hr>
+<h2>align-items: flex-end</h2>    
+<div class="flex-container" style="height: 200px; /* TODO */"> <!--  container 의 bottom 에 배치 -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+</div>
+
+<hr>
+<h2>align-items: stretch</h2>    
+<div class="flex-container" style="height: 200px; /* TODO */"> <!--  container 에 채울만큼 늘리어져 배치 (디폴트) -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+</div>
+
+<hr>
+<h2>align-items: baseline</h2>    
+<div class="flex-container" style="height: 200px; /* TODO */"> <!--  flex item 내 텍스트의 baseline 에 맞춘다  -->
+    <div><h1>1</h1></div>
+    <div><h6>2</h6></div>
+    <div><h3>3</h3></div>  
+    <div><small>4</small></div> 
+</div>
+
+<hr>
+<h2>align-content: space-between</h2>    
+<div class="flex-container" 
+    style="height: 600px;   
+        
+        /* TODO */
+        			"> <!-- flex lines 간 줄간격을 동일하게 배치 / 화면을 늘렸다 줄였다 해보자   -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>  
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>  
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>  
+</div>
+
+<hr>
+<h2>align-content: space-around</h2>    
+<div class="flex-container" 
+    style="height: 600px;   
+        /* TODO */
+
+			"> <!-- flex lines 간 줄간 '이전', '사이', '이후' 간격을 동일하게 배치 / 화면을 늘렸다 줄였다 해보자   -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>  
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>  
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>  
+</div>
+
+<hr>
+<h2>align-content: stretch</h2>    
+<div class="flex-container" 
+    style="height: 600px;   
+        
+        /* TODO */
+        
+        "> <!-- (디폴트) flex lines 들이 컨테이너 공간을 다 차지하게 늘려 배치  -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>  
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>  
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>  
+</div>
+
+<hr>
+<h2>align-content: center</h2>    
+<div class="flex-container" 
+    style="height: 600px;   
+        
+        /* TODO */
+        
+        "> <!-- flex lines 들이 컨테이너 공간 middle 에 배치  -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>  
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>  
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>  
+</div>
+
+<hr>
+<h2>align-content: flex-start</h2>    
+<div class="flex-container" 
+    style="height: 600px;   
+        
+        /* TODO */
+        "> <!-- flex lines 들이 컨테이너 시작지점 배치  -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>  
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>  
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>  
+</div>
+
+<hr>
+<h2>align-content: flex-end</h2>    
+<div class="flex-container" 
+    style="height: 600px;   
+        
+        /* TODO */
+        
+        "> <!-- flex lines 들이 컨테이너 끝지점 배치  -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>  
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>  
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>  
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>  
+</div>
+
+<hr>
+<h2>가로 세로 완전 중앙 배치!</h2>
+<div class="flex-container" 
+	style="height: 300px;  
+	/* TODO */
+	">
+    <div></div>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+@charset "UTF-8";
+* {box-sizing: border-box;}
+body {margin: 0; }
+.column img{width: 100%;}
+.header{text-align: center; padding: 32px;}
+
+.row{
+	/* content 에 관계 없이 
+	flexible 아이템들을 
+	동일한 length 로 맞춘다*/
+	
+	/* TODO */
+	
+	/* flexible 아이템들이 wrap 될것인지 여부
+		wrap / nowrap */
+
+	/* TODO */
+}
+
+.column {
+	/* TODO */
+}
+
+.column img{
+	/* TODO */
+}
+
+
+
+@media (max-width: 800px){ /*  ~ 800 */
+	/* TODO */
+} 
+
+@media (max-width: 600px){  /* ~ 600 */
+	/* TODO */	
+}
+
+
+

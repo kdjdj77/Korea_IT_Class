@@ -9,67 +9,64 @@
 <form action="https://www.w3schools.com/action_page.php">
 
 <!-- hidden -->
+<input type="hidden" name="data1" value="alpha">
+<input type="hidden" name="data2" value="beta">
 
 <!-- text -->
 <br><hr>
 
 <!-- 필수요소인 경우 required ,placeholder : 입력 힌트 -->
+Id:<br>
+<input type="text" name="id" placeholder="id 를 입력하세요" required>
 <br><hr>
 
 <!-- disabled, readonly -->
+별명:<br>
+<input type="text" name="nick" value="건드리면 안되는 값" disabled><br>
+취미:<br>
+<input type="text" name="hobby" value="읽기전용" readonly>
+ 
+
+
 <br><hr>
 
 <!-- number -->
+나이:<br>
+<input type="number" name="age">
 <br><hr>
 
 <!--  password -->
+비밀번호:<br>
+<input type="password" name="psw">
 <br><hr>
 
 
 <!-- radio -->
+<input type="radio" name="gender" value="male">남성<br>
+<input type="radio" name="gender" value="female" checked>여성<br>
+<input type="radio" name="gender" value="pet">동물<br>
 <br><hr>
 
 
 <!-- checkbox -->
+<input type="checkbox" name="vehicle1" value="Bike">자전거<br>
+<input type="checkbox" name="vehicle2" value="Car" checked>자동차<br>
 <br><hr>
 
 
 <!-- button -->
 <!--  <button> 도 있고 <input type="button" 도 있다 -->
+<input type="button" value="클릭" onclick="alert('Hello')">
 <br><hr>
 
 <!-- reset -->
 
 <!-- submit -->
-
+<input type="submit">
 <!-- form 안의 button 은 type=button 이 명시 안되면 submit 동작을 하니 주의! -->
-
+<button type="button">버튼이다</button>
 </form>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

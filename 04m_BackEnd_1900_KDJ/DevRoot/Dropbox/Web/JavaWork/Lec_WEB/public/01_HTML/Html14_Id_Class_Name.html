@@ -3,7 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <title>id class name</title>
+<style>
+p {
+	font-size: 200%;
+}
 
+p#demo { /* id=demo 인 p element 에 적용 */
+	background-color: cyan;
+}
+
+p.c1 { /* class 에 c1 을 가진 p element 에 적용 */
+	color: red;
+}
+
+p.c2 {
+	background-color: yellow;
+}
+</style>
 </head>
 <!-- 
 HTML 에서 element 를 식별하는 수단 3가지 (attribute)
@@ -25,39 +41,15 @@ HTML 에서 element 를 식별하는 수단 3가지 (attribute)
  -->
 <body>
 
-<p>id = demo</p>
-<p>class="c1"</p>
-<p>class="c2"</p>
-<p>class="c1 c2"</p>
+<p id="demo">id = demo</p>
+<p class="c1">class="c1"</p>
+<p class="c2">class="c2"</p>
+<p class="c1 c2">class="c1 c2"</p>
 
 <p>id = demo 또?</p>
 
-아이디: <input type="text" size="20">
+아이디: <input type="text" size="20" name="userid">
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
