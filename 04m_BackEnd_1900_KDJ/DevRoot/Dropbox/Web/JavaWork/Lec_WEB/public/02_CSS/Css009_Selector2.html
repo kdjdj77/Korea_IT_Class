@@ -5,60 +5,62 @@
 <title>Selector2 - Pseudo class</title>
 <style>
 /* unvisited link */
-TODO_1 {
+a:link {
     color: red;
 }
 
 /* visited link */
-TODO_2 {
+a:visited {
     color: green;
 }
 
 /* mouse over link */
-TODO_3 {
+a:hover {
     color: hotpink;
 }
 
 /* selected link */
-TODO_4 {
+a:active {
     color: blue;
 }
 
 /* :hover 마우스가 올라간 상태 */
-TODO_5 {
+div#demo1 {
     background-color: green;
     color: white;
     padding: 25px;
     text-align: center;
 }
-TODO_6 {
+div#demo1:hover {
     background-color: blue;
 }
 
 /* 마우스가 올라갔을때만 보여지게 하는 방법 */
-TODO_7 {
+p#demo2 {
      /* 기본적으로 안보이게 하다가 */
+	display: none;
     background-color: yellow;
     color: black;
     padding: 20px;
 }
 
-TODO_8 {
+div:hover p#demo2 {
     /* 마우스 올라가면 보이게 하기 */
+	display:block;
 }
 
 /* :first-child */
-TODO_9 {
+div#demo3 p:first-child{
     color: blue;
 } 
 
 /* :nth-child() */
-TODO_10 {
+div#demo4 p:nth-child(2) {
     color: red;
 } 
 
 /* :focus 입력 상태*/
-TODO_11 {
+div#demo5 input:focus {
     background-color: yellow;
 }
 
@@ -80,7 +82,7 @@ CSS selector 에서 pseudo-class 구문
 
  -->
 <body>
-<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+<p><b><a href="https://www.naver.com" target="_blank">This is a link</a></b></p>
 
 <hr>
 <div id="demo1">Mouse Over Me</div>

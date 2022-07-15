@@ -5,24 +5,24 @@
 <title>Selector3 - Pseudo element</title>
 <style>
 /* ::first-line 첫 라인 */
-TODO_1 {
+div#demo1 p::first-line {
     color: #ff0000;
     font-variant: small-caps;
 }
 
 /* ::first-letter 첫 글자 */
-TODO_2 {
+div#demo2 p::first-letter {
     color: #ff0000;
     font-size: xx-large;   /* https://www.w3schools.com/cssref/playit.asp?filename=playcss_font-size&preval=x-large 참조 */ 
 }
 
 /* ::before ~앞에 삽입 */
-TODO_3 {
+div#demo3 h1::before {
     content: url(https://www.w3schools.com/css/smiley.gif);  /* content 는 pseudo-element selector 와만 사용 가능*/
 }
 
 /* ::selection  선택 영역 */
-TODO_4 {
+div#demo4 ::selection {
  	color: red;
     background: yellow;
 }
