@@ -1,9 +1,0 @@
-browser  front back  db
-
-1. browser가 front에 요청
-2. front가 html, css, js를 browser에 전달
-3. browser가 dom tree를 생성
-4. brower가 back에 데이터 전달 + 정보 요청
-5. back이 db에 받은 데이터에 맞는 정보 요청
-6. db가 back에 정보 전달
-7. back이 browser에 정보 전달
