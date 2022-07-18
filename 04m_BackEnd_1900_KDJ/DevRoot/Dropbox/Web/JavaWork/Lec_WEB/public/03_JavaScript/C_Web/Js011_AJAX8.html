@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>영화목록조회 - 영화진흥위원회</title>
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+</head>
+<!--
+■ 영화진흥위원회 : 영화목록조회
+http://www.kobis.or.kr/kobisopenapi/homepg/apiservice/searchServiceInfo.do
+
+http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.xml  (XML)
+http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json  (JSON)
+	key : (발급키)
+	movieNm : 조회할 영화명 (utf-8 인코딩)
+	openStartDt : 조회시작 개봉연도 (날짜yyyyMMdd)
+	itemPerPage : 결과 row 의 개수
+	curPage : 현재 페이지
+
+샘플url
+XML 버젼
+http://kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.xml?key=f5eef3421c602c6cb7ea224104795888
+
+JSON 버젼
+http://kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json?key=f5eef3421c602c6cb7ea224104795888
+http://kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json?key=f5eef3421c602c6cb7ea224104795888&movieNm=%EB%AF%B8%EC%85%98&openStartDt=2000&itemPerPage=10&curPage=3
+-->
+<body>
+<h1>영화목록조회</h1>
+<form name="frm">
+영화명: <input type="text" name="movieNm" placeholder="검색할 영화명 입력.."><br>
+조회시작 개봉연도(yyyy): <input type="number" name="openStartDt" placeholder="yyyy"/><br>
+출력ROW : <input type="number" value="10" name="itemPerPage"><br>
+출력페이지 : <input type="number" value="1" name="curPage"><br>
+<br><br>
+
+<button type="button" onclick="loadData()">정보 가져오기</button>
+<button type="button" onclick="removeTable()">지우기</button>
+</form>
+
+<hr>
+
+<h2>검색결과</h2>
+<table id="demoJSON"></table>
+
+
+<script>
+var api_key = "당신의 키값은?";  // 자신의 키값 입력하기!
+var req_url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json";
+
+function removeTable(){
+	//document.getElementById('demoXML').removeChild(document.getElementById('demoXML').childNodes[0]);
+	document.getElementById('demoJSON').removeChild(document.getElementById('demoJSON').childNodes[0]);
+}
+
+function loadData() {
+
+	// 한글의 경우 url encoding 필요  (encodeURIComponent() 등 사용..)
+	// TODO
+	
+	
+	// 유효성 검사
+	// TODO
+	
+	// JSON
+	// TODO
+	
+}
+
+function parseJSON(jsonText){
+	// TODO
+}
+</script>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

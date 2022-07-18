@@ -20,25 +20,29 @@ div {
 div#box1 {
     background: red;
 
-	/* TODO */
+	transition: width 2s, height 2s; /* width 값 변화 발생시 2초에 걸쳐 진행 */
 	
 }
 
 div#box1:hover {
 
-	/* TODO */
-
+	width: 300px;
+	height: 300px;
 }
 
 div#box2 {
 	background-color: blue;
 
-	/* TODO */
+	/* transition: width 2s, height 1s, background 2s, transform 0.7s; */
+	transition: all 2s;
 }
 
 div#box2:hover{
 
-	/* TODO */
+	width: 200px;
+	height: 200px;
+	background-color: yellow;
+	transform: rotate(100deg);
 
 }
 /*  transform : 관련 값
@@ -53,11 +57,11 @@ div#box2:hover{
 div#box3{
 	background-color: green;
 
-	/* TODO */
+	transition: margin 2s;
 }
 
 div#box3:hover{
-	/* TODO */
+	margin-left: 100px;
 }
 
 </style>
@@ -79,6 +83,13 @@ div#box3:hover{
 <p>#box3 마우스를 올려보세요</p>
 <div id="box3"></div>
 
+<!-- HowTo 예제 참조 -->
+<hr>
+<h4>How to 참조</h4>
+<a href="https://www.w3schools.com/howto/howto_css_animate_buttons.asp">Animated buttons</a><br>
+<a href="https://www.w3schools.com/howto/howto_css_icon_bar.asp">Icon bar</a><br>
+<a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_sidenav_buttons">Hover size menu</a><br>
+<a href="https://www.w3schools.com/cssref/css_animatable.asp">CSS Animatable property</a>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
