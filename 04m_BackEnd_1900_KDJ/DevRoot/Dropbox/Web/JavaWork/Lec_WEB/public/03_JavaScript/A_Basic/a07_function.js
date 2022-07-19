@@ -55,33 +55,102 @@
  * 함수로 작성하는 것이 일반이다.
  */
 
-// TODO
+// 함수 정의
+function sayAnthem(){
+   console.log("동해물과 백두산이");
+   console.log("마르고 닳도록");
+   console.log("하느님이 보우하사");
+   console.log("우리나라 만세");
+}
+
+// 함수 호출
+sayAnthem();
+sayAnthem();
+sayAnthem();
+sayAnthem();
+
+console.log(sayAnthem, typeof sayAnthem);
+
+function sayName(name){
+   console.log('안녕하세요');
+   console.log(`제 이름은 ${name} 입니다`);
+}
+
+sayName('김종훈');
+
+// JS 에선 매개변수가 정의된 함수를 호출할때 매개변수 값을 지정하지 않으면 undefined 값이 전달된다!
+sayName();
+
+// JS 에선 함수정의시 지정된 매개변수보다 더 많은 인자값으로 호출하여도 에러 발생하지 않는다!
+sayName("오정환", 25);
 
 
 /*********************************************
- * 함수 호출 관련 디버깅 명령
- *  step into : 실행할 함수 내부로 이동
- *  step out : 실행중인 함수 리턴까지 진행
- * 호출스택 (call stack) : 함수 호출관계 모니터링
- */
+* 함수 호출 관련 디버깅 명령
+*  step into : 실행할 함수 내부로 이동
+*  step out : 실행중인 함수 리턴까지 진행
+* 호출스택 (call stack) : 함수 호출관계 모니터링
+*/
 // TODO
 
 
 /* ********************************************
- * return [값]
- *  -- 함수 종료
- *  -- 호출한 쪽으로 '값 하나' 을 돌려준다 
- */
-// console.log('-'.repeat(20));
-// console.log('[return]');
+* return [값]
+*  -- 함수 종료
+*  -- 호출한 쪽으로 '값 하나' 을 돌려준다 
+*/
+console.log('-'.repeat(20));
+console.log('[return]');
 
-// TODO
+function codeEveryday1(){
+   console.log('웹개발 열공중');
+   console.log('자바스크립트는');
+   console.log('과연 쉬울까요?');
+   return;
+}
 
+codeEveryday1();
+let ret_value = codeEveryday1();
+console.log(ret_value);
+
+function codeEveryday2(){
+   console.log('웹개발 열공중');
+   console.log('자바스크립트는');
+   return;
+   console.log('과연 쉬울까요?');
+}
+
+console.log(codeEveryday2());
 
 // ----------------------------------------------------
 // JS 에선 함수도 '데이터'다
 
-// TODO
+console.log(sayAnthem.toString());
+
+// 일반적으로 JS 에선 아래와 같이 함수를 정의하곤 한다.
+const sayHello2 = function(name, age){
+   console.log('-'.repeat(20));
+   sayName(name);
+   console.log(`나이는 ${age} 살입니다`);
+   console.log('-'.repeat(20));
+}
+
+sayHello2('심예은', 21);
+
+
+let aaa = sayHello2;
+sayHello2('함수함수', 45);
+
+
+// 함수 정의와 동시에 호출
+(function(){
+   console.log('hello function');
+})();
+
+(function(a, b){
+   console.log(`${a} + ${b} = ${a + b}`);
+})(10, 13);
+
 
 // ----------------------------------------------------
 // 함수 정의 예
@@ -92,32 +161,3 @@
 // TODO
 
 console.log("\n[프로그램 종료]", '\n'.repeat(20));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

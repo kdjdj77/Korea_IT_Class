@@ -12,9 +12,36 @@ let str, str1, str2, str3;
  * 방법1. 문자열 리터럴.  "~" 혹은 '~' 으로 생성
  * 방법2. new String() 으로 정의 (비추)
  */
-// console.log("[문자열 생성]");
-// TODO
+console.log("[문자열 생성]");
+str = "Volvo";
+str = 'Volvo';
 
+str = "It's alright";
+str = 'He is called "Johnny"'; console.log(str);
+
+// new String() 
+str1 = "John";
+str2 = new String("John");
+str3 = new String("John");
+
+console.log(typeof str1, typeof str2);
+console.log(str1 == str2);
+console.log(str1 === str2);
+
+// 문자열 리터럴 중간에 줄바꿈... 가능?
+str = "Hello Web App\
+lication";
+console.log(str);  // 그러나 위 방법 비추.
+
+str = "Hello Web App" +
+    "lication";  //  차라리 이 방법 ㅊㅊ
+console.log(str);
+
+// .length
+console.log("length: 문자개수");
+str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+console.log(str.length);
 
 /******************************************
  * String 의 메소드들
@@ -33,11 +60,31 @@ let str, str1, str2, str3;
  *  startsWith(searchValue, start) : 주어진 문자열로 시작하면 true 리턴
  *  endsWith(searchValue, length): 주어진 문자열로 끝나면 true 리턴
  */
-// console.log('-'.repeat(20));
-// console.log("[문자열 검색 indexOf(), lastIndexOf(), search(), includes()]");
-// str = "Please locate where 'locate' occurs!";
+console.log('-'.repeat(20));
+console.log("[문자열 검색 indexOf(), lastIndexOf(), search(), includes()]");
+str = "Please locate where 'locate' occurs!";
 
-// TODO
+console.log(str.indexOf("locate"));  // 7
+console.log(str.lastIndexOf("locate")); // 21
+console.log(str.indexOf("john")); // -1
+
+console.log(str.indexOf("locate", 15));  // index 15 부터 검색
+console.log(str.lastIndexOf("locate", 15));  // index 15부터 역방향 검색
+
+console.log(str.search("locate")); // 7
+
+// search() vs indexOf() : 둘은 다르다!
+// 	search() : 두번째 매개변수 없다, regexp 사용가능
+// 	indexOf() : regexp 사용 불가
+
+console.log(str.includes("locate"));  // true
+console.log(str.includes("abc"));   // false
+
+console.log(str.startsWith("Please"));  // true
+console.log(str.startsWith("please"));  // false
+
+console.log(str.endsWith("occurs"));    // false
+console.log(str.endsWith("occurs!"));   // true
 
 
 /***********************************************
@@ -46,12 +93,18 @@ let str, str1, str2, str3;
  *  substring(start, end)
  *  substr(start, length) : start 부터 length 개의 문자 추출
  */
-// console.log('-'.repeat(20));
-// console.log("[문자열 추출 slice(), substring(), substr()]");
-// str = "Apple, Banana, Kiwi";
+console.log('-'.repeat(20));
+console.log("[문자열 추출 slice(), substring(), substr()]");
+str = "Apple, Banana, Kiwi";
 
-// TODO
+console.log(str.slice(7, 13));
+console.log(str.slice(-12, -6)); // 음수 인덱싱 가능
+console.log(str.slice(7));   // 7부터 끝까지
+console.log(str.slice(-12));
 
+console.log(str.substring(7, 13));   // slice() 와 유사하나 음수인덱싱 불가
+
+console.log(str.substr(7, 6));   // 7부터 6글자
 
 /*******************************
  * 문자열 치환
@@ -144,29 +197,3 @@ let str, str1, str2, str3;
 // TODO
 
 console.log("\n[프로그램 종료]", '\n'.repeat(20));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
