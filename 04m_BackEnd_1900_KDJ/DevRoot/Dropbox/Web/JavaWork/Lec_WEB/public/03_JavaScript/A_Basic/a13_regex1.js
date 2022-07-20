@@ -41,14 +41,16 @@
  */
 let text, n, pattern;
 
-// console.log('[정규표현식을 사용하는 string 메소드 예]');
-// text = "Hello JavaScript";
+console.log('[정규표현식을 사용하는 string 메소드 예]');
+text = "Hello JavaScript";
 
 // search(string) <- 해당 'string' 을 문자열에서 찾는다
-// TODO
+console.log(text.search("JavaScript"));
 
 // search(RegExp) <- 해당 정규표현식 패턴(RegExp) 을 문자열에서 찾는다
-// TODO
+console.log(text.search(/JavaScript/));
+console.log(text.search(/javascript/));
+console.log(text.search(/javascript/i));
 
 // replace(str1, str2) 
 // str1 을 문자열에서 찾아 str2 로 치환
@@ -77,4 +79,8 @@ console.log('-'.repeat(20));
 console.log('[정규표현식 메소드 예]');
 text = 'The best things in life are free!';
 
-// TODO
+pattern = /e/;
+
+console.log(pattern.test(text));
+
+console.log(pattern.exec(text));
