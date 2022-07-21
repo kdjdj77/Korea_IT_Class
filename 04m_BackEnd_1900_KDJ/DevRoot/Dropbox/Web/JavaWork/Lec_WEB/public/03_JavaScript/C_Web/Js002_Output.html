@@ -15,12 +15,22 @@ JavaScript 가  출력하는 4가지 방법.
 
 <script>
 
-// TODO
+document.getElementById('demo').innerHTML = '실행될까요';
+
+function showRandom(){
+	document.getElementById('demo').innerHTML =
+		Math.floor(Math.random() * 10) + 1;
+}
+
+//script element 안의 JS코드는 element 로딩이 완료된 직후 실행
+
+// inline 으로 작성된 JS 코드는 해당 event 발생시 실행.
+
 
 </script>
 
 
-<h2 onclick="TODO">클릭하세요</h2>
+<h2 onclick="showRandom()">클릭하세요</h2>
 <p id="demo">1~10까지 난수</p>
 <script>
 
@@ -30,24 +40,35 @@ JavaScript 가  출력하는 4가지 방법.
 
 <script>
 // 아래 코드는 '페이지가 로딩'될때 실행
-// TODO
+let text = "로딩중에 document.write()";
+document.write(`<h2>${text}</h2>`);
 
 </script>
 
-<p onclick="TODO">그러나 이것을 클릭하면..</p>
+<!-- document.write() 를 페이지 로딩 완료후에 호출하면
+기존 HTML문서 다 지우고 write함 -->
+
+<p onclick="document.write('헉')">그러나 이것을 클릭하면..</p>
 
 <br>
 
-<h2 onclick="TODO">클릭하면 팝업이..</h2>
+<h2 onclick="alert('짜잔~')">클릭하면 팝업이..</h2>
 
 <br>
 
 
-<h2 onclick="TODO">클릭하고 console에서 확인해보자</h2>
+<h2 onclick="showNumber(5)">클릭하고 console에서 확인해보자</h2>
 
 <script>
 
-// TODO
+function showNumber(num){
+	let i, j;
+	for(i = 0; i < num; i++){
+		j = i * 2;
+		console.log("i=" + i + ", j=" + j);
+	}
+
+}
 
 /*
 	JavaScript 는 브라우저에서 실행 (Client side script) 이기 때문에
@@ -68,29 +89,3 @@ JavaScript 가  출력하는 4가지 방법.
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

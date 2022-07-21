@@ -69,11 +69,22 @@ getName = function(animal){
 }
 
 getName = function(animal){
-    return animal && animal.name;  // 매개변수 검증에 if 문 보다 SCE 많이 애용.
+    const name =  animal && animal.name;  // 매개변수 검증에 if 문 보다 SCE 많이 애용.
+    if(!name){
+        return "이름이 없는 동물입니다";
+    }
+    return name;
 }
 
-// TODO
+name = getName(dog);
+console.log(name);
 
+getName = function(animal){
+    const name =  animal && animal.name;   // SCE
+    return name || "이름이 없는 동물입니다";  // SCE
+}
+
+console.log(getName(dog));
 
 
 

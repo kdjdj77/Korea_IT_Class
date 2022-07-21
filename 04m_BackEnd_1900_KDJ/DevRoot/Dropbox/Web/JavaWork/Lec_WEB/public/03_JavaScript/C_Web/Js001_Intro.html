@@ -28,21 +28,31 @@ DOM( Document Object Model )
 	
 -->
 
+<script>
+function myFunction(){
+	document.getElementById('demo3').innerHTML = "클릭했습니다";
+}
+</script>
+<script src="JS/myScript.js"></script>
+
 <body>
 <h2>1. JavaScript 는 Content 를 바꿀수 있다</h3>
-<button type="button">클릭하면 날짜와 시간이 보여집니다.</button>
+<button type="button" onclick="document.getElementById('demo1').innerHTML = Date();">클릭하면 날짜와 시간이 보여집니다.</button>
 <p id="demo1">클릭하면 Content 가 바뀝니다</p>
-<p id="demo3">클릭해보세요</p>
+<p id="demo3" onclick="myFunction()">클릭해보세요</p>
 
 <h2>2. JavaScript 는 attribute 를 바꿀수 있다</h3>
 <img id="myImage" src="https://www.w3schools.com/html/pic_bulboff.gif" width="100" height="180">
 <div>
-<button type="button">Light On</button>
-<button type="button">Light Off</button>
+<button type="button" onclick="light(1)">Light On</button>
+<button type="button" onclick="light(0)">Light Off</button>
 </div>
 
 <h2>3. JavaScript 는 Style 를 바꿀수 있다</h3>
-<p id="demo2">
+<p id="demo2"
+	onmouseover="document.getElementById('demo2').style.color = 'red'"
+	onmouseout="this.style.color = 'black'"
+>
 마우스를 올렸다, 내렸다 해보세요.
 </p>
 
@@ -50,29 +60,3 @@ DOM( Document Object Model )
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

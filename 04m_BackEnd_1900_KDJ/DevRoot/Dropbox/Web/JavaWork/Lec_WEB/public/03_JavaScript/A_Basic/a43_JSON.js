@@ -9,7 +9,7 @@
  			ex) {"name":"John"}
  		
  	JavaScript에선
- 		object 에서 property name에 쌍따옴표 사용안했다!
+ 		object 에서 property name에 꼭 따옴표를 붙일 필요는 없었다.
  		문자열 데이터는 쌍따옴표 혹은 홀따옴표로 감쌀수 있다.  	
  			ex) {name:'John'}
  			
@@ -37,14 +37,17 @@ let myObj, myJSON, arr;
 
 myObj = { name: "John", age: 31, city: 'New York' };
 console.log(myObj);  // 원래는 이런 모양
-// TODO
+console.log(JSON.stringify(myObj));
 
 
 myJSON = '{"name":"John", "age":31, "city":"New York"}';
-// TODO
+myObj = JSON.parse(myJSON);
+console.log(myObj);
+console.log(myObj.name);
 
 arr = [ "John", 'Peter', 'Sally', "Jane" ];
-// TODO
+myJSON = JSON.stringify(arr);
+console.log(myJSON);
 
 //JSON 으로 변환안되는 값들
 myObj = { 
@@ -54,30 +57,6 @@ myObj = {
 	place : undefined,    // JSON 변환안됨
 	func1 : function(){}  // JSON 변환안됨
 	};
-// TODO
+console.log(JSON.stringify(myObj));
 
 console.log("\n[프로그램 종료]", '\n'.repeat(20));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
