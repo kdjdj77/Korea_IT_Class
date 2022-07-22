@@ -44,8 +44,23 @@ window
 -->
 
 <script>
+// 전역젼수 x
+var x = 10;
 
-// TODO
+function myFunc1(){
+	window.document.getElementById('result1').innerHTML =
+		`전역 x = ${window.x}, 전역 a = ${window.a}`;
+}
+
+function myFunc2(){
+	x += 3;
+	document.getElementById('result2').innerHTML = x;
+}
+
+function myFunc3(){
+	a = 40;   // 키워드 없이 선언한 변수는 전역변수가 된다.
+	document.getElementById('result3').innerHTML = a;
+}
 
 </script>
 
@@ -98,20 +113,3 @@ function myFunc7(){
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

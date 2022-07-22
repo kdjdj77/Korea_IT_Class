@@ -41,43 +41,28 @@ th, td {padding: 5px;}
 <br>
 
 <!--  TODO : onclick -->
-<button type="button">삭제하기</button><br>
+<button type="button" onclick="chkDelete()">삭제하기</button><br>
 
 
 </form>
 
 <script>
 
-// TODO
+function chkDelete(){
+	let frm = document.forms.frm;
+
+	for(e of frm['id']){
+		if(e.checked){
+			confirm('선택한 것들을 삭제하시겠습니까?') && frm.submit();
+			return;
+		}
+	}
+
+	alert('삭제할 것을 체크해주세요');
+}
 
 </script>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

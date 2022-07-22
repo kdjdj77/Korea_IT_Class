@@ -32,7 +32,114 @@ div#btnBox * { margin: 2px; }
 
 <script>
 
-// TODO
+function showData(){
+    let result = "입력결과<br>";
+
+    // <form> 객체 가져오기
+    let frm = document.forms['myform1'];  // name='myform1' 인 <form> 객체
+    frm = document.forms.myform1;
+
+    // 1. 일반적인 input 값   .value 값
+    let username = frm['username'].value;
+    username = frm.username.value;
+    
+    result += `이름: ${username}<br>`;
+
+
+    // 2. checkbox 의 값   .checked 로 판단
+    let hobby = [];
+
+    // if(frm['drive'].checked){
+    //   hobby.push(frm['drive'].value);
+    // }
+    frm['drive'].checked && hobby.push(frm['drive'].value);
+    frm['music'].checked && hobby.push(frm['music'].value);
+    frm['sports'].checked && hobby.push(frm['sports'].value);
+    result += `취미: ${hobby.join(',')}<br>`;
+
+    // 3. checkbox  동일 name 이 여럿인 경우
+    // frm['skill'] <-- skill 이라는 name을 갖고 있는 
+    //                  form element 들의 array 임
+
+    let skill = [];
+    // for(i = 0; i < frm['skill'].length; i++){
+    //   if(frm['skill'][i].checked)
+    //     skill.push(frm['skill'][i].value);
+    // }
+
+    for(e of frm['skill']){
+      e.checked && skill.push(e.value);
+    }
+
+    result += `보유기술: ${skill.join(',')}<br>`;
+
+
+    // 4. radio : 이 또한 동일 name 으로 구성.  3.  과 유사
+    let gender = "";
+
+    for(e of frm['gender']){
+      if(e.checked){
+        gender = e.value;
+        break;   
+      }
+    }
+
+    result += `성별: ${gender}<br>`;
+
+    // 5. <select> : 단일   .value;
+    result += `좋아하는차1: ${frm["cars"].value}<br>`;
+
+    // 6. <select> : multiple    3. 과 유사  .selected 사용
+    let cars2 = [];
+    
+    for(e of frm['cars2']){
+      e.selected && cars2.push(e.value);
+    }
+
+    result += `좋아하는차2: ${cars2.join(",")}<br>`;
+
+
+    // 7. <textarea>   .value 사용
+    result += `메모: ${frm['message'].value}<br>`;
+    
+
+    document.getElementById('result').innerHTML = result;
+}
+
+
+function setData(){
+  let frm = document.forms['myform1'];
+
+  // input
+  frm['username'].value = '홍길동';
+
+  // checkbox
+  frm['drive'].checked = false;
+  frm['music'].checked = true;
+  frm['sports'].checked = true;
+
+  // checkbox (동일 name)
+  frm['skill'][0].checked = false;
+  frm['skill'][1].checked = true;
+  frm['skill'][2].checked = true;
+
+  // radio button
+  frm['gender'][0].checked = true;
+
+  // select (단일)
+  // frm['cars'].value = 'fiat';
+  frm['cars'][2].selected = true;
+
+  // select (multiple)
+  frm['cars2'][0].selected = true;
+  frm['cars2'][1].selected = false;
+  frm['cars2'][2].selected = true;
+  frm['cars2'][3].selected = false;
+
+  // textarea 
+  frm['message'].value = "안녕하세요";
+}
+
 
 </script>
 
@@ -110,49 +217,3 @@ div#btnBox * { margin: 2px; }
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

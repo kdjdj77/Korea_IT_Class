@@ -22,29 +22,40 @@ table{
 <body>
 <script>
 
-// TODO
+let n = Math.floor(Math.random() * 10) + 1;
+document.write(`n: ${n} <br>`);
+document.write("<ol>");
+for(i = 0; i < n; i++){
+	document.write(`<li>안녕하세요 ${i + 1} 번째 입니다</li>`)
+}
+document.write("</ol>");
 
 </script>
+
+<script>
+
+	let row = Math.floor(Math.random() * 10) + 1;
+	let col = Math.floor(Math.random() * 10) + 1;
+	
+	document.write("row:" + row + " col:" + col);
+	
+	document.write("<table>");
+	for(i = 1; i <= row; i++){
+		document.write("<tr>");
+		for(j = 1; j <= col; j++){
+			document.write("<td>" + i + "행" + j + "열" + "</td>");
+		}
+		document.write("</tr>");
+	} // end for
+	document.write("</table>");
+	
+	// "\n" 을 안할 경우 드~럽게 나온다.
+	
+	</script>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
