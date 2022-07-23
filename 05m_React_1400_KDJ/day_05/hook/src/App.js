@@ -1,7 +1,9 @@
 import './App.css';
+import Hook from './pages/hook';
 
 function App() {
-  return (":)");
+  return (
+    <Hook/>
+  );
 }
-
 export default App;
