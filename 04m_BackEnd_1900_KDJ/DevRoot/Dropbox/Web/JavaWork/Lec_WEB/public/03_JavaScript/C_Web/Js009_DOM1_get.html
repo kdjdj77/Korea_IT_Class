@@ -39,6 +39,7 @@ HTML element를 다루기 위한
 	window.document 객체를 통해 DOM 구조 다룹니다
 
  -->
+
 <body>
 <img src="https://www.w3schools.com/js/pic_htmltree.gif">
 <hr>	
@@ -50,6 +51,8 @@ HTML element를 다루기 위한
 
 <script>
 //TODO : id 값이 중복되는 경우 첫번째 element 만 가져온다.
+document.write("결과: " + document.getElementById('demo1').innerHTML);
+document.getElementById('demo3').innerHTML = '바꿘지롱';
 
 </script>
 
@@ -62,7 +65,12 @@ HTML element를 다루기 위한
 
 <script>
 // div element들을 찾아서 차례대로 "div1 입니다" "div2 입니다"..  로 내용 바꾸기
-// TODO
+let elements = document.getElementsByTagName('div');
+
+for(i = 0; i < elements.length; i++){
+	let element = elements[i];
+	element.innerHTML = `div${i} 입니다`;
+}
 
 </script>
 
@@ -80,7 +88,11 @@ HTML element를 다루기 위한
 // getElementsByClassName("c3")
 // element.style.background
 
-// TODO
+elements = document.getElementsByClassName("c3");
+
+for(e of elements){
+	e.style.background = "yellow";
+}
 
 </script>
 
@@ -98,7 +110,10 @@ name2: <input type="text" value="name2" name="name2"/><br>
 // 배경색을 노란색으로 하고 입력사이즈를 50으로 변경해보기
 // background (CSS),  size(attribute)
 
-// TODO
+document.getElementsByName("name1").forEach((e)=>{
+	e.style.background = "yellow";
+	e.size = 50;
+});
 
 </script>
 
@@ -112,7 +127,9 @@ name2: <input type="text" value="name2" name="name2"/><br>
 <script>
 // p.intro selector 에 해당하는 element 들을 찾아서 배경색 하늘색으로
 
-// TODO
+document.querySelectorAll("p.intro").forEach(e => {
+	e.style.background = 'cyan';
+});
 
 </script>
 
@@ -159,8 +176,17 @@ document.title
 //name=frm1 인 <form> 안의
 //form element 들의 value 들을 읽어오기
 
-// TODO
+let frm1 = document.forms['frm1'];
 
+// alert(frm1.length);   // 2
+
+let result = [];
+for(e of frm1){
+	result.push(e.value);
+}
+document.getElementById('frm_result1').innerHTML = result.join(',');
+document.getElementById('frm_result2').innerHTML =
+	document.forms['frm2']['input2_2'].value;
 </script>
 
 <hr>
@@ -173,7 +199,16 @@ document.title
 
 <script>
 //모든 이미지들의 테두리를 4px solid blue 로 만들기
-// TODO
+
+// alert(document.images.length);
+
+for(e of document.images){
+	e.style.border = "4px solid blue";
+}
+
+// document.images.forEach(e => {
+// 	e.style.border = "4px solid blue";
+// });
 
 </script>
 
@@ -181,27 +216,3 @@ document.title
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -20,7 +20,23 @@ table{
 
 <script>
 
-// TODO
+document.write(`${x.items.length} 개의 매물이 있습니다<br>`);
+let text = "";
+text += "<table>";
+text += "<tr><th>No</th><th>타이틀</th><th>월세</th><th>보증금</th></tr>";
+
+for(i = 0; i < x.items.length; i++){
+	text += "<tr>";
+	text += `<td>${i + 1}</td>`;
+	text += `<td>${x.items[i].item.title}</td>`;
+	text += `<td>${x.items[i].item.rent}</td>`;
+	text += `<td>${x.items[i].item.deposit}</td>`;	
+	text += "</tr>";
+}
+
+text += "</table>";
+document.write(text);
+
 
 </script>
 
@@ -28,29 +44,3 @@ table{
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

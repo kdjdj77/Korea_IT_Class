@@ -36,11 +36,25 @@ clearInterval('애니메이션id')
 var clockAnimId = undefined;
 function clock(){
 
-	// TODO
+  if(!clockAnimId){
+	  clockAnimId = setInterval(tick, 1000);
+  } else {
+    clearInterval(clockAnimId);
+    clockAnimId = undefined;
+  }
 
 }
 
-// TODO
+function tick(){
+  let d = new Date();
+  document.getElementById('timeboard').innerHTML =
+    d.getFullYear() + "/" +
+      (d.getMonth() + 1) + "/" +  // 0 ~ 11
+      d.getDate() + " " +
+      d.getHours() + ":" + 
+      d.getMinutes() + ":" +
+      d.getSeconds() 
+}
 
 </script>
 
@@ -55,8 +69,19 @@ function clock(){
 
 <script>
 function myMove() {
+  var redBox = document.getElementById('animate');
+  var pos = 0;
+  var id = setInterval(frame, 5);
 
-	// TODO
+  function frame(){
+    if(pos == 350){
+      clearInterval(id);
+    } else {
+      pos++;
+      redBox.style.top = pos + 'px';
+      redBox.style.left = pos + 'px';
+    }
+  }
 
 }
 </script>
@@ -64,20 +89,3 @@ function myMove() {
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

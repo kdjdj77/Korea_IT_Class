@@ -13,7 +13,18 @@
 
 <script>
     function checkAgree(){
-        // TODO
+        let agree = document.getElementsByName("agree");
+        
+        for(e of agree){
+            if(!e.checked){
+                alert(`${e.value} 항목에 동의하셔야 합니다`);
+                e.focus();
+                return;
+            }
+        }
+        
+        alert("성공적으로 가입하셨습니다");
+
     }
 </script>
 
@@ -35,35 +46,3 @@
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

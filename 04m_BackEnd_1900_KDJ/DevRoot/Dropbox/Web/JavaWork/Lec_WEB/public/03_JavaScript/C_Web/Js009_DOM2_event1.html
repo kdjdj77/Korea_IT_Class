@@ -49,7 +49,40 @@ var demoBox = document.getElementById("demo");
 var addButton = document.getElementById("add_event"); 
 var removeButton = document.getElementById("remove_event");
 
-// TODO
+function clickHandler(event){
+	document.getElementById('event').innerHTML = event.type + " " + event.target;
+
+	let bgcolor = demoBox.style.background;
+	if(bgcolor != 'greenyellow')
+		demoBox.style.background = 'greenyellow';
+	else
+		demoBox.style.background = 'yellow';
+}
+
+function mouseOverHandler(event){
+	document.getElementById('event').innerHTML = event.type + " " + event.target;
+	demoBox.style.outline = "3px solid red";
+}
+
+addButton.addEventListener("click", function(){
+	demoBox.addEventListener("click", clickHandler);
+	demoBox.innerHTML = "클릭해보세요";
+
+	demoBox.onmouseover = mouseOverHandler;
+	demoBox.onmouseout = function(event){
+		document.getElementById('event').innerHTML = event.type + " " + event.target;
+		demoBox.style.outline = "";  // 스타일 속성 삭제. undefined 안된다.	
+	}
+
+});
+
+removeButton.addEventListener("click", function(){
+	demoBox.removeEventListener("click", clickHandler);
+	demoBox.innerHTML = "이벤트 없어요";
+
+	demoBox.onmouseover = undefined;
+	demoBox.onmouseout = undefined;
+});
 
 </script>
 
@@ -65,27 +98,3 @@ var removeButton = document.getElementById("remove_event");
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
