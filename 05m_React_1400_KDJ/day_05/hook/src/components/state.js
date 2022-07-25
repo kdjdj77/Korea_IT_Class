@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState, useRef} from "react";
 import AddState from "./addState";
 const State = function() {
 /* //클릭하면 state 변환
@@ -96,19 +96,55 @@ const State = function() {
          userList.find((v) => v.id === 1).name; //Kim
          userList.findIndex((v) => v.id === 1); //0
    3. filter
-      [거름망, 조건에 맞는 데이터를 제외하는 것]
-      -> 삭제 시에 백엔드에서 받아온 데이터가 있음
+      [거름망, 조건에 맞지 않는 데이터를 거르고 맞는 데이터만 읽어오는 것]
+      -> 주로 백엔드에서 데이터가 삭제되었을 때 프론트엔드에서도 삭제하기
+         위해 사용
 
       ex)
          배열명.filter((결과값 변수명) => 조건식)
    */
+   const onRemoveHandler = function(e) {
+      //console.log(typeof e.target.value);
+      const removeState = userList.filter(
+         function(item) {return item.id !== parseInt(e.target.value);}
+         /*filter는 제거하라는 명령문이 아니라
+         해당 상태가 맞지 않는 데이터를 제외하고 읽어오는 것이므로
+         원본 데이터를 훼손한 상태가 아니다*/
+      )
+      setUserList(removeState);
+   };
+
+   const removeButtonArr = useRef([]);
+   const onRemoveHandler_2 = function() {
+      console.log(removeButtonArr);
+   };
+
+   const onRemoveHandler_3 = function(itemId) {
+      console.log(itemId);
+      const removeState = userList.filter(
+         function(item) {return item.id !== itemId;}
+      )//itemId은 Number타입이기 때문에 parseInt 불필요
+      setUserList(removeState);
+   };
+
    return (
       <>
-         {userList.map(function(v) {
+      {/*map, find, filter 실행 시 결과값 받아오는 변수에는 index사용가능*/}
+         {userList.map(function(item, index) {
             return (
-            <div>
-               {v.id}.{v.name}
-               <button>삭제</button>
+            <div key={item.id}>
+               {item.id}.{item.name}
+               <button 
+                  value={item.id} 
+                  /*map의 안에서 매개변수로 전달을 하게 되면 해당 객체에
+                   해당하는 모든 정보를 매개변수로 전달받을 수 있다*/
+                  onClick={function() {
+                     return onRemoveHandler_3(item.id);
+                  }}
+                  ref={function(el) {
+                     return removeButtonArr[item.id] = el;
+                  }}
+               >삭제</button>
             </div>
             );
          })}
