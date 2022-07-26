@@ -44,7 +44,7 @@ http://openapi.seoul.go.kr:8088/키값을넣으세요/json/CardSubwayStatsNew/1/
 
 
 <script>
-var api_key = "당신의 키값을 입력하세요";
+var api_key = "56784f5a746b646a39304e4d46676f";
 
 function removeTable(){
 
@@ -54,19 +54,65 @@ function removeTable(){
 
 function loadData() {
 
-	// TODO
+	const date = document.getElementById('date').value.trim();
+	let url, xhttp;
+
+	// XML
+	url = `http://openapi.seoul.go.kr:8088/${api_key}/xml/CardSubwayStatsNew/1/5/${date}`;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function(){
+		if(this.readyState == 4 && this.status == 200){
+			parseXML(this.responseXML);
+		}
+	};
+	xhttp.open("GET", url, true);
+	xhttp.send();
+	
+	// JSON
+	url = `http://openapi.seoul.go.kr:8088/${api_key}/json/CardSubwayStatsNew/1/5/${date}`;
+	xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function(){
+		if(this.readyState == 4 && this.status == 200){
+			parseJSON(JSON.parse(this.responseText));
+		}
+	};
+	xhttp.open("GET", url, true);
+	xhttp.send();
+
 
 } // end loadData()
 
 function parseXML(xmlDOM) {
 
-	// TODO
-	
+	const table = [];
+	table.push("<tr><th>호선</th><th>역명</th><th>승차인원</th><th>하차인원</th></tr>");
+	for(row of xmlDOM.getElementsByTagName("row")){
+		table.push(`
+		<tr>
+			<td>${row.getElementsByTagName("LINE_NUM")[0].childNodes[0].nodeValue}</td>
+			<td>${row.getElementsByTagName("SUB_STA_NM")[0].childNodes[0].nodeValue}</td>
+			<td>${row.getElementsByTagName("RIDE_PASGR_NUM")[0].childNodes[0].nodeValue}</td>
+			<td>${row.getElementsByTagName("ALIGHT_PASGR_NUM")[0].childNodes[0].nodeValue}</td>
+		</tr>
+		`);
+	}
+	document.getElementById('demoXML').innerHTML = table.join('\n');
 }
 
 function parseJSON(jsonObj){
-
-	// TODO
+	const table = [];
+	table.push("<tr><th>호선</th><th>역명</th><th>승차인원</th><th>하차인원</th></tr>");
+	for(row of jsonObj.CardSubwayStatsNew.row){
+		table.push(`
+		<tr>
+			<td>${row.LINE_NUM}</td>
+			<td>${row.SUB_STA_NM}</td>
+			<td>${row.RIDE_PASGR_NUM}</td>
+			<td>${row.ALIGHT_PASGR_NUM}</td>
+		</tr>
+		`);
+	}
+	document.getElementById('demoJSON').innerHTML = table.join('\n');
 	
 }
 </script>
@@ -74,20 +120,3 @@ function parseJSON(jsonObj){
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

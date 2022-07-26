@@ -29,13 +29,31 @@ var xml_2 = 'JS/note.xml';
 <script>
 function loadCdData() {
 
-	// TODO
+  let xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function(){
+    if(this.readyState == 4 && this.status == 200){
+      //alert(this.responseText);
+      myFunction(this.responseXML);   // DOM구조로 변환된 XML
+    }
+  };
+  xhttp.open("GET", xml_1, true);
+  xhttp.send();
 
 }
 function myFunction(xmlDOM) {
   
-	// TODO
-	
+  let table = [];
+  table.push("<tr><th>Artist</th><th>Title</th></tr>");
+  for(x of xmlDOM.getElementsByTagName("CD")){
+
+    table.push(`
+      <tr>
+        <td>${x.getElementsByTagName('ARTIST')[0].firstChild.nodeValue}</td>
+        <td>${x.getElementsByTagName('TITLE')[0].firstChild.nodeValue}</td>
+      </tr>
+    `);
+  }
+	document.getElementById('demo').innerHTML = table.join('\n');
 }
 </script>
 
@@ -61,20 +79,3 @@ function loadNote(url) {
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -77,8 +77,21 @@ var info = document.getElementById('info');
 var infoTxt = "JS/ajax_info.txt";
 function loadDoc() {
 
-	// TODO
+	info.innerHTML = "";
 
+	let xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function(){
+		// readyState 변경 상태 확인
+		info.innerHTML = `${info.innerHTML}<br>readyState 변경->${this.readyState}`;
+
+		if(this.readyState == 4 && this.status == 200){   // 진동벨
+			// response 가 정상적으로 도착하면 수행할 코드 작성.
+			document.getElementById('demo').innerHTML = this.responseText;
+		}		
+	};
+
+	xhttp.open("GET", infoTxt, true);
+	xhttp.send();
 }
 </script>
 <!-- 
@@ -112,7 +125,7 @@ XMLHttpRequest object 의 property 들.
 		
 3. responseText : response 데이터를 문자열로.
 3. responseXML : response 데이터를 XML로.
-4. status : request 상태값
+4. status : response 상태값
 		[값] : [의미]
 		200 : OK
 		403 : Forbidden
@@ -128,20 +141,3 @@ XMLHttpRequest object 의 property 들.
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
