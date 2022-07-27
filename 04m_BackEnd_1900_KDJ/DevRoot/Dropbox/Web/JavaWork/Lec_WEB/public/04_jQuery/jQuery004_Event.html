@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Event</title>
+<style>
+p {
+	background-color: cyan;
+	padding: 3px;
+}
+</style>
+</head>
+<!-- 
+	다양한 이벤트 함수들
+	1. 마우스 관련 이벤트
+		click   ( ↓,↑  / 왼쪽 버튼만)
+		dblclick   (왼쪽 버튼만)
+		mousedown  (↓ 모든 버튼)
+		mouseup    (↑ 모든 버튼)
+		mouseenter 마우스 올려놓으면
+		mouseleave 마우스 올려져 있다가 나가면 
+		
+	2. 키보드 관련 이벤트
+		keydown
+		keypress   (keydown과 비슷: ALT, CTRL, SHIFT, ESC 등의 키에는 동작 안함 )
+		keyup
+		
+	3. 폼 관련 이벤트
+		submit
+		change
+		focus
+		blur
+		
+	4. Document/Window 관련 이벤트
+		load
+		resize
+		scroll
+		unload
+		
+		
+	대부분의 jQuery '이벤트 함수'들이 위 DOM 이벤트들과 1:1 대응됨. (100%는 아님)
+	
+	
+	$("p").click(function(){
+	  // action goes here!!
+	});
+	
+	jQuery 이벤트 함수의 매개변수가 '함수' 임에 유의
+
+	※ 크롬 개발자 도구에서 EventListener 확인 가능
+ -->
+ 
+ <!--
+ 이벤트 함수들
+ $(document).ready()    :  
+ 
+ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ 
+<script>
+ 
+$(document).ready(function(){
+
+	// 클릭하면(click())사라지게 하기
+	$("p#p01").click(function(){
+		$(this).hide();
+	});
+	
+	// 더블클릭하면(dblclick()) 
+	// 사라졌던게 나타나기
+	$("p#p02").click(function(){
+		$("p#p01").slideDown();
+	});
+	
+	// 마우스 올려놓으면 (mouseenter())
+	$("p#p03").mouseenter(function(){
+		$(this).html("<b>mouse</b> 올려짐");
+	});
+	
+	// 마우스 올려져 있다가 나가면 (mouseleave())
+	$("p#p04").mouseleave(function(){
+		$(this).text("mouse 삐짐");
+	});
+	
+	
+	// 마우스 눌려지면 (mousedown())
+	$("p#p05").mousedown(function(){
+		$(this).css("color", "red");
+	});
+	
+	// 마우스 눌렸다 떼지면 (mouseup())
+	$("p#p06").mouseup(function(){
+		$("#img").attr("src", "../img/example_img_girl.jpg");
+	});
+	
+	// hover(func1, func2)  : mouseenter 와 mouseleave 롤 동시에 처리
+	// 마우스가 들어오면 배경색 노랑색으로
+	// 마우스가 나가면 배경색 cyan 색으로
+	$("p#p07").hover(function(){
+		$(this).css("background-color", "yellow");
+	}, function(){
+		$(this).css("background-color", "cyan");
+	});
+	
+	// focus() 되면
+	// 배경색을 노랑색으로 바꾸세요.
+	$("input#p08").focus(function(){
+		$(this).css("background-color", "yellow");
+		$(this).val("focus됨");
+	});
+	
+	// blur() 되면
+	// 배경색을 다시 하얀색으로 바꾸기
+	$("input#p08").blur(function(){
+		$(this).css("background-color", "#fff");
+		$(this).val("blur 됨");
+	});
+	
+	// on(이벤트, func)
+	// on({이벤트1:func1, 이벤트2:func2, ... }) 여러 이벤트 핸들러 지정
+	$("p#p09").on("click", function(){
+		$(this).fadeOut("slow");
+	});
+	
+    $("p#p10").on({
+		mouseenter : function(){
+			$(this).css("background-color", "lightgray");
+		},
+		mouseleave : function(){
+			$(this).css("background-color", "tomato");
+		},
+		click : function(){
+			$(this).css("background-color", "yellow");
+		},
+	});
+    
+ 	// off() 는 해당 element 의 특정 이벤트 제거
+    $("#btnOff").click(function(){
+		$("#p10").off("click");  // click 이벤트 제거
+	});
+    
+  	// 대부분의 jQuery action함수들은 메소드 체이닝(chaining)됨
+  	$("p#p11")
+		.mouseenter(function(){})
+		.mouseleave(function(){})
+		.text("")
+		;
+}); 
+</script>
+ 
+<body>
+<p id="p01">p01 click</p>
+<p id="p02">p02 dblclick</p>
+<p id="p03">p03 mouseenter</p>
+<p id="p04">p04 mouseleave</p>
+<p id="p05">p05 mousedown</p>
+<p id="p06">p06 mouseup
+	<img id="img" src="">
+</p>
+<p id="p07">p07 hover</p>
+focus & blur: p08 <input id="p08"/></br>
+<p id="p09">p09 on</p>
+<p id="p10">p10 on</p>
+<p id="p11">p11 chaining</p>
+
+<button id="btnOff">btnOff 클릭 이벤트 제거</button>
+
+
+<!-- 
+	on(), off()
+	
+	과거에는
+	bind(), unbind() 함수		Deprecated 3.0
+	live(), die() 함수			Deprecated 1.7
+
+	참조: http://api.jquery.com/category/events/
+	
+	jQuery 도 deprecated 된 함수나 객체들 많다.  레퍼런스를 참조하자
+ -->
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>>
+</body>
+</html>

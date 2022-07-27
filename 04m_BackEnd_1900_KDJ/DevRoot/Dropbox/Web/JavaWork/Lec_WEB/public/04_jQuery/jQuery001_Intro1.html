@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Intro</title>
+</head>
+
+<script>
+function hideP(){
+	
+	for(e of document.getElementsByTagName("p")){
+		// e.addEventListener("click", function(){
+		// 	this.style.display = "none";
+		// });
+
+		e.addEventListener("click", hideElement);
+	}
+
+} // end hideP()
+
+function hideElement()
+{
+	this.style.display = "none";
+}
+
+</script>
+
+<body onload="hideP()">
+
+<p>없어지는 마술을 보여줄께.</p>
+<p>요것도.</p>
+<p>따다~~!</p>
+
+</body>
+</html>

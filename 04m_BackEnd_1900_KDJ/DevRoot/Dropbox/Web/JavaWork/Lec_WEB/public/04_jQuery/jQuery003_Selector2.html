@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Selector</title>
+<style>
+  div {
+    background: yellow;
+    border: 1px solid #AAA;
+    width: 80px;
+    height: 80px;
+    margin: 0 5px;
+    float: left;
+  }
+  div.colored {
+    background: green;
+  }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+
+// TODO
+
+</script>
+</head>
+<body>
+
+<button id="run">Run</button>
+ 
+<div></div>
+<div id="mover"></div>
+<div></div>
+
+<script>
+
+function animateIt(){
+  $("#mover").slideToggle("slow", animateIt);
+}
+animateIt();
+
+$("#run").click(function(){
+   $("div:animated").toggleClass("colored");
+});
+
+</script>
+
+</body>
+</html>

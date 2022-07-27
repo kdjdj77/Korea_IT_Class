@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>AJAX API자치구단위 서울 생활인구 일별 집계표</title>
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<!--
+■자치구단위 서울 생활인구 일별 집계표
+http://data.seoul.go.kr/dataList/datasetView.do?infId=OA-15379&srvType=S&serviceKind=1&currentPageNo=1
+
+http://openapi.seoul.go.kr:8088/(인증키)/(요청파일타입)/SPOP_DAILYSUM_JACHI/(요청시작INDEX)/(요청종료INDEX)/(기준일ID)/(시군구코드)
+
+샘플url
+
+XML 버젼
+http://openapi.seoul.go.kr:8088/(인증키)/xml/SPOP_DAILYSUM_JACHI/1/5/
+예] http://openapi.seoul.go.kr:8088/4d46796d7366726f3833774a774955/xml/SPOP_DAILYSUM_JACHI/1/5/
+예] http://openapi.seoul.go.kr:8088/4d46796d7366726f3833774a774955/xml/SPOP_DAILYSUM_JACHI/1/5/20190101
+예] http://openapi.seoul.go.kr:8088/4d46796d7366726f3833774a774955/xml/SPOP_DAILYSUM_JACHI/1/5/20190101/11000
+
+JSON 버젼
+http://openapi.seoul.go.kr:8088/(인증키)/json/SPOP_DAILYSUM_JACHI/1/5/
+예] http://openapi.seoul.go.kr:8088/4d46796d7366726f3833774a774955/json/SPOP_DAILYSUM_JACHI/1/5/
+예] http://openapi.seoul.go.kr:8088/4d46796d7366726f3833774a774955/json/SPOP_DAILYSUM_JACHI/1/5/20190101
+예] http://openapi.seoul.go.kr:8088/4d46796d7366726f3833774a774955/json/SPOP_DAILYSUM_JACHI/1/5/20190101/11000
+
+
+※ 한번에 1000개 까지의 데이터만 볼수 있슴
+
+ -->
+<body>
+<h1>자치구단위 서울 생활인구 일별 집계표</h1>
+<form>
+날짜: <input type="date" id="stdr_de_id" value="2019-01-01" placeholder="yyyy-mm-dd"/><br>
+시작index <input type="number" id="start_index" value="1"/><br>
+끝index <input type="number" id="end_index" value="5"/><br><br>
+
+<button id="btn_load" type="button">정보 가져오기</button>
+<button id="btn_remove">지우기</button>
+</form>
+<br><br>
+<h2>AJAX + XML</h2>
+<table id="demoXML"></table>
+<hr>
+<h2>AJAX + JSON</h2>
+<table id="demoJSON"></table>
+
+
+<script>
+var api_key = "자신의 키값 입력하기!";
+
+
+$(document).ready(function(){
+	 $("#btn_load").click(function(){
+		// 한글의 경우 url encoding 필요
+		var stdr_de_id = $("#stdr_de_id").val();
+		var start_index = $("#start_index").val();
+		var end_index = $("#end_index").val();
+		stdr_de_id = stdr_de_id.replace(/-/g, '');   // - 없애기
+
+		// XML
+		var url = "http://openapi.seoul.go.kr:8088/" + api_key + "/xml/SPOP_DAILYSUM_JACHI/" + start_index + "/" + end_index + "/" + stdr_de_id;
+
+		// TODO
+		 
+		 
+		 
+		// JSON
+		var url = "http://openapi.seoul.go.kr:8088/" + api_key + "/json/SPOP_DAILYSUM_JACHI/" + start_index + "/" + end_index + "/" + stdr_de_id;
+		 
+		// TODO		
+	 });
+	 
+	 $("#btn_remove").click(function(){
+		$("#demoXML").html("");
+		$("#demoJSON").html("");
+	 });
+});
+
+
+function parseXML(xmlDOM) {
+  var table="<tr><th>날짜</th><th>구ID</th><th>총생활인구수</th><th>일최대이동인구수</th></tr>";
+
+  // TODO
+}
+
+function parseJSON(jsonObj){
+	 
+	var table="<tr><th>날짜</th><th>구ID</th><th>총생활인구수</th><th>일최대이동인구수</th></tr>";
+
+	// TODO
+}
+</script>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

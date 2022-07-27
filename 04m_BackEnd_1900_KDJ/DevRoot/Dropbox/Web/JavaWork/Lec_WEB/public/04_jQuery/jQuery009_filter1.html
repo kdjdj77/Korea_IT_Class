@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>filtering</title>
+<style>
+ul, li {padding: 7px;margin: 5px; border: 1px lightgray solid}
+ul, li {background-color: white;}
+
+.selected {
+	background-color: yellow;
+}
+
+#btnbox{
+	position:fixed;
+	right: 0px;
+	top: 0px;
+	border: 1px cyan solid;
+	width: 150px;
+	background-color: rgba(255,255,255,0.7);
+}
+
+button {
+	color: black;
+	border: 1px solid black;
+	margin: 2px;	
+}
+
+</style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+/* 이미 select 된 element 에 대해 추가적으로 또 select 하는 (필터링) 하는 함수
+ 	배열 처럼 인덱스(index)를 사용하여 선택하는 함수도 있고
+ 	요소의 속성값으로 선택하는 함수도 있다.
+ 	
+ 	~ .first() : ~ 의 첫번째 요소만 선택	 	 
+	 			$(" ~ :first") 와 동일 결과
+	 	
+	~ .last() : ~ 의 마지막 요소만 선택
+ 				$(" ~ :last") 와 동일 결과
+ 	
+	~ .eq(i) : ~ 의 i번째 요소만 선택
+				$(" ~ :eq(i)") 와 동일 결과
+			
+	~ .filter(selector) : ~ 중 selector 지정요소만 선택  
+	
+	~ .filter(callback) : ~ 중 callback 결과가 '참' 인것만 선택
+		
+	~ .not(selector) :   : ~ 중 selector 지정요소를  제외
+*/
+
+ // find 와 filter 차이
+ // ※ https://ghost41m.tistory.com/entry/jQuery-find-%EC%99%80-filter-%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90
+ 
+ 
+ $(document).ready(function(){
+	 
+	 // 버튼 클릭되면 일단 selected 클래스 제거
+	 $("button").click(function(){
+		$("*").removeClass("selected");
+		$("#result").text("결과");
+	});
+	 //---------------------------------------
+	 // ~ .first() : ~ 의 첫번째 요소만 선택
+	 $("#btn11").click(function(){
+		 // TODO
+	});
+
+	 // ~ .last() : ~ 의 마지막 요소만 선택
+	 $("#btn12").click(function(){
+		 // TODO
+	 });
+
+	// ~ .eq(i) : ~ 의 i번째 요소만 선택
+	 $("#btn13").click(function(){
+		 // TODO
+	});	
+	
+	// ~ .filter(selector) : ~ 중 selector 지정요소만 선택
+	$("#btn14").click(function(){
+		 // TODO
+	});
+	
+	
+	// ~ .not(selector) :   : ~ 중 selector 지정요소를  제외
+	 $("#btn15").click(function(){
+		 // TODO
+	});
+	 
+	// find() vs filter()
+	// 	find() : 선택된 것들의 하위에서 선택
+	// 	filter() : 선택된 것들 중에서 선택
+	$("#btn16").click(function(){
+		 // TODO
+	})	 
+ });
+ 
+</script>
+<body>
+
+<h1>필터링</h1>
+
+<ul id="menu1">ul#menu1
+  <li class="a1">li.a1 커피</li>
+  <li class="a2">li.a2 차
+    <ul>ul 차-선택
+      <li class="a2 b1">li.a2.b1 홍차</li>
+      <li class="a2 b2">li.a2.b2 녹차</li>
+    </ul>
+  </li>
+  <li class="a3">li.a3 우유</li>
+</ul>
+
+<br>
+<ul id="menu2">ul#menu2
+  <li class="a1">li.a1 짬뽕</li>
+  <li class="a2">li.a2 짜장면
+    <ul>ul 짜장면-선택
+      <li class="a2 b1">li.a2.b1 보통</li>
+      <li class="a2 b2">li.a2.b2 곱배기</li>
+    </ul>
+  </li>
+  <li class="a3">li.a3 군만두</li>
+</ul>
+
+<br>
+<ul id="menu3">ul#menu3
+  <li class="a1">li.a1 자전거</li>
+  <li class="a2">li.a2 자동차
+    <ul>ul 자동차-선택
+      <li class="a2 b1">li.a2.b1 경차</li>
+      <li class="a2 b2">li.a2.b2 중형차</li>
+    </ul>
+  </li>
+  <li class="a3">li.a3 버스</li>
+</ul>
+
+<br>
+
+<span id="btnbox">
+	<button id="clear">clear</button><br>
+	<button id="btn11">btn11 first()</button><br>
+	<button id="btn12">btn12 last()</button><br>
+	<button id="btn13">btn13 eq()</button><br>	
+	<button id="btn14">btn14 filter()</button><br>
+	<button id="btn15">btn15 not()</button><br>
+	<button id="btn16">btn16 find()</button><br>
+	<p id=result style="margin:1px">결과</p>
+</span>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

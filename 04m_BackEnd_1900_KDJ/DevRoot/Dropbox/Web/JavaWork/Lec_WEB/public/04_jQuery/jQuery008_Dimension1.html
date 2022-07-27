@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Dimension</title>
+<style>
+#div1 {
+    height: 150px;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid blue;
+    margin: 3px;
+    background-color: lightblue;
+}
+
+#div3{
+	width: 100px;
+	height: 100px;
+	background-color: yellow;
+	position: absolute;
+}
+
+</style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+/*
+	element 의 사이즈나 
+ 	browser windows 사이즈 
+
+ 	width()  - content 의 width
+ 	height() - content 의 height
+ 	innerWidth() - width + padding
+ 	innerHeight() - height + padding
+ 	outerWidth() - innerWidth + border
+ 	outerHeight() - innerHeight + border
+ 	outerWidth(true) - innerWidth + border + margin
+ 	outerHeight(true) - innerHeight + border + margin
+*/
+
+$(document).ready(function(){
+    $("#btn01").click(function(){
+    	
+    	// TODO
+ 
+    });
+    
+    // width() , height() 에 매개변수 값을 주면  새로운 값으로 세팅 된다
+    $("#btn02").click(function(){
+       // TODO
+       
+    });
+
+    
+    // $(document) : HTML document
+    // $(window)  : browser viewport
+    //   document 가 window 보다 클수 있다.  (스크롤 바 생김)
+    $("#btn03").click(function(){
+        var txt = "";
+       
+        // TODO
+        
+        $("#div2").html(txt);
+    });
+    
+    // 브라우저 창의 크기가 변할때 발생하는 onresize 이벤트 핸들러
+    
+    // TODO
+    
+    
+    // position() 함수
+    // 리턴값의 left, top property 값에 좌표 저장
+    $("#btn04").click(function(){
+		// TODO
+        
+    });
+
+    
+	// TODO
+    
+    $("#btn05").click(function(){
+    	
+    	// TODO
+    	
+    });
+    
+});
+
+</script>
+
+<body>
+
+<div id="div1"></div>
+<br>
+
+<button id="btn01">btn01 dimension</button>
+<br><br>
+<button id="btn02">btn02 set width&height</button>
+<br><br>
+<button id="btn03">btn03 doc & window</button>
+<br><br>
+<div id="div2"></div>
+
+<!-- TODO 윈도우 크기가 변경될때마다 자동으로 변경되게 하기 -->
+
+<hr>
+<div style="height:120px; position:relative;">
+	<div id="div3"></div>
+</div>
+<button id="btn04">btn04 anim</button>
+<button id="btn05">btn05 position</button>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

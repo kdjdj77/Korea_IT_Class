@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>jQuery + AJAX</title>
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+
+#frame1 {
+	width: 100%;
+	height: 200px;
+}
+
+</style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+// $(selector).serialize()
+//   ↑
+//   form 의 value 들을 모아서 URL에 사용 가능한 query string 을 만듬
+//   이를 사용하여 AJAX request 가능.
+
+//  ※ 아래 예제는 CORS 문제로 크롬에선 실행 안됨
+
+var url = "https://www.w3schools.com/action_page.php";
+
+$(document).ready(function(){
+  $("#btn01").click(function(){
+    // TODO
+  });
+  
+  $("#btn02").click(function(){
+	// TODO	  
+  });
+  
+  $("#btn03").click(function(){
+	// TODO	  
+  });
+});
+</script>
+<body>
+<h2>serialize()</h2>
+
+<form id="frm1" action="">
+  First name: <input type="text" name="FirstName" value="Mickey"><br>
+  Last name: <input type="text" name="LastName" value="Mouse"><br>
+</form>
+
+<button id="btn01">Serialize form values</button>
+<button id="btn02">get</button>
+<button id="btn03">post</button>
+
+<div id="result"></div>
+<hr>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
