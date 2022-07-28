@@ -80,23 +80,35 @@ dataFilter(data,type) :
 	
 */
 
-var api_key = "보여다오 당신의 키값을!";
+var api_key = "4d46796d7366726f3833774a774955";
  
  $(document).ready(function(){
 	 $("#btn_load").click(function(){
-		 var date = document.getElementById("date").value.trim();
+		 var date = $("#date").val().trim();
 		 
 		 // XML
 		 var url = "http://openapi.seoul.go.kr:8088/" + api_key + "/xml/CardSubwayStatsNew/1/5/" + date;
 		
-		// TODO
-		 
-		 
+		$.ajax({
+			url: url,
+			type: "GET",
+			cache: false,
+			success: function(data, status){
+				if(status == "success") parseXML(data);
+			},
+		});
 		 
 		// JSON
 		url = "http://openapi.seoul.go.kr:8088/" + api_key + "/json/CardSubwayStatsNew/1/5/" + date;
 		 
-		// TODO
+		$.ajax({
+			url: url,
+			type: "GET",
+			cache: false,
+			success: function(data, status){
+				if(status == success) parseJSON(data);
+			}
+		});
 		
 	 });
 	 
@@ -139,20 +151,3 @@ function parseJSON(jsonObj) {
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

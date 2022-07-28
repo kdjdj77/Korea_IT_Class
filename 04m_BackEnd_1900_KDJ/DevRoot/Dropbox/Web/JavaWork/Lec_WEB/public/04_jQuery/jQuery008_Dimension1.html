@@ -40,14 +40,23 @@
 
 $(document).ready(function(){
     $("#btn01").click(function(){
-    	
-    	// TODO
+        var txt = "";
+        txt += "width: " + $("#div1").width() + "<br>";
+        txt += "height: " + $("#div1").height() + "<br>";
+        txt += "innerWidth: " + $("#div1").innerWidth() + "<br>";
+        txt += "innerHeight: " + $("#div1").innerHeight() + "<br>";
+        txt += "outerWidth: " + $("#div1").outerWidth() + "<br>";
+        txt += "outerHeight: " + $("#div1").outerHeight() + "<br>";
+        txt += "outerWidth(true): " + $("#div1").outerWidth(true) + "<br>";
+        txt += "outerHeight(true): " + $("#div1").outerHeight(true) + "<br>";
+        $("#div1").html(txt);
+
  
     });
     
     // width() , height() 에 매개변수 값을 주면  새로운 값으로 세팅 된다
     $("#btn02").click(function(){
-       // TODO
+       $("#div1").width(500).height(200);
        
     });
 
@@ -58,7 +67,11 @@ $(document).ready(function(){
     $("#btn03").click(function(){
         var txt = "";
        
-        // TODO
+		txt += "Docuement W/H: " + $(document).width()
+					+ "x" + $(document).height() + "<br>";
+		txt += "Window W/H: " + $(window).width()
+					+ "x" + $(window).height() + "<br>";
+
         
         $("#div2").html(txt);
     });

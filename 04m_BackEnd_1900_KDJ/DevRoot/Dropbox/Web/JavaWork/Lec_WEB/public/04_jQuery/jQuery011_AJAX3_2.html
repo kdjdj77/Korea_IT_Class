@@ -47,53 +47,83 @@ http://openapi.seoul.go.kr:8088/(인증키)/json/subwayStationMaster/1/5/
 
 
 <script>
-var api_key = "너의 키값은?";
+var api_key = "4d46796d7366726f3833774a774955";
 
 $(document).ready(function(){
 	 $("#btn_load").click(function(){
 		// 입력정보 가져오기		
-		// TODO
+		var start = $('#start').val();
+		var end = $('#end').val();
 
 
 		// XML
-		// TODO
+		var url = `http://openapi.seoul.go.kr:8088/${api_key}/xml/subwayStationMaster/${start}/${end}/`
+
+		$.ajax({
+			url :  url,
+			type : "GET",
+			cache : false,
+			success : function(data, status){
+				if(status == "success") parseXML(data);
+			}
+		});
+
 
 		// JSON
-		// TODO		
+		var url = `http://openapi.seoul.go.kr:8088/${api_key}/json/subwayStationMaster/${start}/${end}/`
+		 
+		$.ajax({
+			url :  url,
+			type : "GET",
+			cache : false,
+			success : function(data, status){
+				if(status == "success") parseJSON(data);
+			}
+		 });
+		
 	 });
 	 
 	 $("#btn_remove").click(function(){
-		// TODO
+		$("#demoXML").empty();
+		$("#demoJSON").empty();
 	 });
 });
 
-
 function parseXML(xmlDOM) {
-	// TODO
+  var table="<tr><th>역명</th><th>아이디</th><th>호선</th><th>위도</th><th>경도</th></tr>";
+  
+  $(xmlDOM).find("row").each(function(){	  
+    table += `<tr>`;
+    table += `<td>${$(this).find("STATN_NM").text()}</td>`;
+    table += `<td>${$(this).find("STATN_ID").text()}</td>`;
+    table += `<td>${$(this).find("ROUTE").text()}</td>`;
+    table += `<td>${$(this).find("CRDNT_X").text()}</td>`;
+    table += `<td>${$(this).find("CRDNT_Y").text()}</td>`;
+    table += `</tr>`;
+  });
+  $("#demoXML").html(table);
+  
 }
 
 function parseJSON(jsonObj){
-	// TODO
+	var row = jsonObj.subwayStationMaster.row;
+	 
+	var table="<tr><th>역명</th><th>아이디</th><th>호선</th><th>위도</th><th>경도</th></tr>";
+
+	row.forEach(e => {
+	   table += `<tr>`;
+	   table += `<td>${e.STATN_NM}</td>`;
+	   table += `<td>${e.STATN_ID}</td>`;
+	   table += `<td>${e.ROUTE}</td>`;
+	   table += `<td>${e.CRDNT_X}</td>`;
+	   table += `<td>${e.CRDNT_Y}</td>`;
+	   table += `</tr>`;
+	});
+
+	$("#demoJSON").html(table);
 }
 </script>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

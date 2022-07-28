@@ -64,35 +64,35 @@ button {
 	 //---------------------------------------
 	 // ~ .first() : ~ 의 첫번째 요소만 선택
 	 $("#btn11").click(function(){
-		 // TODO
+		 $("li").first().addClass("selected");
 	});
 
 	 // ~ .last() : ~ 의 마지막 요소만 선택
 	 $("#btn12").click(function(){
-		 // TODO
+		 $("#menu1 li").last().addClass("selected");
 	 });
 
 	// ~ .eq(i) : ~ 의 i번째 요소만 선택
 	 $("#btn13").click(function(){
-		 // TODO
+		$("li").eq(1).addClass("selected");
 	});	
 	
 	// ~ .filter(selector) : ~ 중 selector 지정요소만 선택
 	$("#btn14").click(function(){
-		 // TODO
+		 $("li").filter(".a1").addClass("selected")
 	});
 	
 	
 	// ~ .not(selector) :   : ~ 중 selector 지정요소를  제외
 	 $("#btn15").click(function(){
-		 // TODO
+		 $("li").not("[class*=b]").addClass("selected");
 	});
 	 
 	// find() vs filter()
 	// 	find() : 선택된 것들의 하위에서 선택
 	// 	filter() : 선택된 것들 중에서 선택
 	$("#btn16").click(function(){
-		 // TODO
+		$("ul").find(".a1").addClass("selected")
 	})	 
  });
  
@@ -152,14 +152,3 @@ button {
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-

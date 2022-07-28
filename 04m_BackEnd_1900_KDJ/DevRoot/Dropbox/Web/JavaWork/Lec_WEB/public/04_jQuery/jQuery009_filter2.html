@@ -27,7 +27,15 @@ tr:nth-child(even){
  */
  $(document).ready(function(){
 
-// TODO
+	$("#myInput").on("keyup", function(){
+		let value = $(this).val().toLowerCase();
+		// console.log(value);
+
+		$("#myTable tr").filter(function(){
+			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+		});
+
+	});
 
  });
 </script>

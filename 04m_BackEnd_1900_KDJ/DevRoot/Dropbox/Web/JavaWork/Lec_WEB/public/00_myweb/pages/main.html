@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/x-icon" href="https://cdn.pixabay.com/photo/2020/04/29/07/54/coronavirus-5107715_960_720.png">
+   <title>COVID-INFO</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/default.css">
+   <link rel="stylesheet" href="../css/fullpage.css">
+	<link rel="stylesheet" href="../css/header.css">
+	<link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="../pages/main.html">
+				<img src="https://cdn.pixabay.com/photo/2020/04/29/07/54/coronavirus-5107715_960_720.png" width="45px" height="45px">
+				<span id="logoText"><em>CovidInfo</em></span>
+			</a>
+			<ul>
+				<li><a href="../pages/main.html">HOME</a></li>
+				<li><a href="../pages/1.html">COVID-19</a></li>
+				<li><a href="../pages/2.html">Vaccination</a></li>
+				<li><a href="../pages/3.html">Information</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="fullpage">
+		<div class='quick'><ul></ul></div>
+		<div class="fullsection full1" pageNum="1">
+			<div class="opacity1">
+				<span>COVID-19 확진정보</span>
+				<div id="rankbox" data-aos="fade-up">
+					<div style="font-size:1.5rem; height:15%;">TODAY</div>
+					<div class="rankblock">
+						<div id="rank1"></div>
+						<div id="rCount1"></div>
+					</div>
+					<div class="rankblock">
+						<div id="rank2"></div>
+						<div id="rCount2"></div>
+					</div>
+					<div class="rankblock">
+						<div id="rank3"></div>
+						<div id="rCount3"></div>
+					</div>
+					<div class="rankblock">
+						<div id="rank4"></div>
+						<div id="rCount4"></div>
+					</div>
+					<div class="rankblock">
+						<div id="rank5"></div>
+						<div id="rCount5"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="fullsection full2" pageNum="2">
+			<br><br><br>
+			<h1 style="text-align:center;">지역별 현황</h1>
+			<div class="block" data-aos="fade-up">
+				<select name="countries2" id="countrybox" onchange="parseJSONb(this.value)">
+					<option value="seoul" selected>서울</option>
+					<option value="busan">부산</option>				<option value="daegu">대구</option>
+					<option value="incheon">인천</option>			<option value="gwangju">광주</option>
+					<option value="daejeon">대전</option>			<option value="ulsan">울산</option>
+					<option value="sejong">세종</option>			<option value="gyeonggi">경기</option>
+					<option value="gangwon">강원</option>			<option value="chungbuk">충북</option>
+					<option value="chungnam">충남</option>			<option value="jeonbuk">전북</option>
+					<option value="jeonnam">전남</option>			<option value="gyeongbuk">경북</option>
+					<option value="gyeongnam">경남</option>		<option value="jeju">제주</option>
+				</select>
+				<div id="countryName2" class="page2block"></div>
+				<div class="page2block">
+					<div class="p2bName">신규 확진자</div>
+					<div id="newCase2"></div>
+				</div>
+				<div class="page2block">
+					<div class="p2bName">누적 확진자</div>
+					<div id="totalCase2"></div>
+				</div>
+				<div class="page2block">
+					<div class="p2bName">신규 완치자</div>
+					<div id="recovered2"></div>
+				</div>
+				<div class="page2block">
+					<div class="p2bName">누적 사망자</div>
+					<div id="death2"></div>
+				</div>
+			</div>
+		</div>
+		<div class="fullsection full3" pageNum="3">
+			<br><br><br>
+			<h1 style="text-align:center;">국내 현황</h1>
+			<div class="block">
+				<div></div>
+				<div id="countryName2" class="page2block"></div>
+				<div class="page2block">
+					<div class="p2bName"><br><br><br>신규 확진자</div>
+					<div id="newCase2"></div>
+				</div>
+				<div class="page2block">
+					<div class="p2bName"><br><br><br>누적 확진자</div>
+					<div id="totalCase2"></div>
+				</div>
+				<div class="page2block">
+					<div class="p2bName"><br><br><br>신규 완치자</div>
+					<div id="recovered2"></div>
+				</div>
+				<div class="page2block">
+					<div class="p2bName"><br><br><br>사망자</div>
+					<div id="death2"></div>
+				</div>
+			</div>
+		</div>
+		<!--
+		<div class="fullsection full4" pageNum="4">
+			<span>4 PAGE</span>
+		</div>
+		<div class="fullsection full5" pageNum="5">
+			<span>5 PAGE</span>
+		</div>
+		-->
+	</div>
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="../js/fullpage.js"></script>
+<script src="../js/getAPI.js"></script>
+</html>

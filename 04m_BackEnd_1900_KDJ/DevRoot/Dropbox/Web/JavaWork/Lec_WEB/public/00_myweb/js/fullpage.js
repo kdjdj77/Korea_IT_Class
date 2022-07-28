@@ -15,26 +15,29 @@ function fullset() {
 		//마우스 휠을 위로
 		if(event.originalEvent.wheelDelta >= 0) {
 			let before=page.index();
+			
          //퀵버튼옮기기
 			if(page.index() >= 0) page.prev().addClass("on").siblings(".on").removeClass("on");
 			let pagelength = 0;
 			for(let i = 1; i < (before); i++) pagelength += $(".full" + i).height();
 
-			if(page.index() > 0){ //첫번째 페이지가 아닐때 (index는 0부터 시작임)
+			//첫번째 페이지가 아닐때
+			if(page.index() > 0){
 				page = page.index() - 1;
 				$("#fullpage").animate({"top": -pagelength + "px"}, 700, "swing");
 			}
 		}
       // 마우스 휠을 아래로
       else { 
-         let nextPage=parseInt(page.index() + 1); //다음페이지번호
-			let lastPageNum=parseInt($(".quick ul li").size()); //마지막 페이지번호
+         let nextPage = parseInt(page.index() + 1); //다음페이지번호
+			let lastPageNum = parseInt($(".quick ul li").size()); //마지막 페이지번호
 
-			if(page.index() <= $(".quick ul li").size()-1){ 
+			if (page.index() <= $(".quick ul li").size()-1){ 
 				page.next().addClass("on").siblings(".on").removeClass("on");
 			}
 			
-			if(nextPage < lastPageNum){ //마지막 페이지가 아닐때만 animate !
+			//마지막 페이지가 아닐때만 animate
+			if (nextPage < lastPageNum) {
 				let pagelength = 0;
 				for(let i = 1; i<(nextPage+1); i++) pagelength += $(".full"+i).height();
             $("#fullpage").animate({"top": -pagelength + "px"}, 700, "swing");
@@ -44,7 +47,7 @@ function fullset() {
 	$(window).resize(function(){ 
 		let resizeindex = $(".quick ul li.on").index()+1;
 		let pagelength=0;
-		for(let i = 1; i<resizeindex; i++) pagelength += $(".full"+i).height();
+		for(let i = 1; i < resizeindex; i++) pagelength += $(".full" + i).height();
       $("#fullpage").animate({"top": -pagelength + "px"},0);
 	});
 }

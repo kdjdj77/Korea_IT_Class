@@ -74,33 +74,36 @@ $(document).ready(function(){
 
 	// 어떤 버튼이든지 눌리면 selected 클래스 제거
 	$("button").click(function(){
-		// TODO
+		$("*").removeClass("selected");
 	});
 	
 	//---------------------------------------------
 	// ~ .each(function) : select된 각element 에 대한 동작 수행.
 	$("#btn01").click(function(){
-		$("span")/* TODO */;
+		$("span").each(function(index){
+			$(this).addClass("selected");
+			$(this).text($(this).text() + index);
+		});
 	});
 
 	// ~ .parent() : ~ 의 부모 선택
 	$("#btn11").click(function(){
-	    $("span")/* TODO */;
+	    $("span").parent().addClass("selected");
 	});
 	
 	// ~ .parents() : ~ 의 상위 요소(들) 모두 선택
 	$("#btn12").click(function(){
-		$("span")/* TODO */;
+		$("span").parents().addClass("selected");
 	});
 	
 	// ~ .parents(selector) : ~ 의 상위 요소(들) 중  selector 지정요소들만 선택
 	$("#btn13").click(function(){
-		$("span")/* TODO */;		
+		$("span").parents("ul").addClass("selected");		
 	});
 	
 	// ~ .parentsUntil(selector)  ~ 의 상위 요소(들) 중 selector 지정요소 전까지 모두 선택
 	$("#btn14").click(function(){
-		$("span")/* TODO */;
+		$("span").parentsUntil("div").addClass("selected");
 	});
 	
 	//-----------------------------------------
@@ -118,12 +121,12 @@ $(document).ready(function(){
 	// ~ .find() : ~ 의 자손 요소(들) 모두 선택
 	// ~ .find(selector) : ~ 의 자손 요소(들) 중 selector 지정요소들만 선택
 	$("#btn23").click(function(){
-		$("div")/* TODO */;
+		$("div").find("span").addClass("selected");
 	});
 	
 	// ~ .find("*") : 자손들 모두 선택
 	$("#btn24").click(function(){
-		$("div")/* TODO */;
+		$("div").find("*").addClass("selected");
 	});
 	
 	//-----------------------------------------
@@ -234,26 +237,3 @@ body
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

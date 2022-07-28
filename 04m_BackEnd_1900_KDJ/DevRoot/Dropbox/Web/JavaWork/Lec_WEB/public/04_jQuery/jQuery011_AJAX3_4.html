@@ -32,11 +32,22 @@ var url = "https://www.w3schools.com/action_page.php";
 
 $(document).ready(function(){
   $("#btn01").click(function(){
-    // TODO
+    $("div#result").text($("form#frm1").serialize());
   });
   
   $("#btn02").click(function(){
-	// TODO	  
+    $.ajax({
+      url: url,
+      type: "GET",
+      cache: false,
+      data: $("form#frm1").serialize(),
+      success: function(data, status){
+        if(status == "success"){
+          alert(data);
+        }
+      }
+    })
+
   });
   
   $("#btn03").click(function(){
@@ -61,20 +72,3 @@ $(document).ready(function(){
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

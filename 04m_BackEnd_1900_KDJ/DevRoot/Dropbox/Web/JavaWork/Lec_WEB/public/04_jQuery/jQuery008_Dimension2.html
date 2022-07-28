@@ -27,7 +27,28 @@
 
 $(document).ready(function(){
 	
-	// TODO
+	$(document).click(function(event){
+		let txt = event.pageX + " " + event.pageY;
+
+		// $("#div1").css({
+		// 	'left': event.pageX,
+		// 	'top': event.pageY,
+		// }).text(txt);
+		
+		$circle = $("#circle");
+		$circle.css({
+			'left': event.pageX - ($circle.outerWidth(true) / 2),
+			'top': event.pageY - ($circle.outerHeight(true) / 2),
+		})
+
+		// $circle.fadeIn(2000);
+		// $circle.fadeOut(2000);
+
+		$circle.stop(true).fadeIn(100, function(){
+			$circle.fadeOut(500);
+		});
+
+	});
 	
 });
 
