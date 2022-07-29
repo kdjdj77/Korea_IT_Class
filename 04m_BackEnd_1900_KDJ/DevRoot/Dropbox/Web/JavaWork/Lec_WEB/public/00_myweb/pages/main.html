@@ -34,7 +34,30 @@
 		<div class="fullsection full1" pageNum="1">
 			<div class="opacity1">
 				<span>COVID-19 확진정보</span>
-				<div id="rankbox" data-aos="fade-up">
+				<div id="rankboxL">
+					<div style="font-size:1.5rem; height:15%;">TOTAL</div>
+					<div class="rankblock">
+						<div id="rankL1"></div>
+						<div id="rCountL1"></div>
+					</div>
+					<div class="rankblock">
+						<div id="rankL2"></div>
+						<div id="rCountL2"></div>
+					</div>
+					<div class="rankblock">
+						<div id="rankL3"></div>
+						<div id="rCountL3"></div>
+					</div>
+					<div class="rankblock">
+						<div id="rankL4"></div>
+						<div id="rCountL4"></div>
+					</div>
+					<div class="rankblock">
+						<div id="rankL5"></div>
+						<div id="rCountL5"></div>
+					</div>
+				</div>
+				<div id="rankbox">
 					<div style="font-size:1.5rem; height:15%;">TODAY</div>
 					<div class="rankblock">
 						<div id="rank1"></div>
@@ -62,7 +85,7 @@
 		<div class="fullsection full2" pageNum="2">
 			<br><br><br>
 			<h1 style="text-align:center;">지역별 현황</h1>
-			<div class="block" data-aos="fade-up">
+			<div class="block">
 				<select name="countries2" id="countrybox" onchange="parseJSONb(this.value)">
 					<option value="seoul" selected>서울</option>
 					<option value="busan">부산</option>				<option value="daegu">대구</option>
@@ -131,4 +154,5 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <script src="../js/fullpage.js"></script>
 <script src="../js/getAPI.js"></script>
+<!--<script src="../js/getAPI2.js"></script>-->
 </html>

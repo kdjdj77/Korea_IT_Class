@@ -1,1 +1,185 @@
 @charset "UTF-8";
+
+#ad-1 * {
+    list-style: none;
+    margin: 0px;
+}
+
+#ad-1 {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    background-image: url("image/background.png");
+    background-position: center;
+    background-repeat: repeat;
+}
+
+/* 바다 */
+#ad-1 li#water-back {
+    background-image: url("image/water-back.png");
+    height: 84px;
+    width: 110%;
+    background-repeat: repeat-x;
+    position: absolute;
+    left: -20px;
+    bottom: 10px;
+    z-index: 1;
+}
+
+#ad-1 li#water-front {
+    background-image: url("image/water-front.png");
+    height: 158px;
+    width: 110%;
+    background-repeat: repeat-x;
+    position: absolute;
+    left: -30px;
+    bottom: -70px;
+    z-index: 3;
+}
+
+/* 구름 */
+#ad-1 #clouds {
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+}
+
+#ad-1 #cloud-group-1 {
+    position: absolute;
+    left: 0px;
+    width: 720px;
+
+    /* outline: 3px solid tomato; */
+}
+
+#ad-1 #cloud-group-2 {
+    position: absolute;
+    left: 720px;
+    width: 720px;
+
+    /* outline: 3px solid green; */
+}
+
+#ad-1 .cloud-1 {
+    background-image: url("image/cloud-1.png");
+    height: 121px;
+    width: 172px;
+    position: absolute;
+    left: 40px;
+    top: 10px;
+}
+
+#ad-1 .cloud-2 {
+    background-image: url("image/cloud-2.png");
+    height: 75px;
+    width: 121px;
+    position: absolute;
+    left: 300px;
+    top: -25px;
+}
+
+#ad-1 .cloud-3 {
+    background-image: url("image/cloud-3.png");
+    height: 105px;
+    width: 132px;
+    position: absolute;
+    left: 530px;
+    top: -5px;
+}
+
+/* 보트 */
+#ad-1 ul#boat {
+    width: 249px;
+    height: 215px;
+    position: absolute;
+    left: 20px;
+    bottom: 25px;
+    z-index: 2;
+    overflow: visible;
+
+    /* outline: 2px solid red; */
+}
+
+#ad-1 ul#boat li {
+    background-image: url("image/boat.png");
+    height: 215px;
+    width: 249px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    overflow: visible;
+}
+
+#ad-1 #question-mark {
+    background-image: url("image/question-mark.png");
+    height: 50px;
+    width: 24px;
+    position: absolute;
+    top: -30px;
+    right: 34px;
+}
+
+/* 타이틀 */
+#ad-1 #content {
+    float: right;
+    z-index: 4;
+    position: relative;
+    margin: 40px;
+    width: 325px;
+    text-align: center;
+    overflow: visible;
+}
+
+#ad-1 #content h2 {
+    font-size: 50px;
+    color: rgb(19, 125, 213);
+    text-shadow: 0px 0px 4px #fff;
+    line-height: 50px;
+}
+
+#ad-1 #content h3 {
+    font-size: 25px;
+    color: rgb(32, 34, 36);
+    text-shadow: 0px 0px 4px #fff;
+    line-height: 31px;
+    letter-spacing: -2px;
+}
+
+/* 폼 */
+#ad-1 #content form {
+    margin: 30px 0px 0px 6px;
+    position: relative;
+}
+
+#ad-1 #content #email {
+    float: left;
+    font-size: 16px;
+    width: 158px;
+    height: 48px;
+    border: 1px solid rgb(162, 145, 125);
+    padding: 0px 20px;
+    background-color: rgb(199, 178, 155);
+    color: rgb(255, 255, 255);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: -1px -1px 1px #fff;
+    text-shadow: 1px 1px 0px #a2917d;
+}
+
+#ad-1 #content #submit {
+    float: left;
+    height: 50px;
+    border-width: 1px 1px 1px medium;
+    border-style: solid solid solid none;
+    border-color: rgb(188, 192, 196) rgb(188, 192, 196) rgb(188, 192, 196) currentColor;
+    padding: 0px 15px;
+    color: rgb(19, 125, 213);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-shadow: 1px 1px 0px #fff;
+    background-color: rgb(255, 255, 255);
+}

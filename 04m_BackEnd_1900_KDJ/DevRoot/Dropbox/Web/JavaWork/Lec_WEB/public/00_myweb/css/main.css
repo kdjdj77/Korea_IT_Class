@@ -5,6 +5,13 @@
    width:20%;
    height:40%;
 }
+#rankboxL {
+   position:absolute;
+   bottom:0;
+   left:0;
+   width:20%;
+   height:40%;
+}
 .rankblock {
    display:flex;
    font-weight:bold;
@@ -18,9 +25,6 @@
    border-radius:10px;
    color:black;
    line-height:200%;
-}
-.rankblock > div:nth-child(2) {
-   color:crimson;
 }
 .rankblock > div {
    margin-top:4px;

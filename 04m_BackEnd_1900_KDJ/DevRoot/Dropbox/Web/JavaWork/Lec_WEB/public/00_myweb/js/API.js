@@ -1,40 +1,39 @@
+"use strict"
 const API_KEY = "J8Trk79a5dDBsVwfEuSXyoNnLG4OHKmZp";
+const url = `https://api.corona-19.kr/korea/country/new/?serviceKey=${API_KEY}`;
+const url2 = `https://api.corona-19.kr/korea/beta/?serviceKey=${API_KEY}`;
 
-function getAPI() {
-   let url, url2, xhttp;
-   url = `https://api.corona-19.kr/korea/country/new/?serviceKey=${API_KEY}`;
-   url2 = `https://api.corona-19.kr/korea/beta/?serviceKey=${API_KEY}`;
-	xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function(){
-		if(this.readyState == 4 && this.status == 200) {
-			//데이터 받고 실행할 함수
-			let data = JSON.parse(this.responseText);
-			parseJSON1(data, document.getElementById('countrybox').value);
-			setRank1(data);
-		}
-	};
-	xhttp.open("GET", url, true);
-	xhttp.send();
-	xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function(){
-		if(this.readyState == 4 && this.status == 200){
-			//데이터 받고 실행할 함수
-			let data = JSON.parse(this.responseText);
-			setRank2(data);
-			parseJSON2(data, JSON.parse(this.responseText));
-		}
-	}
-	xhttp.open("GET", url2, true);
-	xhttp.send();
+function getAPI1(u) {
+   let response = fetch(u)
+   .then(function(response) {
+      return JSON.stringify(response.json());
+   })
+   .then(function(responseText) {
+      //데이터 받고 실행할 함수
+      setData1(document.getElementById('countrybox').value);
+      setRank1(JSON.parse(responseText));
+   });
 }
-//data1/////////////////////////////////////////////////////////////
-function parseJSON1(bData, country) {
+function getAPI2(u) {
+   let response = fetch(u)
+   .then(function(response) {
+      return JSON.stringify(response.json());
+   })
+   .then(function(responseText) {
+      //데이터 받고 실행할 함수
+      setRank2(JSON.parse(responseText));
+      setData2(JSON.parse(responseText));
+   });
+}
+
+function setData1(country) {
 	document.getElementById('countryName2').innerText = bData[`${country}`]["countryName"]
 	document.getElementById('newCase2').innerText = bData[`${country}`]["newCase"]
 	document.getElementById('totalCase2').innerText = bData[`${country}`]["totalCase"]
 	document.getElementById('recovered2').innerText = bData[`${country}`]["recovered"]
 	document.getElementById('death2').innerText = bData[`${country}`]["death"]
 }
+
 function setRank1(bData) {
 	const name = ["seoul","busan","daegu","incheon","gwangju","daejeon","ulsan","sejong",
 				"gyeonggi","gangwon","chungbuk","chungnam","jeonbuk","jeonnam","gyeongbuk",
@@ -58,14 +57,15 @@ function setRank1(bData) {
 		document.getElementById(`rCount${i + 1}`).innerText = `${rankCount[i]}▲`;
 	}
 }
-//data2/////////////////////////////////////////////////////////////
-function parseJSON2(aData, jsonObj){
+const setData2 = function(jsonObj){
 	
 }
 function setRank2(aData) {
 	for(let i = 1; i < 6; i++) {
-		document.getElementById(`rankL${i}`).innerText = `${i}. ` + aData['API']['topCountries'][`country${i}N`];
-		document.getElementById(`rCountL${i}`).innerText = aData['API']['topCountries'][`country${i}P`] + "%";
+		document.getElementById[`rankL${i}`] = aData['API']['topCountries'][`country${i}N`];
+		document.getElementById[`rCountL${i}`] = aData['API']['topCountries'][`country${i}P`];
 	}
 }
-getAPI();
+
+getAPI1(url);
+getAPI2(url2);
