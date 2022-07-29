@@ -10,11 +10,9 @@
    height:100%;
    position:relative;
 }
-.full1 {background:#190d65}
-.full2 {background:#190d65}
-.full3 {background:#190d65}
-.full4 {background:#190d65}
-.full5 {background:#190d65}
+.full1 {z-index:-2;background:black}
+.full2 {z-index:-2;background:black}
+.full3 {z-index:-2;background:black}
 #fullpage span {display:block;
    position:absolute;
    top:50%;

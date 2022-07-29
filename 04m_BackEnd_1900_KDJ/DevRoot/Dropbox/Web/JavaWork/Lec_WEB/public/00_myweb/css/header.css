@@ -24,6 +24,7 @@ header nav {
 header nav a {
    display:flex;
    flex-wrap:wrap;
+   margin-left:10px;
    padding-bottom:2px;
    justify-content:center;
    height:38px;

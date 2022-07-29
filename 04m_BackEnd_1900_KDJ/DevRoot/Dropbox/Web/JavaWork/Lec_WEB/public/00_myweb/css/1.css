@@ -1,0 +1,31 @@
+body {
+   background-color:black;
+   overflow-y: scroll
+}
+#bg {
+   position:fixed;
+   width:100vw;
+   height:auto;
+   opacity:0.3;
+   z-index:-5;
+   min-height:100%;
+}
+#title {
+   font-size:3rem;
+   text-align:center;
+}
+#wrapper {
+   background-color:rgba(0,0,0,0.6);
+   width:70%;
+   height:auto;
+   margin:auto;
+   padding:100px 40px 100px 40px;
+   z-index:5;
+}
+#imgBox {
+   position:relative;
+   margin-top:180px;
+}
+#textBox {
+   line-height:2rem;
+}

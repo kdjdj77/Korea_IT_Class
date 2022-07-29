@@ -1,0 +1,66 @@
+body {background-color:black;}
+#bg {
+   position:fixed;
+   width:100vw;
+   height:auto;
+   opacity:0.3;
+   z-index:-5;
+   min-height:100%;
+}
+#title {font-size:2rem; text-align:center;}
+#wrapper {padding-top:100px; height:100vh;}
+#vaccineBox {position:relative; width:70vw; height:100%; margin:auto;}
+#countrybox {
+   position:absolute;
+   margin-top:1%;
+   margin-left:calc(70vw - 218px);
+   width:200px;
+   height:30px;
+   display:flex;
+   flex-wrap:wrap;
+}
+#countryName {
+   font-size:2rem;
+   text-align:center;
+   padding:5px 5px;
+   width:100%;
+   height:6%;
+   background-color:rgb(117, 28, 132);
+   border-radius:10px;
+}
+.vaccineCount {
+   height:13vh;
+   width:50%;
+   text-align:center;
+   font-size:1.5rem;
+   border-radius:10px;
+   transition:0.5s;
+}
+.vaccineCount:hover > .vc {margin-top:1%;font-size:2rem;}
+.vc {transition:0.5s;margin-top:3%;}
+.vaccineCount:nth-child(1) {background-color:#c03434; border:3px solid #c34646;}
+.vaccineCount:nth-child(2) {background-color:#cb5e30; border:3px solid #ca6c44;}
+.vaccineCount:nth-child(3) {background-color:#7cbc2e; border:3px solid #8dc449;}
+.vaccineCount:nth-child(4) {background-color:#2f36b7; border:3px solid #484ebd;}
+#graph {
+   position:absolute;
+   left:calc(50% + 6px);
+   top:7.5%;
+   width:calc(50%);
+   height:calc(52vh + 24px);
+   background-color:ivory;
+   border-radius:10px;
+}
+#axis {
+   position:absolute;
+   width:90%;
+   height:80%;
+   left:5%;
+   top:10%;
+   border-bottom:1px solid black;
+}
+.bar {position:absolute;bottom:0;width:5%;height:2%;transition:0.5s;}
+#bar1 {left:10%; background-color:#c03434;} #bar2 {left:35%; background-color:#cb5e30;}
+#bar3 {left:60%; background-color:#7cbc2e;} #bar4 {left:85%; background-color:#2f36b7;}
+.xN {position:absolute;width:25px;bottom:1rem;color:black;}
+#xName1{left:14%;} #xName2{left:36.5%;} #xName3{left:59%;} #xName4{left:81.5%;}

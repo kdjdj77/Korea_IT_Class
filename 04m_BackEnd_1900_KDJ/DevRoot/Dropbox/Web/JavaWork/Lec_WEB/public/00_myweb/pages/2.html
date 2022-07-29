@@ -11,6 +11,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="../css/default.css">
    <link rel="stylesheet" href="../css/header.css">
+   <link rel="stylesheet" href="../css/2.css">
 </head>
 <body>
    <header>
@@ -27,5 +28,42 @@
 			</ul>
 		</nav>
 	</header>
+	<img id="bg" src="https://www.who.int/images/default-source/wpro/countries/viet-nam/health-topics/vaccines.tmb-1200v.jpg?Culture=en&sfvrsn=89a81d7f_9"/>
+	<div id="wrapper">
+		<h1 id="title"><b>백신 접종 현황</b></h1>
+		<div id="vaccineBox">
+			<select name="countries" id="countrybox" onchange="parseJSON(this.value)">
+				<option value="korea" selected>전국</option>				<option value="seoul">서울</option>
+				<option value="busan">부산</option>				<option value="daegu">대구</option>
+				<option value="incheon">인천</option>			<option value="gwangju">광주</option>
+				<option value="daejeon">대전</option>			<option value="ulsan">울산</option>
+				<option value="sejong">세종</option>			<option value="gyeonggi">경기</option>
+				<option value="gangwon">강원</option>			<option value="chungbuk">충북</option>
+				<option value="chungnam">충남</option>			<option value="jeonbuk">전북</option>
+				<option value="jeonnam">전남</option>			<option value="gyeongbuk">경북</option>
+				<option value="gyeongnam">경남</option>		<option value="jeju">제주</option>
+			</select>
+			<div id="countryName"></div>
+			<div>
+				<div class="vaccineCount"><div class="vc">1차 접종<span id="percent1"></span><br><span id="vaccine1"></span></div></div>
+				<div class="vaccineCount"><div class="vc">2차 접종<span id="percent2"></span><br><span id="vaccine2"></span></div></div>
+				<div class="vaccineCount"><div class="vc">3차 접종<span id="percent3"></span><br><span id="vaccine3"></span></div></div>
+				<div class="vaccineCount"><div class="vc">4차 접종<span id="percent4"></span><br><span id="vaccine4"></span></div></div>
+			</div>
+			<div id="graph">
+				<div id="axis">
+					<div id="bar1" class="bar"></div>
+					<div id="bar2" class="bar"></div>
+					<div id="bar3" class="bar"></div>
+					<div id="bar4" class="bar"></div>
+				</div>
+				<div id="xName1" class="xN">1차</div>
+				<div id="xName2" class="xN">2차</div>
+				<div id="xName3" class="xN">3차</div>
+				<div id="xName4" class="xN">4차</div>
+			</div>
+		</div>
+	</div>
 </body>
+<script src="../js/getAPI2.js"></script>
 </html>
