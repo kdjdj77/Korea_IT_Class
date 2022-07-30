@@ -28,7 +28,6 @@ function parseJSON(country) {
    for(let i = 1; i < 5; i++) {
       let text = cData[`${country}`][`vaccine_${i}`][`vaccine_${i}`];
       let per = Math.round(parseInt(cData[`${country}`][`vaccine_${i}`][`vaccine_${i}`]) / parseInt(name[`${country}`]) * 100) / 100;
-	   if (per > 99) per = 99.2;
       document.getElementById(`vaccine${i}`).innerText = `${text}명`;
       document.getElementById(`percent${i}`).innerText = ` (${per}%)`;
 
@@ -39,8 +38,8 @@ function parseJSON(country) {
 function getDateString() {
 	let today = new Date();
 	let year = today.getFullYear();
-	let month = today.getMonth();
-	let day = today.getDay();
+	let month = today.getMonth() + 1;
+	let day = today.getDate();
 	year = year - parseInt(year / 100) * 100;
 	if (month < 10) month = "0" + month;
 	if (day < 10) day = "0" + day;

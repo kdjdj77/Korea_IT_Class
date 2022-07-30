@@ -79,8 +79,8 @@ function setRank2(aData) {
 function getDateString() {
 	let today = new Date();
 	let year = today.getFullYear();
-	let month = today.getMonth();
-	let day = today.getDay();
+	let month = today.getMonth() + 1;
+	let day = today.getDate();
 	year = year - parseInt(year / 100) * 100;
 	if (month < 10) month = "0" + month;
 	if (day < 10) day = "0" + day;

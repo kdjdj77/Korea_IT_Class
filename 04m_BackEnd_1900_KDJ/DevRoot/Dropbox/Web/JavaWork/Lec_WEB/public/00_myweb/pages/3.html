@@ -11,6 +11,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="../css/default.css">
    <link rel="stylesheet" href="../css/header.css">
+	<link rel="stylesheet" href="../css/3.css">
 </head>
 <body>
    <header>
@@ -23,10 +24,74 @@
 				<li><a href="../pages/main.html">HOME</a></li>
 				<li><a href="../pages/1.html">COVID-19</a></li>
 				<li><a href="../pages/2.html">Vaccination</a></li>
-				<li><a href="../pages/3.html">Information</a></li>
+				<li><a href="../pages/3.html">Survey</a></li>
 			</ul>
 		</nav>
 	</header>
-   https://github.com/dhlife09/Corona-19-API
+   <div id="wrapper">
+		<form name="survey" action="https://www.w3schools.com/action_page.php" method="get">
+			<br><br><br>
+			소속 : <input type="text" name="team"><br>
+			직급 : <input type="text" name="rank"><br>
+			성명 : <input type="text" name="name"><br>
+			핸드폰번호 : <input type="text" name="phone"><br>
+			핸드폰번호 : <input type="text" name="email"><br>
+			핸드폰번호 : <input type="text" name="address"><br>
+			
+			<br>
+			발생증상 :
+			<input type="checkbox" name="symptom" value="fever">발열&nbsp;&nbsp;
+			<input type="checkbox" name="symptom" value="cough">기침&nbsp;&nbsp;
+			<input type="checkbox" name="symptom" value="sore">인후통<br>
+			<input type="checkbox" name="symptom" value="breath">호흡곤란&nbsp;&nbsp;
+			<input type="checkbox" name="symptom" value="etc">기타<br>
+			* 발생증상이 발열인 경우 체온과 열이 발생한 일자는?
+			20<input class="dateBox" type="number" name="yearF">년
+			<input class="dateBox" type="number" name="monF">월
+			<input class="dateBox" type="number" name="dayF">일
+			<br>
+			
+			증상발생일 : 
+			20<input class="dateBox" type="number" name="year">년
+			<input class="dateBox" type="number" name="mon">월
+			<input class="dateBox" type="number" name="day">일
+			<br>
+
+			발생장소 : 
+			<input type="radio" name="place" value="home">자택<br>
+			<input type="radio" name="place" value="comp">회사<br>
+			<input type="radio" name="place" value="out">외부<br>
+			<input type="radio" name="place" value="etc">기타<br>
+			<br>
+			
+			동거인 : 
+			<input type="radio" name="inmate" value="o">유&nbsp;
+			<input type="radio" name="inmate" value="x">무<br>
+			* 동거인이 있을 경우 동거인 기록
+			<input type="text" name="who"><br>
+			<br>
+			
+			최소 2주 해외 여행력 : 
+			<input type="radio" name="travel" value="o">유&nbsp;
+			<input type="radio" name="travel" value="x">무<br>
+			* 여행 기록 없을 경우 아래 사항 작성
+			여행 장소 : <input type="text" name="travelPlace"><br>
+			여행 기간 :
+			20<input class="dateBox" type="number" name="yearP1">년
+			<input class="dateBox" type="number" name="monP1">월
+			<input class="dateBox" type="number" name="dayP1">일 ~
+			20<input class="dateBox" type="number" name="yearP2">년
+			<input class="dateBox" type="number" name="monP2">월
+			<input class="dateBox" type="number" name="dayP2">일
+			<br>
+			
+			비고<br>
+			<input id="note" type="text" name="note">
+			<br><br>
+			<input type="submit" value="제출" onclick="submit()">
+			<br><br>
+		</form>
+	</div>
 </body>
+<script src="../js/submit.js"></script>
 </html>

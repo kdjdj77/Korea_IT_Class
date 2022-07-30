@@ -1,0 +1,11 @@
+body {
+   background-color:black;
+   overflow-y:scroll
+}
+.dateBox {
+   width:20px;
+}
+#note {
+   width:90%;
+   height:100px;;
+}
