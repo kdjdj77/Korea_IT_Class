@@ -29,69 +29,75 @@
 		</nav>
 	</header>
    <div id="wrapper">
-		<form name="survey" action="https://www.w3schools.com/action_page.php" method="get">
+		<form name="survey">
 			<br><br><br>
-			소속 : <input type="text" name="team"><br>
-			직급 : <input type="text" name="rank"><br>
-			성명 : <input type="text" name="name"><br>
-			핸드폰번호 : <input type="text" name="phone"><br>
-			핸드폰번호 : <input type="text" name="email"><br>
-			핸드폰번호 : <input type="text" name="address"><br>
+			소속 : <input class="iText" type="text" name="team"><br><br>
+			직급 : <input class="iText" type="text" name="rank"><br><br>
+			성명 : <input class="iText" type="text" name="name"><br><br>
+			핸드폰번호 : <input class="iText" type="text" name="phone"><br><br>
+			E-mail : <input class="iText" type="text" name="email"><br><br>
+			주소 : <input class="iText" type="text" name="address"><br><br>
 			
 			<br>
 			발생증상 :
-			<input type="checkbox" name="symptom" value="fever">발열&nbsp;&nbsp;
-			<input type="checkbox" name="symptom" value="cough">기침&nbsp;&nbsp;
-			<input type="checkbox" name="symptom" value="sore">인후통<br>
-			<input type="checkbox" name="symptom" value="breath">호흡곤란&nbsp;&nbsp;
-			<input type="checkbox" name="symptom" value="etc">기타<br>
+			<input class="iCheckbox" type="checkbox" name="symptom" value="fever">발열&nbsp;&nbsp;
+			<input class="iCheckbox" type="checkbox" name="symptom" value="cough">기침&nbsp;&nbsp;
+			<input class="iCheckbox" type="checkbox" name="symptom" value="sore">인후통&nbsp;&nbsp;
+			<input class="iCheckbox" type="checkbox" name="symptom" value="breath">호흡곤란&nbsp;&nbsp;
+			<input class="iCheckbox" type="checkbox" name="symptom" value="etc">기타<br><br>
 			* 발생증상이 발열인 경우 체온과 열이 발생한 일자는?
-			20<input class="dateBox" type="number" name="yearF">년
-			<input class="dateBox" type="number" name="monF">월
-			<input class="dateBox" type="number" name="dayF">일
-			<br>
+			<br>&nbsp;&nbsp;
+			20 <select class="dateBox year" name="yearF"></select>년
+			<select class="dateBox mon" name="monF"></select>월
+			<select class="dateBox day" name="dayF"></select>일
+			<br><br>
 			
 			증상발생일 : 
-			20<input class="dateBox" type="number" name="year">년
-			<input class="dateBox" type="number" name="mon">월
-			<input class="dateBox" type="number" name="day">일
-			<br>
+			20 <select class="dateBox year" name="year"></select>년
+			<select class="dateBox mon" name="mon"></select>월
+			<select class="dateBox day" name="day"></select>일
+			<br><br>
 
 			발생장소 : 
-			<input type="radio" name="place" value="home">자택<br>
-			<input type="radio" name="place" value="comp">회사<br>
-			<input type="radio" name="place" value="out">외부<br>
-			<input type="radio" name="place" value="etc">기타<br>
-			<br>
+			<input class="iRadio" type="radio" name="place" value="home">자택
+			<input class="iRadio" type="radio" name="place" value="comp">회사
+			<input class="iRadio" type="radio" name="place" value="out">외부
+			<input class="iRadio" type="radio" name="place" value="etc">기타
+			<br><br>
 			
 			동거인 : 
-			<input type="radio" name="inmate" value="o">유&nbsp;
-			<input type="radio" name="inmate" value="x">무<br>
-			* 동거인이 있을 경우 동거인 기록
-			<input type="text" name="who"><br>
-			<br>
+			<input class="iRadio" type="radio" name="inmate" value="o">유&nbsp;
+			<input class="iRadio" type="radio" name="inmate" value="x">무<br>
+			* 동거인이 있을 경우 동거인 기록 : 
+			<input class="iText" type="text" name="who"><br>
+			<br><br>
 			
 			최소 2주 해외 여행력 : 
-			<input type="radio" name="travel" value="o">유&nbsp;
-			<input type="radio" name="travel" value="x">무<br>
+			<input class="iRadio" type="radio" name="travel" value="true">유&nbsp;
+			<input class="iRadio" type="radio" name="travel" value="false">무<br>
 			* 여행 기록 없을 경우 아래 사항 작성
-			여행 장소 : <input type="text" name="travelPlace"><br>
+			<br>&nbsp;&nbsp;
+			여행 장소 : <input class="iText" type="text" name="travelPlace">
+			<br><br>
+
 			여행 기간 :
-			20<input class="dateBox" type="number" name="yearP1">년
-			<input class="dateBox" type="number" name="monP1">월
-			<input class="dateBox" type="number" name="dayP1">일 ~
-			20<input class="dateBox" type="number" name="yearP2">년
-			<input class="dateBox" type="number" name="monP2">월
-			<input class="dateBox" type="number" name="dayP2">일
-			<br>
+			20 <select class="dateBox year" name="yearP1"></select>년
+			<select class="dateBox mon" name="monP1"></select>월
+			<select class="dateBox day" name="dayP1"></select>일 ~
+			20 <select class="dateBox year" name="yearP2"></select>년
+			<select class="dateBox mon" name="monP2"></select>월
+			<select class="dateBox day" name="dayP2"></select>일
+			<br><br>
 			
 			비고<br>
 			<input id="note" type="text" name="note">
 			<br><br>
-			<input type="submit" value="제출" onclick="submit()">
+			
 			<br><br>
 		</form>
+		<input type="button" value="제출" onclick="submit()">
 	</div>
 </body>
 <script src="../js/submit.js"></script>
+<script src="../js/datebox.js"></script>
 </html>

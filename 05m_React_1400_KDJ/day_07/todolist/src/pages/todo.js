@@ -19,14 +19,14 @@ const Todo = function() {
    const onAddHandler = useCallback(function(id, todo) {
       return setState([...state, {id: id, Todo: todo}]);
    }, [state]);
-
+/*
    const onRemoveHandler = useCallback(function(id) {
       const removeState = state.filter(function(item) {
          return item.id !== id;
       })
       setState(removeState);
    }, [state]);
-
+*/
    return (
       <>
          <TodoTitle state={state}/>
