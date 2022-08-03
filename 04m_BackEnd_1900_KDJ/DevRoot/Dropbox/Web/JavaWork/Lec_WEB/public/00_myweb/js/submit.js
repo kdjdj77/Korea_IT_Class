@@ -3,7 +3,26 @@ function submit() {
    const errorText = "을(를) 입력해주세요"
    arrKey = ["team", "rank", "name", "phone", "email", "address"];
    arrName = ["소속", "직급", "이름", "핸드폰번호", "이메일", "주소"];
-   if(!frm["team"].value.trim()) {frm["team"].focus();alert("소속" + errorText);return false;}
+   let arrlen = arrKey.length;
+   for(i = 0; i < arrlen; i++) {
+      if(!frm[arrKey[i]].value.trim()) {
+         frm[arrKey[i]].focus();
+         alert(arrName[i] + errorText);
+         return false;
+      }
+   }
+   let emailPat = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+   if(!emailPat.test(frm["email"].value)){
+      frm["email"].focus();
+      alert("잘못된 이메일입니다");
+      return false;
+   }
+   let phonePat = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
+   if(!phonePat.test(frm["phone"].value)){
+      frm["phone"].focus();
+      alert("잘못된 전화번호입니다");
+      return false;
+   }
    let myjson = 
    {
       "team":frm["team"].value,

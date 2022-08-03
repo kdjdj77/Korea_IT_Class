@@ -46,29 +46,4 @@ function getDateString() {
 
 	return `(${year}/${month}/${day})`;
 }
-/*
-function setRank1(data) {
-	const name = ["seoul","busan","daegu","incheon","gwangju","daejeon","ulsan","sejong",
-				"gyeonggi","gangwon","chungbuk","chungnam","jeonbuk","jeonnam","gyeongbuk",
-				"gyeongnam","jeju"]
-	let len = name.length; let top = ""; let max = 0; let index = 0;
-	let loc = []; let count = []; let rankName = []; let rankCount = [];
-	for(a of name) {
-		loc.push(`${data[`${a}`][`countryName`]}`);
-		count.push(`${data[`${a}`][`newCase`]}`);
-	}
-	//1~5등 구하기
-	for (let k = 0; k < 5; k++) {
-		for(let i = 0; i < len; i++) {if (max < parseInt(count[i])) {max = count[i]; top = loc[i]; index = i}}
-		rankName.push(top);
-		rankCount.push(max);
-		count[index] = 0;
-		max = 0; top = ""; index = 0;
-	}
-	for(let i = 0; i < 5; i++) {
-		document.getElementById(`rank${i + 1}`).innerText = `${i + 1}.  ${rankName[i]}`;
-		document.getElementById(`rCount${i + 1}`).innerText = `${rankCount[i]}▲`;
-	}
-}
-*/
 getAPI();

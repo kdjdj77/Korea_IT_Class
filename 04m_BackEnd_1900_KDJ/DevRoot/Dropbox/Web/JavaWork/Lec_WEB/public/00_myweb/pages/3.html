@@ -28,74 +28,91 @@
 			</ul>
 		</nav>
 	</header>
+	<img id="bg" src="https://www.medigatenews.com/file/news/157159"/>
    <div id="wrapper">
+		<p id="title">코로나 바이러스 설문지&nbsp;&nbsp;&nbsp;&nbsp;</p>
 		<form name="survey">
-			<br><br><br>
-			소속 : <input class="iText" type="text" name="team"><br><br>
-			직급 : <input class="iText" type="text" name="rank"><br><br>
-			성명 : <input class="iText" type="text" name="name"><br><br>
-			핸드폰번호 : <input class="iText" type="text" name="phone"><br><br>
-			E-mail : <input class="iText" type="text" name="email"><br><br>
-			주소 : <input class="iText" type="text" name="address"><br><br>
-			
+			<div id="leftbox">
+			소속 &nbsp;&nbsp;&nbsp;&nbsp;
+			: <input class="iText" type="text" name="team">&nbsp;*<br><br>
+			직급 &nbsp;&nbsp;&nbsp;&nbsp;
+			: <input class="iText" type="text" name="rank">&nbsp;*<br><br>
+			성명 &nbsp;&nbsp;&nbsp;&nbsp;
+			: <input class="iText" type="text" name="name">&nbsp;*<br><br>
+			</div>
+			<div id="rightbox">
+			핸드폰번호 
+			: <input class="iText" type="text" name="phone">&nbsp;*<br><br>
+			E-mail &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			: <input class="iText" type="text" name="email">&nbsp;*<br><br>
+			주소 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+			: <input class="iText" type="text" name="address">&nbsp;*<br><br>
+			</div>
+			<div id="whiteLine"></div>
 			<br>
-			발생증상 :
+			발생증상 &nbsp;&nbsp;&nbsp;:
 			<input class="iCheckbox" type="checkbox" name="symptom" value="fever">발열&nbsp;&nbsp;
 			<input class="iCheckbox" type="checkbox" name="symptom" value="cough">기침&nbsp;&nbsp;
 			<input class="iCheckbox" type="checkbox" name="symptom" value="sore">인후통&nbsp;&nbsp;
 			<input class="iCheckbox" type="checkbox" name="symptom" value="breath">호흡곤란&nbsp;&nbsp;
 			<input class="iCheckbox" type="checkbox" name="symptom" value="etc">기타<br><br>
+			&nbsp;&nbsp;
 			* 발생증상이 발열인 경우 체온과 열이 발생한 일자는?
-			<br>&nbsp;&nbsp;
+			<br><br>&nbsp;&nbsp;&nbsp;&nbsp;
 			20 <select class="dateBox year" name="yearF"></select>년
 			<select class="dateBox mon" name="monF"></select>월
 			<select class="dateBox day" name="dayF"></select>일
-			<br><br>
+			<br><br><div id="whiteLine"></div>
+			<br>
 			
 			증상발생일 : 
 			20 <select class="dateBox year" name="year"></select>년
 			<select class="dateBox mon" name="mon"></select>월
 			<select class="dateBox day" name="day"></select>일
-			<br><br>
+			<br><br><div id="whiteLine"></div>
+			<br>
 
-			발생장소 : 
+			발생장소 &nbsp;&nbsp;&nbsp;: 
 			<input class="iRadio" type="radio" name="place" value="home">자택
 			<input class="iRadio" type="radio" name="place" value="comp">회사
 			<input class="iRadio" type="radio" name="place" value="out">외부
 			<input class="iRadio" type="radio" name="place" value="etc">기타
-			<br><br>
+			<br><br><div id="whiteLine"></div>
+			<br>
 			
-			동거인 : 
+			동거인 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
 			<input class="iRadio" type="radio" name="inmate" value="o">유&nbsp;
-			<input class="iRadio" type="radio" name="inmate" value="x">무<br>
+			<input class="iRadio" type="radio" name="inmate" value="x">무
+			<br><br>&nbsp;&nbsp;
 			* 동거인이 있을 경우 동거인 기록 : 
-			<input class="iText" type="text" name="who"><br>
-			<br><br>
+			<input class="iText" type="text" name="who">
+			<br><br><div id="whiteLine"></div>
+			<br>
 			
 			최소 2주 해외 여행력 : 
 			<input class="iRadio" type="radio" name="travel" value="true">유&nbsp;
-			<input class="iRadio" type="radio" name="travel" value="false">무<br>
-			* 여행 기록 없을 경우 아래 사항 작성
-			<br>&nbsp;&nbsp;
+			<input class="iRadio" type="radio" name="travel" value="false">무
+			<br><br>&nbsp;&nbsp;
+			* 여행 기록 있을 경우 아래 사항 작성 
+			<br><br>&nbsp;&nbsp;&nbsp;&nbsp;
 			여행 장소 : <input class="iText" type="text" name="travelPlace">
-			<br><br>
+			<br><br>&nbsp;&nbsp;&nbsp;&nbsp;
 
-			여행 기간 :
+			여행 기간 &nbsp;&nbsp;:
 			20 <select class="dateBox year" name="yearP1"></select>년
 			<select class="dateBox mon" name="monP1"></select>월
 			<select class="dateBox day" name="dayP1"></select>일 ~
 			20 <select class="dateBox year" name="yearP2"></select>년
 			<select class="dateBox mon" name="monP2"></select>월
 			<select class="dateBox day" name="dayP2"></select>일
-			<br><br>
+			<br><br><div id="whiteLine"></div>
+			<br>
 			
 			비고<br>
 			<input id="note" type="text" name="note">
 			<br><br>
-			
-			<br><br>
 		</form>
-		<input type="button" value="제출" onclick="submit()">
+		<input id="submitBtn" type="button" value="제출" onclick="submit()">
 	</div>
 </body>
 <script src="../js/submit.js"></script>
