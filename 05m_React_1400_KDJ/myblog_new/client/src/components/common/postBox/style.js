@@ -18,7 +18,7 @@ export const PostList = styled.section`
 
         ::-webkit-scrollbar-thumb {
             height: 30%;
-            background-color: ${(props) => props.theme.mainColor};
+            background-color: ${function(props) {return props.theme.mainColor;}};
         }
 
         ::-webkit-scrollbar-track {
