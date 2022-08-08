@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BS button</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<!--
+  https://getbootstrap.com/docs/5.1/components/buttons/
+  https://www.w3schools.com/bootstrap5/bootstrap_buttons.php  
+-->
+<body>
+  <div class="container mt-3">
+    <h2>BS Button 스타일</h2>
+    <p><code>.btn</code> 과 <code>.btn-*</code> 클래스 사용</p>
+    <button type="button" class="btn">Basic</button>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="TODO">Success</button>
+    <button type="button" class="TODO">Info</button>
+    <button type="button" class="TODO">Warning</button>
+    <button type="button" class="TODO">Danger</button>
+    <button type="button" class="TODO">Dark</button>
+    <button type="button" class="TODO">Light</button>
+    <button type="button" class="TODO">Link</button>
+
+  </div>
+
+  <hr>
+  <div class="container mt-3">
+    <h2>Button 스타일 적용 범위</h2>
+    <p><code>&lt;a&gt;</code>,<code>&lt;button&gt;</code>,<code>&lt;input&gt;</code> 에도 쓰일수 있다</p>
+    <a href="#" class="btn btn-info" role="button">Link Button</a>
+    <button type="button" class="btn btn-info">Button</button>
+    <input type="button" class="btn btn-info" value="Input">
+    <input type="submit" class="btn btn-info" value="Submit">
+    <!-- ※ 참고: role="button" ← role 속성은 '웹접근성' 에서 위젯 구조의 용도및  의미를 전달하기 위한 목적의 속성
+ 			screen reader  에선 role 이 읽혀진다 -->
+  </div>
+
+  <hr>
+  <div class="container mt-3">
+    <h2>Button Outline</h2>
+    <p><code>.btn-outline-*</code> 클래스</p>
+    <button type="button" class="btn btn-outline-primary">Primary</button>
+    <button type="button" class="btn TODO">Secondary</button>
+    <button type="button" class="btn TODO">Success</button>
+    <button type="button" class="btn TODO">Info</button>
+    <button type="button" class="btn TODO">Warning</button>
+    <button type="button" class="btn TODO">Danger</button>
+    <button type="button" class="btn TODO">Dark</button>
+    <button type="button" class="btn TODOk">Light</button>
+
+  </div>
+
+  <hr>
+  <div class="container mt-3">
+    <h2>Button Sizes</h2>
+    <p><code>.btn-lg</code>, <code>.btn-sm</code></p>
+    <button type="button" class="btn btn-primary btn-lg">Large</button>
+    <button type="button" class="btn btn-primary TODO">Default</button>
+    <button type="button" class="btn btn-primary btn-sm">Small</button>
+  </div>
+
+  <hr>
+  <div class="container mt-3">
+    <h2>Block Level Buttons</h2>
+    <p>좌우폭 100% 사용하는 버튼</p>
+    <p><code>.d-grid</code> helper 클래스 안에 button 배치</p>
+    <div class="d-grid">
+      <button type="button" class="btn btn-primary">Button 1</button>
+      <button type="button" class="btn btn-success">Button 2</button>
+    </div>
+
+    <br>
+    <h2>Multiple Blok Level Buttons</h2>
+    <p>block level button 을 여러개 사용하면서 간격을 벌리려면
+      <code>.gap-*</code> 을 parent 에 주면 된다.
+    </p>
+    <div class="TODO">
+      <button type="button" class="btn btn-primary">Full-Width Button</button>
+      <button type="button" class="btn btn-primary">Full-Width Button</button>
+      <button type="button" class="btn btn-primary">Full-Width Button</button>
+    </div>
+  </div>
+
+  <hr>
+  <div class="container mt-3">
+    <h2>Button 상태 : active, disabled</h2>
+    <p><code>.active</code>, <code>.disabled</code></p>
+    <button type="button" class="btn btn-primary">Primary Button</button>
+    <button type="button" class="btn btn-primary TODO">Active Primary</button>
+    <button type="button" class="btn btn-primary" disabled>Disabled Primary</button>
+    <a href="#" class="btn btn-primary TODO">Disabled Link</a>
+
+    <!-- button 의 경우 disabled 클래스만 있으면 색상만 스타일링 되고 클릭 동작은 된다.
+  반드시 속성을 넣자 -->
+  </div>
+
+
+  <hr>
+  <!--
+    https://www.w3schools.com/bootstrap5/bootstrap_spinners.php
+  -->
+  <div class="container mt-3">
+    <h2>Spinner Buttons</h2>
+    <p>Add spinners to buttons:</p>
+                                          
+    <button class="btn btn-primary">
+      <span class="TODO"></span>
+    </button>
+  
+    <button class="btn btn-primary">
+      <span class="TODO"></span>
+      Loading..
+    </button>
+    
+    <button class="btn btn-primary" disabled>
+      <span class="TODO"></span>
+      Loading..
+    </button>
+    
+    <button class="btn btn-primary" disabled>
+      <span class="TODO"></span>
+      Loading..
+    </button>
+  </div>
+  
+
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>

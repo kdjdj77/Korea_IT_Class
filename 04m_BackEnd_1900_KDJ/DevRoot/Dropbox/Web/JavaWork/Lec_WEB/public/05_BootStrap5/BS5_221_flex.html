@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>BS Fex</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</head>
+<!--
+
+  https://getbootstrap.com/docs/5.1/utilities/flex/
+  https://www.w3schools.com/bootstrap5/bootstrap_flex.php
+
+  BS5 에서 달라진점 중 하나!
+  바로 flexbox 를 사용한다는 점입니다. (기존의 float 가 아니라!)
+
+
+-->
+
+<body>
+
+  <div class="container mt-3">
+  <h2>Flex</h2>
+  <p><code>.d-flex</code> 를 사용하여 flex container 를 만들면<br>
+    그 아래의 child element 들은 자동으로 flex item 이 됩니다.
+  </p>
+    <!-- TODO -->
+
+  <hr>
+
+  <div class="container mt-3">
+    <h2>Inline Flex</h2>
+    <p><code>.d-inline-flex</code> inline flexbox container 생성</p>
+    <!-- TODO -->
+  </div>
+
+  <hr>
+
+  <div class="container mt-3">
+    <h2>Horizontal Direction</h2>
+    <p><code>.flex-row</code> to make the flex items appear side by side (default):</p>
+    <!-- TODO -->
+
+    <p><code>.flex-row-reverse</code> to right-align the direction:</p>
+    <!-- TODO -->
+  </div>
+
+  <hr>
+
+  <div class="container mt-3">
+    <h2>Vertical Direction</h2>
+    <p><code>.flex-column</code> to display the flex items vertically (on top of each other):</p>
+    <!-- TODO -->
+
+    <p><code>.flex-column-reverse</code> to reverse the vertical direction:</p>
+    <!-- TODO -->
+
+  </div>
+
+  <hr>
+
+  <div class="container mt-3">
+    <h2>Justify content</h2>
+    <p><code>.justify-content-*</code> classes to change the alignment of flex items. Choose from start (default), end, center, between or around:</p>
+    <!-- TODO -->
+
+  </div>
+
+  <hr>
+
+  <div class="container mt-3">
+    <h2>Fill / Equal Widths</h2>
+    <p><code>.flex-fill</code> on flex items to force them into equal widths:</p>
+    <!-- TODO -->
+
+    <p>Example without .flex-fill:</p>
+    <!-- TODO -->
+
+  </div>
+
+  <hr>
+
+  <div class="container mt-3">
+    <h2>Grow</h2>
+    <p><code>.flex-grow-1</code> on a flex item to take up the rest of the space:</p>
+    <!-- TODO -->
+
+    <p>Example without .flex-grow-1:</p>
+    <!-- TODO -->
+
+  </div>
+
+  <hr>
+  
+  <div class="container mt-3">
+    <h2>Order</h2>
+    <p><code>.order</code> Change the visual order of a specific flex item(s).<br>
+       Valid classes are from 0 to 5:</p>
+    <!-- TODO -->
+
+  </div>
+
+  <hr>
+
+  <div class="container mt-3">
+    <h2>Auto Margins</h2>
+    <p><code>.ms-auto</code> Easily add auto margins to flex items (push items to the right)<br>
+      <code>.me-auto</code> (push items to the left):</p>
+    <!-- TODO -->
+
+  </div>
+  
+  <hr>
+
+  <div class="container mt-3">
+    <h2>Wrap</h2>
+    <p>Control how flex items wrap in a flex container with .flex-nowrap (default), .flex-wrap or .flex-wrap-reverse.</p>
+    <p><code>.flex-wrap:</code></p>
+    <div class="TODO">
+      <div class="p-2 border">Flex item 1</div>
+      <div class="p-2 border">Flex item 2</div>
+      <div class="p-2 border">Flex item 3</div>
+      <div class="p-2 border">Flex item 4</div>
+      <div class="p-2 border">Flex item 5</div>
+      <div class="p-2 border">Flex item 6</div>
+      <div class="p-2 border">Flex item 7</div>
+      <div class="p-2 border">Flex item 8</div>
+      <div class="p-2 border">Flex item 9</div>
+      <div class="p-2 border">Flex item 10</div>
+      <div class="p-2 border">Flex item 11</div>
+      <div class="p-2 border">Flex item 12</div>
+      <div class="p-2 border">Flex item 13 </div>
+      <div class="p-2 border">Flex item 14</div>
+      <div class="p-2 border">Flex item 15</div>
+      <div class="p-2 border">Flex item 16</div>
+      <div class="p-2 border">Flex item 17</div>
+      <div class="p-2 border">Flex item 18</div>
+      <div class="p-2 border">Flex item 19</div>
+      <div class="p-2 border">Flex item 20</div>
+      <div class="p-2 border">Flex item 21</div>
+      <div class="p-2 border">Flex item 22</div>
+      <div class="p-2 border">Flex item 23</div>
+      <div class="p-2 border">Flex item 24</div>
+      <div class="p-2 border">Flex item 25</div>
+    </div>
+    <br>
+    <p><code>.flex-wrap-reverse:</code></p>
+    <div class="TODO">
+      <div class="p-2 border">Flex item 1</div>
+      <div class="p-2 border">Flex item 2</div>
+      <div class="p-2 border">Flex item 3</div>
+      <div class="p-2 border">Flex item 4</div>
+      <div class="p-2 border">Flex item 5</div>
+      <div class="p-2 border">Flex item 6</div>
+      <div class="p-2 border">Flex item 7</div>
+      <div class="p-2 border">Flex item 8</div>
+      <div class="p-2 border">Flex item 9</div>
+      <div class="p-2 border">Flex item 10</div>
+      <div class="p-2 border">Flex item 11</div>
+      <div class="p-2 border">Flex item 12</div>
+      <div class="p-2 border">Flex item 13 </div>
+      <div class="p-2 border">Flex item 14</div>
+      <div class="p-2 border">Flex item 15</div>
+      <div class="p-2 border">Flex item 16</div>
+      <div class="p-2 border">Flex item 17</div>
+      <div class="p-2 border">Flex item 18</div>
+      <div class="p-2 border">Flex item 19</div>
+      <div class="p-2 border">Flex item 20</div>
+      <div class="p-2 border">Flex item 21</div>
+      <div class="p-2 border">Flex item 22</div>
+      <div class="p-2 border">Flex item 23</div>
+      <div class="p-2 border">Flex item 24</div>
+      <div class="p-2 border">Flex item 25</div>
+    </div>
+    <br>
+    <p><code>.flex-nowrap:</code></p>
+    <div class="TODO">
+      <div class="p-2 border">Flex item 1</div>
+      <div class="p-2 border">Flex item 2</div>
+      <div class="p-2 border">Flex item 3</div>
+      <div class="p-2 border">Flex item 4</div>
+      <div class="p-2 border">Flex item 5</div>
+      <div class="p-2 border">Flex item 6</div>
+      <div class="p-2 border">Flex item 7</div>
+      <div class="p-2 border">Flex item 8</div>
+      <div class="p-2 border">Flex item 9</div>
+      <div class="p-2 border">Flex item 10</div>
+      <div class="p-2 border">Flex item 11</div>
+      <div class="p-2 border">Flex item 12</div>
+      <div class="p-2 border">Flex item 13 </div>
+      <div class="p-2 border">Flex item 14</div>
+      <div class="p-2 border">Flex item 15</div>
+      <div class="p-2 border">Flex item 16</div>
+      <div class="p-2 border">Flex item 17</div>
+      <div class="p-2 border">Flex item 18</div>
+      <div class="p-2 border">Flex item 19</div>
+      <div class="p-2 border">Flex item 20</div>
+      <div class="p-2 border">Flex item 21</div>
+      <div class="p-2 border">Flex item 22</div>
+      <div class="p-2 border">Flex item 23</div>
+      <div class="p-2 border">Flex item 24</div>
+      <div class="p-2 border">Flex item 25</div>
+      <div class="p-2 border">Flex item 26</div>
+      <div class="p-2 border">Flex item 27</div>
+      <div class="p-2 border">Flex item 28</div>
+      <div class="p-2 border">Flex item 29</div>
+      <div class="p-2 border">Flex item 30</div>
+      <div class="p-2 border">Flex item 31</div>
+      <div class="p-2 border">Flex item 32</div>
+      <div class="p-2 border">Flex item 33</div>
+      <div class="p-2 border">Flex item 34</div>
+      <div class="p-2 border">Flex item 35</div>
+    </div>
+    <br>
+  </div>
+  
+  <hr>
+
+  <div class="container mt-3">
+    <h2>Align Content</h2>
+    <p>Control the vertical alignment of gathered flex items with the .align-content-* classes.</p>
+    <p><strong>Note:</strong> This example does not look good on a small devices. Also note that these classes have no effect on single rows of flex items.</p>
+    <p><code>.align-content-start</code> (default):</p>
+    <div class="TODO" style="height:300px">
+      <div class="p-2 border">Flex item 1</div>
+      <div class="p-2 border">Flex item 2</div>
+      <div class="p-2 border">Flex item 3</div>
+      <div class="p-2 border">Flex item 4</div>
+      <div class="p-2 border">Flex item 5</div>
+      <div class="p-2 border">Flex item 6</div>
+      <div class="p-2 border">Flex item 7</div>
+      <div class="p-2 border">Flex item 8</div>
+      <div class="p-2 border">Flex item 9</div>
+      <div class="p-2 border">Flex item 10</div>
+      <div class="p-2 border">Flex item 11</div>
+      <div class="p-2 border">Flex item 12</div>
+      <div class="p-2 border">Flex item 13 </div>
+      <div class="p-2 border">Flex item 14</div>
+      <div class="p-2 border">Flex item 15</div>
+      <div class="p-2 border">Flex item 16</div>
+      <div class="p-2 border">Flex item 17</div>
+      <div class="p-2 border">Flex item 18</div>
+      <div class="p-2 border">Flex item 19</div>
+      <div class="p-2 border">Flex item 20</div>
+      <div class="p-2 border">Flex item 21</div>
+      <div class="p-2 border">Flex item 22</div>
+      <div class="p-2 border">Flex item 23</div>
+      <div class="p-2 border">Flex item 24</div>
+      <div class="p-2 border">Flex item 25</div>
+    </div>
+    <br>
+    <p><code>.align-content-end</code>:</p>
+    <div class="TODO" style="height:300px">
+      <div class="p-2 border">Flex item 1</div>
+      <div class="p-2 border">Flex item 2</div>
+      <div class="p-2 border">Flex item 3</div>
+      <div class="p-2 border">Flex item 4</div>
+      <div class="p-2 border">Flex item 5</div>
+      <div class="p-2 border">Flex item 6</div>
+      <div class="p-2 border">Flex item 7</div>
+      <div class="p-2 border">Flex item 8</div>
+      <div class="p-2 border">Flex item 9</div>
+      <div class="p-2 border">Flex item 10</div>
+      <div class="p-2 border">Flex item 11</div>
+      <div class="p-2 border">Flex item 12</div>
+      <div class="p-2 border">Flex item 13 </div>
+      <div class="p-2 border">Flex item 14</div>
+      <div class="p-2 border">Flex item 15</div>
+      <div class="p-2 border">Flex item 16</div>
+      <div class="p-2 border">Flex item 17</div>
+      <div class="p-2 border">Flex item 18</div>
+      <div class="p-2 border">Flex item 19</div>
+      <div class="p-2 border">Flex item 20</div>
+      <div class="p-2 border">Flex item 21</div>
+      <div class="p-2 border">Flex item 22</div>
+      <div class="p-2 border">Flex item 23</div>
+      <div class="p-2 border">Flex item 24</div>
+      <div class="p-2 border">Flex item 25</div>
+    </div>
+    <br>
+    <p><code>.align-content-center</code>:</p>
+    <div class="TODO" style="height:300px">
+      <div class="p-2 border">Flex item 1</div>
+      <div class="p-2 border">Flex item 2</div>
+      <div class="p-2 border">Flex item 3</div>
+      <div class="p-2 border">Flex item 4</div>
+      <div class="p-2 border">Flex item 5</div>
+      <div class="p-2 border">Flex item 6</div>
+      <div class="p-2 border">Flex item 7</div>
+      <div class="p-2 border">Flex item 8</div>
+      <div class="p-2 border">Flex item 9</div>
+      <div class="p-2 border">Flex item 10</div>
+      <div class="p-2 border">Flex item 11</div>
+      <div class="p-2 border">Flex item 12</div>
+      <div class="p-2 border">Flex item 13 </div>
+      <div class="p-2 border">Flex item 14</div>
+      <div class="p-2 border">Flex item 15</div>
+      <div class="p-2 border">Flex item 16</div>
+      <div class="p-2 border">Flex item 17</div>
+      <div class="p-2 border">Flex item 18</div>
+      <div class="p-2 border">Flex item 19</div>
+      <div class="p-2 border">Flex item 20</div>
+      <div class="p-2 border">Flex item 21</div>
+      <div class="p-2 border">Flex item 22</div>
+      <div class="p-2 border">Flex item 23</div>
+      <div class="p-2 border">Flex item 24</div>
+      <div class="p-2 border">Flex item 25</div>
+    </div>
+    <br>
+    <p><code>.align-content-around</code>:</p>
+    <div class="TODO" style="height:300px">
+      <div class="p-2 border">Flex item 1</div>
+      <div class="p-2 border">Flex item 2</div>
+      <div class="p-2 border">Flex item 3</div>
+      <div class="p-2 border">Flex item 4</div>
+      <div class="p-2 border">Flex item 5</div>
+      <div class="p-2 border">Flex item 6</div>
+      <div class="p-2 border">Flex item 7</div>
+      <div class="p-2 border">Flex item 8</div>
+      <div class="p-2 border">Flex item 9</div>
+      <div class="p-2 border">Flex item 10</div>
+      <div class="p-2 border">Flex item 11</div>
+      <div class="p-2 border">Flex item 12</div>
+      <div class="p-2 border">Flex item 13 </div>
+      <div class="p-2 border">Flex item 14</div>
+      <div class="p-2 border">Flex item 15</div>
+      <div class="p-2 border">Flex item 16</div>
+      <div class="p-2 border">Flex item 17</div>
+      <div class="p-2 border">Flex item 18</div>
+      <div class="p-2 border">Flex item 19</div>
+      <div class="p-2 border">Flex item 20</div>
+      <div class="p-2 border">Flex item 21</div>
+      <div class="p-2 border">Flex item 22</div>
+      <div class="p-2 border">Flex item 23</div>
+      <div class="p-2 border">Flex item 24</div>
+      <div class="p-2 border">Flex item 25</div>
+    </div>
+    <br>
+    <p><code>.align-content-stretch</code>:</p>
+    <div class="TODOt" style="height:300px">
+      <div class="p-2 border">Flex item 1</div>
+      <div class="p-2 border">Flex item 2</div>
+      <div class="p-2 border">Flex item 3</div>
+      <div class="p-2 border">Flex item 4</div>
+      <div class="p-2 border">Flex item 5</div>
+      <div class="p-2 border">Flex item 6</div>
+      <div class="p-2 border">Flex item 7</div>
+      <div class="p-2 border">Flex item 8</div>
+      <div class="p-2 border">Flex item 9</div>
+      <div class="p-2 border">Flex item 10</div>
+      <div class="p-2 border">Flex item 11</div>
+      <div class="p-2 border">Flex item 12</div>
+      <div class="p-2 border">Flex item 13 </div>
+      <div class="p-2 border">Flex item 14</div>
+      <div class="p-2 border">Flex item 15</div>
+      <div class="p-2 border">Flex item 16</div>
+      <div class="p-2 border">Flex item 17</div>
+      <div class="p-2 border">Flex item 18</div>
+      <div class="p-2 border">Flex item 19</div>
+      <div class="p-2 border">Flex item 20</div>
+      <div class="p-2 border">Flex item 21</div>
+      <div class="p-2 border">Flex item 22</div>
+      <div class="p-2 border">Flex item 23</div>
+      <div class="p-2 border">Flex item 24</div>
+      <div class="p-2 border">Flex item 25</div>
+    </div>
+    <br>
+  </div>
+    
+  <hr>
+
+  <div class="container mt-3">
+    <h2>Align Items</h2>
+    <p>Control the vertical alignment of single rows of flex items with the .align-content-* classes.</p>
+    <p><code>.align-items-start</code>:</p>
+    <div class="TODO" style="height:150px">
+      <div class="p-2 border">Flex item 1</div>
+      <div class="p-2 border">Flex item 2</div>
+      <div class="p-2 border">Flex item 3</div>
+    </div>
+    <br>
+    <p><code>.align-items-end</code>:</p>
+    <div class="TODO" style="height:150px">
+      <div class="p-2 border">Flex item 1</div>
+      <div class="p-2 border">Flex item 2</div>
+      <div class="p-2 border">Flex item 3</div>
+    </div>
+    <br>
+    <p><code>.align-items-center</code>:</p>
+    <div class="TODO" style="height:150px">
+      <div class="p-2 border">Flex item 1</div>
+      <div class="p-2 border">Flex item 2</div>
+      <div class="p-2 border">Flex item 3</div>
+    </div>
+    <br>
+    <p><code>.align-items-baseline</code>:</p>
+    <div class="TODO" style="height:150px">
+      <div class="p-2 border">Flex item 1</div>
+      <div class="p-2 border">Flex item 2</div>
+      <div class="p-2 border">Flex item 3</div>
+    </div>
+    <br>
+    <p><code>.align-items-stretch</code> (default):</p>
+    <div class="TODO" style="height:150px">
+      <div class="p-2 border">Flex item 1</div>
+      <div class="p-2 border">Flex item 2</div>
+      <div class="p-2 border">Flex item 3</div>
+    </div>
+    <br>
+  </div>
+
+  <hr>
+
+  <div class="container mt-3">
+    <h2>Align Self</h2>
+    <p>Control the vertical alignment of a specific flex item with the .align-self-* classes.</p>
+    <p><code>.align-self-start</code>:</p>
+    <div class="TODO" style="height:150px">
+      <div class="p-2 border">Flex item 1</div>
+      <div class="p-2 border TODO">Flex item 2</div>
+      <div class="p-2 border">Flex item 3</div>
+    </div>
+    <br>
+    <p><code>.align-self-end</code>:</p>
+    <div class="TODO" style="height:150px">
+      <div class="p-2 border">Flex item 1</div>
+      <div class="p-2 border TODO">Flex item 2</div>
+      <div class="p-2 border">Flex item 3</div>
+    </div>
+    <br>
+    <p><code>.align-self-center</code>:</p>
+    <div class="TODO" style="height:150px">
+      <div class="p-2 border">Flex item 1</div>
+      <div class="p-2 border TODO">Flex item 2</div>
+      <div class="p-2 border">Flex item 3</div>
+    </div>
+    <br>
+    <p><code>.align-self-baseline</code>:</p>
+    <div class="TODO" style="height:150px">
+      <div class="p-2 border">Flex item 1</div>
+      <div class="p-2 border TODO">Flex item 2</div>
+      <div class="p-2 border">Flex item 3</div>
+    </div>
+    <br>
+    <p><code>.align-self-stretch</code> (default):</p>
+    <div class="TODO" style="height:150px">
+      <div class="p-2 border">Flex item 1</div>
+      <div class="p-2 border TODO">Flex item 2</div>
+      <div class="p-2 border">Flex item 3</div>
+    </div>
+    <br>
+  </div>
+
+  <hr>
+
+  <!--
+Responsive Flex Classes
+All flex classes comes with additional responsive classes, which makes it easy to set a specific flex class on a specific screen size.
+
+The * symbol can be replaced with sm, md, lg, xl or xxl, which represents small, medium, large, xlarge and xxlarge screens.
+
+Search for a specific flex class..
+Class	Description	Example
+Flex Container	 	 
+.d-*-flex	Creates a flexbox container for different screens	
+.d-*-inline-flex	Creates an inline flexbox container for different screens	
+
+Direction	 	 
+.flex-*-row	Display flex items horizontally on different screens	
+.flex-*-row-reverse	Display flex items horizontally, and right-aligned, on different screens	
+.flex-*-column	Display flex items vertically on different screens	
+.flex-*-column-reverse	Display flex items vertically, with reversed order, on different screens screens
+
+Justified Content	 	 
+.justify-content-*-start	Display flex items from the start (left-aligned) on different screens	
+.justify-content-*-end	Display flex items at the end (right-aligned) on different screens	
+.justify-content-*-center	Display flex items in the center of a flex container on different screens	
+.justify-content-*-between	Display flex items in "between" on different screens	
+.justify-content-*-around	Display flex items "around" on different screens	
+
+Fill / Equal Width	 	 
+.flex-*-fill	Force flex items into equal widths on different screens	
+
+Grow	 	 
+.flex-*-grow-0	Don't make the items grow on different screens	 
+.flex-*-grow-1	Make items grow on different screens	 
+
+Shrink	 	 
+.flex-*-shrink-0	Don't make the items shrink on diferent screens	 
+.flex-*-shrink-1	Make items shrink on different screens	 
+
+Order	 	 
+.order-*-0-12	Change the order from 0 to 5 on small screens	
+
+Wrap	 	 
+.flex-*-nowrap	Don't wrap items on different screens	
+.flex-*-wrap	Wrap items on different screens	
+.flex-*-wrap-reverse	Reverse the wrapping of items on different screens	
+
+Align Content	 	 
+.align-content-*-start	Align gathered items from the start on different screens	
+.align-content-*-end	Align gathered items at the end on different screens	
+.align-content-*-center	Align gathered items in the center on different screens	
+.align-content-*-around	Align gathered items "around" on different screens	
+.align-content-*-stretch	Stretch gathered items on different screens	
+
+Align Items	 	 
+.align-items-*-start	Align single rows of items from the start on different screens	
+.align-items-*-end	Align single rows of items at the end on different screens	
+.align-items-*-center	Align single rows of items in the center on different screens	
+.align-items-*-baseline	Align single rows of items on the baseline on different screens	
+.align-items-*-stretch	Stretch single rows of items on different screens	
+
+Align Self	 	 
+.align-self-*-start	Align a flex item from the start on different screens	
+.align-self-*-end	Align a flex item at the end on different screens	
+.align-self-*-center	Align a flex item in the center on different screens	
+.align-self-*-baseline	Align a flex item on the baseline on different screens	
+.align-self-*-stretch	Stretch a flex item on different screens	
+
+
+  -->
+  
+
+
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
