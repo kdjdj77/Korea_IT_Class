@@ -156,7 +156,7 @@
 	
 	
 	
-	<Context docBase="JSP09_ImplicitObject" path="/JSP09_ImplicitObject" reloadable="true" source="org.eclipse.jst.jee.server:JSP09_ImplicitObject"/></Host>
+	<Context docBase="JSP10_ActionTag" path="/JSP10_ActionTag" reloadable="true" source="org.eclipse.jst.jee.server:JSP10_ActionTag"/><Context docBase="JSP11_Cookie" path="/JSP11_Cookie" reloadable="true" source="org.eclipse.jst.jee.server:JSP11_Cookie"/></Host>
     </Engine>
   </Service>
 </Server>
