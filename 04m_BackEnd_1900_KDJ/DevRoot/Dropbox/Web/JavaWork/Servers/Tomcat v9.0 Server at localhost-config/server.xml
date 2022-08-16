@@ -156,7 +156,7 @@
 	
 	
 	
-	<Context docBase="JSP10_ActionTag" path="/JSP10_ActionTag" reloadable="true" source="org.eclipse.jst.jee.server:JSP10_ActionTag"/><Context docBase="JSP11_Cookie" path="/JSP11_Cookie" reloadable="true" source="org.eclipse.jst.jee.server:JSP11_Cookie"/><Context docBase="JSP12_Session" path="/JSP12_Session" reloadable="true" source="org.eclipse.jst.jee.server:JSP12_Session"/><Context docBase="JSP14_JavaBean" path="/JSP14_JavaBean" reloadable="true" source="org.eclipse.jst.jee.server:JSP14_JavaBean"/></Host>
+	<Context docBase="JSP16_JSTL" path="/JSP16_JSTL" reloadable="true" source="org.eclipse.jst.jee.server:JSP16_JSTL"/></Host>
     </Engine>
   </Service>
 </Server>
