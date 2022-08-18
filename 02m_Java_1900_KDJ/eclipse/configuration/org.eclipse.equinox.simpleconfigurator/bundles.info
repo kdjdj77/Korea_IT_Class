@@ -72,6 +72,7 @@ javax.xml.rpc,1.1.0.v201209140446,plugins/javax.xml.rpc_1.1.0.v201209140446/,4,f
 javax.xml.soap,1.2.0.v201005080501,plugins/javax.xml.soap_1.2.0.v201005080501/,4,false
 javax.xml.stream,1.0.1.v201004272200,plugins/javax.xml.stream_1.0.1.v201004272200.jar,4,false
 javax.xml.ws,2.1.0.v200902101523,plugins/javax.xml.ws_2.1.0.v200902101523.jar,4,false
+net.harawata.mybatipse,1.2.5.202202160242,plugins/net.harawata.mybatipse_1.2.5.202202160242.jar,4,false
 net.i2p.crypto.eddsa,0.3.0.v20210923-1401,plugins/net.i2p.crypto.eddsa_0.3.0.v20210923-1401.jar,4,false
 net.sourceforge.lpg.lpgjavaruntime,1.1.0.v201004271650,plugins/net.sourceforge.lpg.lpgjavaruntime_1.1.0.v201004271650.jar,4,false
 org.apache.ant,1.10.12.v20211102-1452,plugins/org.apache.ant_1.10.12.v20211102-1452/,4,false

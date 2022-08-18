@@ -3,14 +3,14 @@
 <repository name='Bundle pool' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
   <properties size='2'>
     <property name='p2.system' value='true'/>
-    <property name='p2.timestamp' value='1659693979144'/>
+    <property name='p2.timestamp' value='1660813981204'/>
   </properties>
   <mappings size='3'>
     <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
     <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
     <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
   </mappings>
-  <artifacts size='1268'>
+  <artifacts size='1270'>
     <artifact classifier='osgi.bundle' id='org.eclipse.emf.codegen.ui' version='2.23.0.v20210412-0833'>
       <properties size='1'>
         <property name='download.size' value='301954'/>
@@ -743,6 +743,11 @@
       <repositoryProperties size='1'>
         <property name='artifact.folder' value='true'/>
       </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='net.harawata.mybatipse' version='1.2.5.202202160242'>
+      <properties size='1'>
+        <property name='download.size' value='280612'/>
+      </properties>
     </artifact>
     <artifact classifier='osgi.bundle' id='org.eclipse.jpt.jpa.eclipselink.core.ddlgen' version='2.2.201.v201902121834'>
       <properties size='1'>
@@ -1726,6 +1731,14 @@
       <properties size='1'>
         <property name='download.size' value='320507'/>
       </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='net.harawata.mybatipse.feature' version='1.2.5.202202160242'>
+      <properties size='1'>
+        <property name='download.size' value='4518'/>
+      </properties>
+      <repositoryProperties size='1'>
+        <property name='artifact.folder' value='true'/>
+      </repositoryProperties>
     </artifact>
     <artifact classifier='osgi.bundle' id='org.jkiss.dbeaver.ext.mysql' version='2.1.171.202207240747'>
       <properties size='1'>

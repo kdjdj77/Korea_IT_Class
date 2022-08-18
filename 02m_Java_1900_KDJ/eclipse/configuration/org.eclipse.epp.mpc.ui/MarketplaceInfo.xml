@@ -3,6 +3,371 @@
  <object class="org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceInfo" id="MarketplaceInfo0">
   <void property="iuToNodeKey">
    <void method="put">
+    <string>com.hp.fortify.fod.eclipse.upload.java</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#3310555</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>com.microsoft.azuretools.core.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#1919278</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.eclipse.wst.web_ui.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#2963400</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.eclipse.egit</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#2963400</string>
+     </void>
+     <void method="add">
+      <string>https://marketplace.eclipse.org#2953952</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>com.remainsoftware.oas3.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#4556629</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>com.microsoft.azuretools.hdinsight.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#1919278</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>com.hp.fortify.fod.eclipse.upload</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#3310555</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>com.genuitec.eclipse.theming.designer.feature.feature.group</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#3274405</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>mesfavoris.perforce.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#3176231</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.libreoffice.ide.eclipse.java</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#2881446</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>ArtemisFeature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#4612923</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.springframework.boot.ide.main.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#1794107</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.etsi.mts.tdl.ttcn3.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#5464173</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>com.fortify.fod.eclipse.remediation</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#3310555</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.etsi.mts.tdl.model.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#5464173</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.projectusus.autotestsuite</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#1089</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.eclipse.cvs</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#2963400</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.eclipse.wildwebdeveloper.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#2963400</string>
+     </void>
+     <void method="add">
+      <string>https://marketplace.eclipse.org#3394048</string>
+     </void>
+     <void method="add">
+      <string>https://marketplace.eclipse.org#5026683</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.eclipse.statet.rtm.ggplot</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#9295</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>com.equo.chromium.cef.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#5293076</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>com.swdc.codetime</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#5063383</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.eclipse.statet.eutils.autorun</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#9295</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.springframework.tooling.boot.ls.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#1794107</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.eclipse.jdt.java18patch.source</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#5505813</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.etsi.mts.tdl.constraints.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#5464173</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>com.microsoft.azuretools.container.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#1919278</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.eclipse.wildwebdeveloper.embedder.node.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#2963400</string>
+     </void>
+     <void method="add">
+      <string>https://marketplace.eclipse.org#3394048</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.etsi.mts.tdl.tools.to.docx.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#5464173</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.eclipse.pde.java18patch</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#5505813</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.jkiss.dbeaver.ide.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#507775</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.eclipse.wst.xsl.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#2963400</string>
+     </void>
+     <void method="add">
+      <string>https://marketplace.eclipse.org#2953952</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>com.adocus.mma.papyrus.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#53864</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.eclipse.e4.tools.css.editor.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#311774</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.eclipse.statet.eutils.autonature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#9295</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>ContextQuickie2</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#5305264</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.jkiss.dbeaver.git.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#4708777</string>
+     </void>
+     <void method="add">
+      <string>https://marketplace.eclipse.org#507775</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>net.jeeeyul.eclipse.themes.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#339851</string>
+     </void>
+     <void method="add">
+      <string>https://marketplace.eclipse.org#1827835</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>mesfavoris.java.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#3176231</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>com.genuitec.eclipse.theming.feature.feature.group</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#3274405</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>net.harawata.mybatipse.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#1467819</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.jboss.tools.quarkus.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#5026683</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.jkiss.dbeaver.debug.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#507775</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>mesfavoris.git.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#3176231</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
     <string>com.github.eclipsecolortheme.feature</string>
     <object class="java.util.ArrayList">
      <void method="add">
@@ -27,13 +392,8 @@
      <void method="add">
       <string>https://marketplace.eclipse.org#2963400</string>
      </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>com.hp.fortify.fod.eclipse.upload.java</string>
-    <object class="java.util.ArrayList">
      <void method="add">
-      <string>https://marketplace.eclipse.org#3310555</string>
+      <string>https://marketplace.eclipse.org#2953952</string>
      </void>
     </object>
    </void>
@@ -102,37 +462,8 @@
      <void method="add">
       <string>https://marketplace.eclipse.org#2963400</string>
      </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>com.microsoft.azuretools.core.feature</string>
-    <object class="java.util.ArrayList">
      <void method="add">
-      <string>https://marketplace.eclipse.org#1919278</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>org.eclipse.wst.web_ui.feature</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#2963400</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>org.eclipse.egit</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#2963400</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>com.remainsoftware.oas3.feature</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#4556629</string>
+      <string>https://marketplace.eclipse.org#2953952</string>
      </void>
     </object>
    </void>
@@ -145,18 +476,10 @@
     </object>
    </void>
    <void method="put">
-    <string>com.microsoft.azuretools.hdinsight.feature</string>
+    <string>org.springframework.ide.eclipse.boot.dash.feature</string>
     <object class="java.util.ArrayList">
      <void method="add">
-      <string>https://marketplace.eclipse.org#1919278</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>com.hp.fortify.fod.eclipse.upload</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#3310555</string>
+      <string>https://marketplace.eclipse.org#1794107</string>
      </void>
     </object>
    </void>
@@ -165,22 +488,6 @@
     <object class="java.util.ArrayList">
      <void method="add">
       <string>https://marketplace.eclipse.org#5497069</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>com.genuitec.eclipse.theming.designer.feature.feature.group</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#3274405</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>mesfavoris.perforce.feature</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#3176231</string>
      </void>
     </object>
    </void>
@@ -228,30 +535,6 @@
     </object>
    </void>
    <void method="put">
-    <string>org.etsi.mts.tdl.ttcn3.feature</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#5464173</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>com.fortify.fod.eclipse.remediation</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#3310555</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>org.etsi.mts.tdl.model.feature</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#5464173</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
     <string>org.etsi.mts.tdl.txi.feature</string>
     <object class="java.util.ArrayList">
      <void method="add">
@@ -284,53 +567,18 @@
     </object>
    </void>
    <void method="put">
-    <string>org.projectusus.autotestsuite</string>
+    <string>org.springframework.tooling.concourse.ls.feature</string>
     <object class="java.util.ArrayList">
      <void method="add">
-      <string>https://marketplace.eclipse.org#1089</string>
+      <string>https://marketplace.eclipse.org#1794107</string>
      </void>
     </object>
    </void>
    <void method="put">
-    <string>org.eclipse.cvs</string>
+    <string>de.yatta.eclipse.launcher.client</string>
     <object class="java.util.ArrayList">
      <void method="add">
-      <string>https://marketplace.eclipse.org#2963400</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>org.eclipse.wildwebdeveloper.feature</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#2963400</string>
-     </void>
-     <void method="add">
-      <string>https://marketplace.eclipse.org#3394048</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>org.eclipse.statet.rtm.ggplot</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#9295</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>com.swdc.codetime</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#5063383</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>org.eclipse.statet.eutils.autorun</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#9295</string>
+      <string>https://marketplace.eclipse.org#2540018</string>
      </void>
     </object>
    </void>
@@ -351,22 +599,6 @@
     </object>
    </void>
    <void method="put">
-    <string>org.eclipse.jdt.java18patch.source</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#5505813</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>org.etsi.mts.tdl.constraints.feature</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#5464173</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
     <string>com.microsoft.applicationinsights.feature</string>
     <object class="java.util.ArrayList">
      <void method="add">
@@ -379,25 +611,6 @@
     <object class="java.util.ArrayList">
      <void method="add">
       <string>https://marketplace.eclipse.org#507775</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>com.microsoft.azuretools.container.feature</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#1919278</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>org.eclipse.wildwebdeveloper.embedder.node.feature</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#2963400</string>
-     </void>
-     <void method="add">
-      <string>https://marketplace.eclipse.org#3394048</string>
      </void>
     </object>
    </void>
@@ -426,14 +639,6 @@
     </object>
    </void>
    <void method="put">
-    <string>org.etsi.mts.tdl.tools.to.docx.feature</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#5464173</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
     <string>cucumber.eclipse.feature</string>
     <object class="java.util.ArrayList">
      <void method="add">
@@ -446,14 +651,6 @@
     <object class="java.util.ArrayList">
      <void method="add">
       <string>https://marketplace.eclipse.org#5464173</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>org.eclipse.pde.java18patch</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#5505813</string>
      </void>
     </object>
    </void>
@@ -477,10 +674,34 @@
     </object>
    </void>
    <void method="put">
-    <string>org.jkiss.dbeaver.ide.feature</string>
+    <string>org.springframework.tooling.cloudfoundry.manifest.ls.feature</string>
     <object class="java.util.ArrayList">
      <void method="add">
-      <string>https://marketplace.eclipse.org#507775</string>
+      <string>https://marketplace.eclipse.org#1794107</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>com.equo.chromium.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#5293076</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>com.salesforce.bazel.eclipse.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#5403450</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>org.jboss.tools.usage.feature</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>https://marketplace.eclipse.org#5026683</string>
      </void>
     </object>
    </void>
@@ -506,6 +727,9 @@
      <void method="add">
       <string>https://marketplace.eclipse.org#2963400</string>
      </void>
+     <void method="add">
+      <string>https://marketplace.eclipse.org#2953952</string>
+     </void>
     </object>
    </void>
    <void method="put">
@@ -513,14 +737,6 @@
     <object class="java.util.ArrayList">
      <void method="add">
       <string>https://marketplace.eclipse.org#3176231</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>org.eclipse.wst.xsl.feature</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#2963400</string>
      </void>
     </object>
    </void>
@@ -557,34 +773,21 @@
     </object>
    </void>
    <void method="put">
-    <string>com.adocus.mma.papyrus.feature</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#53864</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
     <string>org.eclipse.tm.terminal.feature</string>
     <object class="java.util.ArrayList">
      <void method="add">
       <string>https://marketplace.eclipse.org#2963400</string>
      </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>org.eclipse.e4.tools.css.editor.feature</string>
-    <object class="java.util.ArrayList">
      <void method="add">
-      <string>https://marketplace.eclipse.org#311774</string>
+      <string>https://marketplace.eclipse.org#2953952</string>
      </void>
     </object>
    </void>
    <void method="put">
-    <string>org.eclipse.statet.eutils.autonature</string>
+    <string>org.libreoffice.ide.eclipse.python</string>
     <object class="java.util.ArrayList">
      <void method="add">
-      <string>https://marketplace.eclipse.org#9295</string>
+      <string>https://marketplace.eclipse.org#2881446</string>
      </void>
     </object>
    </void>
@@ -605,14 +808,6 @@
     </object>
    </void>
    <void method="put">
-    <string>ContextQuickie2</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#5305264</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
     <string>org.etsi.mts.tdl.TDLan2.feature</string>
     <object class="java.util.ArrayList">
      <void method="add">
@@ -621,40 +816,10 @@
     </object>
    </void>
    <void method="put">
-    <string>org.jkiss.dbeaver.git.feature</string>
+    <string>m2e.chromatic.feature</string>
     <object class="java.util.ArrayList">
      <void method="add">
-      <string>https://marketplace.eclipse.org#4708777</string>
-     </void>
-     <void method="add">
-      <string>https://marketplace.eclipse.org#507775</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>net.jeeeyul.eclipse.themes.feature</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#339851</string>
-     </void>
-     <void method="add">
-      <string>https://marketplace.eclipse.org#1827835</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>mesfavoris.java.feature</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#3176231</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>com.genuitec.eclipse.theming.feature.feature.group</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#3274405</string>
+      <string>https://marketplace.eclipse.org#4511509</string>
      </void>
     </object>
    </void>
@@ -667,26 +832,10 @@
     </object>
    </void>
    <void method="put">
-    <string>org.jkiss.dbeaver.debug.feature</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#507775</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
     <string>org.eclipse.statet.redocs.tex.r</string>
     <object class="java.util.ArrayList">
      <void method="add">
       <string>https://marketplace.eclipse.org#9295</string>
-     </void>
-    </object>
-   </void>
-   <void method="put">
-    <string>mesfavoris.git.feature</string>
-    <object class="java.util.ArrayList">
-     <void method="add">
-      <string>https://marketplace.eclipse.org#3176231</string>
      </void>
     </object>
    </void>
@@ -776,10 +925,37 @@
     </object>
    </void>
    <void method="put">
+    <string>https://marketplace.eclipse.org#2540018</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>de.yatta.eclipse.launcher.client</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>https://marketplace.eclipse.org#2881446</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>org.libreoffice.ide.eclipse.java</string>
+     </void>
+     <void method="add">
+      <string>org.libreoffice.ide.eclipse.python</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
     <string>https://marketplace.eclipse.org#1403812</string>
     <object class="java.util.ArrayList">
      <void method="add">
       <string>com.github.eclipseuitheme.themes.feature</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>https://marketplace.eclipse.org#1467819</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>net.harawata.mybatipse.feature</string>
      </void>
     </object>
    </void>
@@ -843,6 +1019,26 @@
     <object class="java.util.ArrayList">
      <void method="add">
       <string>org.eclipse.e4.tools.css.editor.feature</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>https://marketplace.eclipse.org#1794107</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>org.springframework.boot.ide.main.feature</string>
+     </void>
+     <void method="add">
+      <string>org.springframework.tooling.boot.ls.feature</string>
+     </void>
+     <void method="add">
+      <string>org.springframework.tooling.cloudfoundry.manifest.ls.feature</string>
+     </void>
+     <void method="add">
+      <string>org.springframework.tooling.concourse.ls.feature</string>
+     </void>
+     <void method="add">
+      <string>org.springframework.ide.eclipse.boot.dash.feature</string>
      </void>
     </object>
    </void>
@@ -964,6 +1160,12 @@
      <void method="add">
       <string>com.xliic.openapi</string>
      </void>
+     <void method="add">
+      <string>com.equo.chromium.feature</string>
+     </void>
+     <void method="add">
+      <string>com.equo.chromium.cef.feature</string>
+     </void>
     </object>
    </void>
    <void method="put">
@@ -1007,6 +1209,22 @@
     </object>
    </void>
    <void method="put">
+    <string>https://marketplace.eclipse.org#4612923</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>ArtemisFeature</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>https://marketplace.eclipse.org#4511509</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>m2e.chromatic.feature</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
     <string>https://marketplace.eclipse.org#3310555</string>
     <object class="java.util.ArrayList">
      <void method="add">
@@ -1042,6 +1260,20 @@
      </void>
      <void method="add">
       <string>pm.eclipse.editbox.feature</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>https://marketplace.eclipse.org#5026683</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>org.jboss.tools.usage.feature</string>
+     </void>
+     <void method="add">
+      <string>org.jboss.tools.quarkus.feature</string>
+     </void>
+     <void method="add">
+      <string>org.eclipse.wildwebdeveloper.feature</string>
      </void>
     </object>
    </void>
@@ -1175,6 +1407,37 @@
     <object class="java.util.ArrayList">
      <void method="add">
       <string>org.exbin.bined.eclipse.feature</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>https://marketplace.eclipse.org#5403450</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>com.salesforce.bazel.eclipse.feature</string>
+     </void>
+    </object>
+   </void>
+   <void method="put">
+    <string>https://marketplace.eclipse.org#2953952</string>
+    <object class="java.util.ArrayList">
+     <void method="add">
+      <string>org.eclipse.wst.xml_ui.feature</string>
+     </void>
+     <void method="add">
+      <string>org.eclipse.wst.xsl.feature</string>
+     </void>
+     <void method="add">
+      <string>org.eclipse.tips.feature</string>
+     </void>
+     <void method="add">
+      <string>org.eclipse.egit</string>
+     </void>
+     <void method="add">
+      <string>org.eclipse.egit.gitflow.feature</string>
+     </void>
+     <void method="add">
+      <string>org.eclipse.tm.terminal.feature</string>
      </void>
     </object>
    </void>
