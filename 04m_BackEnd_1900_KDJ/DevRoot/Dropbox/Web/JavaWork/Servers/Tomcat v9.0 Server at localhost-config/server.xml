@@ -156,7 +156,7 @@
 	
 	
 	
-	<Context docBase="JSP17_MVC" path="/JSP17_MVC" reloadable="true" source="org.eclipse.jst.jee.server:JSP17_MVC"/></Host>
+	<Context docBase="book" path="/book" reloadable="true" source="org.eclipse.jst.jee.server:book"/></Host>
     </Engine>
   </Service>
 </Server>

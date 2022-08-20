@@ -4,32 +4,57 @@
 	<insert id="insert" flushCache="true"
 		parameterType="domain.WriteDTO"
 		keyProperty="id" useGeneratedKeys="true"
-		keyColumn="wr_uid">
+		keyColumn="wr_id">
 		INSERT INTO test_write
 			(wr_subject, wr_content, wr_name)
 		VALUES
 			(#{subject}, #{content}, #{name})
-	
 	</insert>
 	
 	<!-- 글 조회 -->
 	<select id="selectById" resultType="domain.WriteDTO">
 		SELECT
-			wr_uid "id",
+			wr_id "id",
 			wr_subject "subject",
-			wr_content = "content",
-			wr_name = "name",
-			wr_viewcnt = "viewcnt",
+			wr_content "content",
+			wr_name "name",
+			wr_viewcnt "viewcnt",
 			wr_regdate "regDate"
 		FROM test_write
-		WHERE wr_uid = #{id}
+		WHERE wr_id = #{id}
 	</select>
 
+	<select id="select" resultType="domain.WriteDTO">
+		SELECT
+			wr_id "id",
+			wr_subject "subject",
+			wr_content "content",
+			wr_name "name",
+			wr_viewcnt "viewcnt",
+			wr_regdate "regDate"
+		FROM test_write
+		ORDER BY wr_id DESC;
+	</select>
+	
 	<!-- 조회수 증가 -->
 	<update id="incViewCnt" flushCache="true">
 		UPDATE test_write
 		SET wr_viewcnt = wr_viewcnt + 1
-		WHERE wr_uid = #{param1}
+		WHERE wr_id = #{param1}
 	</update>
-
+	
+	<!-- 글 수정 -->
+	<update id="update" flushCache="true"
+		parameterType = "domain.WriteDTO">
+		UPDATE test_write
+		SET wr_subject = #{subject}, wr_content = #{content}
+		WHERE wr_id = #{id}		
+	</update>
+	
+	<!-- 글 삭제 -->
+	<delete id="deleteById" flushCache="true">
+		DELETE FROM test_write
+		WHERE wr_id = #{id}
+	</delete>
+	
 </mapper>

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html lang="ko">
  
@@ -27,32 +29,21 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td><a href="https://www.naver.com">Hello</a> </td>
-                    <td>John</td>
-                    <td>23</td>
-                    <td>2021-03-21</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Hello </td>
-                    <td>John</td>
-                    <td>23</td>
-                    <td>2021-03-21</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Hello </td>
-                    <td>John</td>
-                    <td>23</td>
-                    <td>2021-03-21</td>
-                </tr>
+            
+            	<c:forEach var="dto" items="${list}">
+            		<tr>
+	                    <td>${dto.id}</td>
+	                    <td><a href="detail?id=${dto.id}">${dto.subject}</a> </td>
+	                    <td>${dto.name}</td>
+	                    <td>${dto.viewCnt}</td>
+	                    <td>${dto.regDateTime}</td>
+	                </tr>
+            	</c:forEach>
             </tbody>
         </table>
         <div class="row">
             <div class="col-12">
-                <a class="btn btn-outline-dark" href="#">작성</a>
+                <a class="btn btn-outline-dark" href="write">작성</a>
             </div>
         </div>
     </div>

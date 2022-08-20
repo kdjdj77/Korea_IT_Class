@@ -10,7 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import service.Service;
+import service.write.DeleteService;
 import service.write.DetailService;
+import service.write.ListService;
+import service.write.SelectService;
+import service.write.UpdateService;
 import service.write.WriteService;
 
 @WebServlet("/board/*")
@@ -62,7 +66,10 @@ public class BoardController extends HttpServlet {
 						viewPage = "writeOK.jsp";
 						break;
 				}
+				break;
 			case "/board/list":
+				service = new ListService();
+				service.execute(request, response);
 				viewPage = "list.jsp";
 				break;
 			case "/board/detail":
@@ -71,16 +78,34 @@ public class BoardController extends HttpServlet {
 				viewPage = "detail.jsp";
 				break;
 			case "/board/update":
-				viewPage = "update.jsp";
+				switch(method) {
+					case "GET":
+						service = new SelectService();
+						service.execute(request, response);
+						viewPage = "update.jsp";
+						break;
+					case "POST":
+						service = new UpdateService();
+						service.execute(request, response);
+						viewPage = "updateOK.jsp";
+						break;
+				}
 				break;
 			case "/board/delete":
+				switch(method) {
+					case "POST":
+						service = new DeleteService();
+						service.execute(request, response);
+						viewPage = "deleteOK.jsp";
+						break;
+				}
 				break;	
-		}
-		//위에서 결정된 뷰 페이지(viewPage)로 forward 해줌
-		if (viewPage != null) {
-			RequestDispatcher dispatcher = 
-				request.getRequestDispatcher("/WEB-INF/views/board/" + viewPage);
-			dispatcher.forward(request, response);
+			}
+			//위에서 결정된 뷰 페이지(viewPage)로 forward 해줌
+			if (viewPage != null) {
+				RequestDispatcher dispatcher = 
+					request.getRequestDispatcher("/WEB-INF/views/board/" + viewPage);
+				dispatcher.forward(request, response);
 		}
 	}
 }

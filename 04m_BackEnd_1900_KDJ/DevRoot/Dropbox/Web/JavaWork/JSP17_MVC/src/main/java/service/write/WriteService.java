@@ -22,16 +22,19 @@ public class WriteService implements Service {
 		String content = request.getParameter("content");
 		// *이 단계에서 parameter 검증해야 한다
 		
-		// DB
+		// 위 값들을 DTO에 담기
 		WriteDTO dto = new WriteDTO();
 		dto.setName(name);
 		dto.setSubject(subject);
 		dto.setContent(content);
 		
+		
 		int cnt = 0;
 		
+		// 트랜잭션을 위한 객체
 		SqlSession sqlSession = null;
 		WriteDAO dao = null;
+		
 		try {
 			sqlSession = SqlSessionManager.getInstance().openSession();
 			dao = sqlSession.getMapper(WriteDAO.class); //MyBatis가 생성한 DAO
