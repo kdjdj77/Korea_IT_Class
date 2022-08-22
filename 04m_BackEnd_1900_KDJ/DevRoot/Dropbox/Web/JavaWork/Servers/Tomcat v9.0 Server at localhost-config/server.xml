@@ -156,7 +156,7 @@
 	
 	
 	
-	<Context docBase="book" path="/book" reloadable="true" source="org.eclipse.jst.jee.server:book"/></Host>
+	<Context docBase="JSP18_Auth" path="/JSP18_Auth" reloadable="true" source="org.eclipse.jst.jee.server:JSP18_Auth"/></Host>
     </Engine>
   </Service>
 </Server>
