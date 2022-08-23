@@ -94,6 +94,13 @@ public class UserController extends HttpServlet {
 				}
 				break;
 			case "/user/logout":
+				if (method.equals("POST")) {
+					request.getSession().removeAttribute(C.PRINCIPAL);
+					response.sendRedirect(request.getContextPath() + "/home");
+				}
+				break;
+			case "/user/rejectAuth":
+				viewPage = "/common/rejectAuth.jsp";
 				break;
 		}
 		

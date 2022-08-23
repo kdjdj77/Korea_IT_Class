@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.ibatis.session.SqlSession;
 
+import common.C;
+import domain.UserDTO;
 import domain.WriteDAO;
 import domain.WriteDTO;
 import service.Service;
@@ -17,14 +19,16 @@ public class WriteService implements Service {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
 		// 입력한 값을 받아오기
-		String name = request.getParameter("name");
 		String subject = request.getParameter("subject");
 		String content = request.getParameter("content");
 		// *이 단계에서 parameter 검증해야 한다
 		
+		// 현재 로그인 한 사용자 정보
+		UserDTO user = (UserDTO)request.getSession().getAttribute(C.PRINCIPAL);
+		
 		// 위 값들을 DTO에 담기
 		WriteDTO dto = new WriteDTO();
-		dto.setName(name);
+		dto.setUser(user);
 		dto.setSubject(subject);
 		dto.setContent(content);
 		

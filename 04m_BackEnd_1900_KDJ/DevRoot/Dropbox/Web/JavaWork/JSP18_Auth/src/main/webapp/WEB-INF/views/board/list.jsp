@@ -15,7 +15,8 @@
 </head>
  
 <body>
- 
+	<%-- 인증 헤더 --%>
+    <jsp:include page="/WEB-INF/views/common/header.jsp"/>
     <div class="container mt-3">
         <h2>목록</h2>
         <table class="table table-hover">
@@ -34,7 +35,7 @@
             		<tr>
 	                    <td>${dto.id}</td>
 	                    <td><a href="detail?id=${dto.id}">${dto.subject}</a> </td>
-	                    <td>${dto.name}</td>
+	                    <td>${dto.user.username}</td>
 	                    <td>${dto.viewCnt}</td>
 	                    <td>${dto.regDateTime}</td>
 	                </tr>

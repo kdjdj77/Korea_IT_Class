@@ -9,8 +9,12 @@
     <title>Home</title>
 </head>
 <body>
+    <%-- 인증 헤더 --%>
+    <jsp:include page="/WEB-INF/views/common/header.jsp"/>
+
     <div class="container mt-3">
         <h1>Home</h1>
+        <a class="btn btn-primary" href="${pageContext.request.contextPath }/board/list">목록보기</a>
     </div>
 </body>
 </html>

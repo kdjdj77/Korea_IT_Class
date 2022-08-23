@@ -26,6 +26,8 @@
 		 
 		 
 		<body>
+			<%-- 인증 헤더 --%>
+    		<jsp:include page="/WEB-INF/views/common/header.jsp"/>
 		    <div class="container mt-3">
 		        <h2>수정</h2>
 		        <hr>
@@ -39,7 +41,7 @@
 		            <input type="hidden" name="id" value="${dto.id}"/>
 		            <div class="mb-3">
 		                <label for="name">작성자:</label>
-		                <span class="form-control" readonly>${dto.name}</span>
+		                <span class="form-control" readonly>${dto.user.username}(${dto.user.name})</span>
 		            </div>    
 		            <div class="mb-3 mt-3">
 		                <label for="subject">제목:</label>

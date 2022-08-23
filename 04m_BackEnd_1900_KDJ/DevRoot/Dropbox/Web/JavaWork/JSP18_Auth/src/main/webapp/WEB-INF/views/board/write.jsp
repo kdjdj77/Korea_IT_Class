@@ -12,6 +12,8 @@
 </head>
  
 <body>
+	<%-- 인증 헤더 --%>
+    <jsp:include page="/WEB-INF/views/common/header.jsp"/>
     <div class="container mt-3">
         <h2>작성</h2>
         <hr>
@@ -22,7 +24,7 @@
             </div>
             <div class="mb-3 mt-3">
                 <label for="subject">제목:</label>
-                <input type="text" class="form-control" id="subject" placeholder="제목을 입력하세요" name="subject" required>
+                <span class="form-control">${PRINCIPAL.username}(${PRINCIPAL.name})</span>
             </div>
             <div class="mb-3 mt-3">
                 <label for="content">내용:</label>

@@ -2,8 +2,8 @@ SET SESSION FOREIGN_KEY_CHECKS=0;
 
 /* Drop Tables */
 
-DROP TABLE IF EXISTS t4_user;
 DROP TABLE IF EXISTS t4_write;
+DROP TABLE IF EXISTS t4_user;
 
 
 
@@ -25,14 +25,25 @@ CREATE TABLE t4_user
 
 CREATE TABLE t4_write
 (
-	wr_id int NOT NULL AUTO_INCREMENT,
-	wr_subject varchar(200) NOT NULL,
-	wr_content text,
-	wr_name varchar(20) NOT NULL,
-	wr_viewcnt int DEFAULT 0 CHECK(wr_viewcnt >= 0),
-	wr_regdate datetime DEFAULT now(),
-	PRIMARY KEY (wr_id)
+	id int NOT NULL AUTO_INCREMENT,
+	user_id int NOT NULL,
+	subject varchar(200) NOT NULL,
+	content longtext,
+	viewcnt int DEFAULT 0 CHECK(viewcnt >= 0),
+	regdate datetime DEFAULT now(),
+	PRIMARY KEY (id)
 );
+
+
+
+/* Create Foreign Keys */
+
+ALTER TABLE t4_write
+	ADD FOREIGN KEY (user_id)
+	REFERENCES t4_user (id)
+	ON UPDATE RESTRICT
+	ON DELETE RESTRICT
+;
 
 
 
