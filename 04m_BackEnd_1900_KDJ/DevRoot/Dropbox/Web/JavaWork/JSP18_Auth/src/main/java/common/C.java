@@ -70,8 +70,8 @@ public class C {
 		HttpServletRequest request,
 		HttpServletResponse response,
 		String [] authorities //접근에 필요한 권한
-		) throws IOException 
-    {
+		) throws IOException {
+    	
     	String conPath = request.getContextPath();
     	
     	// 원래 가고자 했던 url

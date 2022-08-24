@@ -10,16 +10,18 @@
 		<result column="u_authorities" property="authorities"/>
 		<result column="u_regdate" property="regDate"/>
 	</resultMap>
+
 	<resultMap type="domain.WriteDTO" id="mapWrite">
-		<result column="w.id" property="id"/>
-		<result column="w.subject" property="subject"/>
+		<result column="w_id" property="id"/>
+		<result column="w_subject" property="subject"/>
 		<result column="w_content" property="content"/>
 		<result column="w_viewcnt" property="viewCnt"/>
 		<result column="w_regdate" property="regDate"/>
 		<collection property="user" resultMap="mapUser"/>
 	</resultMap>
+
 	<select id="select" resultMap="mapWrite">
-		SELECT
+        SELECT
 	        w.id "w_id",
 	        w.subject "w_subject",
 	        w.content "w_content",
@@ -37,11 +39,11 @@
         ORDER BY 
         	w.id DESC
 	</select>
-	
+
+
 	<insert id="insert" flushCache="true"
 		parameterType="domain.WriteDTO"
-		keyProperty="id" useGeneratedKeys="true"
-		keyColumn="wr_id">
+		keyProperty="id" useGeneratedKeys="true" keyColumn="id">
 		INSERT INTO t4_write
 			(subject, content, user_id)
 		VALUES
@@ -50,7 +52,7 @@
 	
 	<!-- 글 조회 -->
 	<select id="selectById" resultMap="mapWrite">
-		SELECT
+        SELECT
 	        w.id "w_id",
 	        w.subject "w_subject",
 	        w.content "w_content",
@@ -69,25 +71,25 @@
         	w.id DESC
 	</select>
 	
+		
 	<!-- 조회수 증가 -->
 	<update id="incViewCnt" flushCache="true">
 		UPDATE t4_write
 		SET viewcnt = viewcnt + 1
 		WHERE id = #{param1}
 	</update>
-	
-	<!-- 글 수정 -->
+
+	<!-- 글수정 -->
 	<update id="update" flushCache="true"
-		parameterType = "domain.WriteDTO">
+		parameterType="domain.WriteDTO">
 		UPDATE t4_write
 		SET subject = #{subject}, content = #{content}
-		WHERE id = #{id}		
+		WHERE id = #{id}
 	</update>
 	
-	<!-- 글 삭제 -->
+	<!-- 글삭제 -->
 	<delete id="deleteById" flushCache="true">
-		DELETE FROM t4_write
-		WHERE id = #{id}
+		DELETE FROM t4_write WHERE id = #{id}
 	</delete>
-	
+
 </mapper>

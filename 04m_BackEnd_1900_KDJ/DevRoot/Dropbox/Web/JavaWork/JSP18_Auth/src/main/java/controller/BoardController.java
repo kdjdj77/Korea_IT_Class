@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import common.C;
 import service.Service;
 import service.write.DeleteService;
 import service.write.DetailService;
@@ -56,15 +57,17 @@ public class BoardController extends HttpServlet {
 		
 		switch(command) {
 			case "/board/write":
-				switch(method) {
-					case "GET":
-						viewPage = "write.jsp";
-						break;
-					case "POST":
-						service = new WriteService();
-						service.execute(request, response);
-						viewPage = "writeOK.jsp";
-						break;
+				if(C.securityCheck(request, response, new String[] {"ROLE_MEMBER"})) {
+					switch(method) {
+						case "GET":
+							viewPage = "write.jsp";
+							break;
+						case "POST":
+							service = new WriteService();
+							service.execute(request, response);
+							viewPage = "writeOK.jsp";
+							break;
+					}
 				}
 				break;
 			case "/board/list":
@@ -72,32 +75,43 @@ public class BoardController extends HttpServlet {
 				service.execute(request, response);
 				viewPage = "list.jsp";
 				break;
-			case "/board/detail":
-				service = new DetailService();
-				service.execute(request, response);
-				viewPage = "detail.jsp";
+			case "/board/detail": // 로그인한 사람만 접근 가능
+				if (C.securityCheck(request, response, null)) {
+					service = new DetailService();
+					service.execute(request, response);
+					viewPage = "detail.jsp";
+				}
 				break;
-			case "/board/update":
-				switch(method) {
-					case "GET":
-						service = new SelectService();
-						service.execute(request, response);
-						viewPage = "update.jsp";
-						break;
-					case "POST":
-						service = new UpdateService();
-						service.execute(request, response);
-						viewPage = "updateOK.jsp";
-						break;
+			case "/board/update": //ROLE_MEMBER + 작성자만 접근가능
+				if (C.securityCheck(request, response, new String[] {"ROLE_MEMBER"})) {
+					switch(method) {
+						case "GET":
+							service = new SelectService(); //Service 안에서 작성자 여부 판단
+							service.execute(request, response);
+							
+							if(!response.isCommitted()) { //위에서 redirect되면 실행 안함
+								viewPage = "update.jsp";
+							}
+							break;
+						case "POST":
+							service = new UpdateService();
+							service.execute(request, response);
+							viewPage = "updateOK.jsp";
+							break;
+					}
 				}
 				break;
 			case "/board/delete":
-				switch(method) {
+				if (C.securityCheck(request, response, new String[] {"ROLE_MEMBER"})) {
+					switch(method) {
 					case "POST":
-						service = new DeleteService();
+						service = new DeleteService(); //작성자가 아닌 경우 Service 안에서 redirect 실행
 						service.execute(request, response);
-						viewPage = "deleteOK.jsp";
+						if(!response.isCommitted()) {
+							viewPage = "deleteOK.jsp";
+						}
 						break;
+					}
 				}
 				break;	
 			}

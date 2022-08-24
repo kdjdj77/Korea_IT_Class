@@ -156,7 +156,7 @@
 	
 	
 	
-	<Context docBase="JSP18_Auth" path="/JSP18_Auth" reloadable="true" source="org.eclipse.jst.jee.server:JSP18_Auth"/></Host>
+	<Context docBase="JSP20_FileUpload" path="/JSP20_FileUpload" reloadable="true" source="org.eclipse.jst.jee.server:JSP20_FileUpload"/></Host>
     </Engine>
   </Service>
 </Server>
