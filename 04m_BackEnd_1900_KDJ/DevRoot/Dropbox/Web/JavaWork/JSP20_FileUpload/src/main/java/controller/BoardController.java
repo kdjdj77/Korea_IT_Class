@@ -13,6 +13,7 @@ import common.C;
 import service.Service;
 import service.write.DeleteService;
 import service.write.DetailService;
+import service.write.DownloadService;
 import service.write.ListService;
 import service.write.SelectService;
 import service.write.UpdateService;
@@ -121,6 +122,13 @@ public class BoardController extends HttpServlet {
 			    Integer pageRows = Integer.parseInt(request.getParameter("pageRows"));
 			    request.getSession().setAttribute("pageRows", pageRows);
 			    response.sendRedirect(request.getContextPath() + "/board/list?page=" + page);
+				break;
+				
+			//파일 다운로드
+			case "/board/download":
+				service = new DownloadService();
+				service.execute(request, response);
+				//파일데이터를 response하는 것이니 굳이 view가 필요하지 않음
 				break;
 			}
 			//위에서 결정된 뷰 페이지(viewPage)로 forward 해줌

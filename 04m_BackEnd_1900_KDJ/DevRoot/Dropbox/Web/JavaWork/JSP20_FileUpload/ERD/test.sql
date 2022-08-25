@@ -52,5 +52,61 @@ SELECT * FROM t4_write ORDER BY id DESC LIMIT 5, 5;
 SELECT * FROM t4_write ORDER BY id DESC LIMIT 0, 10; -- 1page
 SELECT * FROM t4_write ORDER BY id DESC LIMIT 10, 10; -- 2page
 
+-- ------------------------------------------------------------
+-- 파일첨부
+
+SELECT * FROM t4_file;
+
+--  첨부 파일이 있는 게시글 조회
+SELECT w.id "w_id", f.id "f_id", f.source, f.file
+FROM t4_write w, t4_file f
+WHERE w.id  = f.write_id
+ORDER BY w.id DESC
+;
+
+-- 특정 글 (write.id)의 첨부파일 1개 INSERT (작성, 수정)
+INSERT INTO t4_file (source, file, write_id)
+VALUES (?, ?, ?)
+;
+
+-- 특정 글 (write.id)의 첨부파일 여러개 INSERT (작성, 수정)
+INSERT INTO t4_file (source, file, write_id)
+VALUES (?, ?, ?), (?, ?, ?), (?, ?, ?)...
+;
+
+-- 특정 글 (write_id)의 첨부파일(들)을 SELECT  (조회, 수정)
+SELECT id, source, file, write_id
+FROM t4_file
+WHERE write_id = 1
+ORDER BY id DESC
+;
+
+
+-- 특정 첨부파일 (file.id) 하나를 SELECT
+SELECT id, source, file, write_id
+FROM t4_file
+WHERE id = ?
+;
+
+-- 특정 첨부파일 (file.id) 하나를 DELETE (수정)
+DELETE FROM t4_file WHERE id = ?
+;
+
+-- 특정 글의 (write_id) 의 첨부파일(들)을  DELETE  (삭제)
+DELETE FROM t4_file WHERE write_id = ?
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

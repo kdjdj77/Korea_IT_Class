@@ -2,6 +2,7 @@ SET SESSION FOREIGN_KEY_CHECKS=0;
 
 /* Drop Tables */
 
+DROP TABLE IF EXISTS t4_file;
 DROP TABLE IF EXISTS t4_write;
 DROP TABLE IF EXISTS t4_user;
 
@@ -9,6 +10,16 @@ DROP TABLE IF EXISTS t4_user;
 
 
 /* Create Tables */
+
+CREATE TABLE t4_file
+(
+	id int NOT NULL AUTO_INCREMENT,
+	write_id int NOT NULL,
+	source varchar(100) NOT NULL,
+	file varchar(100) NOT NULL,
+	PRIMARY KEY (id)
+);
+
 
 CREATE TABLE t4_user
 (
@@ -43,6 +54,14 @@ ALTER TABLE t4_write
 	REFERENCES t4_user (id)
 	ON UPDATE RESTRICT
 	ON DELETE RESTRICT
+;
+
+
+ALTER TABLE t4_file
+	ADD FOREIGN KEY (write_id)
+	REFERENCES t4_write (id)
+	ON UPDATE RESTRICT
+	ON DELETE CASCADE
 ;
 
 
