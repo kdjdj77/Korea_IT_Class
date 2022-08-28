@@ -7,22 +7,22 @@ const dbconfig = config[env];
 const db = {};
 
 const sequelize = new Sequelize(
-   dbconfig.database,
-   dbconfig.username,
-   dbconfig.password,
-   dbconfig
+    dbconfig.database,
+    dbconfig.username,
+    dbconfig.password,
+    dbconfig
 );
 
 db.User = user;
 
-Object.keys(db).forEach(function(modelName) {
-   db[modelName].init(sequelize);
+Object.keys(db).forEach((modelName) => {
+    db[modelName].init(sequelize);
 });
 
-Object.keys(db).forEach(function(modelName) {
-   if(db[modelName].associate) {
-      db[modelName].associate(db);
-   }
+Object.keys(db).forEach((modelName) => {
+    if (db[modelName].associate) {
+        db[modelName].associate(db);
+    }
 });
 
 db.sequelize = sequelize;
