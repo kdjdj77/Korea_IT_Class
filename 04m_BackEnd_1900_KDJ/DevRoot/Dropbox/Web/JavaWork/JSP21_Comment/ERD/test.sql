@@ -25,6 +25,27 @@ INSERT INTO t4_write (user_id, subject, content) VALUES
 (3, '제목입니다4', '내용입니다4')
 ;
 
+-- 샘플 댓글
+INSERT INTO t4_comment(user_id, write_id, content) VALUES
+(1, 1, '1. user1이 1번글에 댓글 작성.'),
+(1, 1, '2. user1이 1번글에 댓글 작성.'),
+(1, 2, '3. user1이 2번글에 댓글 작성.'),
+(1, 2, '4. user1이 2번글에 댓글 작성.'),
+(1, 3, '5. user1이 3번글에 댓글 작성.'),
+(1, 3, '6. user1이 3번글에 댓글 작성.'),
+(1, 4, '7. user1이 4번글에 댓글 작성.'),
+(1, 4, '8. user1이 4번글에 댓글 작성.'),
+(3, 1, '9. admin1이 1번글에 댓글 작성.'),
+(3, 1, '10. admin1이 1번글에 댓글 작성.'),
+(3, 2, '11. admin1이 2번글에 댓글 작성.'),
+(3, 2, '12. admin1이 2번글에 댓글 작성.'),
+(3, 3, '13. admin1이 3번글에 댓글 작성.'),
+(3, 3, '14. admin1이 3번글에 댓글 작성.'),
+(3, 4, '15. admin1이 4번글에 댓글 작성.'),
+(3, 4, '16. admin1이 4번글에 댓글 작성.')
+;
+
+
 SELECT * FROM t4_user ORDER BY id DESC;
 SELECT * FROM t4_write ORDER BY id DESC;
 
@@ -95,6 +116,18 @@ DELETE FROM t4_file WHERE id = ?
 -- 특정 글의 (write_id) 의 첨부파일(들)을  DELETE  (삭제)
 DELETE FROM t4_file WHERE write_id = ?
 ;
+
+# -------------------------------------------------------
+# 댓글
+
+# 특정글 의 (댓글 + 사용자) 정보
+SELECT c.id "id", c.content "content", c.regdate "regdate",
+    u.id "user_id", u.username "user_username", u.password "user_password", u.name "user_name", u.authorities "user_authorities", u.regdate "user_regdate"
+FROM t4_comment c, t4_user u
+WHERE c.user_id = u.id AND c.write_id = 1
+ORDER BY c.id DESC
+;
+
 
 
 

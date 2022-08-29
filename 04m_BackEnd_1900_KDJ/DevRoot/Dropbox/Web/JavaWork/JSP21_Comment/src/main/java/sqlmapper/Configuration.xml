@@ -30,6 +30,7 @@
     <mapper resource="domain/WriteDAO.xml"/>
     <mapper resource="domain/UserDAO.xml"/>
     <mapper resource="domain/FileDAO.xml"/>
+    <mapper resource="domain/CommentDAO.xml"/>
     <!-- <mapper resource="domain/*"/> -->
   </mappers>
  

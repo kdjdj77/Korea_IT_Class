@@ -2,6 +2,7 @@ SET SESSION FOREIGN_KEY_CHECKS=0;
 
 /* Drop Tables */
 
+DROP TABLE IF EXISTS t4_comment;
 DROP TABLE IF EXISTS t4_file;
 DROP TABLE IF EXISTS t4_write;
 DROP TABLE IF EXISTS t4_user;
@@ -10,6 +11,18 @@ DROP TABLE IF EXISTS t4_user;
 
 
 /* Create Tables */
+
+CREATE TABLE t4_comment
+(
+	id int NOT NULL AUTO_INCREMENT,
+	user_id int NOT NULL,
+	write_id int NOT NULL,
+	content text NOT NULL,
+	regdate datetime DEFAULT now(),
+	PRIMARY KEY (id),
+	UNIQUE (id)
+);
+
 
 CREATE TABLE t4_file
 (
@@ -49,11 +62,27 @@ CREATE TABLE t4_write
 
 /* Create Foreign Keys */
 
+ALTER TABLE t4_comment
+	ADD FOREIGN KEY (user_id)
+	REFERENCES t4_user (id)
+	ON UPDATE RESTRICT
+	ON DELETE CASCADE
+;
+
+
 ALTER TABLE t4_write
 	ADD FOREIGN KEY (user_id)
 	REFERENCES t4_user (id)
 	ON UPDATE RESTRICT
 	ON DELETE RESTRICT
+;
+
+
+ALTER TABLE t4_comment
+	ADD FOREIGN KEY (write_id)
+	REFERENCES t4_write (id)
+	ON UPDATE RESTRICT
+	ON DELETE CASCADE
 ;
 
 

@@ -156,7 +156,7 @@
 	
 	
 	
-	</Host>
+	<Context docBase="JSP21_Comment" path="/JSP21_Comment" reloadable="true" source="org.eclipse.jst.jee.server:JSP21_Comment"/></Host>
     </Engine>
   </Service>
 </Server>

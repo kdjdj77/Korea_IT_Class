@@ -21,6 +21,13 @@
 		    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 		    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 		
+		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		    <script>
+		    	const conPath = "${pageContext.request.contextPath}";
+		    	const logged_id = ${PRINCIPAL.id};
+		    </script>
+		    <script src="${pageContext.request.contextPath }/js/detail.js"></script>    
+
 		    <title>조회 - ${dto.subject}</title>
 		</head>
 		
@@ -100,7 +107,11 @@
 		            <a class="btn btn-outline-dark" href="write">작성</a>
 		            </c:if>
 		            <!-- 하단 링크 -->        
-		
+					
+					<!-- 댓글 -->
+					<jsp:include page="comment.jsp"/>
+					<!-- 댓글 -->
+					
 		        </section>
 		    </div>
 		</body>
