@@ -44,8 +44,6 @@ $(function() {
 		});
 
 	});
-
-
 })
 
 // 특정 글(write_id)의 댓글 목록 읽어오기
@@ -62,6 +60,7 @@ function loadComment(write_id) {
 					return;
 				}
 				buildComment(data); // 댓글 목록 렌더링
+				addDelete(); //댓글 목록 불러온 뒤 삭제에 대한 이벤트리스너 등록
 			}
 		},
 	});	
@@ -98,5 +97,32 @@ function buildComment(result) {
 	$("#cmt_list").html(out.join("\n"));
 }
 
-
-
+// 댓글삭제버튼이 눌렸을때 해당 댓글 삭제하는 이벤트리스너를 삭제버튼에 등록
+function addDelete() {
+	// 현재 글의 id
+	const id = $("input[name='id']").val().trim();
+	
+	$("[data-cmtdel-id]").click(function() {
+		if (!confirm("댓글을 삭제하시겠습니까?")) return;
+		
+		// 삭제할 댓글의 id
+		const comment_id = $(this).attr("data-cmtdel-id");
+		$.ajax({
+			url: conPath + "/comment/delete",
+			type: "POST",
+			cache: false,
+			data: {"id": comment_id},
+			success: function(data, status) {
+				if (status == "success") {
+					if (data.status !== "OK") {
+						alert(data.status);
+						return;
+					}
+					
+					// 삭제후에는 다시 목록 불러오기
+					loadComment(id);
+				}
+			},
+		});
+	})
+}

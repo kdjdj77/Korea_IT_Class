@@ -41,5 +41,9 @@
 		INSERT INTO t4_comment(user_id, write_id, content)
     	VALUES(#{user.id}, #{write.id}, #{content})
 	</insert>
-
+	
+	<delete id="deleteById" flushCache="true">
+		DELETE FROM t4_comment WHERE id = #{id}
+	</delete>
+	
 </mapper>

@@ -9,4 +9,7 @@ public interface CommentDAO {
 	
 	// 댓글 작성 <-- 매개변수는 DTO에 담음
 	public int insert(CommentDTO dto) throws SQLException;
+	
+	// 댓글(id) 삭제
+	public int deleteById(int id) throws SQLException;
 }
