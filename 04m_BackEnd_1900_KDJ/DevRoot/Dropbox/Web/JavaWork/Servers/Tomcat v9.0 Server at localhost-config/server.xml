@@ -156,7 +156,7 @@
 	
 	
 	
-	<Context docBase="JSP21_Comment" path="/JSP21_Comment" reloadable="true" source="org.eclipse.jst.jee.server:JSP21_Comment"/></Host>
+	<Context docBase="JSP21_Comment" path="/JSP21_Comment" reloadable="true" source="org.eclipse.jst.jee.server:JSP21_Comment"/><Context docBase="JSP18_Auth" path="/JSP18_Auth" reloadable="true" source="org.eclipse.jst.jee.server:JSP18_Auth"/></Host>
     </Engine>
   </Service>
 </Server>
