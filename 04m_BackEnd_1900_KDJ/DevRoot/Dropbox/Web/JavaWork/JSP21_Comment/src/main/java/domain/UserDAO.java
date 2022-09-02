@@ -13,5 +13,4 @@ public interface UserDAO {
 	
 	// 회원(user) 등록 <-- DTO
 	int register(UserDTO dto) throws SQLException;
-
 }
