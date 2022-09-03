@@ -47,3 +47,15 @@ day_05의 id(자동생성), content, createdat, updatedat, userIdx(선택)
 table name posts 스키마 만들어오기
 
 관계설정 belongTo, belongToMany, hasOne, hasMany
+
+-------------------------------------------------------------
+
+프론트 배포 (정적인 사이트의 경우)
+   * aws s3 --react, vueJS
+   dothome
+   githubpage
+   nestify (ci/cd)
+
+서버사이드렌더링(SSR) --nextJS 일반 html은 X
+   aws ec2
+   docker + ...

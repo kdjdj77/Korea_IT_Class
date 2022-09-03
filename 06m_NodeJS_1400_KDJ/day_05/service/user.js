@@ -48,7 +48,7 @@ export default class UserService {
                     return next(err);
                 }
                 const fullUser = await User.fineOne({
-                    where: {id:user.id}, 
+                    where: {id: user.id},
                     attributes:{
                         exclude: ["password"], //제거
                     },

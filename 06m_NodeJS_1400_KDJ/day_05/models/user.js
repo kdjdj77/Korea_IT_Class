@@ -27,6 +27,7 @@ export default class User extends Sequelize.Model {
         );
     }
     static associate(db) {
+        db.User.hasMany(db.Post, {foreignKey: "userIdx"});
         //관계 설정
 
         //1 : N (hasMany 부모테이블)
