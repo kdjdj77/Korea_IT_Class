@@ -59,3 +59,5 @@ table name posts 스키마 만들어오기
 서버사이드렌더링(SSR) --nextJS 일반 html은 X
    aws ec2
    docker + ...
+
+   
