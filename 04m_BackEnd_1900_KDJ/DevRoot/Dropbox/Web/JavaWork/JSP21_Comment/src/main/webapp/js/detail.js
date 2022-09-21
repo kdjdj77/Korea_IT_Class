@@ -74,6 +74,7 @@ function buildComment(result) {
 	result.data.forEach(comment => {
 		let id = comment.id;
         let content = comment.content.trim();
+        let star = comment.star;
         let regdate = comment.regdate;
 
         let user_id = parseInt(comment.user.id);
@@ -90,6 +91,7 @@ function buildComment(result) {
 	        <td>
 	            <span>${content}</span>${delBtn}            
 	        </td>
+	        <td><span><small class="text-secondary">${star}</small></span></td>
 	        <td><span><small class="text-secondary">${regdate}</small></span></td>
 	        </tr>`;
 		out.push(row);

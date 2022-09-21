@@ -1,0 +1,966 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.5.2
+Build-Jdk-Spec: 11
+Bundle-ManifestVersion: 2
+Bundle-Name: Cloud Foundry Manifest Language Server
+Bundle-Vendor: VMware, Inc.
+Bundle-SymbolicName: org.springframework.tooling.cloudfoundry.manifest.l
+ s;singleton:=true
+Bundle-Version: 1.39.0.202209151102
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: org.eclipse.jdt.launching;bundle-version="3.8.0",org.ecl
+ ipse.core.runtime;bundle-version="3.12.0",org.eclipse.lsp4e;bundle-vers
+ ion="0.9.0",org.eclipse.lsp4j;bundle-version="0.6.0",org.eclipse.lsp4j.
+ jsonrpc;bundle-version="0.6.0",org.springframework.tooling.ls.eclipse.c
+ ommons;bundle-version="4.0.0",com.google.guava,org.eclipse.core.resourc
+ es,org.eclipse.ui.genericeditor;bundle-version="1.0.0",org.eclipse.tm4e
+ .core;bundle-version="0.1.0",org.eclipse.tm4e.ui;bundle-version="0.1.0"
+ ,org.eclipse.ui,org.eclipse.ui.editors,org.springsource.ide.eclipse.com
+ mons.livexp,io.projectreactor.reactor-core,org.reactivestreams.reactive
+ -streams
+Import-Package: org.eclipse.jface.preference,org.osgi.framework
+Export-Package: org.springframework.tooling.cloudfoundry.manifest.ls
+Bundle-ClassPath: icons/,syntaxes/,.
+Eclipse-BundleShape: dir
+Automatic-Module-Name: org.springframework.tooling.cloudfoundry.manifest
+ .ls
+Bundle-License: Eclipse Public License v1.0;link="https://www.eclipse.or
+ g/legal/epl-v10.html"
+
+Name: plugin.xml
+SHA-256-Digest: to9Z67RBDASsGCp1ibcpTOxwDyYRVtu5ivAjBjpoydo=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/routes.html
+SHA-256-Digest: 0ippjyMjQ79aL1nAYgz5Qq6Rvj9NYZ/yzinPnYVRz1g=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/no-hostname.md
+SHA-256-Digest: CUAM2XrvGV4fLvE6fsfkgRLGD5tgpluW6fZUnPcHkzg=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/jcl-over-slf4j-
+ 1.7.36.jar
+SHA-256-Digest: q1fKj9IjdywXNl0SH1npTsvwrlnQjAOjy1uBBxwBkZU=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/docker.md
+SHA-256-Digest: UmDHq3WJ6uTuIEG68ONT20Gx/TL6GKOqLoOuvk5RmnE=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/spring-context-
+ 5.3.22.jar
+SHA-256-Digest: 5/nEcnyYqvAlQgVvHCxQTc20R491xLrrgasVBZt1UsU=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/command.md
+SHA-256-Digest: kychccwT25tXfW09cl0NIXkNwzBxw9WaEnwDjR5hwcA=
+
+Name: servers/manifest-yaml-language-server/META-INF/maven/org.springfra
+ mework.ide.vscode/manifest-yaml-language-server/pom.properties
+SHA-256-Digest: fNCk2kEYrqBVrTmUcooB6ByyfJgSlgCYbOtHstMurrM=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/JarURLConnection.class
+SHA-256-Digest: JpYl6JAEThtatj2zdnKgnnn4/6OD9S99mHe3Mwnggho=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/remark-1.0.0.ja
+ r
+SHA-256-Digest: yeS8lcYdLjBHGXOZRwR6J6QbPWQN6XGawoD8sqJmzOY=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/CentralDirectoryVisitor.class
+SHA-256-Digest: i1UMJA37HY3OcrQai4eoGA8saL//7OTzFGfcPiLP/HA=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/AsciiBytes.class
+SHA-256-Digest: bIKUklKqbPbDbEXnC8EPpqt2EpmyBnlo3SWY66j4di0=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/org.eclipse.lsp
+ 4j.generator-0.14.0.jar
+SHA-256-Digest: a9qO9Uqq2rnp7fmdiu/K7q+55iWwTw+9GD3Twguh8lc=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/failureaccess-1
+ .0.1.jar
+SHA-256-Digest: oXHuTHNN0tqDfksWvp30Zhr6typBra8x64Tf2vk2yiY=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/archive/ExplodedArchive$SimpleJarFileArchive.class
+SHA-256-Digest: 6rj6gHEXnDmvfhHI9tjNblKjoLJ+1GnuRVAO00M5fqU=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/language-server
+ -starter-1.39.0-SNAPSHOT.jar
+SHA-256-Digest: /ayyFpkOUOm9CqiYdTw0pc/XTSG98EsKv0gaw8BR9Y8=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/logback-classic
+ -1.2.11.jar
+SHA-256-Digest: TY6JliGjAGwvZuGf6rACsR5s/FyxhU/EHwFTLADesqo=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/JarFileEntries$EntryIterator.class
+SHA-256-Digest: O2Ul63Kxgm0wRDlUGN4oBLjuwj5wRtwwmA7kPVe5JVA=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/wire-runtime-2.
+ 2.0.jar
+SHA-256-Digest: iTqr14qZWTYa7nTEzovqCxhlwAIVkD+53RxlbeVDbvo=
+
+Name: servers/manifest-yaml-language-server/META-INF/third-party-open-so
+ urce-licenses/the mit license - mit-license.html
+SHA-256-Digest: f+lvc/YH2qOSc+MajVLYTvudr22n71QBA1+LljfGsts=
+
+Name: org/springframework/tooling/cloudfoundry/manifest/ls/CloudFoundryM
+ anifestLanguageServer.class
+SHA-256-Digest: BVzP9aYjjWiCHDeACyhx+Ay+4MI0pgx/5Z31q1sWPgU=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/RouteValueParser.class
+SHA-256-Digest: Fq+0fq8dEI5EEGWv9HUOfh/HA7AEPPhdMRDSU/jkaZs=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/log4j-api-2.17.
+ 2.jar
+SHA-256-Digest: CTUbWgOCjzac3P929O055qb8IPJPBGk10LKO9RUvjOQ=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/LaunchedURLClassLoader.class
+SHA-256-Digest: VzCv5gBcHDS9A6klQNwXYtUdF5YVKY+It4buFBGgcbc=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/JarFile.class
+SHA-256-Digest: VC0mK8ikFPk9d5+i0uvNI8gb9r2PSoJeK2VDGbzhnfI=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/ZipInflaterInputStream.class
+SHA-256-Digest: FbkqXFAox+QqVcrdDemsOiiR4kBO2MDN1qlmo5/aSus=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/hosts.md
+SHA-256-Digest: V70mytg46/LqxczgvBvD0Zd/8OWQTKWkaA8QN+RMWn4=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/JarFileEntries$Zip64Offsets.class
+SHA-256-Digest: BnkXoXrd9tFbrAmH1IloZPtk35QQMjE6pBNjVb8VZ+Q=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/stack.html
+SHA-256-Digest: ocWBc7CFl4bzMllCvBiJvODy8PNn767+60dSC9A9q+U=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/logback-core-1.
+ 2.11.jar
+SHA-256-Digest: bOHpOXvoKYoumQKfVflVxvo87yVRccVU0LnCAc/9AVk=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/j2objc-annotati
+ ons-1.3.jar
+SHA-256-Digest: Ia8wySJnvWEiwOC00gzMtmQaN+r5VsZUDsRx1YTmSns=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/ManifestYmlValueParsers$2.class
+SHA-256-Digest: 7V64vxbFs9+LVA0CJSiZtraWCFmKDS+7RWByt185QzI=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/netty-codec-soc
+ ks-4.1.79.Final.jar
+SHA-256-Digest: YY/eJT3ac6A5ubeugTw0VwxOx82VFCwqRGAqmIt4nwA=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/jackson-core-2.
+ 13.3.jar
+SHA-256-Digest: qxGajqPMaUcuvA6HC4Sb+75TatV9YT3DhFPM1ZLKaj0=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/JarEntryCertification.class
+SHA-256-Digest: vJLv7eLYzfwjmdC/bnVkn90Xhhyda3iD4VUpcawHmRQ=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/WarLauncher.class
+SHA-256-Digest: ItL0usCv51h3grEWIgsML1Co8lqUxT0itHGshSdFBaU=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/commons-compres
+ s-1.16.1.jar
+SHA-256-Digest: og2ORTFau+B/r5UuCVgXuZJfOMT8OeiiEcfQcnAul+s=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/buildpacks.md
+SHA-256-Digest: 7ccHn3Ulpyvny+gs4vZZg5hqbc+Uz+8rRDghTq8Gdx0=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/health-check-type.md
+SHA-256-Digest: NISrbFiy3b7gvtdwiu8JQgRbeatX0cDkb9XHBNEMupQ=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/guava-31.1-jre.
+ jar
+SHA-256-Digest: pC7cnKt5Ljn+ObuU8/ymVe0Vf/h6iveOHWulsHxKAKs=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/spring-boot-jar
+ mode-layertools-2.7.3.jar
+SHA-256-Digest: xtlpXxsFohuMGJ+3c3hn8x3p5mLkqam7eNodmAlOJxg=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/path.html
+SHA-256-Digest: x+gIFR8biGodz4kB+IToGCeQZ0mlKdOo7nVUNVhTMkY=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/JarFile$1.class
+SHA-256-Digest: vkfkItW0cnB+nAw2LSnFKD/0NqRhgbGhx7wE75N+HYs=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/ManifestYamlLanguageServerBootApp.cla
+ ss
+SHA-256-Digest: cWqMWHf3iX3YcK780+tIhula9Iw6Waac0Lv+Me03lkw=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/timeout.md
+SHA-256-Digest: 0zRHipTsFAsDuA/kbo3UuRs5LBP09TzJu17Q+eOLJv0=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/StringSequence.class
+SHA-256-Digest: zl4w6t8KGEXowK3ZsRGsIQPW3iZ1OBL1izKa9lCGWkE=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/gson-2.9.1.jar
+SHA-256-Digest: N4U04znm5tULFzb7Ort28cFdG+P0wTzsbVNkEuI9pgM=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/spring-core-5.3
+ .22.jar
+SHA-256-Digest: bpf7lSFcWDsGCYwKc9JyN8YWXM1PgQPi3tQDAzgry6M=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/ClassPathIndexFile.class
+SHA-256-Digest: sFrekC0zOZDwwsZ61mQIrrmEBHKCC61aaYJ3Pqk84II=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/archive/Archive$Entry.class
+SHA-256-Digest: JGgig4pnfZeHWUQP8xP82Lrelq2u/6JhUIwQInSeUBw=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/cloudfoundry-cl
+ ient-reactor-3.8.0.RELEASE.jar
+SHA-256-Digest: mefpx8+g+BRIEoubUwNRAYCLS/rN1udIN+ISYTUcJdY=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/stack.md
+SHA-256-Digest: pe8V+peTyntQ+dmTykM/EHp/D+7sSMj5nUVV1sheJB4=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/ManifestYmlValueParsers$1.class
+SHA-256-Digest: bW8KsrZXqkx5EYx/Ra0qvffbVef/lmO6zsyq7SVa+YU=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/data/RandomAccessData.class
+SHA-256-Digest: QhckHBStjCKgPZ4Bm6ZigGLoXy3BljJI1L2pnmxd3Ao=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/CfJson.class
+SHA-256-Digest: aUbgLJagYGO2ZEzzKwZVTKE46wMjHh1u3d/q2ujpzWA=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/listenablefutur
+ e-9999.0-empty-to-avoid-conflict-with-guava.jar
+SHA-256-Digest: s3KgN9QjCqV/vv/e8w/WEj+cDC24XQrO0AyRuXTzP5k=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/host.html
+SHA-256-Digest: SF93cDLHpVbDHNNn4gWjsWWIwtFPR8iRALupgSnd6BA=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/jsoup-1.9.2.jar
+SHA-256-Digest: nBiF8bGCJW4G8eMLhFHK7QwN7pYpnWNI+WjRi1TQpGo=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/env.md
+SHA-256-Digest: yHbVg6EUIFCvn37nRwTzazMjWfFD6lIUARNRWp7F4aQ=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/reactive-stream
+ s-1.0.4.jar
+SHA-256-Digest: 91yll3ibPaxY9hhXuawuEDSmj6Zy2zUFWo+0UJ4yXyg=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/archive/ExplodedArchive$FileEntry.class
+SHA-256-Digest: ssr/KUuortP8PMM9Y7F+eUxYL1MB3lUtRvkkDmr30Jw=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/org.eclipse.xte
+ nd.lib.macro-2.24.0.jar
+SHA-256-Digest: spZ16xanOIOJeL6CTBChEkHlm7bUuvUq4C9RkWNtLUs=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/ManifestYamlCFServicesProvider.class
+SHA-256-Digest: 6KhGgYemLXqtGhG4Wc8823L9Abr+mV9M4jcV23WAzZk=
+
+Name: servers/manifest-yaml-language-server/META-INF/third-party-open-so
+ urce-licenses/bsd license 3 - bsd-3-clause.html
+SHA-256-Digest: VCzmR+/rouJ4Zdv5NRjrcxXifp4/l3VEyUo5suSiTP4=
+
+Name: servers/manifest-yaml-language-server/META-INF/third-party-open-so
+ urce-licenses/epl 2.0 - epl-2.0.html
+SHA-256-Digest: BTR+f0KEGf3WwzdyyaxzHutmdYNLUQ8FCkS5ODLVadc=
+
+Name: servers/manifest-yaml-language-server/META-INF/third-party-open-so
+ urce-licenses/apache license 2.0 - license-2.0.txt
+SHA-256-Digest: qsc7MUj20dcRHbyjIJn2jSbGRMaBOuHk8F9leaomY/4=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/spring-web-5.3.
+ 22.jar
+SHA-256-Digest: 0gGSWl9hml9REH7QcEOoR8ZFdzFlyVS8NPpZg/oEPx8=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/javax.inject-1.
+ jar
+SHA-256-Digest: kcdwRKUMSBY2wy2Rb9ickRinIZU5BFLIEGUID5V95/8=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/ManifestYamlLanguageServerInitializer
+ .class
+SHA-256-Digest: Us2nsPC3Po12w1SgYWBMvRsVcdnA+fCoqb6kJVnvnhs=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/PropertiesLauncher$PrefixMatchingArchiveFilter.class
+SHA-256-Digest: 4AGcUGySfbEVDArjDsEgjcD+N5w4bTQwKQn9Lg6m98s=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/domains.md
+SHA-256-Digest: VRZFHaxJuWWlcbvZSX9Jd25/uWla+GWhDCN8xxySbcs=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/buildpack.html
+SHA-256-Digest: xvzTrizf6Y1jbt0HfYEh0jw4NnHazWwzSEmswXayr4Y=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/path.md
+SHA-256-Digest: HABlkUo7hDxsJBpj1mY1VuG3j8AG6qCxfP4oc5D32lA=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/application
+ .properties
+SHA-256-Digest: iGfpvHTxPu2/l9hIOy6ESeG/2Uu1iPa0xH1YkYrbd+w=
+
+Name: servers/manifest-yaml-language-server/META-INF/third-party-open-so
+ urce-licenses/the mit license - mit.html
+SHA-256-Digest: I5PASvsg3wWZM7xxC2OwlCe2zHtp9YQqGx3XzjTOex8=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/archive/JarFileArchive$NestedArchiveIterator.class
+SHA-256-Digest: 1vedxwLDe9z2ngN+6bver4kMB1p8Zy1pBje+nD0rxd0=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/no-route.md
+SHA-256-Digest: 4XNuzc2dQyeXjBUWbYapRJ8clXVI6VgR+W2SSwdyzoo=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/ManifestYamlStacksProvider.class
+SHA-256-Digest: Lw/ind0t/rDKMsfI2lRyH+9S7eSH158dM9qX5YGBjtI=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/org.eclipse.lsp
+ 4j.jsonrpc-0.14.0.jar
+SHA-256-Digest: jocKRNPKB0GlGHSgDnwBX+r2tRbAPtVydqcK51iCjy4=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/log4j-to-slf4j-
+ 2.17.2.jar
+SHA-256-Digest: m8+lJzUnuVDXlznRHo+AgM/IgZCPoqlGtOiRwCkwlN4=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/ExecutableArchiveLauncher.class
+SHA-256-Digest: FLUuadgX7CAcRWLvLBdYAKyRhq4dMspK8vKAg/myxos=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/commons-lang3-3
+ .12.0.jar
+SHA-256-Digest: 2RnZBEhsA3+NGTQS2gyS4iqfokIwudZ6V4VcXDHH6U4=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/evo-inflector-1
+ .2.2.jar
+SHA-256-Digest: xIXBEIcMWXukAd2ix8WBmjsuFe4GT1OTIxODAr1ZHUg=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/memory.html
+SHA-256-Digest: F5Cq+XkcR44tOaPL3tsFj+oDjo9Rsro2N/mknwzac9A=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/netty-transport
+ -classes-epoll-4.1.79.Final.jar
+SHA-256-Digest: LRAC8HxDn8NworGdKg+i0eIwtd/YckU/5qRx6NOY1H4=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/archive/ExplodedArchive$AbstractIterator.class
+SHA-256-Digest: R5TSo6OT6yudPbUc4jp4kUAxF0DpBOZyaSDKYl6RGQQ=
+
+Name: servers/manifest-yaml-language-server/META-INF/third-party-open-so
+ urce-licenses/gpl2 w_ cpe - license.html
+SHA-256-Digest: IYky2XOTYp/sbZAD+Sa/+Z1Tg3oGEDWDA7HwmJCNRBQ=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/PropertiesLauncher.class
+SHA-256-Digest: Ap1S9vaOlz15yLTEMgsKcwwmBy9sFaJOQr20EaBexok=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/commons-languag
+ e-server-1.39.0-SNAPSHOT.jar
+SHA-256-Digest: xuHqvP1g9etASb2DYrToE/3Fa2JNvdo6YKUKJaYG7wA=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/spring-aop-5.3.
+ 22.jar
+SHA-256-Digest: UsDv6qRSjjC4BbvT2QgoHYSI5IfNKkXY5Ne1keawjnc=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/LICENSE
+SHA-256-Digest: +EeXO1Eh9MEZFqB2kXrYgMVKZ7fTdmdtkuZU8S2K9+0=
+
+Name: servers/manifest-yaml-language-server/META-INF/third-party-open-so
+ urce-licenses/eclipse public license - v 1.0 - epl-v10.html
+SHA-256-Digest: bRTS5E/9Qx1FQoVwCIsdzwq/xh5MnjsFgSsQXgprfk4=
+
+Name: servers/manifest-yaml-language-server/META-INF/third-party-open-so
+ urce-licenses/eclipse public license v2.0 - epl-v20.html
+SHA-256-Digest: beU4Yz+Sw9lfnDAxj+9fP5EEacwuQ5gD3MLUwWGOX4Q=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/netty-transport
+ -4.1.79.Final.jar
+SHA-256-Digest: cc+ZtsNoW2Svmx3hYbI/EH186Ad6lZIffccMolg48DQ=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/reactor-core-3.
+ 3.11.RELEASE.jar
+SHA-256-Digest: QoIylOLgNbaeUU59AZJKOEiA2Qn3ODLJUAJK1SSlJDk=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/util/SystemPropertyUtils.class
+SHA-256-Digest: QsP/0x/ry9DcvG7yxFUxKH7PlvTQ5jEGUkBpz4n4uU4=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/commons-cf-1.39
+ .0-SNAPSHOT.jar
+SHA-256-Digest: WOWl0q+dRCXsR6ItQE0zHSKYOu6kZu7t74kaU2dSOTM=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/netty-transport
+ -native-epoll-4.1.79.Final.jar
+SHA-256-Digest: 6aRVbGGcUyJEv4CdhHS65qTsYjBjD9JiGuN+OCjwUC8=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/archive/ExplodedArchive$ArchiveIterator.class
+SHA-256-Digest: 67HS3eoO9NmmyvBmVvV2NT5B3Zp7UGXpIFF/mdhfg50=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/PropertiesLauncher$1.class
+SHA-256-Digest: vQm1TyaY07OnZB6Ww9cLRfhQ4BQb2kx69Krq33alH20=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/DefaultCloudfoundryConfig.class
+SHA-256-Digest: ueo9KsEGSqklAEY9a/qH6oTWDQmFp/IenuigYX8IUXw=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/jakarta.annotat
+ ion-api-1.3.5.jar
+SHA-256-Digest: hfsD/AVM3078qO/ZtnEru0GOGrmCQcRTnIWFu8I+G4o=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jarmode/TestJarMode.class
+SHA-256-Digest: pZM1YW2Z0cOOIWr2WptBs0FYgncWOZFrsfjnScnKKsY=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/ManifestYamlLanguageServerInitializer
+ $1.class
+SHA-256-Digest: I0KPbZLg46QQuksjSkB1odrVJbz4fMTVFUdKaRZ7dpQ=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/cloudfoundry-ut
+ il-3.8.0.RELEASE.jar
+SHA-256-Digest: B4uWhPMLcLJjQJOJk02Tvm/GZmqy3UXnGQaFMCAoK0s=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/inherit.md
+SHA-256-Digest: GmsSY2QYCFGwJ9UAwLVTrLcjEYy5mGZKQBvr40AAUhM=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/JarEntry.class
+SHA-256-Digest: X/DNOYM/db3Wb2FGKQFIoDc0BnhPp8Sx3BaE4Aw0qRc=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/CentralDirectoryEndRecord$Zip64End.class
+SHA-256-Digest: +wWCRXPfsi7WLQ2YLLZ6bzZiaDOVABHcuaVZBNVwAlg=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/checker-qual-3.
+ 12.0.jar
+SHA-256-Digest: /xB4WsKjV+xd6cKTy5gqLLtgXAMJ6kzBy5ubxtvn88s=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/netty-common-4.
+ 1.79.Final.jar
+SHA-256-Digest: Gg2jfpbbxBu+VvwR5iGhcY7ysx9rzD9Im6LSLCNeajw=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/CentralDirectoryEndRecord$Zip64Locator.class
+SHA-256-Digest: 6xkAmtPlp3hUz16+lRnVP3b36wCeZZUdQBnV1zb9wog=
+
+Name: syntaxes/YAML.tmLanguage
+SHA-256-Digest: p45g2ej2En5C9aJwx9CRwSEoRXhHbD6On+vrgW2sPMA=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/name.md
+SHA-256-Digest: jv1cm1tSnPWxrB11KgDkmNEJlgptT9BUsh86OoaZAZ8=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/domain.html
+SHA-256-Digest: iMLgnLt2/4QoSRTQZywRtvUCz5JyxUWiZOY1HjIniEo=
+
+Name: servers/manifest-yaml-language-server/META-INF/third-party-open-so
+ urce-licenses/edl 1.0 - edl-v10.html
+SHA-256-Digest: URj5czcbCD/lVas5ApXQMzkof6EbIfOZb8r+0GCL3pA=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/LaunchedURLClassLoader$DefinePackageCallType.class
+SHA-256-Digest: jJpXbxiMkxy+hntx8Ik0s4D9VLJxhHh7q+3h991nouM=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/jsr305-3.0.2.ja
+ r
+SHA-256-Digest: dmrSoHg/JoeWLIrXTO7MOKKLn3Ki0IXuQ4t4E+ko0Mc=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/jjwt-0.9.0.jar
+SHA-256-Digest: wdGK1d1+ApFMElz+YRt9HWIVHXkdnU2c1gcxYjFA9BY=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/commons-util-1.
+ 39.0-SNAPSHOT.jar
+SHA-256-Digest: OfSq3xtoV+MyNnsBQUEQgcAeQWVdxNvAavoLEPF7VU0=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/archive/ExplodedArchive$EntryIterator.class
+SHA-256-Digest: EYPiaq9TnsCNrhulYDe3fYLQ75f/h51oMAbPPL/s9aY=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/no-route.html
+SHA-256-Digest: NyMMsEjzF3OwTauMl56FWeQcbgAidAmnDaQXfu10BdM=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/services.md
+SHA-256-Digest: BE264uvD+nikJhsT9Mf90MHSll4RjJ4xZ/rCFPm0kJ0=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/name.html
+SHA-256-Digest: vyeDStfbVOq3ndLb0CU83LE8p6XIjkVsudb6OaDzsK0=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/JarURLConnection$JarEntryName.class
+SHA-256-Digest: P52G3u314CgHcC4zqr51i+/UsqoGfMhmgApSbqJMGOs=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/CentralDirectoryFileHeader.class
+SHA-256-Digest: jBsNf+99aUwTaUT7YYR3y6a4+pCn6c6b7BGE0c0EAJ4=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/ManifestYmlSchema.class
+SHA-256-Digest: WD18QO37kB42hSvcrXKcKx3kxl66u4egQyr6tyEomDo=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/archive/JarFileArchive$EntryIterator.class
+SHA-256-Digest: SvZJFapah+d/Uz9NsLiNmdYsK6x+4ggZb2rRYvTbk5o=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/jul-to-slf4j-1.
+ 7.36.jar
+SHA-256-Digest: nmQfsULF8LBiPWIiwJ6odSOkG/a+1IrHmUByQBC5id4=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/netty-buffer-4.
+ 1.79.Final.jar
+SHA-256-Digest: U7PJnAJfc0SWDYpBDfV5LKukRE3YLBhgalcvc2ESf5g=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jarmode/JarModeLauncher.class
+SHA-256-Digest: X5NB/fW1J1aZzUcMulcSyCFON+xdxBz6U1KGSoAqnzs=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/okio-1.8.0.jar
+SHA-256-Digest: XP6lr+bG5EGk2/YFOgenM7EknRAJOC60SsIlXM7dDBU=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/archive/Archive$EntryFilter.class
+SHA-256-Digest: V/vn1rcpZsD5z/DdSt+I8xjJggKUaqif1/p5EAWPseY=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/instances.md
+SHA-256-Digest: I/i8i7vScbaF9Y+rDUPA/PSZKuWrkwNNvdmXRMoBf0Y=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/ManifestYmlHintProviders.class
+SHA-256-Digest: 7CkYFDIJu/scawKK+HbiU+v/eNZ7Fpo8BXvVieL8yHo=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/error_prone_ann
+ otations-2.11.0.jar
+SHA-256-Digest: chy5GEK0b6BWhH0QTVIlyLjh6LYiY7mTBR4eWgE3t+w=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/Launcher.class
+SHA-256-Digest: gRSHUJmI5mMFnqnzt6/OOf2fZeUxhHQWAbo44WzR7H8=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/ManifestConstraints.class
+SHA-256-Digest: 4c+PDzyTSXSs/i3qZ5GoN9RKkUrB4bV5jHGfmDsXcQg=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/netty-handler-4
+ .1.79.Final.jar
+SHA-256-Digest: th9WMK9rPNThiIXF/eL4ZDqY/gPlKeBfiL/oCuPL1x4=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/services.html
+SHA-256-Digest: 4sxZJwrMO60nxXxi+i7q4RGjQwTyh1ifdRKsfqSaj/E=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/spring-expressi
+ on-5.3.22.jar
+SHA-256-Digest: xAiFkrVcjCmIij/v3R4LqBkrQhbDvpY+1mpca4K1NCg=
+
+Name: servers/manifest-yaml-language-server/META-INF/third-party-open-so
+ urce-licenses.txt
+SHA-256-Digest: uT3aZCgnSGWqVcUBEujGphopzqzAMoZJe72XEDNiTDM=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/data/RandomAccessDataFile$1.class
+SHA-256-Digest: 4IQ2fHSKUjafKsl6v6zKLPhfXu6XUobTJ/Hu5n+7668=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/LaunchedURLClassLoader$UseFastConnectionExceptionsEnumeration.class
+SHA-256-Digest: /zQ1WEhO3iaMrYb5AvHVRS+cLbAERCSRuwqHv/8JR7M=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/CentralDirectoryParser.class
+SHA-256-Digest: EFHqXKW5Bo7xBD1IT8ECa/olg+ZJTCNFsZOBBANzdsE=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/FileHeader.class
+SHA-256-Digest: ZRyX+r/xBtI4nOGWPm4u4jxktxNn/jJczpZHPYfjUHw=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/netty-handler-p
+ roxy-4.1.79.Final.jar
+SHA-256-Digest: mabuX/PrOMqlxbIVgmYGhWtW3AQNiI9pEW2cbbiHCa4=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/JarFileWrapper.class
+SHA-256-Digest: Tm3FwWiIUjy7BwVds4tyDhFhhaPS5KHbutWtoPVTNZc=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/domains.html
+SHA-256-Digest: jKgTKbSv1PaLSFGkpQt211kIxa1ON7TfRjM9uVoBU6A=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/netty-codec-4.1
+ .79.Final.jar
+SHA-256-Digest: qA3LeQd9IXow2MnkPB2ld7ZC8eb7GqgLwis+uHK1Zd4=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/netty-resolver-
+ 4.1.79.Final.jar
+SHA-256-Digest: xsERoze7azqInOqzIelHPaSaTiYdz0IvyiIoQGTjgTA=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/commons-yaml-1.
+ 39.0-SNAPSHOT.jar
+SHA-256-Digest: 6NHyno+WIDQdGZu59uFK1EZVgiRIxypgbsIA/ljx8h0=
+
+Name: servers/manifest-yaml-language-server/META-INF/MANIFEST.MF
+SHA-256-Digest: sKvH0oPRyGClUFdsu9GU1jP9eb86cfjlSgDpqthLLgo=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/domain.md
+SHA-256-Digest: IyuozAqfGA3heZCYHVsdYT28REggA6yy5mqWsJ6vp4w=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/JarFileEntries$1.class
+SHA-256-Digest: cS87iMrlmd507YixWD6q/XEJZewIBXwW81D6mHl5Kb4=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/archive/ExplodedArchive.class
+SHA-256-Digest: 729uhX5T7BgZwOLikKPNIMop+s4fz8HpzgP12t8leWM=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/disk_quota.md
+SHA-256-Digest: zAUhPwY7Al97EhRWKJABG6dBeY05QjNb105i2Iox6nY=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/CFServicesValueParser.class
+SHA-256-Digest: T0MDkhOJgtG1b8FGn0dSC0xnkGXCUttEFBOjcMLqbRg=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/cloudfoundry-cl
+ ient-3.8.0.RELEASE.jar
+SHA-256-Digest: wffAhdxitH22zpLvRXkrF1hQVzCQEtGkUUQ/Fqczhlc=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/cloudfoundry-op
+ erations-3.8.0.RELEASE.jar
+SHA-256-Digest: 2lqpuQ6b69i4pAHzFC0AD3f0u22v3XyIjaGOyA9aiV8=
+
+Name: servers/manifest-yaml-language-server/META-INF/third-party-open-so
+ urce-licenses/gnu lesser general public license - lgpl-2.1.html
+SHA-256-Digest: uyRD9QH3d0soFt8B4nPnMxerhuEU35OJKuES8xKPrww=
+
+Name: servers/manifest-yaml-language-server/META-INF/third-party-open-so
+ urce-licenses/the mit license - license.html
+SHA-256-Digest: Fry6o6rO3o7pFqw5CklAAFk9fdcdcLIMywg+ldQqhiY=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/instances.html
+SHA-256-Digest: FKcG7TwlwL/YJDaJaqboXNU4iHFhtR91tQpklo+E4uI=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classpath.idx
+SHA-256-Digest: Dq/dn1na8U9ziHWkMuCky12adqwMn6zUeFb+EZOERi8=
+
+Name: servers/manifest-yaml-language-server/META-INF/third-party-open-so
+ urce-licenses/mit-0 - mit-0.html
+SHA-256-Digest: MuBDwcrc9L2H0SfTzgSZFpd79NilQUpQCzEM/PoKXNY=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/timeout.html
+SHA-256-Digest: viaWqxIpEGnRILyExn0pzFI1er/1g49VV/fZOMLTQgc=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/MainMethodRunner.class
+SHA-256-Digest: je8pDGIV4Hu9t6+xjPTlhRrpYHSS/zO4Mtc5lhgpWl4=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/command.html
+SHA-256-Digest: IQ0YGQBFSjI79OBL5wTKIRQ+pECPSzBB4ml6n/En+VA=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/javolution-core
+ -java-6.0.0.jar
+SHA-256-Digest: upa4nnlfVefN3mGefLIdHcKYb1jNw7PPXsHzgr/lD/g=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/snakeyaml-1.30.
+ jar
+SHA-256-Digest: 9DpOQKlGuM39AyG8HJqDm8PxGcV+TKhPuHw2f1HIsrM=
+
+Name: org/springframework/tooling/cloudfoundry/manifest/ls/Constants.cla
+ ss
+SHA-256-Digest: uvgPWX0w0Xmbwemu2eYZBqpxGrSa1XWf9oTo7QH65tk=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/disk_quota.html
+SHA-256-Digest: tGtdTx0nAmi88kiUsZFm6di29vf21RF8y+fhHLvnYpo=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/JarFileEntries.class
+SHA-256-Digest: jWNolK1OrFd5zWoeH/uSIHqLuwGTfGreSjNT7+OJPXA=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/org.eclipse.lsp
+ 4j-0.14.0.jar
+SHA-256-Digest: tyQDvKXhnbCey1O/msjeuX7eetOUoLi3fewDQpauAWY=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/routes.md
+SHA-256-Digest: poi/aGKA2DNKeczpcVQEJcG1Y/RGh7d9jkX6bKh6liA=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/ManifestYamlSchemaProblemsTypes.class
+SHA-256-Digest: EnAmJxzb0IHvFpSs50wAN9f+1aPdtH6amAE00tML2TY=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/layers.idx
+SHA-256-Digest: Ze0DheH6imjcfMPOqn/wdwH0CslTd9lnzOx66mMGJ2o=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/host.md
+SHA-256-Digest: /KKHm0XU9Q8nyg9w22X+wG7kZ6ICAPTdNdDUvZEuzSQ=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/env.html
+SHA-256-Digest: DhWDaiLnbRdnd01QnCr9jjGIHiVKpf/OKlj/EdfHt0I=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/Bytes.class
+SHA-256-Digest: p3OTg8V5XtmRAUhYj1SBYKQ8/CUnsymkWti1Yacw9QM=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/jackson-datatyp
+ e-jdk8-2.13.3.jar
+SHA-256-Digest: Hs5Pp1kb4xWziqmG3tDryNr8q9wCYPeBnmY1Q6QBv9s=
+
+Name: servers/manifest-yaml-language-server/META-INF/third-party-open-so
+ urce-licenses/the apache software license, version 2.0 - license-2.0.tx
+ t
+SHA-256-Digest: qsc7MUj20dcRHbyjIJn2jSbGRMaBOuHk8F9leaomY/4=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/JarFileEntries$Offsets.class
+SHA-256-Digest: 8ZtFccOYhERT8qjbiKNXcp51Wmarrw9KTbTtoVOemdw=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/AbstractCFHintsProvider.class
+SHA-256-Digest: qUHIfefmotwsM+dONiJovd0s+j9M+djn/bQA7DDcbi8=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/inherit.html
+SHA-256-Digest: tGyh7M8OTOW+wjwC55CUsXIXlfy8MfAVpMwM0C9uJyQ=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/PropertiesLauncher$ArchiveEntryFilter.class
+SHA-256-Digest: Qb3hFtrBEqCnG6pEo1psitpozuh0Nn0eSN+9+/bDqDk=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/hosts.html
+SHA-256-Digest: QFFrB+hpPg4NMOxGO8gusWApCSNfmn5+DjHXf9YJf6E=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/AbstractJarFile.class
+SHA-256-Digest: KQ5OhdxgVT7efWPgxF7JVgaFCvTRkDvvEHOm451+7OY=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/spring-boot-aut
+ oconfigure-2.7.3.jar
+SHA-256-Digest: pUtnzZcfhWCY4F7ROWdZYiChiYVjolUiUiNHk+L6jmM=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/spring-beans-5.
+ 3.22.jar
+SHA-256-Digest: St/xc6b2j/xaUzPIyKN9EHQLDMEk+ar67YijqMpDHKQ=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/spring-jcl-5.3.
+ 22.jar
+SHA-256-Digest: mFAAd3HamiZqHIF2p6g4fMM2A/X5LcdTr8hG3sElyIA=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/archive/JarFileArchive$AbstractIterator.class
+SHA-256-Digest: E6Vrbx5KWrfXQSw9pLPTHX8TArhv1c+CltApctGPFoM=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/jackson-databin
+ d-2.13.3.jar
+SHA-256-Digest: ZES/CNjNRil0Cvw9sSdpOPSUco3rZjzlhcTpH2tF64Q=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/ManifestYmlValueParsers.class
+SHA-256-Digest: 4qEGdwSdF4xz20+XvY7WuDTIBaQj/473ZK4RBlO6jMQ=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/ManifestYmlValueParsers$3.class
+SHA-256-Digest: mTyC0+NnvIy3oGQ1Xqm9ywQLn7my0qY2Y57/ziJucWg=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/memory.md
+SHA-256-Digest: 54lmf3ya8ZhvLPbgZciYRPn0ukzwcoWwpsLfDp10VrY=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/commons-lsp-ext
+ ensions-1.39.0-SNAPSHOT.jar
+SHA-256-Digest: 9u6EAK/PLk/vZ+qR5jZiPlmPVQQZGISmpqoXdA7Psz4=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/RouteContentAssistant.class
+SHA-256-Digest: wi2O/jk6fVj+wOEl7Tc7RiHgrhwOn8FDY3jsW9fTTpo=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/ManifestYamlCFDomainsProvider.class
+SHA-256-Digest: eaKR5ztgMaXJdSqS4Dov091DMg+Th3wo3v86/wpSnvg=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/JarEntryFilter.class
+SHA-256-Digest: kBqH5sUj5kP/hmnLIskgdzhHI2mZpe+B/eXiyS93Dpw=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/AbstractJarFile$JarFileType.class
+SHA-256-Digest: psh/vNU1FBZdkbOW68+rfjY3B1flojTKNfuvGb2iC7w=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/objenesis-3.2.j
+ ar
+SHA-256-Digest: A9lgvVrvA8ZT6wAEE62hXrd83SuOREiIbt9WkoBeNfM=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/health-check-http-endpoint.md
+SHA-256-Digest: pipEUeY/0mxwUt9sOZlbuJyKcmCRREIff2qAh8zkppg=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/netty-transport
+ -native-unix-common-4.1.79.Final.jar
+SHA-256-Digest: WwF92WAK9l6hdGo7Utq9ge5L89+bUJCdtPtJ/LNZKXA=
+
+Name: servers/manifest-yaml-language-server/META-INF/maven/org.springfra
+ mework.ide.vscode/manifest-yaml-language-server/pom.xml
+SHA-256-Digest: Cod0HiutPPrzCHtuh5HV7+hlFrxqYz4X73X1FSIZL/4=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/archive/Archive.class
+SHA-256-Digest: Yq1JPZAqLoaGr0KzbG6agdWAyrEMHlWoSKk0IDbRWRg=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jarmode/JarMode.class
+SHA-256-Digest: G4DcCn3dx4i6/BW4FU75e8jNryFM7KDPVB3JzOPh0XA=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/JarFile$JarEntryEnumeration.class
+SHA-256-Digest: mlJaD28rQzCv3HxxTBIOC8rCdZ4O0CbJx7R/iY0KI8Y=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/org.eclipse.xte
+ xt.xbase.lib-2.24.0.jar
+SHA-256-Digest: +Xm8u7mEKk95UAIB7W2rWjQnRg6A76Xh547MiSeaYA4=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/org/springf
+ ramework/ide/vscode/manifest/yaml/ManifestYamlCFBuildpacksProvider.clas
+ s
+SHA-256-Digest: IxbHgChnZaG8xXXgs+FQ/X5ZjEWk1/6JpsDEYVlrQDs=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/archive/JarFileArchive$JarFileEntry.class
+SHA-256-Digest: qE/6hxsv4fjBqWjGUsYVFD6Fj8eZj8Ga+NJBJX8bsgs=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/no-hostname.html
+SHA-256-Digest: YSrQG2ClzKMGpMA1I/U+haNM5GtGwrU+pl8qgS56vU0=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/PropertiesLauncher$ClassPathArchives.class
+SHA-256-Digest: /YoWLbzEXrZe1iLrIFBqOVmPh5ouzcLaVSgFxSLEnsg=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/org.eclipse.xte
+ nd.lib-2.24.0.jar
+SHA-256-Digest: N+utsAd8Pw6TR8y78toY+k7rlnW1329emb7KF58Nk1A=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/Handler.class
+SHA-256-Digest: uR7lw3Liaa4qrQHygYdlEnAYVUhhm60VEuxyPqy0pFY=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/java-semver-0.9
+ .0.jar
+SHA-256-Digest: IhjHO0D5r5i1cNCEQgwbSoEzIpe9f8J93VUukDvo6Tw=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/JarLauncher.class
+SHA-256-Digest: T3vTPCYKoIQaZxTgF2in3KTh6lRUJ3eq017gSvZLTuE=
+
+Name: about.html
+SHA-256-Digest: dpmwnT9saBkWwJsLZZxY1wcNaCgCpzy8ZibfTTceUck=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/slf4j-api-1.7.2
+ 5.jar
+SHA-256-Digest: GMSgCV1cHaa4F1kudnuyPSndL1YK1033X/OWHb3iW3k=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/JarURLConnection$1.class
+SHA-256-Digest: uCTCb++B7g3o+bNmo079xbeyEljkNz71FVmhFP+9Saw=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/buildpack.md
+SHA-256-Digest: 9JZO8QnDDob6hLlh23S2uGsT99OtmldNW0HyrC/LX4I=
+
+Name: servers/manifest-yaml-language-server/META-INF/third-party-open-so
+ urce-licenses/bsd-3-clause - license.html
+SHA-256-Digest: X+t22K3aOKze66TkMB0NhjO7D0Dh6AKUixPO4h5oYQ4=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/random-route.md
+SHA-256-Digest: rw6MvWL/2kO/5lsCrowNOXFwYBQtW1WhpwTJc3aaPSw=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/byte-buddy-1.12
+ .13.jar
+SHA-256-Digest: amiL/1sNpPTyamcr5mI+/vlIN/HdSe8tH19v4HwGaZw=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/data/RandomAccessDataFile$FileAccess.class
+SHA-256-Digest: nZ5346vYj6ZSng3RT3sXhCVfeRpUZf/Z4ZRQWKz75Y4=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/reactor-netty-0
+ .7.5.RELEASE.jar
+SHA-256-Digest: qwiD8lJxC8f60QKsS4xv/zRt9PkpoaCpcD1135xM46U=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/data/RandomAccessDataFile.class
+SHA-256-Digest: JFS/EdoD12JnWGL9ORsrS8pQCi+wTBlDYhCkS7yqttE=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/jackson-annotat
+ ions-2.13.3.jar
+SHA-256-Digest: Uyam+83nz4gX82wlQQHNRfas6kJYUYzTyA7luJ9OS5s=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/archive/JarFileArchive.class
+SHA-256-Digest: Gc/OsP8mrmjxP6vagaI+Z/TfFGqmcTIN8eMp0lWdJpw=
+
+Name: icons/cloud_obj.png
+SHA-256-Digest: pENYi+2Wb87uRZHvT5Nunx2GxXLDzoU6fUX1O7sDDNA=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/spring-boot-2.7
+ .3.jar
+SHA-256-Digest: t+Cnq3KSqIJ+NPhoZ6j9+DVMdYXC20/GyALt5W/gfTw=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/CentralDirectoryEndRecord.class
+SHA-256-Digest: /QCrKortzLnbL2+SY21ZQ6BSxPsSE+sKQp/xiKXFb4k=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/JarFileEntries$ZipOffsets.class
+SHA-256-Digest: dFDNavbhwdwbTm7r1MB3UxEQ53aEzcme19m4HGzb69g=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/lib/netty-codec-htt
+ p-4.1.79.Final.jar
+SHA-256-Digest: FueFBA+NDDnprlGUtlJ8ifXhURa7pK1/T8d2zbG5KRg=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/jar/CentralDirectoryEndRecord$1.class
+SHA-256-Digest: UE+sEbUO2j9MoNktcOLla0bgGGe8ZXf1msTI8iC/LDI=
+
+Name: servers/manifest-yaml-language-server/org/springframework/boot/loa
+ der/data/RandomAccessDataFile$DataInputStream.class
+SHA-256-Digest: d5YVfcFtLqISuufzcwJjtOtVTiRP0TtR6BRQRy8KGDU=
+
+Name: servers/manifest-yaml-language-server/BOOT-INF/classes/description
+ -by-prop-name/buildpacks.html
+SHA-256-Digest: I2FdFTrP0D740vovV7YQmmy5J5+GBuA0/9G7ypMT1ZY=
+
