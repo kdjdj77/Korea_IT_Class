@@ -4,11 +4,11 @@ import java.time.LocalDateTime;
 
 import org.junit.jupiter.api.Test;
 
-class UsersTest {
+class UserTest {
 
 	@Test
 	void test() {
-		Users user = new Users();
+		User user = new User();
 		user.setEmail("martin@gmail.com");
 		user.setName("martin");
 		user.setCreatedAt(LocalDateTime.now());

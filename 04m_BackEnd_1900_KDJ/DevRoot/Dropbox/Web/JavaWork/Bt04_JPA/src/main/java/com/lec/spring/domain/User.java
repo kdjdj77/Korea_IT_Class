@@ -18,8 +18,8 @@ import lombok.RequiredArgsConstructor;
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Builder
-@Entity
-public class Users {
+@Entity(name = "users")
+public class User {
 	// 엔티티로 사용하려면 primary key가 반드시 필요
 	@Id // PK
 	@GeneratedValue // AI
