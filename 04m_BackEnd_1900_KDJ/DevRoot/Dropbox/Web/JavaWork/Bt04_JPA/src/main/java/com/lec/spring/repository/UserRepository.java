@@ -2,10 +2,15 @@ package com.lec.spring.repository;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import com.lec.spring.domain.User;
 
@@ -72,6 +77,37 @@ public interface UserRepository extends JpaRepository<User, Long> {
     // 11. Null, Empty
     List<User> findByIdIsNotNull();
 //    List<User> findByIdIsNotEmpty();
-    List<User> findByAddressIsNotEmpty();
+//    List<User> findByAddressIsNotEmpty();
     
+    // 12. In, NotIn
+    List<User> findByNameIn(List<String> names);
+    
+	// 13. StartingWith, EndingWith, Contains
+	// 문자열에 대한 검색쿼리, LIKE 사용
+    List<User> findByNameStartingWith(String name);
+    List<User> findByNameEndingWith(String name);
+    List<User> findByEmailContains(String name);
+
+    // 14. Like
+    List<User> findByEmailLike(String email);
+    
+    // 16. OrderBy
+    List<User> findTopByNameOrderByIdDesc(String name);
+    List<User> findFirstByNameOrderByIdDesc(String name);
+    
+    // 17. 정렬기준 추가
+    List<User> findFirstByNameOrderByIdDescEmailDesc(String name);
+
+    // 18. 매개변수(Sort) 기반 정렬
+    List<User> findFirstByName(String name, Sort sort);
+
+    // 19. Paging
+    // import org.springframework.data.domain.Pageable;
+    Page<User> findByName(String name, Pageable pageable);
+    
+    // 20. Enum테스트
+    @Query(value = "SELECT * FROM users LIMIT 1;", nativeQuery = true)
+    Map<String, Object> findRowRecord();
+
+
 }
