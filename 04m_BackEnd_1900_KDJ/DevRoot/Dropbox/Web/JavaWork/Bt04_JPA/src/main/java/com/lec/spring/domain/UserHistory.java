@@ -8,8 +8,6 @@ import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -27,30 +25,17 @@ import lombok.ToString;
 @ToString(callSuper = true) // 상속받은 createdAt, updatedAt 출력을 위해
 @EqualsAndHashCode(callSuper = true)
 @Entity
-public class Book extends BaseEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-   
-    private String name;
-    private String category;
-    private Long authorId; // NULL 허용 -> Wrapper 사용
-    private Long publisherId; // NULL 허용 -> Wrapper 사용
-   
-//  @Column(updatable = false)
+//@EntityListeners(value = AuditingEntityListener.class)
+public class UserHistory extends BaseEntity {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private Long userId;
+	private String name;
+	private String email;
+//	@Column(updatable = false)
 //	@CreatedDate // AuditingEntityListener가 Listener로 적용시 사용
 //	private LocalDateTime createdAt;
 //	@LastModifiedDate // AuditingEntityListener가 Listener로 적용시 사용
 //	private LocalDateTime updatedAt;
-   
-//    @PrePersist
-//    public void prePersist() {
-//        this.createdAt = LocalDateTime.now();
-//        this.updatedAt = LocalDateTime.now();
-//    }
-//   
-//    @PreUpdate
-//    public void preUpdate() {
-//        this.updatedAt = LocalDateTime.now();
-//    }
-} 
+}

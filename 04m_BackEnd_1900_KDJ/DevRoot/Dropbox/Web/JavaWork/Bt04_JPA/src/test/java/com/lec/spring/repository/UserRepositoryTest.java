@@ -30,6 +30,8 @@ class UserRepositoryTest {
 
 	@Autowired
 	private UserRepository userRepository;
+	@Autowired
+	private UserHistoryRepository userHistoryRepository;
 	
 //	@Test
 //	@Transactional // org.springframework.transaction.annotation.Transactional
@@ -281,7 +283,7 @@ class UserRepositoryTest {
         System.out.println("------------------------------------------------------------\n");
     }
 
-	@Test
+//	@Test
 	void pagingAndSortingTest() {
 		System.out.println("\n-- TEST#pagingAndSortingTest() ---------------------------------------------");
 
@@ -407,7 +409,7 @@ class UserRepositoryTest {
 	    System.out.println("\n------------------------------------------------------------\n");
 	}
 	
-	@Test
+//	@Test
 	void preUpdateTest() throws InterruptedException{
 	    Thread.sleep(1000);
 	    System.out.println("\n-- TEST#preUpdateTest() ---------------------------------------------");
@@ -420,4 +422,24 @@ class UserRepositoryTest {
 	    System.out.println("to-be : " + userRepository.findAll().get(0));
 	    System.out.println("\n------------------------------------------------------------\n");
 	}
+	
+	@Test
+	void userHistoryTest() {
+	    System.out.println("\n-- TEST#userHistoryTest() ---------------------------------------------");
+
+	    User user = new User();
+	    user.setEmail("martin-new@greendragon.com");
+	    user.setName("martin-new");
+
+	    userRepository.save(user); // INSERT
+	    
+	    user.setName("martin-new-new");
+	    userRepository.save(user); // UPDATE
+	    
+	    userHistoryRepository.findAll().forEach(System.out::println);
+
+	   
+	    System.out.println("\n------------------------------------------------------------\n");
+	}
+
 }

@@ -16,7 +16,8 @@ class BookRepositoryTest {
         System.out.println("\n-- TEST#bookTest() ---------------------------------------------");
         Book book = new Book();
         book.setName("JPA 스터디");
-        book.setAuthor("성연철");
+        book.setAuthorId(1L);
+        book.setPublisherId(1L);
         bookRepository.save(book); // INSERT
        
         System.out.println(bookRepository.findAll());
