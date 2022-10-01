@@ -10,7 +10,7 @@ export const axiosApiInstance = axios.create({
 
 axiosApiInstance.interceptors.request.use(
   async (config) => {
-    /*.. */
+    return config;
   },
   (error) => {
     throw new Error(error);

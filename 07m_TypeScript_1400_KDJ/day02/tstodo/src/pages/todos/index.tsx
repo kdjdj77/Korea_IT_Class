@@ -11,10 +11,24 @@ type TodopageProps = {
 const TodosPage: FC<TodopageProps> = ({ isative }): JSX.Element => {
   const [todos, setTodos] = useState<Todo[]>([]);
 
+  const onAddTodo = async ({ content, setIsDone }: any) => {
+    setIsDone(false);
+    if (content.trim() === "") return;
+    try {
+      const response = await TodoApi.addTodo({ data: { content } });
+      const { data } = response;
+      if (!data.message) return;
+      setTodos([...todos, data.data]);
+      setIsDone(true);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   return (
     <>
       <TodoList todos={todos} setTodos={setTodos} />
-      <TodoInput />
+      <TodoInput onAddTodo={onAddTodo} />
     </>
   );
 };
