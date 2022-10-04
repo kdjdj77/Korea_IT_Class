@@ -1,22 +1,28 @@
 package com.lec.spring.domain;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Index;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.PostPersist;
 import javax.persistence.PostRemove;
 import javax.persistence.PostUpdate;
 import javax.persistence.PrePersist;
 import javax.persistence.PreRemove;
 import javax.persistence.PreUpdate;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.persistence.UniqueConstraint;
@@ -45,11 +51,11 @@ import lombok.ToString;
 @ToString(callSuper = true) // 상속받은 createdAt, updatedAt 출력을 위해
 @EqualsAndHashCode(callSuper = true)
 // 이 객체가 JPA 에서 관리하는 Entity 객체임을 정의
-@Entity  // javax.persistence.Entity  (name= 실제로 생성될 테이블명)
-@Table(name="users"  // 이 이름으로 물리적인 테이즐 생성
-	, indexes = {@Index(columnList = "name")}  // 컬럼에 대한 index 생성
-	, uniqueConstraints = {@UniqueConstraint(columnNames = {"email"})}  // unique 제약사항
-)
+@Entity(name="users")  // javax.persistence.Entity  (name= 실제로 생성될 테이블명)
+//@Table(name="users"  // 이 이름으로 물리적인 테이즐 생성
+//	, indexes = {@Index(columnList = "name")}  // 컬럼에 대한 index 생성
+//	, uniqueConstraints = {@UniqueConstraint(columnNames = {"email"})}  // unique 제약사항
+//)
 @EntityListeners(value = {UserEntityListener.class})
 public class User extends BaseEntity {
 	// 엔티티로 사용하려면 primary key가 반드시 필요
@@ -61,6 +67,19 @@ public class User extends BaseEntity {
 	@NonNull
 	@Column(unique = true)
 	private String email;
+	@OneToMany(fetch = FetchType.EAGER)
+	@JoinColumn(
+			name = "user_id", 
+			insertable = false, 
+			updatable = false) // Entity가 어떤 컬럼으로 join하게 될 지 지정해준다
+	@ToString.Exclude
+	private List<UserHistory> userHistories = new ArrayList<>(); // NPE 방지
+
+	@OneToMany
+	@JoinColumn(name="user_id")
+	@ToString.Exclude
+	private List<Review> reviews = new ArrayList<>();
+	
 //	@Column(updatable = false)
 //	@CreatedDate // AuditingEntityListener가 Listener로 적용시 사용
 //	private LocalDateTime createdAt;

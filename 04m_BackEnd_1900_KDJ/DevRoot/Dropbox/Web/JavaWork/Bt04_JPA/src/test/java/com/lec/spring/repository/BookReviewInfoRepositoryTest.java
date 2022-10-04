@@ -74,7 +74,7 @@ class BookReviewInfoRepositoryTest {
 	    Book book = new Book();
 	    book.setName("JPA 완전정복");
 	    book.setAuthorId(1L);
-	    book.setPublisherId(1L);
+//	    book.setPublisherId(1L);
 	   
 	    // save() 의 리턴값은 Entity 다.
 	    return bookRepository.save(book); // Book 에 INSERT
@@ -105,9 +105,13 @@ class BookReviewInfoRepositoryTest {
 	                    .orElseThrow(RuntimeException::new)
 	                    .getBook()  // ★1:1 연결된 Book Entity 를 직접 가져온다!★
 	                    ;
-	   
+	    
 	    System.out.println(">>> " + result);
-	   
+	    // Book에서 BookReviewInfo 정보 가져오기
+	    BookReviewInfo result2 = bookRepository.findById(1L).orElseThrow(RuntimeException::new)
+	    		.getBookReviewInfo()
+	    		;
+	    System.out.println(">>> " + result2);
 	    System.out.println("\n------------------------------------------------------------\n");
 	}
 

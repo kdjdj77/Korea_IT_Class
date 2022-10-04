@@ -1,5 +1,7 @@
 package com.lec.spring.listener;
 
+import javax.persistence.PostPersist;
+import javax.persistence.PostUpdate;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 
@@ -15,10 +17,12 @@ import com.lec.spring.support.BeanUtils;
 public class UserEntityListener {
 //	@Autowired // <- Listener에서는 스프링 주입 불가
 	private UserHistoryRepository userHistoryRepository;
-	@PrePersist // User가 INSERT 수행하기 전
-	@PreUpdate // User가 UPDATE 수행하기 전
-	public void preUpdateAndPrePersist(Object o) { // User Entity를 매개변수 받음
-		System.out.println(">> UserEntityListener#preUpdate&prePersist");
+//	@PrePersist // User가 INSERT 수행하기 전
+//	@PreUpdate // User가 UPDATE 수행하기 전
+	@PostUpdate
+	@PostPersist
+	public void postUpdateAndPostPersist(Object o) { // User Entity를 매개변수 받음
+		System.out.println(">> UserEntityListener#postUpdate&postPersist");
 		
 		// Listener에서 스프링 빈 주입받기
 		UserHistoryRepository userHistoryRepository
@@ -26,9 +30,10 @@ public class UserEntityListener {
 		
 		User user = (User) o;
 		UserHistory userHistory = new UserHistory();
-		userHistory.setUserId(user.getId());
+//		userHistory.setUserId(user.getId());
 		userHistory.setName(user.getName());
 		userHistory.setEmail(user.getEmail());
+		userHistory.setUser(user);
 		
 		// userHistoryRepository가 null이다
 		// Entity Listener는 Spring Bean을 주입받지 못한다

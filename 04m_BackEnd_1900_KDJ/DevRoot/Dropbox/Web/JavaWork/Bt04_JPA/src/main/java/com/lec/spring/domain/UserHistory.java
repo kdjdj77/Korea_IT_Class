@@ -8,6 +8,7 @@ import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -30,9 +31,13 @@ public class UserHistory extends BaseEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private Long userId;
+//	@Column(name = "user_id", insertable = false, updatable = false)
+//	private Long userId;
 	private String name;
 	private String email;
+	@ManyToOne
+//	@ToString.Exclude
+	private User user;
 //	@Column(updatable = false)
 //	@CreatedDate // AuditingEntityListener가 Listener로 적용시 사용
 //	private LocalDateTime createdAt;

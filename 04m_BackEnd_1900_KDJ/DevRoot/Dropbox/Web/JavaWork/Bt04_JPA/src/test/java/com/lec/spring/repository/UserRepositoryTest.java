@@ -23,6 +23,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.lec.spring.domain.Gender;
 import com.lec.spring.domain.User;
+import com.lec.spring.domain.UserHistory;
 
 
 @SpringBootTest   // 스프링 context 를 로딩하여 테스트에 사용
@@ -423,7 +424,7 @@ class UserRepositoryTest {
 	    System.out.println("\n------------------------------------------------------------\n");
 	}
 	
-	@Test
+//	@Test
 	void userHistoryTest() {
 	    System.out.println("\n-- TEST#userHistoryTest() ---------------------------------------------");
 
@@ -439,6 +440,34 @@ class UserRepositoryTest {
 	    userHistoryRepository.findAll().forEach(System.out::println);
 
 	   
+	    System.out.println("\n------------------------------------------------------------\n");
+	}
+	
+	@Test
+	void userRelationTest() {
+	    System.out.println("\n-- TEST#userRelationTest() ---------------------------------------------");
+
+	    User user = new User();
+	    user.setName("David");
+	    user.setEmail("david@reddragon.com");
+	    user.setGender(Gender.MALE);
+	    userRepository.save(user); // INSERT,UserHistory에도 추가
+	    
+	    user.setName("daniel");
+	    userRepository.save(user); // UPDATE, UserHistory에도 추가
+	    
+	    user.setEmail("daniel@bluedragon.com");
+	    userRepository.save(user); // UPDATE, UserHistory에도 추가
+	    
+//	    userHistoryRepository.findAll().forEach(System.out::println);
+	    // userId로 UserHistory 조회
+//	    List<UserHistory> result = userHistoryRepository.findByUserId(
+//	    		userRepository.findByEmail("daniel@bluedragon.com").getId());
+	    List<UserHistory> result = userRepository.findByEmail("daniel@bluedragon.com").getUserHistories();
+	    result.forEach(System.out::println);
+	    
+	    System.out.println("UserHistory.getUser() : "
+	    		+ userHistoryRepository.findAll().get(0).getUser());
 	    System.out.println("\n------------------------------------------------------------\n");
 	}
 
