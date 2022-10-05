@@ -2,6 +2,7 @@ package com.lec.spring.domain;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -11,6 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -53,6 +55,20 @@ public class Book extends BaseEntity {
     @ManyToOne
     @ToString.Exclude
     private Publisher publisher;
+//    @ManyToMany
+//    @ToString.Exclude
+//    private List<Author> authors = new ArrayList<>();
+//    
+//    public void addAuthor(Author...author) {
+//    	Collections.addAll(this.authors, author);
+//    }
+    @OneToMany
+    @JoinColumn(name="book_id")
+    @ToString.Exclude
+    private List<Writing> writings = new ArrayList<>();
+    public void addWritings(Writing...writings) {
+    	Collections.addAll(this.writings, writings);
+    }
 //  @Column(updatable = false)
 //	@CreatedDate // AuditingEntityListener가 Listener로 적용시 사용
 //	private LocalDateTime createdAt;
