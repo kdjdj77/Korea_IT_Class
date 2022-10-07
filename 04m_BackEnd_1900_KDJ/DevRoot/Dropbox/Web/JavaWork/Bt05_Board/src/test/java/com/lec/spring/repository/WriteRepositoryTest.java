@@ -3,6 +3,7 @@ package com.lec.spring.repository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.lec.spring.domain.Authority;
 import com.lec.spring.domain.Comment;
@@ -23,6 +24,8 @@ class WriteRepositoryTest {
 	private CommentRepository commentRepository;
 	@Autowired
 	private FileRepository fileRepository;
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 	
 	@Test
 	void init() {
@@ -44,19 +47,20 @@ class WriteRepositoryTest {
 		// User 생성
 		User user1 = User.builder()
 				.username("USER1")
-				.password("1234")  // 나중에 Security 적용하면 PasswordEncoder사용해야함.
+//				.password("1234")  // 나중에 Security 적용하면 PasswordEncoder사용해야함.
+				.password(passwordEncoder.encode("1234"))
 				.name("회원1")
 				.build();
 		
 		User user2 = User.builder()
 				.username("USER2")
-				.password("1234")
+				.password(passwordEncoder.encode("1234"))
 				.name("회원2")
 				.build();
 		
 		User admin1 = User.builder()
 				.username("ADMIN1")
-				.password("1234")
+				.password(passwordEncoder.encode("1234"))
 				.name("관리자1")
 				.build();
 
