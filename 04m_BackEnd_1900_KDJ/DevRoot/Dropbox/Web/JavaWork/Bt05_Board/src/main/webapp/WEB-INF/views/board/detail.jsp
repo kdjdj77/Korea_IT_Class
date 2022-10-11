@@ -2,6 +2,11 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+<%-- 로그인한 사용자 정보 Authentication 객체의 필요한 property 들을 변수에 담아 사용 가능  --%>
+<sec:authentication property="name" var="username"/>  
+<sec:authentication property="authorities" var="authorities"/> 
+<sec:authentication property="principal" var="userdetails"/>
 
 <c:choose>
 	<c:when test="${empty list || fn:length(list) == 0}">
@@ -32,6 +37,8 @@
 			}
 		</script>
 		<body>
+			<%-- 인증 헤더 --%>
+			<jsp:include page="/WEB-INF/views/common/header.jsp"/>
 		    <div class="container mt-3">
 		        <h2>조회 - ${dto.subject}</h2>
 		        <hr>
@@ -47,7 +54,7 @@
 		        	</form>
 		            <div class="mb-3">
 		                <label for="name">작성자:</label>
-		                <span class="form-control" >${dto.name}</span>
+		                <span class="form-control" >${dto.user.username}</span>
 		            </div>    
 		            <div class="mb-3 mt-3">
 		                <label for="subject">제목:</label>
@@ -59,11 +66,17 @@
 		            </div>    
 		 
 		            <!-- 하단 링크 -->
-		            <a class="btn btn-outline-dark" href="update?id=${dto.id}">수정</a>
-		            <a class="btn btn-outline-dark" href="list">목록</a>
-		            <button type="button" class="btn btn-outline-dark"
-		            	onclick="chkDelete()">삭제</button>
-		            <a class="btn btn-outline-dark" href="write">작성</a>
+		            <c:if test="${userdetails.user.id == dto.user.id}">
+		            	<a class="btn btn-outline-dark" href="update?id=${dto.id}">수정</a>
+		            </c:if>
+		            <a class="btn btn-outline-dark" href="list?page=${empty page?'':page}">목록</a>
+		            <c:if test="${userdetails.user.id == dto.user.id}">
+			            <button type="button" class="btn btn-outline-dark"
+			            	onclick="chkDelete()">삭제</button>
+		            </c:if>
+		            <sec:authorize access="hasAnyRole('ADMIN', 'MEMBER')">
+		            	<a class="btn btn-outline-dark" href="write">작성</a>
+		            </sec:authorize>
 		            <!-- 하단 링크 -->        
 		 
 		        </section>

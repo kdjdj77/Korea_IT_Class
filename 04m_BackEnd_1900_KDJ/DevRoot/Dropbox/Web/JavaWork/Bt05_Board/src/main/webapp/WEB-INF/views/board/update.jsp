@@ -26,6 +26,9 @@
 		 
 		 
 		<body>
+			<%-- 인증 헤더 --%>
+			<jsp:include page="/WEB-INF/views/common/header.jsp"/>
+
 		    <div class="container mt-3">
 		        <h2>수정</h2>
 		        <hr>
@@ -39,7 +42,7 @@
 		            <input type="hidden" name="id" value="${dto.id}"/>
 		            <div class="mb-3">
 		                <label for="name">작성자:</label>
-		                <span class="form-control" readonly>${dto.name}</span>
+		                <span class="form-control" readonly>${dto.user.username}</span>
 		            </div>    
 		            <div class="mb-3 mt-3">
 		                <label for="subject">제목:</label>
@@ -53,7 +56,7 @@
 		            <!-- 하단 링크 -->
 		            <button type="submit" class="btn btn-outline-dark">수정완료</button>
 		            <button type="button" class="btn btn-outline-dark" onclick="history.back()">이전으로</button>
-		            <a class="btn btn-outline-dark" href="list">목록</a>
+		            <a class="btn btn-outline-dark" href="list?page=${empty page?'':page}">목록</a>
 		            <!-- 하단 링크 -->
 		 
 		        </form>

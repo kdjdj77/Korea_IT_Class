@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+<%-- 로그인한 사용자 정보 Authentication 객체의 필요한 property 들을 변수에 담아 사용 가능  --%>
+<sec:authentication property="name" var="username"/>  
+<sec:authentication property="authorities" var="authorities"/> 
+<sec:authentication property="principal" var="userdetails"/>
 <!DOCTYPE html>
 <html lang="ko">
  
@@ -12,13 +17,15 @@
 </head>
  
 <body>
+	<%-- 인증 헤더 --%>
+	<jsp:include page="/WEB-INF/views/common/header.jsp"/>
     <div class="container mt-3">
         <h2>작성</h2>
         <hr>
         <form name="frm" action="write" method="POST">
             <div class="mb-3">
                 <label for="name">작성자:</label>
-                <input type="text" class="form-control" id="name" placeholder="작성자를 입력하세요" name="name" required>
+                <span class="form-control">${username} (${userdetails.user.name})</span>
             </div>
             <div class="mb-3 mt-3">
                 <label for="subject">제목:</label>
@@ -30,7 +37,7 @@
             </div>
  
             <button type="submit" class="btn btn-outline-dark">작성완료</button>
-            <a class="btn btn-outline-dark" href="list">목록</a>
+            <a class="btn btn-outline-dark" href="list?page=${empty page?'':page}">목록</a>
         </form>
  
     </div>

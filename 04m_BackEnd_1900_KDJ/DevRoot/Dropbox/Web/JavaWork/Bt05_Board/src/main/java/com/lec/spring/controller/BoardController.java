@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.lec.spring.domain.Write;
 import com.lec.spring.service.BoardService;
+import com.lec.spring.util.U;
 
 @Controller
 @RequestMapping("/board")
@@ -28,8 +29,10 @@ public class BoardController {
 	
 	// /board/list
 	@GetMapping("/list")
-	public void list(Model model) {
-		model.addAttribute("list", boardService.list());
+//	public void list(Model model) {
+	public void list(Integer page, Model model) {
+//		model.addAttribute("list", boardService.list());
+		boardService.list(page, model);
 	}
 	
 	// /board/write
@@ -74,5 +77,12 @@ public class BoardController {
 		return "board/deleteOk";
 	}
 	
+	// 페이징
+	// pageRows 변경시 동작
+	@PostMapping("/pageRows")
+	public String pageRows(Integer page, Integer pageRows) {
+		U.getSession().setAttribute("pageRows", pageRows);
+		return "redirect:/board/list?page=" + page;
+	}
 	
 } // end controller
