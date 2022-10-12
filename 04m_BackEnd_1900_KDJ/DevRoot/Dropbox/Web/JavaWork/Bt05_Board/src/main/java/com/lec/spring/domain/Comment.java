@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,7 +20,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@ToString
+@ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
 @Entity(name="t6_comment")
 public class Comment extends BaseEntity{
@@ -30,6 +32,7 @@ public class Comment extends BaseEntity{
 	@ToString.Exclude
 	private User user; // 댓글 작성자 (FK)
 	@Column(name="write_id")
+	@JsonIgnore
 	private Long write;
 	@Column(nullable=false)
 	private String content; //댓글 내용

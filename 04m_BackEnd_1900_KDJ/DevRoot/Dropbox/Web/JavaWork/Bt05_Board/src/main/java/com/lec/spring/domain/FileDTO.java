@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -30,5 +31,6 @@ public class FileDTO {
 	private String source;   // 원본 파일 명
 	@Column(nullable = false)
 	private String file;     // 저장된 파일 명 (rename 된 파일명)
-
+	@Transient
+	private boolean isImage; // 이미지 여부
 }
