@@ -112,7 +112,6 @@
    5) 자동 마운트
       - 설정 파일 : /etc/fstab
 
-   1 - #vi /etc/fstab -> i
-
-        장치명    마운트위치    파일시스템 종류     옵션  덤프 검사
-   2 - /dev/sdb1     /mnt           xfs         default  0   0
+      1 - #vi /etc/fstab -> i
+         장치명    마운트위치    파일시스템 종류     옵션  덤프 검사
+      2 - /dev/sdb1     /mnt           xfs         default  0   0

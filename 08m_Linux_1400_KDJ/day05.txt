@@ -1,0 +1,75 @@
+디스크 제거
+   1 - vi /etc/fstab -> 자동마운트 라인 제거
+   2 - umount /dev/sdc1
+   3 - fdisk /dev/sdc -> d -> d -> w
+
+디스크 분할
+   4 - fdisk /dev/sdc
+   5 -    -> n -> p -> 엔터 엔터 20000000(원하는 크기)
+   5 -    -> n -> p -> 엔터 엔터 엔터 w
+   6 - mkfs.xfs -f /dev/sdc1
+   7 - mkfs.xfs -f /dev/sdc2
+   8 - cd home
+   9 - mkdir hdd1
+   10 - mkdir hdd2
+   11 - mount /dev/sdc1 /home/hdd1
+   12 - mount /dev/sdc2 /home/hdd2
+
+==[LVM]===================================================
+
+Logical Volume Manager
+
+디스크의 파티션을 나누어서 쓰는 일은 많이 없다(디스크 용량 부족)
+디스크 두 개 이상을 논리적으로 하나로 묶을 수 있다
+
+sda1을 쓰다가 용량이 가득 차면 LVM으로 다른 디스크와 통합한다
+
+-- 20GB 디스크 두개로 40GB 만들기
+   아래 순서대로 진행
+
+   #fdisk /dev/sdd
+      n p 엔터 엔터 엔터 t 8e w
+   #fdisk /dev/sde
+      n p 엔터 엔터 엔터 t 8e w
+   #pvcreate /dev/sdd1 /dev/sde1
+   #vgcreate myvg /dev/sdd1 /dev/sde1
+   #lvcreate -n mylv -l 100%FREE myvg
+   #mkfs.xfs /dev/myvg/mylv
+   #mount /dev/myvg/mylv /mnt
+   #vi /etc/fstab
+      /dev/myvg/mylv    /mnt  default  0 0 >> 추가
+   #reboot
+
+--
+-- 위 40GB 디스크에 20GB 디스크 추가해서 60GB 만들기
+   아래 순서대로 진행
+
+   #vgcreate myvg /dev/sdd1 /dev/sde1
+   #vgextend myvg /dev/sdf1
+   #lvcreate -n mylv -l 100%FREE myvg
+   #mkfs.xfs /dev/myvg/mylv
+   #mount /dev/myvg/mylv /mnt
+   #resize2fs /dev/myvg/mylv: ext
+   #xfs_growfs /dev/myvg/mylv: xfs
+
+--
+
+1. 파티션 나누기
+   - LVM 타입
+2. PV(Physical Volume) 생성
+   #pvcreatea [장치명]
+   #pvcreate /dev/sdd1 /dev/sde1
+3. VG(Volume Group) 생성
+   #vgcreate [그룹명] /dev/sdd1 /dev/sde1
+   #vgcreate myvg /dev/sdd1 /dev/sde1
+4. LV(Logical Volume) 생성
+   #lvcreate -n mylv -l 100%FREE myvg
+5. 파일 시스템 생성
+   #mkfs.xfs /dev/myvg/mylv
+6. 마운트
+   #.mount /dev/myvg/mylv /mnt
+
+
+
+
+
