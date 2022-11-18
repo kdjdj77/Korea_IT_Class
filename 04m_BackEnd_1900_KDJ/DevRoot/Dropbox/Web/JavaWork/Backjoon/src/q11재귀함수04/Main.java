@@ -64,45 +64,38 @@ public class Main {
 		st = new StringTokenizer(br.readLine());
 		
 		A = new int[N];
-		for(int i = 0; i < N; i++) {
-			A[i] = Integer.parseInt(st.nextToken());
-		}
+		for(int i = 0; i < N; i++) A[i] = Integer.parseInt(st.nextToken());
+
 		tmp = new int[N];
 		merge_sort(A, 0, N - 1);
 		System.out.println(result);
 		
 	}
 	
-	public static void merge_sort(int[] A, int p, int r) {
+	public static void merge_sort(int[] list, int p, int r) {
 		if (count > K) return ;
 		if (p < r) {
 			int q = (p + r) / 2;
-			merge_sort(A, p, q);
-			merge_sort(A, q + 1, r);
-			merge(A, p, q, r);
+			merge_sort(list, p, q);
+			merge_sort(list, q + 1, r);
+			merge(list, p, q, r);
 		}
 	}
 	
-	public static void merge(int[] A, int p, int q, int r) {
+	public static void merge(int[] list, int p, int q, int r) {
 		int i = p, j = q + 1, t = 0;
 		
 		while (i <= q && j <= r) {
-			if(A[i] <= A[j]) { tmp[t] = A[i]; i++; }
-			else { tmp[t] = A[j]; j++; }
-			t++;
+			if(list[i] <= list[j]) tmp[t++] = list[i++];
+			else tmp[t++] = list[j++];
 		}
-		
-		while (i <= q) tmp[t++] = A[i++];
-		while (j <= r) tmp[t++] = A[j++];
+		while (i <= q) tmp[t++] = list[i++];
+		while (j <= r) tmp[t++] = list[j++];
 
 		i = p; t = 0;
 		while (i <= r) {
-			count++;
-			if (count == K) {
-				result = tmp[t];
-				break;
-			} 
-			A[i++] = tmp[t++];
+			if (++count == K) { result = tmp[t]; break; } 
+			list[i++] = tmp[t++];
 		}
 	}
 }
