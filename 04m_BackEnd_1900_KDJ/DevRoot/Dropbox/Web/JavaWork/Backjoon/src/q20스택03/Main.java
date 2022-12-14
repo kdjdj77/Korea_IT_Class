@@ -26,14 +26,15 @@ public class Main {
 			String str = br.readLine();
 			int len = str.length();
 			
-			Stack<Integer> s = new Stack<>();
+			Stack<Boolean> s = new Stack<>();
 			for(int j = 0; j < len; j++) {
-				if (str.charAt(j) == '(') s.push(0);
-				else if (s.peek() == 0) s.pop();
-				else
+				if (str.charAt(j) == '(') s.push(true);
+				else if (s.isEmpty()) { s.push(true); break; }
+				else s.pop();
 			}
 			if (s.empty()) sb.append("YES\n");
 			else sb.append("NO\n");
 		}
+		System.out.print(sb);
 	}
 }
