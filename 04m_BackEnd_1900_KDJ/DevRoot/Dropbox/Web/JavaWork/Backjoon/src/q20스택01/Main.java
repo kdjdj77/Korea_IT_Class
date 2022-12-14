@@ -50,12 +50,5 @@ public class Main {
 	public static int size() { return len; }
 	public static int empty() { return len == 0 ? 1 : 0; }
 	public static int top() { return len == 0 ? -1 : s[len - 1]; }
-	public static int pop() {
-		if(len == 0) return -1;
-		else {
-			int res = s[len - 1];
-			s[--len] = 0;
-			return res;
-		}
-	}
+	public static int pop() { return len == 0 ? -1 : s[len-- - 1]; }
 }
