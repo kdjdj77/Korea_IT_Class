@@ -41,24 +41,24 @@ public class Main {
 		}
 		System.out.println(sb);
 	}
-	private static int L(int[] A, int k) {
-		int s = 0;
-		int e = A.length;
-		while (s < e) {
-			int mid = (s + e) / 2;
-			if (k <= A[mid]) e = mid;
-			else s = mid + 1;
-		}
-		return s;
-	}
-	private static int R(int[] A, int k) {
-		int s = 0;
-		int e = A.length;
-		while (s < e) {
-			int mid = (s + e) / 2;
-			if (k < A[mid]) e = mid;
-			else s = mid + 1;
-		}
-		return s;
-	}
+//	private static int L(int[] A, int k) {
+//		int s = 0;
+//		int e = A.length;
+//		while (s < e) {
+//			int mid = (s + e) / 2;
+//			if (k <= A[mid]) e = mid;
+//			else s = mid + 1;
+//		}
+//		return s;
+//	}
+//	private static int R(int[] A, int k) {
+//		int s = 0;
+//		int e = A.length;
+//		while (s < e) {
+//			int mid = (s + e) / 2;
+//			if (k < A[mid]) e = mid;
+//			else s = mid + 1;
+//		}
+//		return s;
+//	}
 }
