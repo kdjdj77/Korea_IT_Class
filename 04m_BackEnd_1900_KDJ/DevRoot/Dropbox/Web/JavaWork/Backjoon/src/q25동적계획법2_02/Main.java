@@ -23,40 +23,36 @@ BC를 먼저 곱하고 A를 곱하는 경우 A(BC)에 필요한 곱셈 연산의
 */
 
 import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
- 
+
 public class Main {
-	static int[][] list;
-	static int[] sum;
+	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringBuffer sb = new StringBuffer();
 		StringTokenizer st;
 		int N = Integer.parseInt(br.readLine());
-		while (N-- > 0) {
+		int[][] A = new int[N][2];
+		int[][] sum = new int[N][N];
+		
+		for(int i = 0; i < N; i++) {
 			st = new StringTokenizer(br.readLine());
-			list = new int[N][N];
-			sum = new int[N+1];
-			
-			for(int i = 1; i < N; i++) {
-				int x = Integer.parseInt(st.nextToken());
-				int y = Integer.parseInt(st.nextToken());
-				x = list[i][i] = list[i-1][i-1] * x;
-				sum[i] = sum[i-1] + x;
+			A[i][0] = Integer.parseInt(st.nextToken());
+			A[i][1] = Integer.parseInt(st.nextToken());
+		}
+		
+		for(int gap = 1; gap < N; gap++) {
+			for(int s = 0; s < N - gap; s++) {
+				int e = s + gap;
+				sum[s][e] = Integer.MAX_VALUE;
+				for(int k = s; k < e; k++) {
+					int x = sum[s][k] + sum[k+1][e] + A[s][0] * A[k][1] * A[e][1];
+					sum[s][e] = Math.min(sum[s][e], x);
+				}
 			}
-			sb.append(price(0, N-1) - sum[N]).append("\n");
 		}
-		System.out.print(sb);
-	}
-	public static int price(int s, int e) {
-		if (list[s][e] != 0) return list[s][e];
-		list[s][e] = Integer.MAX_VALUE;
-		for(int i = s; i < e; i++) {
-			list[s][e] = Math.min(list[s][e], price(s, i) + price(i+1, e));
-		}
-		list[s][e] += sum[e] - sum[s-1];
-		return list[s][e];
+		System.out.println(sum[0][N-1]);
+		br.close();
 	}
 }
