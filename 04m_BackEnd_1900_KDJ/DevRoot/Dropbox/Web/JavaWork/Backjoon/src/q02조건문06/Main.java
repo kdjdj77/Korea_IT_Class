@@ -21,7 +21,7 @@ public class Main {
 		h += t / 60;
 		m += t % 60;
 		if (m >= 60) { m -= 60; h += 1; }
-		if (h >= 24) { h -= 24; }
+		if (h >= 24) h -= 24;
 		System.out.print(h + " " + m);
 		s.close();
 	}
