@@ -19,27 +19,40 @@ package q25동적계획법2_06;
 */
 
 import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.StringTokenizer;
- 
+
 public class Main {
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st2;
-		StringBuffer sb = new StringBuffer();
-		StringTokenizer st = new StringTokenizer(br.readLine());
-		int N = Integer.parseInt(st.nextToken());
-		int M = Integer.parseInt(st.nextToken());
-		
-		int[][] list = new int[N][2];
-		
-		st = new StringTokenizer(br.readLine());
-		st2 = new StringTokenizer(br.readLine());
-		for(int i = 0; i < N; i++) {
-			list[i][0] = Integer.parseInt(st.nextToken());
-			list[i][1] = Integer.parseInt(st2.nextToken());
-		}
-		
-	}
+    public static void main(String[] args) throws IOException {
+    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        StringTokenizer st2;
+        
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+        int res = Integer.MAX_VALUE;
+
+        int[][] list = new int[N][2];
+        int[][] dp = new int[N][10001];
+
+        st = new StringTokenizer(br.readLine());
+        st2 = new StringTokenizer(br.readLine());
+        for(int i = 0 ; i < N; i++){
+            list[i][0] = Integer.parseInt(st.nextToken());
+            list[i][1] = Integer.parseInt(st2.nextToken());
+        }
+
+        for(int i = 0 ; i < N; i++){
+            int m = list[i][0], c = list[i][1];
+			
+            for(int j = 0; j <= 10000; j++){
+                if(i == 0) dp[i][j] = j >= c ? m : 0;
+                else dp[i][j] = j >= c ? Math.max(dp[i-1][j-c] + m, dp[i-1][j]) : dp[i-1][j];
+
+                if(dp[i][j] >= M) res = Math.min(res, j);
+            }
+        }
+        System.out.println(res);
+    }
 }
