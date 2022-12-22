@@ -1,4 +1,5 @@
 package q27그래프와순회01;
+
 /*
 문제
 오늘도 서준이는 깊이 우선 탐색(DFS) 수업 조교를 하고 있다. 아빠가 수업한 내용을 학생들이 잘 이해했는지 문제를 통해서 확인해보자.
@@ -21,14 +22,58 @@ dfs(V, E, R) {  # V : 정점 집합, E : 간선 집합, R : 시작 정점
 첫째 줄부터 N개의 줄에 정수를 한 개씩 출력한다. i번째 줄에는 정점 i의 방문 순서를 출력한다. 시작 정점의 방문 순서는 1이다. 시작 정점에서 방문할 수 없는 경우 0을 출력한다.
 */
 
-import java.io.*;
-import java.util.*;
- 
-public class Main {
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringBuffer sb = new StringBuffer();
-		StringTokenizer st;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.StringTokenizer;
 
-	}
+public class Main {
+    static ArrayList<ArrayList<Integer>> A;
+    static int[] res;
+    static boolean[] dp;
+    static int cnt = 1;
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+        int s = Integer.parseInt(st.nextToken());
+
+        A = new ArrayList<>();
+        res = new int[N+1];
+        dp = new boolean[N+1];
+
+        for (int i = 0; i <=N; i++) A.add(new ArrayList<>());
+
+        for (int i = 0; i < M; i++) {
+            st = new StringTokenizer(br.readLine());
+            int x = Integer.parseInt(st.nextToken());
+            int y = Integer.parseInt(st.nextToken());
+            A.get(x).add(y);
+            A.get(y).add(x);
+        }
+
+        for (int i = 1; i <=N; i++) Collections.sort(A.get(i));
+
+        res[s] = 1; 
+        dp[s] = true;
+        dfs(s);
+
+        for (int i = 1; i <= N; i++) sb.append(res[i]).append("\n");
+        System.out.println(sb);
+    }
+    public static void dfs(int s) {
+        for (int i : A.get(s)) {
+            if (!dp[i]) {
+                res[i] = ++cnt;
+                dp[i] = true;
+                dfs(i);
+            }
+        }
+    }
 }
