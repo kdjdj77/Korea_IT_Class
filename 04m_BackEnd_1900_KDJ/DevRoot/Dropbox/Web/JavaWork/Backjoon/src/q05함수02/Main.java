@@ -31,7 +31,7 @@ public class Main {
 	
 	public static int d(int a) {
 		int sum = a;
-		while(a != 0) {
+		while(a != 0) {				
 			sum += a % 10;
 			a = a / 10;
 		}
