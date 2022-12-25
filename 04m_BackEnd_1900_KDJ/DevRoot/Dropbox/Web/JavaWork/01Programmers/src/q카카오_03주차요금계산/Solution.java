@@ -67,12 +67,7 @@ records는 하루 동안의 입/출차된 기록만 담고 있으며, 입차된 
 import java.util.*;
 
 class Solution {
-	public static void main(String args[]) {
-		int[] a = {180, 5000, 10, 600};
-		String[] b = {"05:34 5961 IN", "06:00 0000 IN", "06:34 0000 OUT", "07:59 5961 OUT", "07:59 0148 IN", "18:59 0000 IN", "19:09 0148 OUT", "22:59 5961 IN", "23:00 5961 OUT"};
-		solution(a, b);
-	}
-    public static int[] solution(int[] fees, String[] records) {
+    public int[] solution(int[] fees, String[] records) {
     	StringTokenizer st;
     	HashMap<Integer, Integer> map = new HashMap<>();
     	LinkedHashMap<Integer, Integer> resMap = new LinkedHashMap<>();
@@ -83,26 +78,20 @@ class Solution {
         	String inout = st.nextToken();
         	if (inout.equals("IN")) map.put(number, time);
         	else {
-        		int t = time - map.get(number), fee;
+        		int t = time - map.get(number);
         		map.remove(number);
-        		if (t > fees[0]) fee = getFee(t, fees);
-        		else fee = fees[1];
-        		resMap.put(number, resMap.getOrDefault(number, 0) + fee);
+        		resMap.put(number, resMap.getOrDefault(number, 0) + t);
         	}
         }
         for(int number : map.keySet()) {
-        	int fee = getFee(1440 - map.get(number), fees);
-        	resMap.put(number, resMap.getOrDefault(number, 0) + fee);
+        	resMap.put(number, resMap.getOrDefault(number, 0) + 1439 - map.get(number));
         }
         
         int[] res = new int[resMap.size()];
         int k = 0;
         for(int a : resMap.keySet()) res[k++] = a;
-        
         Arrays.sort(res);
-        print(res);
-        for(int i = 0; i < res.length; i++) res[i] = resMap.get(res[i]);
-        print(res);
+        for(int i = 0; i < res.length; i++) res[i] = getFee(resMap.get(res[i]), fees);
         return res;
     }
     public static int getTime(String t) {
@@ -110,12 +99,7 @@ class Solution {
     	return Integer.parseInt(re[0]) * 60 + Integer.parseInt(re[1]);
     }
     public static int getFee(int t, int[] fees) {
-    	return fees[1]+(t-fees[0])/fees[2]*fees[3];
-    }
-    public static void print(int[] a) {
-    	for(int i = 0; i < a.length; i++) {
-    		System.out.print(a[i] + " ");
-    	}
-    	System.out.println();
+    	if (t < fees[0]) return fees[1];
+    	return fees[1]+(int)Math.ceil((t-fees[0])/(float)fees[2])*fees[3];
     }
 }
